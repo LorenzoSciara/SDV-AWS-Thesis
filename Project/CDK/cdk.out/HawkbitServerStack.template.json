@@ -1,0 +1,791 @@
+{
+ "Resources": {
+  "VPCB9E5F0B4": {
+   "Type": "AWS::EC2::VPC",
+   "Properties": {
+    "CidrBlock": "10.0.0.0/16",
+    "EnableDnsHostnames": true,
+    "EnableDnsSupport": true,
+    "InstanceTenancy": "default",
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "HawkbitServerStack/VPC"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitServerStack/VPC/Resource"
+   }
+  },
+  "VPCpublicSubnet1Subnet325F50B2": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": "eu-west-1a",
+    "CidrBlock": "10.0.0.0/18",
+    "MapPublicIpOnLaunch": true,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "public"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Public"
+     },
+     {
+      "Key": "Name",
+      "Value": "HawkbitServerStack/VPC/publicSubnet1"
+     }
+    ],
+    "VpcId": {
+     "Ref": "VPCB9E5F0B4"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitServerStack/VPC/publicSubnet1/Subnet"
+   }
+  },
+  "VPCpublicSubnet1RouteTableF591E248": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "HawkbitServerStack/VPC/publicSubnet1"
+     }
+    ],
+    "VpcId": {
+     "Ref": "VPCB9E5F0B4"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitServerStack/VPC/publicSubnet1/RouteTable"
+   }
+  },
+  "VPCpublicSubnet1RouteTableAssociationBFFA43B7": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "VPCpublicSubnet1RouteTableF591E248"
+    },
+    "SubnetId": {
+     "Ref": "VPCpublicSubnet1Subnet325F50B2"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitServerStack/VPC/publicSubnet1/RouteTableAssociation"
+   }
+  },
+  "VPCpublicSubnet1DefaultRoute19059ECD": {
+   "Type": "AWS::EC2::Route",
+   "Properties": {
+    "DestinationCidrBlock": "0.0.0.0/0",
+    "GatewayId": {
+     "Ref": "VPCIGWB7E252D3"
+    },
+    "RouteTableId": {
+     "Ref": "VPCpublicSubnet1RouteTableF591E248"
+    }
+   },
+   "DependsOn": [
+    "VPCVPCGW99B986DC"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "HawkbitServerStack/VPC/publicSubnet1/DefaultRoute"
+   }
+  },
+  "VPCpublicSubnet2Subnet2B2DFF71": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": "eu-west-1b",
+    "CidrBlock": "10.0.64.0/18",
+    "MapPublicIpOnLaunch": true,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "public"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Public"
+     },
+     {
+      "Key": "Name",
+      "Value": "HawkbitServerStack/VPC/publicSubnet2"
+     }
+    ],
+    "VpcId": {
+     "Ref": "VPCB9E5F0B4"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitServerStack/VPC/publicSubnet2/Subnet"
+   }
+  },
+  "VPCpublicSubnet2RouteTable55DAB1BB": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "HawkbitServerStack/VPC/publicSubnet2"
+     }
+    ],
+    "VpcId": {
+     "Ref": "VPCB9E5F0B4"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitServerStack/VPC/publicSubnet2/RouteTable"
+   }
+  },
+  "VPCpublicSubnet2RouteTableAssociation0849466B": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "VPCpublicSubnet2RouteTable55DAB1BB"
+    },
+    "SubnetId": {
+     "Ref": "VPCpublicSubnet2Subnet2B2DFF71"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitServerStack/VPC/publicSubnet2/RouteTableAssociation"
+   }
+  },
+  "VPCpublicSubnet2DefaultRoute9ED4D6BC": {
+   "Type": "AWS::EC2::Route",
+   "Properties": {
+    "DestinationCidrBlock": "0.0.0.0/0",
+    "GatewayId": {
+     "Ref": "VPCIGWB7E252D3"
+    },
+    "RouteTableId": {
+     "Ref": "VPCpublicSubnet2RouteTable55DAB1BB"
+    }
+   },
+   "DependsOn": [
+    "VPCVPCGW99B986DC"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "HawkbitServerStack/VPC/publicSubnet2/DefaultRoute"
+   }
+  },
+  "VPCpublicSubnet3Subnet0CBD4ADC": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": "eu-west-1c",
+    "CidrBlock": "10.0.128.0/18",
+    "MapPublicIpOnLaunch": true,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "public"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Public"
+     },
+     {
+      "Key": "Name",
+      "Value": "HawkbitServerStack/VPC/publicSubnet3"
+     }
+    ],
+    "VpcId": {
+     "Ref": "VPCB9E5F0B4"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitServerStack/VPC/publicSubnet3/Subnet"
+   }
+  },
+  "VPCpublicSubnet3RouteTable07F40487": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "HawkbitServerStack/VPC/publicSubnet3"
+     }
+    ],
+    "VpcId": {
+     "Ref": "VPCB9E5F0B4"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitServerStack/VPC/publicSubnet3/RouteTable"
+   }
+  },
+  "VPCpublicSubnet3RouteTableAssociation2A52E4AA": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "VPCpublicSubnet3RouteTable07F40487"
+    },
+    "SubnetId": {
+     "Ref": "VPCpublicSubnet3Subnet0CBD4ADC"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitServerStack/VPC/publicSubnet3/RouteTableAssociation"
+   }
+  },
+  "VPCpublicSubnet3DefaultRoute6038437A": {
+   "Type": "AWS::EC2::Route",
+   "Properties": {
+    "DestinationCidrBlock": "0.0.0.0/0",
+    "GatewayId": {
+     "Ref": "VPCIGWB7E252D3"
+    },
+    "RouteTableId": {
+     "Ref": "VPCpublicSubnet3RouteTable07F40487"
+    }
+   },
+   "DependsOn": [
+    "VPCVPCGW99B986DC"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "HawkbitServerStack/VPC/publicSubnet3/DefaultRoute"
+   }
+  },
+  "VPCIGWB7E252D3": {
+   "Type": "AWS::EC2::InternetGateway",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "HawkbitServerStack/VPC"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitServerStack/VPC/IGW"
+   }
+  },
+  "VPCVPCGW99B986DC": {
+   "Type": "AWS::EC2::VPCGatewayAttachment",
+   "Properties": {
+    "InternetGatewayId": {
+     "Ref": "VPCIGWB7E252D3"
+    },
+    "VpcId": {
+     "Ref": "VPCB9E5F0B4"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitServerStack/VPC/VPCGW"
+   }
+  },
+  "VPCRestrictDefaultSecurityGroupCustomResource59474679": {
+   "Type": "Custom::VpcRestrictDefaultSG",
+   "Properties": {
+    "ServiceToken": {
+     "Fn::GetAtt": [
+      "CustomVpcRestrictDefaultSGCustomResourceProviderHandlerDC833E5E",
+      "Arn"
+     ]
+    },
+    "DefaultSecurityGroupId": {
+     "Fn::GetAtt": [
+      "VPCB9E5F0B4",
+      "DefaultSecurityGroup"
+     ]
+    },
+    "Account": "668487117877"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "HawkbitServerStack/VPC/RestrictDefaultSecurityGroupCustomResource/Default"
+   }
+  },
+  "CustomVpcRestrictDefaultSGCustomResourceProviderRole26592FE0": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Version": "2012-10-17",
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ]
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Sub": "arn:${AWS::Partition}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+     }
+    ],
+    "Policies": [
+     {
+      "PolicyName": "Inline",
+      "PolicyDocument": {
+       "Version": "2012-10-17",
+       "Statement": [
+        {
+         "Effect": "Allow",
+         "Action": [
+          "ec2:AuthorizeSecurityGroupIngress",
+          "ec2:AuthorizeSecurityGroupEgress",
+          "ec2:RevokeSecurityGroupIngress",
+          "ec2:RevokeSecurityGroupEgress"
+         ],
+         "Resource": [
+          {
+           "Fn::Join": [
+            "",
+            [
+             "arn:aws:ec2:eu-west-1:668487117877:security-group/",
+             {
+              "Fn::GetAtt": [
+               "VPCB9E5F0B4",
+               "DefaultSecurityGroup"
+              ]
+             }
+            ]
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitServerStack/Custom::VpcRestrictDefaultSGCustomResourceProvider/Role"
+   }
+  },
+  "CustomVpcRestrictDefaultSGCustomResourceProviderHandlerDC833E5E": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Code": {
+     "S3Bucket": "cdk-hnb659fds-assets-668487117877-eu-west-1",
+     "S3Key": "7f18a11296f35510ee16538afec983ed6312e12afbf81b777089a9f8e34e2474.zip"
+    },
+    "Timeout": 900,
+    "MemorySize": 128,
+    "Handler": "__entrypoint__.handler",
+    "Role": {
+     "Fn::GetAtt": [
+      "CustomVpcRestrictDefaultSGCustomResourceProviderRole26592FE0",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs18.x",
+    "Description": "Lambda function for removing all inbound/outbound rules from the VPC default security group"
+   },
+   "DependsOn": [
+    "CustomVpcRestrictDefaultSGCustomResourceProviderRole26592FE0"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "HawkbitServerStack/Custom::VpcRestrictDefaultSGCustomResourceProvider/Handler",
+    "aws:asset:path": "asset.7f18a11296f35510ee16538afec983ed6312e12afbf81b777089a9f8e34e2474",
+    "aws:asset:property": "Code"
+   }
+  },
+  "InstanceSSMCBFA3CF0": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "ec2.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/AmazonSSMManagedInstanceCore"
+       ]
+      ]
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitServerStack/InstanceSSM/Resource"
+   }
+  },
+  "MyNewKeyPair": {
+   "Type": "AWS::EC2::KeyPair",
+   "Properties": {
+    "KeyName": "HawkbitServer"
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitServerStack/MyNewKeyPair"
+   }
+  },
+  "InstanceInstanceSecurityGroupF0E2D5BE": {
+   "Type": "AWS::EC2::SecurityGroup",
+   "Properties": {
+    "GroupDescription": "HawkbitServerStack/Instance/InstanceSecurityGroup",
+    "SecurityGroupEgress": [
+     {
+      "CidrIp": "0.0.0.0/0",
+      "Description": "Allow all outbound traffic by default",
+      "IpProtocol": "-1"
+     }
+    ],
+    "SecurityGroupIngress": [
+     {
+      "CidrIp": "0.0.0.0/0",
+      "Description": "Allow inbound HTTP traffic",
+      "FromPort": 8080,
+      "IpProtocol": "tcp",
+      "ToPort": 8080
+     },
+     {
+      "CidrIp": "0.0.0.0/0",
+      "Description": "Allow inbound HTTP traffic",
+      "FromPort": 5672,
+      "IpProtocol": "tcp",
+      "ToPort": 5672
+     }
+    ],
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "HawkbitServerStack/Instance"
+     }
+    ],
+    "VpcId": {
+     "Ref": "VPCB9E5F0B4"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitServerStack/Instance/InstanceSecurityGroup/Resource"
+   }
+  },
+  "InstanceInstanceProfileAB5AEF02": {
+   "Type": "AWS::IAM::InstanceProfile",
+   "Properties": {
+    "Roles": [
+     {
+      "Ref": "InstanceSSMCBFA3CF0"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitServerStack/Instance/InstanceProfile"
+   }
+  },
+  "InstanceC1063A87": {
+   "Type": "AWS::EC2::Instance",
+   "Properties": {
+    "AvailabilityZone": "eu-west-1a",
+    "IamInstanceProfile": {
+     "Ref": "InstanceInstanceProfileAB5AEF02"
+    },
+    "ImageId": "ami-0905a3c97561e0b69",
+    "InstanceType": "t2.small",
+    "SecurityGroupIds": [
+     {
+      "Fn::GetAtt": [
+       "InstanceInstanceSecurityGroupF0E2D5BE",
+       "GroupId"
+      ]
+     }
+    ],
+    "SubnetId": {
+     "Ref": "VPCpublicSubnet1Subnet325F50B2"
+    },
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "HawkbitServerStack/Instance"
+     }
+    ],
+    "UserData": {
+     "Fn::Base64": "#!/bin/bash\nsudo apt-get update -y\nsudo apt-get install -y docker-compose\nsudo echo -e \"version: '3'\n\nservices:\n\n  \n  rabbitmq:\n    image: 'rabbitmq:3-management'\n    restart: always\n    ports:\n      - '15672:15672'\n      - '5672:5672'\n    labels:\n      NAME: 'rabbitmq'\n\n  \n  mysql:\n    image: 'mysql:8.0'\n    environment:\n      MYSQL_DATABASE: 'hawkbit'\n      # MYSQL_USER: 'root' is created by default in the container for mysql 8.0+\n      MYSQL_ALLOW_EMPTY_PASSWORD: 'true'\n    restart: always\n    ports:\n      - '3306:3306'\n    labels:\n      NAME: 'mysql'\n\n  \n  hawkbit:\n    image: 'hawkbit/hawkbit-update-server:latest-mysql'\n    environment:\n      - 'SPRING_DATASOURCE_URL=jdbc:mariadb://mysql:3306/hawkbit'\n      - 'SPRING_RABBITMQ_HOST=rabbitmq'\n      - 'SPRING_RABBITMQ_USERNAME=guest'\n      - 'SPRING_RABBITMQ_PASSWORD=guest'\n      - 'SPRING_DATASOURCE_USERNAME=root'\n      - 'HAWKBIT_ARTIFACT_URL_PROTOCOLS_DOWNLOAD-HTTP_HOSTNAME=[server_ip_address]'\n      - 'HAWKBIT_ARTIFACT_URL_PROTOCOLS_DOWNLOAD-HTTP_IP=[server_ip_address]'\n    restart: always\n    ports:\n      - '8080:8080'\n    volumes:\n      - ./application.properties:/opt/hawkbit/application.properties\n    labels:\n      NAME: 'hawkbit'\" > /home/ubuntu/docker-compose.yml\nsudo sed -i \"s/\\[server_ip_address\\]/$(sudo curl -s http://169.254.169.254/latest/meta-data/public-ipv4)/g\" /home/ubuntu/docker-compose.yml\nsudo docker-compose -f /home/ubuntu/docker-compose.yml up -d"
+    }
+   },
+   "DependsOn": [
+    "InstanceSSMCBFA3CF0"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "HawkbitServerStack/Instance/Resource"
+   }
+  },
+  "CreateParam1021EC1EB": {
+   "Type": "Custom::AWS",
+   "Properties": {
+    "ServiceToken": {
+     "Fn::GetAtt": [
+      "AWS679f53fac002430cb0da5b7982bd22872D164C4C",
+      "Arn"
+     ]
+    },
+    "Create": "{\"action\":\"PutParameter\",\"service\":\"SSM\",\"parameters\":{\"Name\":\"/hawkbitServer/username\",\"Value\":\"admin\",\"Type\":\"SecureString\"},\"physicalResourceId\":{\"id\":\"create_param1\"}}",
+    "Delete": "{\"action\":\"DeleteParameter\",\"service\":\"SSM\",\"parameters\":{\"Name\":\"/hawkbitServer/username\"},\"physicalResourceId\":{\"id\":\"delete_param1\"}}",
+    "InstallLatestAwsSdk": false
+   },
+   "DependsOn": [
+    "CreateParam1CustomResourcePolicy7F6F8F94"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "HawkbitServerStack/CreateParam1/Resource/Default"
+   }
+  },
+  "CreateParam1CustomResourcePolicy7F6F8F94": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "ssm:DeleteParameter",
+        "ssm:PutParameter"
+       ],
+       "Effect": "Allow",
+       "Resource": "*"
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "CreateParam1CustomResourcePolicy7F6F8F94",
+    "Roles": [
+     {
+      "Ref": "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitServerStack/CreateParam1/CustomResourcePolicy/Resource"
+   }
+  },
+  "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitServerStack/AWS679f53fac002430cb0da5b7982bd2287/ServiceRole/Resource"
+   }
+  },
+  "AWS679f53fac002430cb0da5b7982bd22872D164C4C": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Code": {
+     "S3Bucket": "cdk-hnb659fds-assets-668487117877-eu-west-1",
+     "S3Key": "17c16a3854838fd3ff4bda08146122a6701f33b9c86ae17f415ad0dc47a97544.zip"
+    },
+    "Handler": "index.handler",
+    "Role": {
+     "Fn::GetAtt": [
+      "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs18.x",
+    "Timeout": 120
+   },
+   "DependsOn": [
+    "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "HawkbitServerStack/AWS679f53fac002430cb0da5b7982bd2287/Resource",
+    "aws:asset:path": "asset.17c16a3854838fd3ff4bda08146122a6701f33b9c86ae17f415ad0dc47a97544",
+    "aws:asset:is-bundled": false,
+    "aws:asset:property": "Code"
+   }
+  },
+  "CreateParam2191D186D": {
+   "Type": "Custom::AWS",
+   "Properties": {
+    "ServiceToken": {
+     "Fn::GetAtt": [
+      "AWS679f53fac002430cb0da5b7982bd22872D164C4C",
+      "Arn"
+     ]
+    },
+    "Create": "{\"action\":\"PutParameter\",\"service\":\"SSM\",\"parameters\":{\"Name\":\"/hawkbitServer/password\",\"Value\":\"admin\",\"Type\":\"SecureString\"},\"physicalResourceId\":{\"id\":\"create_param2\"}}",
+    "Delete": "{\"action\":\"DeleteParameter\",\"service\":\"SSM\",\"parameters\":{\"Name\":\"/hawkbitServer/password\"},\"physicalResourceId\":{\"id\":\"delete_param3\"}}",
+    "InstallLatestAwsSdk": false
+   },
+   "DependsOn": [
+    "CreateParam2CustomResourcePolicyA2EEA81D"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "HawkbitServerStack/CreateParam2/Resource/Default"
+   }
+  },
+  "CreateParam2CustomResourcePolicyA2EEA81D": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "ssm:DeleteParameter",
+        "ssm:PutParameter"
+       ],
+       "Effect": "Allow",
+       "Resource": "*"
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "CreateParam2CustomResourcePolicyA2EEA81D",
+    "Roles": [
+     {
+      "Ref": "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitServerStack/CreateParam2/CustomResourcePolicy/Resource"
+   }
+  },
+  "CreateParam3E3104D9F": {
+   "Type": "Custom::AWS",
+   "Properties": {
+    "ServiceToken": {
+     "Fn::GetAtt": [
+      "AWS679f53fac002430cb0da5b7982bd22872D164C4C",
+      "Arn"
+     ]
+    },
+    "Create": {
+     "Fn::Join": [
+      "",
+      [
+       "{\"action\":\"PutParameter\",\"service\":\"SSM\",\"parameters\":{\"Name\":\"/hawkbitServer/ip_address\",\"Value\":\"",
+       {
+        "Fn::GetAtt": [
+         "InstanceC1063A87",
+         "PublicIp"
+        ]
+       },
+       "\",\"Type\":\"String\"},\"physicalResourceId\":{\"id\":\"create_param3\"}}"
+      ]
+     ]
+    },
+    "Delete": "{\"action\":\"DeleteParameter\",\"service\":\"SSM\",\"parameters\":{\"Name\":\"/hawkbitServer/ip_address\"},\"physicalResourceId\":{\"id\":\"delete_param3\"}}",
+    "InstallLatestAwsSdk": false
+   },
+   "DependsOn": [
+    "CreateParam3CustomResourcePolicy29039C2F"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "HawkbitServerStack/CreateParam3/Resource/Default"
+   }
+  },
+  "CreateParam3CustomResourcePolicy29039C2F": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "ssm:DeleteParameter",
+        "ssm:PutParameter"
+       ],
+       "Effect": "Allow",
+       "Resource": "*"
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "CreateParam3CustomResourcePolicy29039C2F",
+    "Roles": [
+     {
+      "Ref": "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitServerStack/CreateParam3/CustomResourcePolicy/Resource"
+   }
+  },
+  "CDKMetadata": {
+   "Type": "AWS::CDK::Metadata",
+   "Properties": {
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/21R0W7CMAz8Ft5DtsIXANLQtJeqTLwiNxjwaBMUO0NV1X+fKZRq0558Pl9y52Rms9fMZhO48tTtz9OKSttuBNzZKLVr0c1su704szr4bb4yeSorcptUepQbN6IiJMFPKCsc+ZFbMAdHIBT8U3wD714wqnINgldoHjaPbiEa5FSj7w0+sMmBonn3LOAdmg26FEmadQzp0pv+JQZpZwhq2xbhHm6owziP4UBK5UF36zPcUWcqqMs96IuQP1Yowb8l7/olnkDVA+4Mz3fAjMJ2cSva22VyZ5QlsKYokEOKGn2VWEI9tprp/5FG+6Y9RtPfpx9z1CTG9ZpdfIjU7cq/z3Umb+QU/MtcP9hms8kXE01j8kI12uJefwBd+/3G/QEAAA=="
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitServerStack/CDKMetadata/Default"
+   }
+  }
+ },
+ "Parameters": {
+  "BootstrapVersion": {
+   "Type": "AWS::SSM::Parameter::Value<String>",
+   "Default": "/cdk-bootstrap/hnb659fds/version",
+   "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]"
+  }
+ },
+ "Rules": {
+  "CheckBootstrapVersion": {
+   "Assertions": [
+    {
+     "Assert": {
+      "Fn::Not": [
+       {
+        "Fn::Contains": [
+         [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+         ],
+         {
+          "Ref": "BootstrapVersion"
+         }
+        ]
+       }
+      ]
+     },
+     "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI."
+    }
+   ]
+  }
+ }
+}

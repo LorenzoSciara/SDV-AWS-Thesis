@@ -1,0 +1,3 @@
+org/eclipse/hawkbit/simulator/AuthenticatedWebSecurityTest.class
+org/eclipse/hawkbit/simulator/AllowAllWebSecurityTest.class
+org/eclipse/hawkbit/simulator/DdiWebSecurityTest.class

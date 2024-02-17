@@ -1,0 +1,3 @@
+/home/lorenzo/Desktop/hawkbit-device-simulator/src/test/java/org/eclipse/hawkbit/simulator/AllowAllWebSecurityTest.java
+/home/lorenzo/Desktop/hawkbit-device-simulator/src/test/java/org/eclipse/hawkbit/simulator/DdiWebSecurityTest.java
+/home/lorenzo/Desktop/hawkbit-device-simulator/src/test/java/org/eclipse/hawkbit/simulator/AuthenticatedWebSecurityTest.java

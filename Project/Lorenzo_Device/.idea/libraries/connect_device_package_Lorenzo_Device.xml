@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="connect_device_package_Lorenzo_Device">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/connect_device_package_Lorenzo_Device.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

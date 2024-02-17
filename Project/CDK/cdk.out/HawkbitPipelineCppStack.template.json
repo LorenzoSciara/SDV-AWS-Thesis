@@ -1,0 +1,2268 @@
+{
+ "Resources": {
+  "HawkbitCppCustomBuildImageRepo7E5BBA3F": {
+   "Type": "AWS::CodeCommit::Repository",
+   "Properties": {
+    "Code": {
+     "BranchName": "main",
+     "S3": {
+      "Bucket": "cdk-hnb659fds-assets-668487117877-eu-west-1",
+      "Key": "c0bba09c0ed529d1cdbb3adf1ac508741b5ed1ba751cb8993c8c85823c424136.zip"
+     }
+    },
+    "RepositoryName": "HawkbitCppCustomBuildImage"
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/HawkbitCppCustomBuildImageRepo/Resource"
+   }
+  },
+  "HawkbitCppCustomBuildImageRepoHawkbitPipelineCppStackhawkbitdevicec40130EA7mainEventRule05150B96": {
+   "Type": "AWS::Events::Rule",
+   "Properties": {
+    "EventPattern": {
+     "source": [
+      "aws.codecommit"
+     ],
+     "resources": [
+      {
+       "Fn::GetAtt": [
+        "HawkbitCppCustomBuildImageRepo7E5BBA3F",
+        "Arn"
+       ]
+      }
+     ],
+     "detail-type": [
+      "CodeCommit Repository State Change"
+     ],
+     "detail": {
+      "event": [
+       "referenceCreated",
+       "referenceUpdated"
+      ],
+      "referenceName": [
+       "main"
+      ]
+     }
+    },
+    "State": "ENABLED",
+    "Targets": [
+     {
+      "Arn": {
+       "Fn::Join": [
+        "",
+        [
+         "arn:aws:codepipeline:eu-west-1:668487117877:",
+         {
+          "Ref": "hawkbitdevicec165DDAE6"
+         }
+        ]
+       ]
+      },
+      "Id": "Target0",
+      "RoleArn": {
+       "Fn::GetAtt": [
+        "hawkbitdevicecEventsRoleA8E59EFD",
+        "Arn"
+       ]
+      }
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/HawkbitCppCustomBuildImageRepo/HawkbitPipelineCppStackhawkbitdevicec40130EA7-main-EventRule/Resource"
+   }
+  },
+  "hawkbitCppCustomImageBuildRole095CEDD7": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "codebuild.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbitCppCustomImageBuildRole/Resource"
+   }
+  },
+  "hawkbitCppCustomImageBuildRoleDefaultPolicyC32D77E5": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": "codecommit:GitPull",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "HawkbitCppCustomBuildImageRepo7E5BBA3F",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:aws:codecommit:",
+           {
+            "Ref": "AWS::Region"
+           },
+           ":",
+           {
+            "Ref": "AWS::AccountId"
+           },
+           ":HawkbitCppCustomBuildImage"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:aws:logs:",
+           {
+            "Ref": "AWS::Region"
+           },
+           ":",
+           {
+            "Ref": "AWS::AccountId"
+           },
+           ":log-group:/aws/codebuild/HawkbitCppCustomBuildImage"
+          ]
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:aws:logs:",
+           {
+            "Ref": "AWS::Region"
+           },
+           ":",
+           {
+            "Ref": "AWS::AccountId"
+           },
+           ":log-group:/aws/codebuild/HawkbitCppCustomBuildImage:*"
+          ]
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:aws:logs:eu-west-1:668487117877:log-group:/aws/codebuild/",
+           {
+            "Ref": "HawkbitCppCustomBuildImageBuild66108212"
+           },
+           ":*"
+          ]
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:aws:logs:eu-west-1:668487117877:log-group:/aws/codebuild/",
+           {
+            "Ref": "HawkbitCppCustomBuildImageBuild66108212"
+           }
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": [
+        "codebuild:BatchPutCodeCoverages",
+        "codebuild:BatchPutTestCases",
+        "codebuild:CreateReport",
+        "codebuild:CreateReportGroup",
+        "codebuild:UpdateReport"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:aws:codebuild:",
+           {
+            "Ref": "AWS::Region"
+           },
+           ":",
+           {
+            "Ref": "AWS::AccountId"
+           },
+           ":report-group/HawkbitCppCustomBuildImage-*"
+          ]
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:aws:codebuild:eu-west-1:668487117877:report-group/",
+           {
+            "Ref": "HawkbitCppCustomBuildImageBuild66108212"
+           },
+           "-*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": [
+        "ecr:BatchCheckLayerAvailability",
+        "ecr:BatchGetImage",
+        "ecr:CompleteLayerUpload",
+        "ecr:DescribeImageScanFindings",
+        "ecr:DescribeImages",
+        "ecr:DescribeRepositories",
+        "ecr:GetAuthorizationToken",
+        "ecr:GetDownloadUrlForLayer",
+        "ecr:GetLifecyclePolicy",
+        "ecr:GetLifecyclePolicyPreview",
+        "ecr:GetRepositoryPolicy",
+        "ecr:InitiateLayerUpload",
+        "ecr:ListImages",
+        "ecr:ListTagsForResource",
+        "ecr:PutImage",
+        "ecr:UploadLayerPart"
+       ],
+       "Effect": "Allow",
+       "Resource": "*"
+      },
+      {
+       "Action": [
+        "ecr:BatchCheckLayerAvailability",
+        "ecr:BatchGetImage",
+        "ecr:CompleteLayerUpload",
+        "ecr:GetDownloadUrlForLayer",
+        "ecr:InitiateLayerUpload",
+        "ecr:PutImage",
+        "ecr:UploadLayerPart"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::GetAtt": [
+         "HawkbitCppBlogRepo9F7F41CD",
+         "Arn"
+        ]
+       }
+      },
+      {
+       "Action": [
+        "s3:GetBucket*",
+        "s3:GetObject*",
+        "s3:List*"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:aws:s3:::codepipeline-",
+           {
+            "Ref": "AWS::Region"
+           },
+           "-833521754963"
+          ]
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:aws:s3:::codepipeline-",
+           {
+            "Ref": "AWS::Region"
+           },
+           "-833521754963/*"
+          ]
+         ]
+        }
+       ]
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "hawkbitCppCustomImageBuildRoleDefaultPolicyC32D77E5",
+    "Roles": [
+     {
+      "Ref": "hawkbitCppCustomImageBuildRole095CEDD7"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbitCppCustomImageBuildRole/DefaultPolicy/Resource"
+   }
+  },
+  "HawkbitCppBlogRepo9F7F41CD": {
+   "Type": "AWS::ECR::Repository",
+   "Properties": {
+    "RepositoryName": "hawkbit-cpp-blog",
+    "Tags": [
+     {
+      "Key": "aws-cdk:auto-delete-images",
+      "Value": "true"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/HawkbitCppBlogRepo/Resource"
+   }
+  },
+  "HawkbitCppBlogRepoAutoDeleteImagesCustomResource78E5E337": {
+   "Type": "Custom::ECRAutoDeleteImages",
+   "Properties": {
+    "ServiceToken": {
+     "Fn::GetAtt": [
+      "CustomECRAutoDeleteImagesCustomResourceProviderHandler8D89C030",
+      "Arn"
+     ]
+    },
+    "RepositoryName": {
+     "Ref": "HawkbitCppBlogRepo9F7F41CD"
+    }
+   },
+   "DependsOn": [
+    "HawkbitCppBlogRepo9F7F41CD"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/HawkbitCppBlogRepo/AutoDeleteImagesCustomResource/Default"
+   }
+  },
+  "CustomECRAutoDeleteImagesCustomResourceProviderRole665F2773": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Version": "2012-10-17",
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ]
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Sub": "arn:${AWS::Partition}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+     }
+    ],
+    "Policies": [
+     {
+      "PolicyName": "Inline",
+      "PolicyDocument": {
+       "Version": "2012-10-17",
+       "Statement": [
+        {
+         "Effect": "Allow",
+         "Action": [
+          "ecr:BatchDeleteImage",
+          "ecr:DescribeRepositories",
+          "ecr:ListImages",
+          "ecr:ListTagsForResource"
+         ],
+         "Resource": [
+          {
+           "Fn::Join": [
+            "",
+            [
+             "arn:",
+             {
+              "Ref": "AWS::Partition"
+             },
+             ":ecr:eu-west-1:668487117877:repository/*"
+            ]
+           ]
+          }
+         ],
+         "Condition": {
+          "StringEquals": {
+           "ecr:ResourceTag/aws-cdk:auto-delete-images": "true"
+          }
+         }
+        }
+       ]
+      }
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/Custom::ECRAutoDeleteImagesCustomResourceProvider/Role"
+   }
+  },
+  "CustomECRAutoDeleteImagesCustomResourceProviderHandler8D89C030": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Code": {
+     "S3Bucket": "cdk-hnb659fds-assets-668487117877-eu-west-1",
+     "S3Key": "e024e432dbd64a0923f6308842181e502c39dd8287ee2dbae98472ec78a5097f.zip"
+    },
+    "Timeout": 900,
+    "MemorySize": 128,
+    "Handler": "index.handler",
+    "Role": {
+     "Fn::GetAtt": [
+      "CustomECRAutoDeleteImagesCustomResourceProviderRole665F2773",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs18.x",
+    "Description": {
+     "Fn::Join": [
+      "",
+      [
+       "Lambda function for auto-deleting images in ",
+       {
+        "Ref": "HawkbitCppBlogRepo9F7F41CD"
+       },
+       " repository."
+      ]
+     ]
+    }
+   },
+   "DependsOn": [
+    "CustomECRAutoDeleteImagesCustomResourceProviderRole665F2773"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/Custom::ECRAutoDeleteImagesCustomResourceProvider/Handler",
+    "aws:asset:path": "asset.e024e432dbd64a0923f6308842181e502c39dd8287ee2dbae98472ec78a5097f",
+    "aws:asset:property": "Code"
+   }
+  },
+  "HawkbitCppCustomBuildImageBuild66108212": {
+   "Type": "AWS::CodeBuild::Project",
+   "Properties": {
+    "Artifacts": {
+     "Type": "NO_ARTIFACTS"
+    },
+    "Cache": {
+     "Type": "NO_CACHE"
+    },
+    "EncryptionKey": "alias/aws/s3",
+    "Environment": {
+     "ComputeType": "BUILD_GENERAL1_SMALL",
+     "EnvironmentVariables": [
+      {
+       "Name": "ecr",
+       "Type": "PLAINTEXT",
+       "Value": {
+        "Fn::Join": [
+         "",
+         [
+          {
+           "Fn::Select": [
+            4,
+            {
+             "Fn::Split": [
+              ":",
+              {
+               "Fn::GetAtt": [
+                "HawkbitCppBlogRepo9F7F41CD",
+                "Arn"
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          ".dkr.ecr.",
+          {
+           "Fn::Select": [
+            3,
+            {
+             "Fn::Split": [
+              ":",
+              {
+               "Fn::GetAtt": [
+                "HawkbitCppBlogRepo9F7F41CD",
+                "Arn"
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          ".",
+          {
+           "Ref": "AWS::URLSuffix"
+          },
+          "/",
+          {
+           "Ref": "HawkbitCppBlogRepo9F7F41CD"
+          }
+         ]
+        ]
+       }
+      },
+      {
+       "Name": "tag",
+       "Type": "PLAINTEXT",
+       "Value": "v1"
+      }
+     ],
+     "Image": "aws/codebuild/standard:1.0",
+     "ImagePullCredentialsType": "CODEBUILD",
+     "PrivilegedMode": true,
+     "Type": "LINUX_CONTAINER"
+    },
+    "Name": "HawkbitCppCustomBuildImage",
+    "ServiceRole": {
+     "Fn::GetAtt": [
+      "hawkbitCppCustomImageBuildRole095CEDD7",
+      "Arn"
+     ]
+    },
+    "Source": {
+     "BuildSpec": "buildspec.yml",
+     "Location": {
+      "Fn::GetAtt": [
+       "HawkbitCppCustomBuildImageRepo7E5BBA3F",
+       "CloneUrlHttp"
+      ]
+     },
+     "Type": "CODECOMMIT"
+    },
+    "SourceVersion": "master",
+    "TimeoutInMinutes": 60
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/HawkbitCppCustomBuildImageBuild/Resource"
+   }
+  },
+  "hawkbitdevicecRoleC4D38E25": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "codepipeline.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    }
+   },
+   "DependsOn": [
+    "hawkbitdeviceBuildCodePipelineActionRoleDefaultPolicy12099275",
+    "hawkbitdeviceBuildCodePipelineActionRole00C9FE02",
+    "hawkbitdeviceEventsRoleDefaultPolicy3CC5FBBF",
+    "hawkbitdeviceEventsRole726D97B9",
+    "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRoleDefaultPolicyA7E2761B",
+    "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRole79AF71EC",
+    "hawkbitdevice4D38CBED",
+    "hawkbitdeviceRoleDefaultPolicyAD24F563",
+    "hawkbitdeviceRoleF21FF7F1",
+    "hawkbitdeviceSourceCodeCommitCodePipelineActionRoleDefaultPolicy57E70513",
+    "hawkbitdeviceSourceCodeCommitCodePipelineActionRole143DD809"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbit-device-c/Role/Resource"
+   }
+  },
+  "hawkbitdevicecRoleDefaultPolicy9E8D8912": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "s3:Abort*",
+        "s3:DeleteObject*",
+        "s3:GetBucket*",
+        "s3:GetObject*",
+        "s3:List*",
+        "s3:PutObject",
+        "s3:PutObjectLegalHold",
+        "s3:PutObjectRetention",
+        "s3:PutObjectTagging",
+        "s3:PutObjectVersionTagging"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:aws:s3:::codepipeline-",
+           {
+            "Ref": "AWS::Region"
+           },
+           "-833521754963"
+          ]
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:aws:s3:::codepipeline-",
+           {
+            "Ref": "AWS::Region"
+           },
+           "-833521754963/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "hawkbitdevicecBuildCodePipelineActionRole99C9F960",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::GetAtt": [
+          "hawkbitdevicecSourceCodeCommitCodePipelineActionRole07EAB5FB",
+          "Arn"
+         ]
+        }
+       ]
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "hawkbitdevicecRoleDefaultPolicy9E8D8912",
+    "Roles": [
+     {
+      "Ref": "hawkbitdevicecRoleC4D38E25"
+     }
+    ]
+   },
+   "DependsOn": [
+    "hawkbitdeviceBuildCodePipelineActionRoleDefaultPolicy12099275",
+    "hawkbitdeviceBuildCodePipelineActionRole00C9FE02",
+    "hawkbitdeviceEventsRoleDefaultPolicy3CC5FBBF",
+    "hawkbitdeviceEventsRole726D97B9",
+    "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRoleDefaultPolicyA7E2761B",
+    "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRole79AF71EC",
+    "hawkbitdevice4D38CBED",
+    "hawkbitdeviceRoleDefaultPolicyAD24F563",
+    "hawkbitdeviceRoleF21FF7F1",
+    "hawkbitdeviceSourceCodeCommitCodePipelineActionRoleDefaultPolicy57E70513",
+    "hawkbitdeviceSourceCodeCommitCodePipelineActionRole143DD809"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbit-device-c/Role/DefaultPolicy/Resource"
+   }
+  },
+  "hawkbitdevicec165DDAE6": {
+   "Type": "AWS::CodePipeline::Pipeline",
+   "Properties": {
+    "ArtifactStore": {
+     "Location": {
+      "Fn::Join": [
+       "",
+       [
+        "codepipeline-",
+        {
+         "Ref": "AWS::Region"
+        },
+        "-833521754963"
+       ]
+      ]
+     },
+     "Type": "S3"
+    },
+    "Name": "hawkbit-device-c",
+    "RoleArn": {
+     "Fn::GetAtt": [
+      "hawkbitdevicecRoleC4D38E25",
+      "Arn"
+     ]
+    },
+    "Stages": [
+     {
+      "Actions": [
+       {
+        "ActionTypeId": {
+         "Category": "Source",
+         "Owner": "AWS",
+         "Provider": "CodeCommit",
+         "Version": "1"
+        },
+        "Configuration": {
+         "RepositoryName": {
+          "Fn::GetAtt": [
+           "HawkbitCppCustomBuildImageRepo7E5BBA3F",
+           "Name"
+          ]
+         },
+         "BranchName": "main",
+         "PollForSourceChanges": false
+        },
+        "Name": "CodeCommit",
+        "OutputArtifacts": [
+         {
+          "Name": "SourceArtifact"
+         }
+        ],
+        "RoleArn": {
+         "Fn::GetAtt": [
+          "hawkbitdevicecSourceCodeCommitCodePipelineActionRole07EAB5FB",
+          "Arn"
+         ]
+        },
+        "RunOrder": 1
+       }
+      ],
+      "Name": "Source"
+     },
+     {
+      "Actions": [
+       {
+        "ActionTypeId": {
+         "Category": "Build",
+         "Owner": "AWS",
+         "Provider": "CodeBuild",
+         "Version": "1"
+        },
+        "Configuration": {
+         "ProjectName": {
+          "Ref": "HawkbitCppCustomBuildImageBuild66108212"
+         }
+        },
+        "InputArtifacts": [
+         {
+          "Name": "SourceArtifact"
+         }
+        ],
+        "Name": "Build",
+        "RoleArn": {
+         "Fn::GetAtt": [
+          "hawkbitdevicecBuildCodePipelineActionRole99C9F960",
+          "Arn"
+         ]
+        },
+        "RunOrder": 1
+       }
+      ],
+      "Name": "Build"
+     }
+    ]
+   },
+   "DependsOn": [
+    "hawkbitdevicecRoleDefaultPolicy9E8D8912",
+    "hawkbitdevicecRoleC4D38E25",
+    "hawkbitdeviceBuildCodePipelineActionRoleDefaultPolicy12099275",
+    "hawkbitdeviceBuildCodePipelineActionRole00C9FE02",
+    "hawkbitdeviceEventsRoleDefaultPolicy3CC5FBBF",
+    "hawkbitdeviceEventsRole726D97B9",
+    "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRoleDefaultPolicyA7E2761B",
+    "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRole79AF71EC",
+    "hawkbitdevice4D38CBED",
+    "hawkbitdeviceRoleDefaultPolicyAD24F563",
+    "hawkbitdeviceRoleF21FF7F1",
+    "hawkbitdeviceSourceCodeCommitCodePipelineActionRoleDefaultPolicy57E70513",
+    "hawkbitdeviceSourceCodeCommitCodePipelineActionRole143DD809"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbit-device-c/Resource"
+   }
+  },
+  "hawkbitdevicecSourceCodeCommitCodePipelineActionRole07EAB5FB": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "AWS": "arn:aws:iam::668487117877:root"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    }
+   },
+   "DependsOn": [
+    "hawkbitdeviceBuildCodePipelineActionRoleDefaultPolicy12099275",
+    "hawkbitdeviceBuildCodePipelineActionRole00C9FE02",
+    "hawkbitdeviceEventsRoleDefaultPolicy3CC5FBBF",
+    "hawkbitdeviceEventsRole726D97B9",
+    "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRoleDefaultPolicyA7E2761B",
+    "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRole79AF71EC",
+    "hawkbitdevice4D38CBED",
+    "hawkbitdeviceRoleDefaultPolicyAD24F563",
+    "hawkbitdeviceRoleF21FF7F1",
+    "hawkbitdeviceSourceCodeCommitCodePipelineActionRoleDefaultPolicy57E70513",
+    "hawkbitdeviceSourceCodeCommitCodePipelineActionRole143DD809"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbit-device-c/Source/CodeCommit/CodePipelineActionRole/Resource"
+   }
+  },
+  "hawkbitdevicecSourceCodeCommitCodePipelineActionRoleDefaultPolicy2B64B9E3": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "s3:Abort*",
+        "s3:DeleteObject*",
+        "s3:GetBucket*",
+        "s3:GetObject*",
+        "s3:List*",
+        "s3:PutObject",
+        "s3:PutObjectLegalHold",
+        "s3:PutObjectRetention",
+        "s3:PutObjectTagging",
+        "s3:PutObjectVersionTagging"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:aws:s3:::codepipeline-",
+           {
+            "Ref": "AWS::Region"
+           },
+           "-833521754963"
+          ]
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:aws:s3:::codepipeline-",
+           {
+            "Ref": "AWS::Region"
+           },
+           "-833521754963/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": [
+        "codecommit:CancelUploadArchive",
+        "codecommit:GetBranch",
+        "codecommit:GetCommit",
+        "codecommit:GetUploadArchiveStatus",
+        "codecommit:UploadArchive"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::GetAtt": [
+         "HawkbitCppCustomBuildImageRepo7E5BBA3F",
+         "Arn"
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "hawkbitdevicecSourceCodeCommitCodePipelineActionRoleDefaultPolicy2B64B9E3",
+    "Roles": [
+     {
+      "Ref": "hawkbitdevicecSourceCodeCommitCodePipelineActionRole07EAB5FB"
+     }
+    ]
+   },
+   "DependsOn": [
+    "hawkbitdeviceBuildCodePipelineActionRoleDefaultPolicy12099275",
+    "hawkbitdeviceBuildCodePipelineActionRole00C9FE02",
+    "hawkbitdeviceEventsRoleDefaultPolicy3CC5FBBF",
+    "hawkbitdeviceEventsRole726D97B9",
+    "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRoleDefaultPolicyA7E2761B",
+    "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRole79AF71EC",
+    "hawkbitdevice4D38CBED",
+    "hawkbitdeviceRoleDefaultPolicyAD24F563",
+    "hawkbitdeviceRoleF21FF7F1",
+    "hawkbitdeviceSourceCodeCommitCodePipelineActionRoleDefaultPolicy57E70513",
+    "hawkbitdeviceSourceCodeCommitCodePipelineActionRole143DD809"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbit-device-c/Source/CodeCommit/CodePipelineActionRole/DefaultPolicy/Resource"
+   }
+  },
+  "hawkbitdevicecEventsRoleA8E59EFD": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "events.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    }
+   },
+   "DependsOn": [
+    "hawkbitdeviceBuildCodePipelineActionRoleDefaultPolicy12099275",
+    "hawkbitdeviceBuildCodePipelineActionRole00C9FE02",
+    "hawkbitdeviceEventsRoleDefaultPolicy3CC5FBBF",
+    "hawkbitdeviceEventsRole726D97B9",
+    "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRoleDefaultPolicyA7E2761B",
+    "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRole79AF71EC",
+    "hawkbitdevice4D38CBED",
+    "hawkbitdeviceRoleDefaultPolicyAD24F563",
+    "hawkbitdeviceRoleF21FF7F1",
+    "hawkbitdeviceSourceCodeCommitCodePipelineActionRoleDefaultPolicy57E70513",
+    "hawkbitdeviceSourceCodeCommitCodePipelineActionRole143DD809"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbit-device-c/EventsRole/Resource"
+   }
+  },
+  "hawkbitdevicecEventsRoleDefaultPolicy8230DF24": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": "codepipeline:StartPipelineExecution",
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          "arn:aws:codepipeline:eu-west-1:668487117877:",
+          {
+           "Ref": "hawkbitdevicec165DDAE6"
+          }
+         ]
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "hawkbitdevicecEventsRoleDefaultPolicy8230DF24",
+    "Roles": [
+     {
+      "Ref": "hawkbitdevicecEventsRoleA8E59EFD"
+     }
+    ]
+   },
+   "DependsOn": [
+    "hawkbitdeviceBuildCodePipelineActionRoleDefaultPolicy12099275",
+    "hawkbitdeviceBuildCodePipelineActionRole00C9FE02",
+    "hawkbitdeviceEventsRoleDefaultPolicy3CC5FBBF",
+    "hawkbitdeviceEventsRole726D97B9",
+    "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRoleDefaultPolicyA7E2761B",
+    "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRole79AF71EC",
+    "hawkbitdevice4D38CBED",
+    "hawkbitdeviceRoleDefaultPolicyAD24F563",
+    "hawkbitdeviceRoleF21FF7F1",
+    "hawkbitdeviceSourceCodeCommitCodePipelineActionRoleDefaultPolicy57E70513",
+    "hawkbitdeviceSourceCodeCommitCodePipelineActionRole143DD809"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbit-device-c/EventsRole/DefaultPolicy/Resource"
+   }
+  },
+  "hawkbitdevicecBuildCodePipelineActionRole99C9F960": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "AWS": "arn:aws:iam::668487117877:root"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    }
+   },
+   "DependsOn": [
+    "hawkbitdeviceBuildCodePipelineActionRoleDefaultPolicy12099275",
+    "hawkbitdeviceBuildCodePipelineActionRole00C9FE02",
+    "hawkbitdeviceEventsRoleDefaultPolicy3CC5FBBF",
+    "hawkbitdeviceEventsRole726D97B9",
+    "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRoleDefaultPolicyA7E2761B",
+    "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRole79AF71EC",
+    "hawkbitdevice4D38CBED",
+    "hawkbitdeviceRoleDefaultPolicyAD24F563",
+    "hawkbitdeviceRoleF21FF7F1",
+    "hawkbitdeviceSourceCodeCommitCodePipelineActionRoleDefaultPolicy57E70513",
+    "hawkbitdeviceSourceCodeCommitCodePipelineActionRole143DD809"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbit-device-c/Build/Build/CodePipelineActionRole/Resource"
+   }
+  },
+  "hawkbitdevicecBuildCodePipelineActionRoleDefaultPolicyD001DBA2": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "codebuild:BatchGetBuilds",
+        "codebuild:StartBuild",
+        "codebuild:StopBuild"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::GetAtt": [
+         "HawkbitCppCustomBuildImageBuild66108212",
+         "Arn"
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "hawkbitdevicecBuildCodePipelineActionRoleDefaultPolicyD001DBA2",
+    "Roles": [
+     {
+      "Ref": "hawkbitdevicecBuildCodePipelineActionRole99C9F960"
+     }
+    ]
+   },
+   "DependsOn": [
+    "hawkbitdeviceBuildCodePipelineActionRoleDefaultPolicy12099275",
+    "hawkbitdeviceBuildCodePipelineActionRole00C9FE02",
+    "hawkbitdeviceEventsRoleDefaultPolicy3CC5FBBF",
+    "hawkbitdeviceEventsRole726D97B9",
+    "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRoleDefaultPolicyA7E2761B",
+    "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRole79AF71EC",
+    "hawkbitdevice4D38CBED",
+    "hawkbitdeviceRoleDefaultPolicyAD24F563",
+    "hawkbitdeviceRoleF21FF7F1",
+    "hawkbitdeviceSourceCodeCommitCodePipelineActionRoleDefaultPolicy57E70513",
+    "hawkbitdeviceSourceCodeCommitCodePipelineActionRole143DD809"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbit-device-c/Build/Build/CodePipelineActionRole/DefaultPolicy/Resource"
+   }
+  },
+  "HawkbitDeviceCE72CCD01": {
+   "Type": "AWS::CodeCommit::Repository",
+   "Properties": {
+    "Code": {
+     "BranchName": "master",
+     "S3": {
+      "Bucket": "cdk-hnb659fds-assets-668487117877-eu-west-1",
+      "Key": "d29e20a238ce413d10e5d49cc306bace38a67d80416cf439981dd065bc380199.zip"
+     }
+    },
+    "RepositoryName": "HawkbitDeviceC"
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/HawkbitDeviceC/Resource"
+   }
+  },
+  "HawkbitDeviceCHawkbitPipelineCppStackhawkbitdevice7D7E3922EventRule466574FF": {
+   "Type": "AWS::Events::Rule",
+   "Properties": {
+    "EventPattern": {
+     "source": [
+      "aws.codecommit"
+     ],
+     "resources": [
+      {
+       "Fn::GetAtt": [
+        "HawkbitDeviceCE72CCD01",
+        "Arn"
+       ]
+      }
+     ],
+     "detail-type": [
+      "CodeCommit Repository State Change"
+     ],
+     "detail": {
+      "event": [
+       "referenceCreated",
+       "referenceUpdated"
+      ],
+      "referenceName": [
+       "master"
+      ]
+     }
+    },
+    "State": "ENABLED",
+    "Targets": [
+     {
+      "Arn": {
+       "Fn::Join": [
+        "",
+        [
+         "arn:aws:codepipeline:eu-west-1:668487117877:",
+         {
+          "Ref": "hawkbitdevice4D38CBED"
+         }
+        ]
+       ]
+      },
+      "Id": "Target0",
+      "RoleArn": {
+       "Fn::GetAtt": [
+        "hawkbitdeviceEventsRole726D97B9",
+        "Arn"
+       ]
+      }
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/HawkbitDeviceC/HawkbitPipelineCppStackhawkbitdevice7D7E3922EventRule/Resource"
+   }
+  },
+  "HawkbitDeviceBuildCRole5AD45FEB": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "codebuild.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/HawkbitDeviceBuildC/Role/Resource"
+   }
+  },
+  "HawkbitDeviceBuildCRoleDefaultPolicyB11B95EE": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": "codecommit:GitPull",
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::GetAtt": [
+         "HawkbitDeviceCE72CCD01",
+         "Arn"
+        ]
+       }
+      },
+      {
+       "Action": [
+        "ecr:BatchCheckLayerAvailability",
+        "ecr:BatchGetImage",
+        "ecr:GetDownloadUrlForLayer"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::GetAtt": [
+         "HawkbitCppBlogRepo9F7F41CD",
+         "Arn"
+        ]
+       }
+      },
+      {
+       "Action": "ecr:GetAuthorizationToken",
+       "Effect": "Allow",
+       "Resource": "*"
+      },
+      {
+       "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:aws:logs:eu-west-1:668487117877:log-group:/aws/codebuild/",
+           {
+            "Ref": "HawkbitDeviceBuildCCAFA3C39"
+           },
+           ":*"
+          ]
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:aws:logs:eu-west-1:668487117877:log-group:/aws/codebuild/",
+           {
+            "Ref": "HawkbitDeviceBuildCCAFA3C39"
+           }
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": [
+        "codebuild:BatchPutCodeCoverages",
+        "codebuild:BatchPutTestCases",
+        "codebuild:CreateReport",
+        "codebuild:CreateReportGroup",
+        "codebuild:UpdateReport"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          "arn:aws:codebuild:eu-west-1:668487117877:report-group/",
+          {
+           "Ref": "HawkbitDeviceBuildCCAFA3C39"
+          },
+          "-*"
+         ]
+        ]
+       }
+      },
+      {
+       "Action": [
+        "s3:Abort*",
+        "s3:DeleteObject*",
+        "s3:GetBucket*",
+        "s3:GetObject*",
+        "s3:List*",
+        "s3:PutObject",
+        "s3:PutObjectLegalHold",
+        "s3:PutObjectRetention",
+        "s3:PutObjectTagging",
+        "s3:PutObjectVersionTagging"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:aws:s3:::codepipeline-",
+           {
+            "Ref": "AWS::Region"
+           },
+           "-833521754963"
+          ]
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:aws:s3:::codepipeline-",
+           {
+            "Ref": "AWS::Region"
+           },
+           "-833521754963/*"
+          ]
+         ]
+        }
+       ]
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "HawkbitDeviceBuildCRoleDefaultPolicyB11B95EE",
+    "Roles": [
+     {
+      "Ref": "HawkbitDeviceBuildCRole5AD45FEB"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/HawkbitDeviceBuildC/Role/DefaultPolicy/Resource"
+   }
+  },
+  "HawkbitDeviceBuildCCAFA3C39": {
+   "Type": "AWS::CodeBuild::Project",
+   "Properties": {
+    "Artifacts": {
+     "Type": "NO_ARTIFACTS"
+    },
+    "Cache": {
+     "Type": "NO_CACHE"
+    },
+    "EncryptionKey": "alias/aws/s3",
+    "Environment": {
+     "ComputeType": "BUILD_GENERAL1_SMALL",
+     "Image": {
+      "Fn::Join": [
+       "",
+       [
+        {
+         "Fn::Select": [
+          4,
+          {
+           "Fn::Split": [
+            ":",
+            {
+             "Fn::GetAtt": [
+              "HawkbitCppBlogRepo9F7F41CD",
+              "Arn"
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        ".dkr.ecr.",
+        {
+         "Fn::Select": [
+          3,
+          {
+           "Fn::Split": [
+            ":",
+            {
+             "Fn::GetAtt": [
+              "HawkbitCppBlogRepo9F7F41CD",
+              "Arn"
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        ".",
+        {
+         "Ref": "AWS::URLSuffix"
+        },
+        "/",
+        {
+         "Ref": "HawkbitCppBlogRepo9F7F41CD"
+        },
+        ":v1"
+       ]
+      ]
+     },
+     "ImagePullCredentialsType": "SERVICE_ROLE",
+     "PrivilegedMode": true,
+     "Type": "LINUX_CONTAINER"
+    },
+    "Name": "HawkbitDeviceBuildC",
+    "ServiceRole": {
+     "Fn::GetAtt": [
+      "HawkbitDeviceBuildCRole5AD45FEB",
+      "Arn"
+     ]
+    },
+    "Source": {
+     "BuildSpec": "buildspec.yml",
+     "Location": {
+      "Fn::GetAtt": [
+       "HawkbitDeviceCE72CCD01",
+       "CloneUrlHttp"
+      ]
+     },
+     "Type": "CODECOMMIT"
+    },
+    "SourceVersion": "master"
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/HawkbitDeviceBuildC/Resource"
+   }
+  },
+  "hawkbitDeploySoftwareOnHawkbitServerLambdaRoleCF5B8F21": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbitDeploySoftwareOnHawkbitServerLambdaRole/Resource"
+   }
+  },
+  "hawkbitDeploySoftwareOnHawkbitServerLambdaRoleDefaultPolicy98859F6B": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "codepipeline:PutJobFailureResult",
+        "codepipeline:PutJobSuccessResult",
+        "iam:ListGroups",
+        "iam:ListRoles",
+        "iam:ListUsers",
+        "kms:CreateAlias",
+        "kms:CreateKey",
+        "kms:DeleteAlias",
+        "kms:Describe*",
+        "kms:GenerateRandom",
+        "kms:Get*",
+        "kms:List*",
+        "kms:TagResource",
+        "kms:UntagResource",
+        "ssm:Describe*",
+        "ssm:Get*",
+        "ssm:List*"
+       ],
+       "Effect": "Allow",
+       "Resource": "*"
+      },
+      {
+       "Action": [
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          "arn:aws:logs:",
+          {
+           "Ref": "AWS::Region"
+          },
+          ":",
+          {
+           "Ref": "AWS::AccountId"
+          },
+          ":log-group:/aws/lambda/hawkbitDeploySoftwareOnHawkbitServer:*"
+         ]
+        ]
+       }
+      },
+      {
+       "Action": "logs:CreateLogGroup",
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          "arn:aws:logs:",
+          {
+           "Ref": "AWS::Region"
+          },
+          ":",
+          {
+           "Ref": "AWS::AccountId"
+          },
+          ":*"
+         ]
+        ]
+       }
+      },
+      {
+       "Action": "logs:*",
+       "Effect": "Allow",
+       "Resource": "arn:aws:logs:*:*:*"
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "hawkbitDeploySoftwareOnHawkbitServerLambdaRoleDefaultPolicy98859F6B",
+    "Roles": [
+     {
+      "Ref": "hawkbitDeploySoftwareOnHawkbitServerLambdaRoleCF5B8F21"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbitDeploySoftwareOnHawkbitServerLambdaRole/DefaultPolicy/Resource"
+   }
+  },
+  "hawkbitDeploySoftwareOnHawkbitServer7E96CF1B": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Code": {
+     "S3Bucket": "cdk-hnb659fds-assets-668487117877-eu-west-1",
+     "S3Key": "826c358fb37b0d8b6a8b1dea769ee180d4aac1a69df846e56279eb69b72218bd.zip"
+    },
+    "FunctionName": "hawkbitDeploySoftwareOnHawkbitServer",
+    "Handler": "hawkbitDeploySoftwareOnHawkbitServer.lambda_handler",
+    "Role": {
+     "Fn::GetAtt": [
+      "hawkbitDeploySoftwareOnHawkbitServerLambdaRoleCF5B8F21",
+      "Arn"
+     ]
+    },
+    "Runtime": "python3.11",
+    "Timeout": 60
+   },
+   "DependsOn": [
+    "hawkbitDeploySoftwareOnHawkbitServerLambdaRoleDefaultPolicy98859F6B",
+    "hawkbitDeploySoftwareOnHawkbitServerLambdaRoleCF5B8F21"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbitDeploySoftwareOnHawkbitServer/Resource",
+    "aws:asset:path": "asset.826c358fb37b0d8b6a8b1dea769ee180d4aac1a69df846e56279eb69b72218bd.zip",
+    "aws:asset:is-bundled": false,
+    "aws:asset:property": "Code"
+   }
+  },
+  "hawkbitDeploySoftwareOnHawkbitServerLogRetention49CC002F": {
+   "Type": "Custom::LogRetention",
+   "Properties": {
+    "ServiceToken": {
+     "Fn::GetAtt": [
+      "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A",
+      "Arn"
+     ]
+    },
+    "LogGroupName": {
+     "Fn::Join": [
+      "",
+      [
+       "/aws/lambda/",
+       {
+        "Ref": "hawkbitDeploySoftwareOnHawkbitServer7E96CF1B"
+       }
+      ]
+     ]
+    },
+    "RetentionInDays": 1
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbitDeploySoftwareOnHawkbitServer/LogRetention/Resource"
+   }
+  },
+  "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/Resource"
+   }
+  },
+  "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "logs:DeleteRetentionPolicy",
+        "logs:PutRetentionPolicy"
+       ],
+       "Effect": "Allow",
+       "Resource": "*"
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB",
+    "Roles": [
+     {
+      "Ref": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/DefaultPolicy/Resource"
+   }
+  },
+  "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Handler": "index.handler",
+    "Runtime": "nodejs18.x",
+    "Timeout": 900,
+    "Code": {
+     "S3Bucket": "cdk-hnb659fds-assets-668487117877-eu-west-1",
+     "S3Key": "5bc602ecde93c947efe5899ae355f999986a1acbe610b1c0b9c468d738857555.zip"
+    },
+    "Role": {
+     "Fn::GetAtt": [
+      "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB",
+      "Arn"
+     ]
+    }
+   },
+   "DependsOn": [
+    "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB",
+    "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/Resource",
+    "aws:asset:path": "asset.5bc602ecde93c947efe5899ae355f999986a1acbe610b1c0b9c468d738857555",
+    "aws:asset:is-bundled": false,
+    "aws:asset:property": "Code"
+   }
+  },
+  "hawkbitdeviceRoleF21FF7F1": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "codepipeline.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbit-device/Role/Resource"
+   }
+  },
+  "hawkbitdeviceRoleDefaultPolicyAD24F563": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "s3:Abort*",
+        "s3:DeleteObject*",
+        "s3:GetBucket*",
+        "s3:GetObject*",
+        "s3:List*",
+        "s3:PutObject",
+        "s3:PutObjectLegalHold",
+        "s3:PutObjectRetention",
+        "s3:PutObjectTagging",
+        "s3:PutObjectVersionTagging"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:aws:s3:::codepipeline-",
+           {
+            "Ref": "AWS::Region"
+           },
+           "-833521754963"
+          ]
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:aws:s3:::codepipeline-",
+           {
+            "Ref": "AWS::Region"
+           },
+           "-833521754963/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "hawkbitdeviceBuildCodePipelineActionRole00C9FE02",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::GetAtt": [
+          "hawkbitdeviceSourceCodeCommitCodePipelineActionRole143DD809",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::GetAtt": [
+          "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRole79AF71EC",
+          "Arn"
+         ]
+        }
+       ]
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "hawkbitdeviceRoleDefaultPolicyAD24F563",
+    "Roles": [
+     {
+      "Ref": "hawkbitdeviceRoleF21FF7F1"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbit-device/Role/DefaultPolicy/Resource"
+   }
+  },
+  "hawkbitdevice4D38CBED": {
+   "Type": "AWS::CodePipeline::Pipeline",
+   "Properties": {
+    "ArtifactStore": {
+     "Location": {
+      "Fn::Join": [
+       "",
+       [
+        "codepipeline-",
+        {
+         "Ref": "AWS::Region"
+        },
+        "-833521754963"
+       ]
+      ]
+     },
+     "Type": "S3"
+    },
+    "Name": "hawkbit-device",
+    "RoleArn": {
+     "Fn::GetAtt": [
+      "hawkbitdeviceRoleF21FF7F1",
+      "Arn"
+     ]
+    },
+    "Stages": [
+     {
+      "Actions": [
+       {
+        "ActionTypeId": {
+         "Category": "Source",
+         "Owner": "AWS",
+         "Provider": "CodeCommit",
+         "Version": "1"
+        },
+        "Configuration": {
+         "RepositoryName": {
+          "Fn::GetAtt": [
+           "HawkbitDeviceCE72CCD01",
+           "Name"
+          ]
+         },
+         "BranchName": "master",
+         "PollForSourceChanges": false
+        },
+        "Name": "CodeCommit",
+        "Namespace": "SourceVariables",
+        "OutputArtifacts": [
+         {
+          "Name": "SourceArtifact"
+         }
+        ],
+        "RoleArn": {
+         "Fn::GetAtt": [
+          "hawkbitdeviceSourceCodeCommitCodePipelineActionRole143DD809",
+          "Arn"
+         ]
+        },
+        "RunOrder": 1
+       }
+      ],
+      "Name": "Source"
+     },
+     {
+      "Actions": [
+       {
+        "ActionTypeId": {
+         "Category": "Build",
+         "Owner": "AWS",
+         "Provider": "CodeBuild",
+         "Version": "1"
+        },
+        "Configuration": {
+         "ProjectName": {
+          "Ref": "HawkbitDeviceBuildCCAFA3C39"
+         }
+        },
+        "InputArtifacts": [
+         {
+          "Name": "SourceArtifact"
+         }
+        ],
+        "Name": "Build",
+        "OutputArtifacts": [
+         {
+          "Name": "BuildArtifact"
+         }
+        ],
+        "RoleArn": {
+         "Fn::GetAtt": [
+          "hawkbitdeviceBuildCodePipelineActionRole00C9FE02",
+          "Arn"
+         ]
+        },
+        "RunOrder": 1
+       }
+      ],
+      "Name": "Build"
+     },
+     {
+      "Actions": [
+       {
+        "ActionTypeId": {
+         "Category": "Invoke",
+         "Owner": "AWS",
+         "Provider": "Lambda",
+         "Version": "1"
+        },
+        "Configuration": {
+         "FunctionName": {
+          "Ref": "hawkbitDeploySoftwareOnHawkbitServer7E96CF1B"
+         },
+         "UserParameters": "#{SourceVariables.RepositoryName}"
+        },
+        "InputArtifacts": [
+         {
+          "Name": "BuildArtifact"
+         }
+        ],
+        "Name": "hawkbitDeploySoftwareOnHawkbitServer",
+        "Namespace": "LambdaVariables",
+        "OutputArtifacts": [
+         {
+          "Name": "DeploySoftwareOnHawkbitServerArtifacts"
+         }
+        ],
+        "RoleArn": {
+         "Fn::GetAtt": [
+          "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRole79AF71EC",
+          "Arn"
+         ]
+        },
+        "RunOrder": 1
+       }
+      ],
+      "Name": "hawkbitDeploySoftwareOnHawkbitServer"
+     }
+    ]
+   },
+   "DependsOn": [
+    "hawkbitdeviceRoleDefaultPolicyAD24F563",
+    "hawkbitdeviceRoleF21FF7F1"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbit-device/Resource"
+   }
+  },
+  "hawkbitdeviceSourceCodeCommitCodePipelineActionRole143DD809": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "AWS": "arn:aws:iam::668487117877:root"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbit-device/Source/CodeCommit/CodePipelineActionRole/Resource"
+   }
+  },
+  "hawkbitdeviceSourceCodeCommitCodePipelineActionRoleDefaultPolicy57E70513": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "s3:Abort*",
+        "s3:DeleteObject*",
+        "s3:GetBucket*",
+        "s3:GetObject*",
+        "s3:List*",
+        "s3:PutObject",
+        "s3:PutObjectLegalHold",
+        "s3:PutObjectRetention",
+        "s3:PutObjectTagging",
+        "s3:PutObjectVersionTagging"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:aws:s3:::codepipeline-",
+           {
+            "Ref": "AWS::Region"
+           },
+           "-833521754963"
+          ]
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:aws:s3:::codepipeline-",
+           {
+            "Ref": "AWS::Region"
+           },
+           "-833521754963/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": [
+        "codecommit:CancelUploadArchive",
+        "codecommit:GetBranch",
+        "codecommit:GetCommit",
+        "codecommit:GetUploadArchiveStatus",
+        "codecommit:UploadArchive"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::GetAtt": [
+         "HawkbitDeviceCE72CCD01",
+         "Arn"
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "hawkbitdeviceSourceCodeCommitCodePipelineActionRoleDefaultPolicy57E70513",
+    "Roles": [
+     {
+      "Ref": "hawkbitdeviceSourceCodeCommitCodePipelineActionRole143DD809"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbit-device/Source/CodeCommit/CodePipelineActionRole/DefaultPolicy/Resource"
+   }
+  },
+  "hawkbitdeviceEventsRole726D97B9": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "events.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbit-device/EventsRole/Resource"
+   }
+  },
+  "hawkbitdeviceEventsRoleDefaultPolicy3CC5FBBF": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": "codepipeline:StartPipelineExecution",
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          "arn:aws:codepipeline:eu-west-1:668487117877:",
+          {
+           "Ref": "hawkbitdevice4D38CBED"
+          }
+         ]
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "hawkbitdeviceEventsRoleDefaultPolicy3CC5FBBF",
+    "Roles": [
+     {
+      "Ref": "hawkbitdeviceEventsRole726D97B9"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbit-device/EventsRole/DefaultPolicy/Resource"
+   }
+  },
+  "hawkbitdeviceBuildCodePipelineActionRole00C9FE02": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "AWS": "arn:aws:iam::668487117877:root"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbit-device/Build/Build/CodePipelineActionRole/Resource"
+   }
+  },
+  "hawkbitdeviceBuildCodePipelineActionRoleDefaultPolicy12099275": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "codebuild:BatchGetBuilds",
+        "codebuild:StartBuild",
+        "codebuild:StopBuild"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::GetAtt": [
+         "HawkbitDeviceBuildCCAFA3C39",
+         "Arn"
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "hawkbitdeviceBuildCodePipelineActionRoleDefaultPolicy12099275",
+    "Roles": [
+     {
+      "Ref": "hawkbitdeviceBuildCodePipelineActionRole00C9FE02"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbit-device/Build/Build/CodePipelineActionRole/DefaultPolicy/Resource"
+   }
+  },
+  "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRole79AF71EC": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "AWS": "arn:aws:iam::668487117877:root"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbit-device/hawkbitDeploySoftwareOnHawkbitServer/hawkbitDeploySoftwareOnHawkbitServer/CodePipelineActionRole/Resource"
+   }
+  },
+  "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRoleDefaultPolicyA7E2761B": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": "lambda:ListFunctions",
+       "Effect": "Allow",
+       "Resource": "*"
+      },
+      {
+       "Action": "lambda:InvokeFunction",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "hawkbitDeploySoftwareOnHawkbitServer7E96CF1B",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "hawkbitDeploySoftwareOnHawkbitServer7E96CF1B",
+             "Arn"
+            ]
+           },
+           ":*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": [
+        "s3:Abort*",
+        "s3:DeleteObject*",
+        "s3:GetBucket*",
+        "s3:GetObject*",
+        "s3:List*",
+        "s3:PutObject",
+        "s3:PutObjectLegalHold",
+        "s3:PutObjectRetention",
+        "s3:PutObjectTagging",
+        "s3:PutObjectVersionTagging"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:aws:s3:::codepipeline-",
+           {
+            "Ref": "AWS::Region"
+           },
+           "-833521754963"
+          ]
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:aws:s3:::codepipeline-",
+           {
+            "Ref": "AWS::Region"
+           },
+           "-833521754963/*"
+          ]
+         ]
+        }
+       ]
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRoleDefaultPolicyA7E2761B",
+    "Roles": [
+     {
+      "Ref": "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRole79AF71EC"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbit-device/hawkbitDeploySoftwareOnHawkbitServer/hawkbitDeploySoftwareOnHawkbitServer/CodePipelineActionRole/DefaultPolicy/Resource"
+   }
+  },
+  "CDKMetadata": {
+   "Type": "AWS::CDK::Metadata",
+   "Properties": {
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/31Ry07DMBD8lt4dQ9ovoEicOETmAyrHWcI2tjfyo6iy8u9snKBeEKeZndmnfZTtcyvbg/6OjRmmxmIvy0fSZhIsXYqhAQw5h0kWBTNFTBTu4vXTP6JFxNNFxwgpypcVOJbnbCZIZx1BwA08W0VlC7WScRGoHUu0Syt2ZNHU3htbBJjw39h1uT6jHWTpAl3BpFq80c2ecQaLHjhjZzVl54uw2vWDluUte5OQ/Or+cnZpjPKdRgWJT6hSPZAfaEQ/CgWRcjDcM8dE7hGue/5p8XI3HCAsorunL/JPJ/4A2R4P14jYhMxTHEi14Q8lygSsnQEAAA=="
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/CDKMetadata/Default"
+   }
+  }
+ },
+ "Parameters": {
+  "BootstrapVersion": {
+   "Type": "AWS::SSM::Parameter::Value<String>",
+   "Default": "/cdk-bootstrap/hnb659fds/version",
+   "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]"
+  }
+ },
+ "Rules": {
+  "CheckBootstrapVersion": {
+   "Assertions": [
+    {
+     "Assert": {
+      "Fn::Not": [
+       {
+        "Fn::Contains": [
+         [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+         ],
+         {
+          "Ref": "BootstrapVersion"
+         }
+        ]
+       }
+      ]
+     },
+     "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,8 @@
+version: 0.2
+phases:
+  build:
+    commands:
+      - gcc main.c -o main.exe
+artifacts:
+  files:
+    - s3_test

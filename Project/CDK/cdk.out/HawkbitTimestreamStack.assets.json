@@ -1,0 +1,34 @@
+{
+  "version": "34.0.0",
+  "files": {
+    "d5522f5717bfb6a41f6e94155b2d9427e5be0e8b8f2341278a0b4f9a5d91548d": {
+      "source": {
+        "path": "asset.d5522f5717bfb6a41f6e94155b2d9427e5be0e8b8f2341278a0b4f9a5d91548d.zip",
+        "packaging": "file"
+      },
+      "destinations": {
+        "668487117877-eu-west-1": {
+          "bucketName": "cdk-hnb659fds-assets-668487117877-eu-west-1",
+          "objectKey": "d5522f5717bfb6a41f6e94155b2d9427e5be0e8b8f2341278a0b4f9a5d91548d.zip",
+          "region": "eu-west-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::668487117877:role/cdk-hnb659fds-file-publishing-role-668487117877-eu-west-1"
+        }
+      }
+    },
+    "599a4d50d77c00c7f839627d74b32dab57d85581c013d5887b29f00cbcd4059b": {
+      "source": {
+        "path": "HawkbitTimestreamStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "668487117877-eu-west-1": {
+          "bucketName": "cdk-hnb659fds-assets-668487117877-eu-west-1",
+          "objectKey": "599a4d50d77c00c7f839627d74b32dab57d85581c013d5887b29f00cbcd4059b.json",
+          "region": "eu-west-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::668487117877:role/cdk-hnb659fds-file-publishing-role-668487117877-eu-west-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

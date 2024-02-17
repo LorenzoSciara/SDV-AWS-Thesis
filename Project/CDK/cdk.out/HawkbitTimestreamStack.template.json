@@ -1,0 +1,278 @@
+{
+ "Resources": {
+  "HawkbitCppCustomBuildImageRepo7E5BBA3F": {
+   "Type": "AWS::CodeCommit::Repository",
+   "Properties": {
+    "Code": {
+     "BranchName": "main",
+     "S3": {
+      "Bucket": "cdk-hnb659fds-assets-668487117877-eu-west-1",
+      "Key": "d5522f5717bfb6a41f6e94155b2d9427e5be0e8b8f2341278a0b4f9a5d91548d.zip"
+     }
+    },
+    "RepositoryName": "HawkbitCppCustomBuildImage"
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitTimestreamStack/HawkbitCppCustomBuildImageRepo/Resource"
+   }
+  },
+  "hawkbitCppCustomImageBuildRole095CEDD7": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "codebuild.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitTimestreamStack/hawkbitCppCustomImageBuildRole/Resource"
+   }
+  },
+  "HawkbitCppCustomBuildImageBuildRoleF3A6A862": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "codebuild.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitTimestreamStack/HawkbitCppCustomBuildImageBuild/Role/Resource"
+   }
+  },
+  "HawkbitCppCustomBuildImageBuildRoleDefaultPolicy4A0F2805": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": "codecommit:GitPull",
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::GetAtt": [
+         "HawkbitCppCustomBuildImageRepo7E5BBA3F",
+         "Arn"
+        ]
+       }
+      },
+      {
+       "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:aws:logs:eu-west-1:668487117877:log-group:/aws/codebuild/",
+           {
+            "Ref": "HawkbitCppCustomBuildImageBuild66108212"
+           },
+           ":*"
+          ]
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:aws:logs:eu-west-1:668487117877:log-group:/aws/codebuild/",
+           {
+            "Ref": "HawkbitCppCustomBuildImageBuild66108212"
+           }
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": [
+        "codebuild:BatchPutCodeCoverages",
+        "codebuild:BatchPutTestCases",
+        "codebuild:CreateReport",
+        "codebuild:CreateReportGroup",
+        "codebuild:UpdateReport"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          "arn:aws:codebuild:eu-west-1:668487117877:report-group/",
+          {
+           "Ref": "HawkbitCppCustomBuildImageBuild66108212"
+          },
+          "-*"
+         ]
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "HawkbitCppCustomBuildImageBuildRoleDefaultPolicy4A0F2805",
+    "Roles": [
+     {
+      "Ref": "HawkbitCppCustomBuildImageBuildRoleF3A6A862"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitTimestreamStack/HawkbitCppCustomBuildImageBuild/Role/DefaultPolicy/Resource"
+   }
+  },
+  "HawkbitCppCustomBuildImageBuild66108212": {
+   "Type": "AWS::CodeBuild::Project",
+   "Properties": {
+    "Artifacts": {
+     "Type": "NO_ARTIFACTS"
+    },
+    "Cache": {
+     "Type": "NO_CACHE"
+    },
+    "EncryptionKey": "alias/aws/s3",
+    "Environment": {
+     "ComputeType": "BUILD_GENERAL1_SMALL",
+     "EnvironmentVariables": [
+      {
+       "Name": "ECR_REGISTRY",
+       "Type": "PLAINTEXT",
+       "Value": {
+        "Fn::Join": [
+         "",
+         [
+          {
+           "Ref": "AWS::AccountId"
+          },
+          ".ecr.",
+          {
+           "Ref": "AWS::Region"
+          },
+          ".amazonaws.com/cpp-blog"
+         ]
+        ]
+       }
+      },
+      {
+       "Name": "ECR_PATH",
+       "Type": "PLAINTEXT",
+       "Value": {
+        "Fn::Join": [
+         "",
+         [
+          {
+           "Ref": "AWS::AccountId"
+          },
+          ".ecr.",
+          {
+           "Ref": "AWS::Region"
+          },
+          ".amazonaws.com"
+         ]
+        ]
+       }
+      }
+     ],
+     "Image": "aws/codebuild/standard:1.0",
+     "ImagePullCredentialsType": "CODEBUILD",
+     "PrivilegedMode": true,
+     "Type": "LINUX_CONTAINER"
+    },
+    "Name": "HawkbitCppCustomBuildImage",
+    "ServiceRole": {
+     "Fn::GetAtt": [
+      "HawkbitCppCustomBuildImageBuildRoleF3A6A862",
+      "Arn"
+     ]
+    },
+    "Source": {
+     "BuildSpec": "buildspec.yml",
+     "Location": {
+      "Fn::GetAtt": [
+       "HawkbitCppCustomBuildImageRepo7E5BBA3F",
+       "CloneUrlHttp"
+      ]
+     },
+     "Type": "CODECOMMIT"
+    },
+    "SourceVersion": "master"
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitTimestreamStack/HawkbitCppCustomBuildImageBuild/Resource"
+   }
+  },
+  "HawkbitCppBlogRepo9F7F41CD": {
+   "Type": "AWS::ECR::Repository",
+   "Properties": {
+    "RepositoryName": "hawkbit-cpp-blog"
+   },
+   "UpdateReplacePolicy": "Retain",
+   "DeletionPolicy": "Retain",
+   "Metadata": {
+    "aws:cdk:path": "HawkbitTimestreamStack/HawkbitCppBlogRepo/Resource"
+   }
+  },
+  "CDKMetadata": {
+   "Type": "AWS::CDK::Metadata",
+   "Properties": {
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/32PTQ7CQAiFz+KeotUTWC/Q1AOYkaJifzDDNKZp5u5OWxN3rt4D8vhgj/kux3zj3pZR3WStXHE6B0cNpNZlIq2ZtOsk4FTxS02C+hFOt/5XRbDDxZlxMDzOkmosBmo4FM4YxHUprC0vsVlLbYWWLauLMHOug7Q1TqXXJ1NYpquNwOT/8CMs2HT2Xfo7VGw6eFpxXx+hHMND++0hPYz5fvM0kcwPfZCOsVr1A7OaJYANAQAA"
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitTimestreamStack/CDKMetadata/Default"
+   }
+  }
+ },
+ "Parameters": {
+  "BootstrapVersion": {
+   "Type": "AWS::SSM::Parameter::Value<String>",
+   "Default": "/cdk-bootstrap/hnb659fds/version",
+   "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]"
+  }
+ },
+ "Rules": {
+  "CheckBootstrapVersion": {
+   "Assertions": [
+    {
+     "Assert": {
+      "Fn::Not": [
+       {
+        "Fn::Contains": [
+         [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+         ],
+         {
+          "Ref": "BootstrapVersion"
+         }
+        ]
+       }
+      ]
+     },
+     "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI."
+    }
+   ]
+  }
+ }
+}

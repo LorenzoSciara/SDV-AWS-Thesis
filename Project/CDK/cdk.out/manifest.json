@@ -1,0 +1,665 @@
+{
+  "version": "34.0.0",
+  "artifacts": {
+    "HawkbitDeviceStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "HawkbitDeviceStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "HawkbitDeviceStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://668487117877/eu-west-1",
+      "properties": {
+        "templateFile": "HawkbitDeviceStack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::668487117877:role/cdk-hnb659fds-deploy-role-668487117877-eu-west-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::668487117877:role/cdk-hnb659fds-cfn-exec-role-668487117877-eu-west-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-668487117877-eu-west-1/c59129a1ee2adeba29c6961dc82079e66d0ab0bcf1781b9553548eca04f7f5c4.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "HawkbitDeviceStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::668487117877:role/cdk-hnb659fds-lookup-role-668487117877-eu-west-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "HawkbitDeviceStack.assets"
+      ],
+      "metadata": {
+        "/HawkbitDeviceStack/HawkbitDevice": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HawkbitDevice"
+          }
+        ],
+        "/HawkbitDeviceStack/CfnPolicy": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CfnPolicy"
+          }
+        ],
+        "/HawkbitDeviceStack/HawkbitDevice001PolicyPrincipalAttachment": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HawkbitDevice001PolicyPrincipalAttachment"
+          }
+        ],
+        "/HawkbitDeviceStack/HawkbitDevice001ThingPrincipalAttachment": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HawkbitDevice001ThingPrincipalAttachment"
+          }
+        ],
+        "/HawkbitDeviceStack/DeactiveCertificateResource/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DeactiveCertificateResource831B6CC4"
+          }
+        ],
+        "/HawkbitDeviceStack/DeactiveCertificateResource/CustomResourcePolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DeactiveCertificateResourceCustomResourcePolicy7DEA74CD"
+          }
+        ],
+        "/HawkbitDeviceStack/AWS679f53fac002430cb0da5b7982bd2287/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2"
+          }
+        ],
+        "/HawkbitDeviceStack/AWS679f53fac002430cb0da5b7982bd2287/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AWS679f53fac002430cb0da5b7982bd22872D164C4C"
+          }
+        ],
+        "/HawkbitDeviceStack/DeleteCertificateResource/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DeleteCertificateResource08549CCB"
+          }
+        ],
+        "/HawkbitDeviceStack/DeleteCertificateResource/CustomResourcePolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DeleteCertificateResourceCustomResourcePolicyD50C0348"
+          }
+        ],
+        "/HawkbitDeviceStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/HawkbitDeviceStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/HawkbitDeviceStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "HawkbitDeviceStack"
+    },
+    "HawkbitServerStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "HawkbitServerStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "HawkbitServerStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://668487117877/eu-west-1",
+      "properties": {
+        "templateFile": "HawkbitServerStack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::668487117877:role/cdk-hnb659fds-deploy-role-668487117877-eu-west-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::668487117877:role/cdk-hnb659fds-cfn-exec-role-668487117877-eu-west-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-668487117877-eu-west-1/1bf67a8cff9c24eff1ac4009591210d64cd1ed0373d80d5e73e562a7aa6b308e.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "HawkbitServerStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::668487117877:role/cdk-hnb659fds-lookup-role-668487117877-eu-west-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "HawkbitServerStack.assets"
+      ],
+      "metadata": {
+        "/HawkbitServerStack/VPC/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCB9E5F0B4"
+          }
+        ],
+        "/HawkbitServerStack/VPC/publicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCpublicSubnet1Subnet325F50B2"
+          }
+        ],
+        "/HawkbitServerStack/VPC/publicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCpublicSubnet1RouteTableF591E248"
+          }
+        ],
+        "/HawkbitServerStack/VPC/publicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCpublicSubnet1RouteTableAssociationBFFA43B7"
+          }
+        ],
+        "/HawkbitServerStack/VPC/publicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCpublicSubnet1DefaultRoute19059ECD"
+          }
+        ],
+        "/HawkbitServerStack/VPC/publicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCpublicSubnet2Subnet2B2DFF71"
+          }
+        ],
+        "/HawkbitServerStack/VPC/publicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCpublicSubnet2RouteTable55DAB1BB"
+          }
+        ],
+        "/HawkbitServerStack/VPC/publicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCpublicSubnet2RouteTableAssociation0849466B"
+          }
+        ],
+        "/HawkbitServerStack/VPC/publicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCpublicSubnet2DefaultRoute9ED4D6BC"
+          }
+        ],
+        "/HawkbitServerStack/VPC/publicSubnet3/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCpublicSubnet3Subnet0CBD4ADC"
+          }
+        ],
+        "/HawkbitServerStack/VPC/publicSubnet3/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCpublicSubnet3RouteTable07F40487"
+          }
+        ],
+        "/HawkbitServerStack/VPC/publicSubnet3/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCpublicSubnet3RouteTableAssociation2A52E4AA"
+          }
+        ],
+        "/HawkbitServerStack/VPC/publicSubnet3/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCpublicSubnet3DefaultRoute6038437A"
+          }
+        ],
+        "/HawkbitServerStack/VPC/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCIGWB7E252D3"
+          }
+        ],
+        "/HawkbitServerStack/VPC/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCVPCGW99B986DC"
+          }
+        ],
+        "/HawkbitServerStack/VPC/RestrictDefaultSecurityGroupCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VPCRestrictDefaultSecurityGroupCustomResource59474679"
+          }
+        ],
+        "/HawkbitServerStack/Custom::VpcRestrictDefaultSGCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomVpcRestrictDefaultSGCustomResourceProviderRole26592FE0"
+          }
+        ],
+        "/HawkbitServerStack/Custom::VpcRestrictDefaultSGCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomVpcRestrictDefaultSGCustomResourceProviderHandlerDC833E5E"
+          }
+        ],
+        "/HawkbitServerStack/InstanceSSM/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "InstanceSSMCBFA3CF0"
+          }
+        ],
+        "/HawkbitServerStack/MyNewKeyPair": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyNewKeyPair"
+          }
+        ],
+        "/HawkbitServerStack/Instance/InstanceSecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "InstanceInstanceSecurityGroupF0E2D5BE"
+          }
+        ],
+        "/HawkbitServerStack/Instance/InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "InstanceInstanceProfileAB5AEF02"
+          }
+        ],
+        "/HawkbitServerStack/Instance/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "InstanceC1063A87"
+          }
+        ],
+        "/HawkbitServerStack/CreateParam1/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CreateParam1021EC1EB"
+          }
+        ],
+        "/HawkbitServerStack/CreateParam1/CustomResourcePolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CreateParam1CustomResourcePolicy7F6F8F94"
+          }
+        ],
+        "/HawkbitServerStack/AWS679f53fac002430cb0da5b7982bd2287/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2"
+          }
+        ],
+        "/HawkbitServerStack/AWS679f53fac002430cb0da5b7982bd2287/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AWS679f53fac002430cb0da5b7982bd22872D164C4C"
+          }
+        ],
+        "/HawkbitServerStack/CreateParam2/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CreateParam2191D186D"
+          }
+        ],
+        "/HawkbitServerStack/CreateParam2/CustomResourcePolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CreateParam2CustomResourcePolicyA2EEA81D"
+          }
+        ],
+        "/HawkbitServerStack/CreateParam3/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CreateParam3E3104D9F"
+          }
+        ],
+        "/HawkbitServerStack/CreateParam3/CustomResourcePolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CreateParam3CustomResourcePolicy29039C2F"
+          }
+        ],
+        "/HawkbitServerStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/HawkbitServerStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/HawkbitServerStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "HawkbitServerStack"
+    },
+    "HawkbitPipelineCppStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "HawkbitPipelineCppStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "HawkbitPipelineCppStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://668487117877/eu-west-1",
+      "properties": {
+        "templateFile": "HawkbitPipelineCppStack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::668487117877:role/cdk-hnb659fds-deploy-role-668487117877-eu-west-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::668487117877:role/cdk-hnb659fds-cfn-exec-role-668487117877-eu-west-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-668487117877-eu-west-1/3e0b7a0a4fdcecdf065754da227dc9c77bb3c718cf0afa2fd412093a2a78bc13.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "HawkbitPipelineCppStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::668487117877:role/cdk-hnb659fds-lookup-role-668487117877-eu-west-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "HawkbitPipelineCppStack.assets"
+      ],
+      "metadata": {
+        "/HawkbitPipelineCppStack/HawkbitCppCustomBuildImageRepo/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HawkbitCppCustomBuildImageRepo7E5BBA3F"
+          }
+        ],
+        "/HawkbitPipelineCppStack/HawkbitCppCustomBuildImageRepo/HawkbitPipelineCppStackhawkbitdevicec40130EA7-main-EventRule/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HawkbitCppCustomBuildImageRepoHawkbitPipelineCppStackhawkbitdevicec40130EA7mainEventRule05150B96"
+          }
+        ],
+        "/HawkbitPipelineCppStack/hawkbitCppCustomImageBuildRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "hawkbitCppCustomImageBuildRole095CEDD7"
+          }
+        ],
+        "/HawkbitPipelineCppStack/hawkbitCppCustomImageBuildRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "hawkbitCppCustomImageBuildRoleDefaultPolicyC32D77E5"
+          }
+        ],
+        "/HawkbitPipelineCppStack/HawkbitCppBlogRepo/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HawkbitCppBlogRepo9F7F41CD"
+          }
+        ],
+        "/HawkbitPipelineCppStack/HawkbitCppBlogRepo/AutoDeleteImagesCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HawkbitCppBlogRepoAutoDeleteImagesCustomResource78E5E337"
+          }
+        ],
+        "/HawkbitPipelineCppStack/Custom::ECRAutoDeleteImagesCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomECRAutoDeleteImagesCustomResourceProviderRole665F2773"
+          }
+        ],
+        "/HawkbitPipelineCppStack/Custom::ECRAutoDeleteImagesCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomECRAutoDeleteImagesCustomResourceProviderHandler8D89C030"
+          }
+        ],
+        "/HawkbitPipelineCppStack/HawkbitCppCustomBuildImageBuild/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HawkbitCppCustomBuildImageBuild66108212"
+          }
+        ],
+        "/HawkbitPipelineCppStack/hawkbit-device-c/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "hawkbitdevicecRoleC4D38E25"
+          }
+        ],
+        "/HawkbitPipelineCppStack/hawkbit-device-c/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "hawkbitdevicecRoleDefaultPolicy9E8D8912"
+          }
+        ],
+        "/HawkbitPipelineCppStack/hawkbit-device-c/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "hawkbitdevicec165DDAE6"
+          }
+        ],
+        "/HawkbitPipelineCppStack/hawkbit-device-c/Source/CodeCommit/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "hawkbitdevicecSourceCodeCommitCodePipelineActionRole07EAB5FB"
+          }
+        ],
+        "/HawkbitPipelineCppStack/hawkbit-device-c/Source/CodeCommit/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "hawkbitdevicecSourceCodeCommitCodePipelineActionRoleDefaultPolicy2B64B9E3"
+          }
+        ],
+        "/HawkbitPipelineCppStack/hawkbit-device-c/EventsRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "hawkbitdevicecEventsRoleA8E59EFD"
+          }
+        ],
+        "/HawkbitPipelineCppStack/hawkbit-device-c/EventsRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "hawkbitdevicecEventsRoleDefaultPolicy8230DF24"
+          }
+        ],
+        "/HawkbitPipelineCppStack/hawkbit-device-c/Build/Build/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "hawkbitdevicecBuildCodePipelineActionRole99C9F960"
+          }
+        ],
+        "/HawkbitPipelineCppStack/hawkbit-device-c/Build/Build/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "hawkbitdevicecBuildCodePipelineActionRoleDefaultPolicyD001DBA2"
+          }
+        ],
+        "/HawkbitPipelineCppStack/HawkbitDeviceC/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HawkbitDeviceCE72CCD01"
+          }
+        ],
+        "/HawkbitPipelineCppStack/HawkbitDeviceC/HawkbitPipelineCppStackhawkbitdevice7D7E3922EventRule/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HawkbitDeviceCHawkbitPipelineCppStackhawkbitdevice7D7E3922EventRule466574FF"
+          }
+        ],
+        "/HawkbitPipelineCppStack/HawkbitDeviceBuildC/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HawkbitDeviceBuildCRole5AD45FEB"
+          }
+        ],
+        "/HawkbitPipelineCppStack/HawkbitDeviceBuildC/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HawkbitDeviceBuildCRoleDefaultPolicyB11B95EE"
+          }
+        ],
+        "/HawkbitPipelineCppStack/HawkbitDeviceBuildC/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HawkbitDeviceBuildCCAFA3C39"
+          }
+        ],
+        "/HawkbitPipelineCppStack/hawkbitDeploySoftwareOnHawkbitServerLambdaRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "hawkbitDeploySoftwareOnHawkbitServerLambdaRoleCF5B8F21"
+          }
+        ],
+        "/HawkbitPipelineCppStack/hawkbitDeploySoftwareOnHawkbitServerLambdaRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "hawkbitDeploySoftwareOnHawkbitServerLambdaRoleDefaultPolicy98859F6B"
+          }
+        ],
+        "/HawkbitPipelineCppStack/hawkbitDeploySoftwareOnHawkbitServer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "hawkbitDeploySoftwareOnHawkbitServer7E96CF1B"
+          }
+        ],
+        "/HawkbitPipelineCppStack/hawkbitDeploySoftwareOnHawkbitServer/LogRetention/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "hawkbitDeploySoftwareOnHawkbitServerLogRetention49CC002F"
+          }
+        ],
+        "/HawkbitPipelineCppStack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB"
+          }
+        ],
+        "/HawkbitPipelineCppStack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB"
+          }
+        ],
+        "/HawkbitPipelineCppStack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A"
+          }
+        ],
+        "/HawkbitPipelineCppStack/hawkbit-device/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "hawkbitdeviceRoleF21FF7F1"
+          }
+        ],
+        "/HawkbitPipelineCppStack/hawkbit-device/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "hawkbitdeviceRoleDefaultPolicyAD24F563"
+          }
+        ],
+        "/HawkbitPipelineCppStack/hawkbit-device/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "hawkbitdevice4D38CBED"
+          }
+        ],
+        "/HawkbitPipelineCppStack/hawkbit-device/Source/CodeCommit/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "hawkbitdeviceSourceCodeCommitCodePipelineActionRole143DD809"
+          }
+        ],
+        "/HawkbitPipelineCppStack/hawkbit-device/Source/CodeCommit/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "hawkbitdeviceSourceCodeCommitCodePipelineActionRoleDefaultPolicy57E70513"
+          }
+        ],
+        "/HawkbitPipelineCppStack/hawkbit-device/EventsRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "hawkbitdeviceEventsRole726D97B9"
+          }
+        ],
+        "/HawkbitPipelineCppStack/hawkbit-device/EventsRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "hawkbitdeviceEventsRoleDefaultPolicy3CC5FBBF"
+          }
+        ],
+        "/HawkbitPipelineCppStack/hawkbit-device/Build/Build/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "hawkbitdeviceBuildCodePipelineActionRole00C9FE02"
+          }
+        ],
+        "/HawkbitPipelineCppStack/hawkbit-device/Build/Build/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "hawkbitdeviceBuildCodePipelineActionRoleDefaultPolicy12099275"
+          }
+        ],
+        "/HawkbitPipelineCppStack/hawkbit-device/hawkbitDeploySoftwareOnHawkbitServer/hawkbitDeploySoftwareOnHawkbitServer/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRole79AF71EC"
+          }
+        ],
+        "/HawkbitPipelineCppStack/hawkbit-device/hawkbitDeploySoftwareOnHawkbitServer/hawkbitDeploySoftwareOnHawkbitServer/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRoleDefaultPolicyA7E2761B"
+          }
+        ],
+        "/HawkbitPipelineCppStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/HawkbitPipelineCppStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/HawkbitPipelineCppStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "HawkbitPipelineCppStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
