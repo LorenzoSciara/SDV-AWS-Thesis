@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.3)  16 FEB 2024 21:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.3)  17 FEB 2024 12:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/Lorenzo/Documents/TESI/Book/AWS-ConnectedVehiclePlatform/thesis.tex
-(c:/Users/Lorenzo/Documents/TESI/Book/AWS-ConnectedVehiclePlatform/thesis.tex
+**c:/Users/Lorenzo/Documents/TESI/SDV-AWS-Thesis/Book/thesis.tex
+(c:/Users/Lorenzo/Documents/TESI/SDV-AWS-Thesis/Book/thesis.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (C:\Users\Lorenzo\AppData\Local\Programs\MiKTeX\tex/latex/toptesi\toptesi.cls
@@ -539,7 +539,7 @@ File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 File: listings.cfg 2023/02/27 1.9 listings configuration
 ))
 Package: listings 2023/02/27 1.9 (Carsten Heinz)
-) (thesis.aux (chapters/00/abstract.aux) (chapters/01/introduction.aux) (chapters/02/state_of_the_art.aux) (chapters/06/conclusions.aux))
+) (thesis.aux (chapters/00/abstract.aux) (chapters/01/introduction.aux) (chapters/02/state_of_the_art.aux) (chapters/03/proofOfConcept.aux) (chapters/04/concluding_remarks.aux) (chapters/06/conclusions.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
@@ -621,7 +621,7 @@ File: translations-basic-dictionary-english.trsl (english translation file `tran
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 76.
 \c@lstlisting=\count340
-<PolitoLogos/PolitoLogo3.jpg, id=64, 3522.15875pt x 2491.3075pt>
+<PolitoLogos/PolitoLogo3.jpg, id=140, 3522.15875pt x 2491.3075pt>
 File: PolitoLogos/PolitoLogo3.jpg Graphic file (type jpg)
 <use PolitoLogos/PolitoLogo3.jpg>
 Package pdftex.def Info: PolitoLogos/PolitoLogo3.jpg  used on input line 98.
@@ -664,34 +664,34 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 
-] (thesis.toc)
+] (thesis.toc [5
+
+])
 \tf@toc=\write6
 \openout6 = `thesis.toc'.
 
- [5
-
-] (thesis.lof)
+ [6] (thesis.lof)
 \tf@lof=\write7
 \openout7 = `thesis.lof'.
 
- [6
+ [7
 
 
 ] (thesis.lot)
 \tf@lot=\write8
 \openout8 = `thesis.lot'.
 
- [7
+ [8
 
 
 ] (thesis.lol)
 \tf@lol=\write9
 \openout9 = `thesis.lol'.
 
- [8
+ [9
 
 
-] [9
+] [10
 
 ]
 \openout2 = `chapters/01/introduction.aux'.
@@ -702,12 +702,12 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 (hyperref)                setting the option has no effect on input line 4.
 
 Chapter 1.
-<images/automotive_world production.png, id=140, 379.91937pt x 170.6375pt>
+<images/automotive_world production.png, id=240, 379.91937pt x 170.6375pt>
 File: images/automotive_world production.png Graphic file (type png)
 <use images/automotive_world production.png>
 Package pdftex.def Info: images/automotive_world production.png  used on input line 13.
 (pdftex.def)             Requested size: 380.2495pt x 170.79068pt.
-<images/vehicle_processors.png, id=144, 682.55pt x 431.6125pt>
+<images/vehicle_processors.png, id=244, 682.55pt x 431.6125pt>
 File: images/vehicle_processors.png Graphic file (type png)
 <use images/vehicle_processors.png>
 Package pdftex.def Info: images/vehicle_processors.png  used on input line 22.
@@ -715,7 +715,7 @@ Package pdftex.def Info: images/vehicle_processors.png  used on input line 22.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[10
+[11
 
 
 
@@ -726,7 +726,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}) h
                                                   \__shipout_drop_firstpage_...
 l.28 
       <./images/automotive_world production.png>]
-<images/Storm_Reply_logo.png, id=154, 169.57843pt x 52.92212pt>
+<images/Storm_Reply_logo.png, id=254, 169.57843pt x 52.92212pt>
 File: images/Storm_Reply_logo.png Graphic file (type png)
 <use images/Storm_Reply_logo.png>
 Package pdftex.def Info: images/Storm_Reply_logo.png  used on input line 42.
@@ -735,18 +735,18 @@ Package pdftex.def Info: images/Storm_Reply_logo.png  used on input line 42.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[11
+[12
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.48 
       <./images/vehicle_processors.png>]
-<images/AWSMagicQuadrantForCloud.png, id=164, 362.9811pt x 401.5pt>
+<images/AWSMagicQuadrantForCloud.png, id=264, 362.9811pt x 401.5pt>
 File: images/AWSMagicQuadrantForCloud.png Graphic file (type png)
 <use images/AWSMagicQuadrantForCloud.png>
 Package pdftex.def Info: images/AWSMagicQuadrantForCloud.png  used on input line 53.
 (pdftex.def)             Requested size: 126.75198pt x 140.2024pt.
- [12
+ [13
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
@@ -756,12 +756,32 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.1.4}) h
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.64   \item \textbf
-                    {Flexibility:} The AWS Global Infrastructure provides fl... <./images/Storm_Reply_logo.png> <./images/AWSMagicQuadrantForCloud.png (PNG copy)>]) [13] [14]
+                    {Flexibility:} The AWS Global Infrastructure provides fl... <./images/Storm_Reply_logo.png> <./images/AWSMagicQuadrantForCloud.png (PNG copy)>]) [14] [15]
 \openout2 = `chapters/02/state_of_the_art.aux'.
 
  (chapters/02/state_of_the_art.tex
 Chapter 2.
-) [15
+) [16
+
+
+
+
+]
+\openout2 = `chapters/03/proofOfConcept.aux'.
+
+ (chapters/03/proofOfConcept.tex
+Chapter 3.
+) [17
+
+
+
+
+]
+\openout2 = `chapters/04/concluding_remarks.aux'.
+
+ (chapters/04/concluding_remarks.tex
+Chapter 4.
+) [18
 
 
 
@@ -770,8 +790,8 @@ Chapter 2.
 \openout2 = `chapters/06/conclusions.aux'.
 
  (chapters/06/conclusions.tex
-Chapter 3.
-) [16
+Chapter 5.
+) [19
 
 
 
@@ -781,30 +801,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--45
 \OT1/cmr/m/n/12 com / Gartner-[]Magic-[]Quadrant-[]for-[]Cloud-[]AI-[]Developer-[]Services . html ? trk =
  []
 
-) [17
+) [20
 
 
 
-] (thesis.aux (chapters/00/abstract.aux) (chapters/01/introduction.aux) (chapters/02/state_of_the_art.aux) (chapters/06/conclusions.aux))
+] (thesis.aux (chapters/00/abstract.aux) (chapters/01/introduction.aux) (chapters/02/state_of_the_art.aux) (chapters/03/proofOfConcept.aux) (chapters/04/concluding_remarks.aux) (chapters/06/conclusions.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: D6CCC18F8734F26CCFC015E08E95A1F4;896.
+(rerunfilecheck)             Checksum: 5AE333FB49D91364930D3705A1D219EC;2244.
  ) 
 Here is how much of TeX's memory you used:
- 23571 strings out of 474542
- 437074 string characters out of 5743503
+ 23669 strings out of 474542
+ 439842 string characters out of 5743503
  1933978 words of memory out of 5000000
- 45352 multiletter control sequences out of 15000+600000
+ 45410 multiletter control sequences out of 15000+600000
  569678 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 138i,13n,135p,717b,2571s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 138i,13n,135p,703b,2686s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Lorenzo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (17 pages, 3306759 bytes).
+Output written on thesis.pdf (20 pages, 3323277 bytes).
 PDF statistics:
- 263 PDF objects out of 1000 (max. 8388607)
- 45 named destinations out of 1000 (max. 500000)
- 158 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 376 PDF objects out of 1000 (max. 8388607)
+ 67 named destinations out of 1000 (max. 500000)
+ 310 words of extra memory for PDF output out of 10000 (max. 10000000)
 
