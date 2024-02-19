@@ -5,8 +5,8 @@ This is the complete project for the Computer Engineering thesis by Lorenzo Scia
 ```bash
 thesis-repository/
 |-- Book/
-|   |-- ...
-`-- Project/
+    |-- ...
+|-- Project/
     |-- ...
 ```
 ## Thesis Book

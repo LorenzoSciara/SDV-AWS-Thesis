@@ -5,8 +5,8 @@ This is the CDK project. It is used to create the entire AWS infrastructure for 
 ```bash
 thesis-repository/
 |-- Book/
-|   |-- ...
-`-- Project/
+    |-- ...
+|-- Project/
     |-- CDK/
         |-- certificate/
         |-- files/

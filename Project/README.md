@@ -5,8 +5,8 @@ This is the project for the job, as well as the practical example. The project f
 ```bash
 thesis-repository/
 |-- Book/
-|   |-- ...
-`-- Project/
+    |-- ...
+|-- Project/
     |-- CDK/
     |-- GrafanaDashboards/
     |-- Lorenzo_Device/
