@@ -37,7 +37,7 @@ The `OS.py` file manage all the files of the device simulator.
 ## Requirements
 Instructions to make platform ready for the device simulator use:
 
-apt-get install python3-pip
+sudo apt-get install python3-pip
 python3 -m pip install -r requirements.txt
 
 ## Usage

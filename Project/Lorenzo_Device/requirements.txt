@@ -1,1 +1,1 @@
-awsiot== 0.4.0
+AWSIoTPythonSDK == 1.5.4
