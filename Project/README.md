@@ -2,6 +2,7 @@
 
 This is the project for the job, as well as the practical example. The project follows the following schema:
 
+```bash
 thesis-repository/
 |-- Book/
 |   |-- ...
@@ -17,7 +18,7 @@ thesis-repository/
     |-- TCUc/
     |-- TCUcpp/
     `-- documentation/
-
+```
 ## CDK
 
 The `CDK` directory contains the code for the cdk stack that is used to buld the entire AWS infrastructure. A better explaination is given in the CDK directory.

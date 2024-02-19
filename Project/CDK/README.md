@@ -2,6 +2,7 @@
 
 This is the CDK project. It is used to create the entire AWS infrastructure for the cloud side of the project. The project follows the following schema:
 
+```bash
 thesis-repository/
 |-- Book/
 |   |-- ...
@@ -14,6 +15,7 @@ thesis-repository/
         |-- repos/
         |-- stacks/
     |-- ...
+```
 
 ## certificates
 
