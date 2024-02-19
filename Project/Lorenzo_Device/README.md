@@ -1,6 +1,6 @@
 # Lorenzo_Device
 
-This is the Hawkbit device project. It is used to simulate a device vehicle that downloads update from Hawkbit server. The project follows the following schema:
+This is the Hawkbit device project. It is used to simulate a device vehicle that downloads update from Hawkbit server. The Device Simulator could run on ubuntu 22.0 or on arm ruspberry. The project follows the following schema:
 
 ```bash
 thesis-repository/
