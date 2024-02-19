@@ -258,11 +258,137 @@ class HawkbitPipelineCppStack(Stack):
             actions=[hawkbitDeploySoftwareOnHawkbitServer_invoke],
         )
 
+        # Lambda role for Rolling out Software on device
+        lambda_role = iam.Role(self, "hawkbitRolloutSoftwareOnDeviceLambdaRole", 
+            assumed_by=iam.ServicePrincipal("lambda.amazonaws.com")
+        )
+        lambda_role.add_to_policy(
+            iam.PolicyStatement(
+                effect=iam.Effect.ALLOW,
+                actions=["ssm:Describe*","ssm:Get*","ssm:List*","kms:CreateAlias","kms:CreateKey","kms:DeleteAlias","kms:Describe*","kms:GenerateRandom","kms:Get*","kms:List*","kms:TagResource","kms:UntagResource","iam:ListGroups","iam:ListRoles","iam:ListUsers","codepipeline:PutJobSuccessResult","codepipeline:PutJobFailureResult"],
+                resources=["*"],
+            )
+        )
+        lambda_role.add_to_policy(
+            iam.PolicyStatement(
+                effect=iam.Effect.ALLOW,
+                actions=["logs:CreateLogStream",
+                "logs:PutLogEvents"],
+                resources=[f"arn:aws:logs:{region}:{account}:log-group:/aws/lambda/hawkbitRolloutSoftwareOnDevice:*"],
+            )
+        )
+        lambda_role.add_to_policy(
+            iam.PolicyStatement(
+                effect=iam.Effect.ALLOW,
+                actions=["logs:CreateLogGroup"],
+                resources=[f"arn:aws:logs:{region}:{account}:*"],
+            )
+        )
+        lambda_role.add_to_policy(
+            iam.PolicyStatement(
+                effect=iam.Effect.ALLOW,
+                actions=["logs:*"],
+                resources=["arn:aws:logs:*:*:*"],
+            )
+        )
+        # Lambda for the new stage
+        lambda_function = _lambda.Function(
+            self,"hawkbitRolloutSoftwareOnDevice",
+            function_name="hawkbitRolloutSoftwareOnDevice",
+            runtime=_lambda.Runtime.PYTHON_3_11,
+            code=_lambda.Code.from_asset("./lambda/hawkbitRolloutSoftwareOnDevice.zip"),
+            handler="hawkbitRolloutSoftwareOnDevice.lambda_handler",
+            role=lambda_role,
+            log_retention=logs.RetentionDays.ONE_DAY,
+            timeout=Duration.seconds(60),
+        )
+
+        hawkbitRolloutSoftwareOnDevice_output = pipeline.Artifact("hawkbitRolloutSoftwareOnDeviceArtifacts")
+        invoke_action = codepipeline_actions.LambdaInvokeAction(
+            action_name="hawkbitRolloutSoftwareOnDevice",
+            lambda_=lambda_function,
+            inputs=[hawkbitDeploySoftwareOnHawkbitServer_output],
+            user_parameters_string="#{LambdaVariables.DistributioSet}",
+            outputs=[hawkbitRolloutSoftwareOnDevice_output],
+        )
+
+        # New stage for Rolling out Software on Device
+        hawkbitRolloutSoftwareOnDevice = pipeline.StageProps(
+            stage_name="hawkbitRolloutSoftwareOnDevice",
+            actions=[invoke_action],
+            transition_disabled_reason="Stage is not needed now",
+            transition_to_enabled=False
+        )
+
+        # Lambda role for assign Software To a single Device
+        lambda_role = iam.Role(self, "hawkbitAssignSoftwareToDeviceLambdaRole", 
+            assumed_by=iam.ServicePrincipal("lambda.amazonaws.com")
+        )
+        lambda_role.add_to_policy(
+            iam.PolicyStatement(
+                effect=iam.Effect.ALLOW,
+                actions=["ssm:Describe*","ssm:Get*","ssm:List*","kms:CreateAlias","kms:CreateKey","kms:DeleteAlias","kms:Describe*","kms:GenerateRandom","kms:Get*","kms:List*","kms:TagResource","kms:UntagResource","iam:ListGroups","iam:ListRoles","iam:ListUsers","codepipeline:PutJobSuccessResult","codepipeline:PutJobFailureResult"],
+                resources=["*"],
+            )
+        )
+        lambda_role.add_to_policy(
+            iam.PolicyStatement(
+                effect=iam.Effect.ALLOW,
+                actions=["logs:CreateLogStream",
+                "logs:PutLogEvents"],
+                resources=[f"arn:aws:logs:{region}:{account}:log-group:/aws/lambda/hawkbitAssignSoftwareToDevice:*"],
+            )
+        )
+        lambda_role.add_to_policy(
+            iam.PolicyStatement(
+                effect=iam.Effect.ALLOW,
+                actions=["logs:CreateLogGroup"],
+                resources=[f"arn:aws:logs:{region}:{account}:*"],
+            )
+        )
+        lambda_role.add_to_policy(
+            iam.PolicyStatement(
+                effect=iam.Effect.ALLOW,
+                actions=["logs:*"],
+                resources=["arn:aws:logs:*:*:*"],
+            )
+        )
+        
+        # Lambda for the new stage
+        lambda_function = _lambda.Function(
+            self,"hawkbitAssignSoftwareToDevice",
+            function_name="hawkbitAssignSoftwareToDevice",
+            runtime=_lambda.Runtime.PYTHON_3_11,
+            code=_lambda.Code.from_asset("./lambda/hawkbitAssignSoftwareToDevice.zip"),
+            handler="hawkbitAssignSoftwareToDevice.lambda_handler",
+            role=lambda_role,
+            log_retention=logs.RetentionDays.ONE_DAY,
+            timeout=Duration.seconds(60),
+        )
+
+        hawkbitAssignSoftwareToDevice_output = pipeline.Artifact("hawkbitAssignSoftwareToDeviceArtifacts")
+
+        invoke_action = codepipeline_actions.LambdaInvokeAction(
+            action_name="hawkbitAssignSoftwareToDevice",
+            lambda_=lambda_function,
+            inputs=[hawkbitDeploySoftwareOnHawkbitServer_output],
+            user_parameters_string="#{LambdaVariables.DistributioSet}",
+            outputs=[hawkbitAssignSoftwareToDevice_output],
+        )
+
+        # New stage for Deploying Software on Hawkbit Server
+        hawkbitAssignSoftwareToDevice_stage = pipeline.StageProps(
+            stage_name="hawkbitAssignSoftwareToDevice",
+            actions=[invoke_action],
+            transition_disabled_reason="Stage is not needed now",
+            transition_to_enabled=False
+        )
+
         # Creates an AWS CodePipeline with source, build, and deploy stages
         pipeline_istance = pipeline.Pipeline(
             self, "hawkbit-device",
             pipeline_name="hawkbit-device",
             artifact_bucket=artifact_bucket,
-            stages=[source_stage, build_stage, hawkbitDeploySoftwareOnHawkbitServer_stage]
+            stages=[source_stage, build_stage, hawkbitDeploySoftwareOnHawkbitServer_stage, hawkbitRolloutSoftwareOnDevice, hawkbitAssignSoftwareToDevice_stage]
         )
         cpp_custom_pipeline.node.add_dependency(pipeline_istance)

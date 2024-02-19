@@ -19,7 +19,7 @@
             },
             "constructInfo": {
               "fqn": "aws-cdk-lib.aws_iot.CfnThing",
-              "version": "2.101.1"
+              "version": "2.128.0"
             }
           },
           "CfnPolicy": {
@@ -86,7 +86,7 @@
             },
             "constructInfo": {
               "fqn": "aws-cdk-lib.aws_iot.CfnPolicy",
-              "version": "2.101.1"
+              "version": "2.128.0"
             }
           },
           "HawkbitDevice001PolicyPrincipalAttachment": {
@@ -116,7 +116,7 @@
             },
             "constructInfo": {
               "fqn": "aws-cdk-lib.aws_iot.CfnPolicyPrincipalAttachment",
-              "version": "2.101.1"
+              "version": "2.128.0"
             }
           },
           "HawkbitDevice001ThingPrincipalAttachment": {
@@ -146,7 +146,7 @@
             },
             "constructInfo": {
               "fqn": "aws-cdk-lib.aws_iot.CfnThingPrincipalAttachment",
-              "version": "2.101.1"
+              "version": "2.128.0"
             }
           },
           "DeactiveCertificateResource": {
@@ -158,7 +158,7 @@
                 "path": "HawkbitDeviceStack/DeactiveCertificateResource/Provider",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_lambda.SingletonFunction",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "Resource": {
@@ -170,13 +170,13 @@
                     "path": "HawkbitDeviceStack/DeactiveCertificateResource/Resource/Default",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CfnResource",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CustomResource",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "CustomResourcePolicy": {
@@ -209,19 +209,19 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_iam.Policy",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               }
             },
             "constructInfo": {
               "fqn": "aws-cdk-lib.custom_resources.AwsCustomResource",
-              "version": "2.101.1"
+              "version": "2.128.0"
             }
           },
           "AWS679f53fac002430cb0da5b7982bd2287": {
@@ -237,7 +237,7 @@
                     "path": "HawkbitDeviceStack/AWS679f53fac002430cb0da5b7982bd2287/ServiceRole/ImportServiceRole",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.Resource",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   },
                   "Resource": {
@@ -276,13 +276,13 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_iam.CfnRole",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_iam.Role",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "Code": {
@@ -294,7 +294,7 @@
                     "path": "HawkbitDeviceStack/AWS679f53fac002430cb0da5b7982bd2287/Code/Stage",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.AssetStaging",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   },
                   "AssetBucket": {
@@ -302,13 +302,13 @@
                     "path": "HawkbitDeviceStack/AWS679f53fac002430cb0da5b7982bd2287/Code/AssetBucket",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_s3.BucketBase",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "Resource": {
@@ -319,7 +319,7 @@
                   "aws:cdk:cloudformation:props": {
                     "code": {
                       "s3Bucket": "cdk-hnb659fds-assets-668487117877-eu-west-1",
-                      "s3Key": "17c16a3854838fd3ff4bda08146122a6701f33b9c86ae17f415ad0dc47a97544.zip"
+                      "s3Key": "ed6cd104ff5f101d06dae8cb2b87cc6e6d69b9a22055b467ea6cae10ff023023.zip"
                     },
                     "handler": "index.handler",
                     "role": {
@@ -334,13 +334,13 @@
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_lambda.CfnFunction",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               }
             },
             "constructInfo": {
               "fqn": "aws-cdk-lib.aws_lambda.Function",
-              "version": "2.101.1"
+              "version": "2.128.0"
             }
           },
           "DeleteCertificateResource": {
@@ -352,7 +352,7 @@
                 "path": "HawkbitDeviceStack/DeleteCertificateResource/Provider",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_lambda.SingletonFunction",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "Resource": {
@@ -364,13 +364,13 @@
                     "path": "HawkbitDeviceStack/DeleteCertificateResource/Resource/Default",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CfnResource",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CustomResource",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "CustomResourcePolicy": {
@@ -403,19 +403,19 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_iam.Policy",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               }
             },
             "constructInfo": {
               "fqn": "aws-cdk-lib.custom_resources.AwsCustomResource",
-              "version": "2.101.1"
+              "version": "2.128.0"
             }
           },
           "CDKMetadata": {
@@ -427,7 +427,7 @@
                 "path": "HawkbitDeviceStack/CDKMetadata/Default",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnResource",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               }
             },
@@ -441,7 +441,7 @@
             "path": "HawkbitDeviceStack/BootstrapVersion",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnParameter",
-              "version": "2.101.1"
+              "version": "2.128.0"
             }
           },
           "CheckBootstrapVersion": {
@@ -449,13 +449,13 @@
             "path": "HawkbitDeviceStack/CheckBootstrapVersion",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnRule",
-              "version": "2.101.1"
+              "version": "2.128.0"
             }
           }
         },
         "constructInfo": {
           "fqn": "aws-cdk-lib.Stack",
-          "version": "2.101.1"
+          "version": "2.128.0"
         }
       },
       "HawkbitServerStack": {
@@ -486,7 +486,7 @@
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_ec2.CfnVPC",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "publicSubnet1": {
@@ -523,7 +523,7 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_ec2.CfnSubnet",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   },
                   "Acl": {
@@ -531,7 +531,7 @@
                     "path": "HawkbitServerStack/VPC/publicSubnet1/Acl",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.Resource",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   },
                   "RouteTable": {
@@ -553,7 +553,7 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_ec2.CfnRouteTable",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   },
                   "RouteTableAssociation": {
@@ -572,7 +572,7 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_ec2.CfnSubnetRouteTableAssociation",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   },
                   "DefaultRoute": {
@@ -592,13 +592,13 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_ec2.CfnRoute",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_ec2.PublicSubnet",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "publicSubnet2": {
@@ -635,7 +635,7 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_ec2.CfnSubnet",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   },
                   "Acl": {
@@ -643,7 +643,7 @@
                     "path": "HawkbitServerStack/VPC/publicSubnet2/Acl",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.Resource",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   },
                   "RouteTable": {
@@ -665,7 +665,7 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_ec2.CfnRouteTable",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   },
                   "RouteTableAssociation": {
@@ -684,7 +684,7 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_ec2.CfnSubnetRouteTableAssociation",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   },
                   "DefaultRoute": {
@@ -704,13 +704,13 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_ec2.CfnRoute",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_ec2.PublicSubnet",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "publicSubnet3": {
@@ -747,7 +747,7 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_ec2.CfnSubnet",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   },
                   "Acl": {
@@ -755,7 +755,7 @@
                     "path": "HawkbitServerStack/VPC/publicSubnet3/Acl",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.Resource",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   },
                   "RouteTable": {
@@ -777,7 +777,7 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_ec2.CfnRouteTable",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   },
                   "RouteTableAssociation": {
@@ -796,7 +796,7 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_ec2.CfnSubnetRouteTableAssociation",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   },
                   "DefaultRoute": {
@@ -816,13 +816,13 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_ec2.CfnRoute",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_ec2.PublicSubnet",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "IGW": {
@@ -841,7 +841,7 @@
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_ec2.CfnInternetGateway",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "VPCGW": {
@@ -860,7 +860,7 @@
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_ec2.CfnVPCGatewayAttachment",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "RestrictDefaultSecurityGroupCustomResource": {
@@ -872,19 +872,19 @@
                     "path": "HawkbitServerStack/VPC/RestrictDefaultSecurityGroupCustomResource/Default",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CfnResource",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CustomResource",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               }
             },
             "constructInfo": {
               "fqn": "aws-cdk-lib.aws_ec2.Vpc",
-              "version": "2.101.1"
+              "version": "2.128.0"
             }
           },
           "Custom::VpcRestrictDefaultSGCustomResourceProvider": {
@@ -896,7 +896,7 @@
                 "path": "HawkbitServerStack/Custom::VpcRestrictDefaultSGCustomResourceProvider/Staging",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.AssetStaging",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "Role": {
@@ -904,7 +904,7 @@
                 "path": "HawkbitServerStack/Custom::VpcRestrictDefaultSGCustomResourceProvider/Role",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnResource",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "Handler": {
@@ -912,13 +912,13 @@
                 "path": "HawkbitServerStack/Custom::VpcRestrictDefaultSGCustomResourceProvider/Handler",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnResource",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               }
             },
             "constructInfo": {
-              "fqn": "aws-cdk-lib.CustomResourceProvider",
-              "version": "2.101.1"
+              "fqn": "aws-cdk-lib.CustomResourceProviderBase",
+              "version": "2.128.0"
             }
           },
           "InstanceSSM": {
@@ -930,7 +930,7 @@
                 "path": "HawkbitServerStack/InstanceSSM/ImportInstanceSSM",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.Resource",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "Resource": {
@@ -969,13 +969,13 @@
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_iam.CfnRole",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               }
             },
             "constructInfo": {
               "fqn": "aws-cdk-lib.aws_iam.Role",
-              "version": "2.101.1"
+              "version": "2.128.0"
             }
           },
           "MyNewKeyPair": {
@@ -989,7 +989,7 @@
             },
             "constructInfo": {
               "fqn": "aws-cdk-lib.aws_ec2.CfnKeyPair",
-              "version": "2.101.1"
+              "version": "2.128.0"
             }
           },
           "Instance": {
@@ -1043,13 +1043,13 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_ec2.CfnSecurityGroup",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_ec2.SecurityGroup",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "InstanceProfile": {
@@ -1067,7 +1067,7 @@
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_iam.CfnInstanceProfile",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "Resource": {
@@ -1106,13 +1106,13 @@
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_ec2.CfnInstance",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               }
             },
             "constructInfo": {
               "fqn": "aws-cdk-lib.aws_ec2.Instance",
-              "version": "2.101.1"
+              "version": "2.128.0"
             }
           },
           "CreateParam1": {
@@ -1124,7 +1124,7 @@
                 "path": "HawkbitServerStack/CreateParam1/Provider",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_lambda.SingletonFunction",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "Resource": {
@@ -1136,13 +1136,13 @@
                     "path": "HawkbitServerStack/CreateParam1/Resource/Default",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CfnResource",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CustomResource",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "CustomResourcePolicy": {
@@ -1178,19 +1178,19 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_iam.Policy",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               }
             },
             "constructInfo": {
               "fqn": "aws-cdk-lib.custom_resources.AwsCustomResource",
-              "version": "2.101.1"
+              "version": "2.128.0"
             }
           },
           "AWS679f53fac002430cb0da5b7982bd2287": {
@@ -1206,7 +1206,7 @@
                     "path": "HawkbitServerStack/AWS679f53fac002430cb0da5b7982bd2287/ServiceRole/ImportServiceRole",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.Resource",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   },
                   "Resource": {
@@ -1245,13 +1245,13 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_iam.CfnRole",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_iam.Role",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "Code": {
@@ -1263,7 +1263,7 @@
                     "path": "HawkbitServerStack/AWS679f53fac002430cb0da5b7982bd2287/Code/Stage",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.AssetStaging",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   },
                   "AssetBucket": {
@@ -1271,13 +1271,13 @@
                     "path": "HawkbitServerStack/AWS679f53fac002430cb0da5b7982bd2287/Code/AssetBucket",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_s3.BucketBase",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "Resource": {
@@ -1288,7 +1288,7 @@
                   "aws:cdk:cloudformation:props": {
                     "code": {
                       "s3Bucket": "cdk-hnb659fds-assets-668487117877-eu-west-1",
-                      "s3Key": "17c16a3854838fd3ff4bda08146122a6701f33b9c86ae17f415ad0dc47a97544.zip"
+                      "s3Key": "ed6cd104ff5f101d06dae8cb2b87cc6e6d69b9a22055b467ea6cae10ff023023.zip"
                     },
                     "handler": "index.handler",
                     "role": {
@@ -1303,13 +1303,13 @@
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_lambda.CfnFunction",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               }
             },
             "constructInfo": {
               "fqn": "aws-cdk-lib.aws_lambda.Function",
-              "version": "2.101.1"
+              "version": "2.128.0"
             }
           },
           "CreateParam2": {
@@ -1321,7 +1321,7 @@
                 "path": "HawkbitServerStack/CreateParam2/Provider",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_lambda.SingletonFunction",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "Resource": {
@@ -1333,13 +1333,13 @@
                     "path": "HawkbitServerStack/CreateParam2/Resource/Default",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CfnResource",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CustomResource",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "CustomResourcePolicy": {
@@ -1375,19 +1375,19 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_iam.Policy",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               }
             },
             "constructInfo": {
               "fqn": "aws-cdk-lib.custom_resources.AwsCustomResource",
-              "version": "2.101.1"
+              "version": "2.128.0"
             }
           },
           "CreateParam3": {
@@ -1399,7 +1399,7 @@
                 "path": "HawkbitServerStack/CreateParam3/Provider",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_lambda.SingletonFunction",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "Resource": {
@@ -1411,13 +1411,13 @@
                     "path": "HawkbitServerStack/CreateParam3/Resource/Default",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CfnResource",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CustomResource",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "CustomResourcePolicy": {
@@ -1453,19 +1453,19 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_iam.Policy",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               }
             },
             "constructInfo": {
               "fqn": "aws-cdk-lib.custom_resources.AwsCustomResource",
-              "version": "2.101.1"
+              "version": "2.128.0"
             }
           },
           "CDKMetadata": {
@@ -1477,7 +1477,7 @@
                 "path": "HawkbitServerStack/CDKMetadata/Default",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnResource",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               }
             },
@@ -1491,7 +1491,7 @@
             "path": "HawkbitServerStack/BootstrapVersion",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnParameter",
-              "version": "2.101.1"
+              "version": "2.128.0"
             }
           },
           "CheckBootstrapVersion": {
@@ -1499,13 +1499,733 @@
             "path": "HawkbitServerStack/CheckBootstrapVersion",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnRule",
-              "version": "2.101.1"
+              "version": "2.128.0"
             }
           }
         },
         "constructInfo": {
           "fqn": "aws-cdk-lib.Stack",
-          "version": "2.101.1"
+          "version": "2.128.0"
+        }
+      },
+      "HawkbitTimestreamStack": {
+        "id": "HawkbitTimestreamStack",
+        "path": "HawkbitTimestreamStack",
+        "children": {
+          "hawkbitDeviceData": {
+            "id": "hawkbitDeviceData",
+            "path": "HawkbitTimestreamStack/hawkbitDeviceData",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "HawkbitTimestreamStack/hawkbitDeviceData/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Kinesis::Stream",
+                  "aws:cdk:cloudformation:props": {
+                    "name": "hawkbitDeviceData",
+                    "retentionPeriodHours": 24,
+                    "streamEncryption": {
+                      "Fn::If": [
+                        "AwsCdkKinesisEncryptedStreamsUnsupportedRegions",
+                        {
+                          "Ref": "AWS::NoValue"
+                        },
+                        {
+                          "EncryptionType": "KMS",
+                          "KeyId": "alias/aws/kinesis"
+                        }
+                      ]
+                    },
+                    "streamModeDetails": {
+                      "streamMode": "ON_DEMAND"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_kinesis.CfnStream",
+                  "version": "2.128.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_kinesis.Stream",
+              "version": "2.128.0"
+            }
+          },
+          "AwsCdkKinesisEncryptedStreamsUnsupportedRegions": {
+            "id": "AwsCdkKinesisEncryptedStreamsUnsupportedRegions",
+            "path": "HawkbitTimestreamStack/AwsCdkKinesisEncryptedStreamsUnsupportedRegions",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnCondition",
+              "version": "2.128.0"
+            }
+          },
+          "hawkbitDeviceToKinesis": {
+            "id": "hawkbitDeviceToKinesis",
+            "path": "HawkbitTimestreamStack/hawkbitDeviceToKinesis",
+            "children": {
+              "ImporthawkbitDeviceToKinesis": {
+                "id": "ImporthawkbitDeviceToKinesis",
+                "path": "HawkbitTimestreamStack/hawkbitDeviceToKinesis/ImporthawkbitDeviceToKinesis",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.128.0"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "HawkbitTimestreamStack/hawkbitDeviceToKinesis/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                  "aws:cdk:cloudformation:props": {
+                    "assumeRolePolicyDocument": {
+                      "Statement": [
+                        {
+                          "Action": "sts:AssumeRole",
+                          "Effect": "Allow",
+                          "Principal": {
+                            "Service": "iot.amazonaws.com"
+                          }
+                        }
+                      ],
+                      "Version": "2012-10-17"
+                    },
+                    "roleName": "hawkbitDeviceToKinesis"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_iam.CfnRole",
+                  "version": "2.128.0"
+                }
+              },
+              "DefaultPolicy": {
+                "id": "DefaultPolicy",
+                "path": "HawkbitTimestreamStack/hawkbitDeviceToKinesis/DefaultPolicy",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "HawkbitTimestreamStack/hawkbitDeviceToKinesis/DefaultPolicy/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                      "aws:cdk:cloudformation:props": {
+                        "policyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "kinesis:*",
+                              "Effect": "Allow",
+                              "Resource": {
+                                "Fn::GetAtt": [
+                                  "hawkbitDeviceDataE2948235",
+                                  "Arn"
+                                ]
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "policyName": "hawkbitDeviceToKinesisDefaultPolicy576DBDFC",
+                        "roles": [
+                          {
+                            "Ref": "hawkbitDeviceToKinesis90D2B23A"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
+                      "version": "2.128.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_iam.Policy",
+                  "version": "2.128.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_iam.Role",
+              "version": "2.128.0"
+            }
+          },
+          "fromDeviceToKinesis": {
+            "id": "fromDeviceToKinesis",
+            "path": "HawkbitTimestreamStack/fromDeviceToKinesis",
+            "attributes": {
+              "aws:cdk:cloudformation:type": "AWS::IoT::TopicRule",
+              "aws:cdk:cloudformation:props": {
+                "ruleName": "HawkbitDeviceDataToKinesis",
+                "topicRulePayload": {
+                  "actions": [
+                    {
+                      "kinesis": {
+                        "roleArn": {
+                          "Fn::GetAtt": [
+                            "hawkbitDeviceToKinesis90D2B23A",
+                            "Arn"
+                          ]
+                        },
+                        "streamName": {
+                          "Ref": "hawkbitDeviceDataE2948235"
+                        },
+                        "partitionKey": "${DeviceID}"
+                      }
+                    }
+                  ],
+                  "sql": "SELECT * FROM 'device/HawkbitDevice001/telemetry'"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_iot.CfnTopicRule",
+              "version": "2.128.0"
+            }
+          },
+          "memoryRetentionParam": {
+            "id": "memoryRetentionParam",
+            "path": "HawkbitTimestreamStack/memoryRetentionParam",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnParameter",
+              "version": "2.128.0"
+            }
+          },
+          "magneticRetentionParam": {
+            "id": "magneticRetentionParam",
+            "path": "HawkbitTimestreamStack/magneticRetentionParam",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnParameter",
+              "version": "2.128.0"
+            }
+          },
+          "hawkbitDevice": {
+            "id": "hawkbitDevice",
+            "path": "HawkbitTimestreamStack/hawkbitDevice",
+            "attributes": {
+              "aws:cdk:cloudformation:type": "AWS::Timestream::Database",
+              "aws:cdk:cloudformation:props": {
+                "databaseName": "hawkbitDevice"
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_timestream.CfnDatabase",
+              "version": "2.128.0"
+            }
+          },
+          "ABS": {
+            "id": "ABS",
+            "path": "HawkbitTimestreamStack/ABS",
+            "attributes": {
+              "aws:cdk:cloudformation:type": "AWS::Timestream::Table",
+              "aws:cdk:cloudformation:props": {
+                "databaseName": "hawkbitDevice",
+                "retentionProperties": {
+                  "MemoryStoreRetentionPeriodInHours": {
+                    "Ref": "memoryRetentionParam"
+                  },
+                  "MagneticStoreRetentionPeriodInDays": {
+                    "Ref": "magneticRetentionParam"
+                  }
+                },
+                "schema": {
+                  "compositePartitionKey": [
+                    {
+                      "type": "DIMENSION",
+                      "enforcementInRecord": "REQUIRED",
+                      "name": "DeviceID"
+                    }
+                  ]
+                },
+                "tableName": "ABS"
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_timestream.CfnTable",
+              "version": "2.128.0"
+            }
+          },
+          "Airbag": {
+            "id": "Airbag",
+            "path": "HawkbitTimestreamStack/Airbag",
+            "attributes": {
+              "aws:cdk:cloudformation:type": "AWS::Timestream::Table",
+              "aws:cdk:cloudformation:props": {
+                "databaseName": "hawkbitDevice",
+                "retentionProperties": {
+                  "MemoryStoreRetentionPeriodInHours": {
+                    "Ref": "memoryRetentionParam"
+                  },
+                  "MagneticStoreRetentionPeriodInDays": {
+                    "Ref": "magneticRetentionParam"
+                  }
+                },
+                "schema": {
+                  "compositePartitionKey": [
+                    {
+                      "type": "DIMENSION",
+                      "enforcementInRecord": "REQUIRED",
+                      "name": "DeviceID"
+                    }
+                  ]
+                },
+                "tableName": "Airbag"
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_timestream.CfnTable",
+              "version": "2.128.0"
+            }
+          },
+          "AirConditioning": {
+            "id": "AirConditioning",
+            "path": "HawkbitTimestreamStack/AirConditioning",
+            "attributes": {
+              "aws:cdk:cloudformation:type": "AWS::Timestream::Table",
+              "aws:cdk:cloudformation:props": {
+                "databaseName": "hawkbitDevice",
+                "retentionProperties": {
+                  "MemoryStoreRetentionPeriodInHours": {
+                    "Ref": "memoryRetentionParam"
+                  },
+                  "MagneticStoreRetentionPeriodInDays": {
+                    "Ref": "magneticRetentionParam"
+                  }
+                },
+                "schema": {
+                  "compositePartitionKey": [
+                    {
+                      "type": "DIMENSION",
+                      "enforcementInRecord": "REQUIRED",
+                      "name": "DeviceID"
+                    }
+                  ]
+                },
+                "tableName": "AirConditioning"
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_timestream.CfnTable",
+              "version": "2.128.0"
+            }
+          },
+          "Battery": {
+            "id": "Battery",
+            "path": "HawkbitTimestreamStack/Battery",
+            "attributes": {
+              "aws:cdk:cloudformation:type": "AWS::Timestream::Table",
+              "aws:cdk:cloudformation:props": {
+                "databaseName": "hawkbitDevice",
+                "retentionProperties": {
+                  "MemoryStoreRetentionPeriodInHours": {
+                    "Ref": "memoryRetentionParam"
+                  },
+                  "MagneticStoreRetentionPeriodInDays": {
+                    "Ref": "magneticRetentionParam"
+                  }
+                },
+                "schema": {
+                  "compositePartitionKey": [
+                    {
+                      "type": "DIMENSION",
+                      "enforcementInRecord": "REQUIRED",
+                      "name": "DeviceID"
+                    }
+                  ]
+                },
+                "tableName": "Battery"
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_timestream.CfnTable",
+              "version": "2.128.0"
+            }
+          },
+          "Engine": {
+            "id": "Engine",
+            "path": "HawkbitTimestreamStack/Engine",
+            "attributes": {
+              "aws:cdk:cloudformation:type": "AWS::Timestream::Table",
+              "aws:cdk:cloudformation:props": {
+                "databaseName": "hawkbitDevice",
+                "retentionProperties": {
+                  "MemoryStoreRetentionPeriodInHours": {
+                    "Ref": "memoryRetentionParam"
+                  },
+                  "MagneticStoreRetentionPeriodInDays": {
+                    "Ref": "magneticRetentionParam"
+                  }
+                },
+                "schema": {
+                  "compositePartitionKey": [
+                    {
+                      "type": "DIMENSION",
+                      "enforcementInRecord": "REQUIRED",
+                      "name": "DeviceID"
+                    }
+                  ]
+                },
+                "tableName": "Engine"
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_timestream.CfnTable",
+              "version": "2.128.0"
+            }
+          },
+          "HeatSeats": {
+            "id": "HeatSeats",
+            "path": "HawkbitTimestreamStack/HeatSeats",
+            "attributes": {
+              "aws:cdk:cloudformation:type": "AWS::Timestream::Table",
+              "aws:cdk:cloudformation:props": {
+                "databaseName": "hawkbitDevice",
+                "retentionProperties": {
+                  "MemoryStoreRetentionPeriodInHours": {
+                    "Ref": "memoryRetentionParam"
+                  },
+                  "MagneticStoreRetentionPeriodInDays": {
+                    "Ref": "magneticRetentionParam"
+                  }
+                },
+                "schema": {
+                  "compositePartitionKey": [
+                    {
+                      "type": "DIMENSION",
+                      "enforcementInRecord": "REQUIRED",
+                      "name": "DeviceID"
+                    }
+                  ]
+                },
+                "tableName": "HeatSeats"
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_timestream.CfnTable",
+              "version": "2.128.0"
+            }
+          },
+          "hawkbitFromKinesisToTimestreamLambdaRole": {
+            "id": "hawkbitFromKinesisToTimestreamLambdaRole",
+            "path": "HawkbitTimestreamStack/hawkbitFromKinesisToTimestreamLambdaRole",
+            "children": {
+              "ImporthawkbitFromKinesisToTimestreamLambdaRole": {
+                "id": "ImporthawkbitFromKinesisToTimestreamLambdaRole",
+                "path": "HawkbitTimestreamStack/hawkbitFromKinesisToTimestreamLambdaRole/ImporthawkbitFromKinesisToTimestreamLambdaRole",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.128.0"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "HawkbitTimestreamStack/hawkbitFromKinesisToTimestreamLambdaRole/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                  "aws:cdk:cloudformation:props": {
+                    "assumeRolePolicyDocument": {
+                      "Statement": [
+                        {
+                          "Action": "sts:AssumeRole",
+                          "Effect": "Allow",
+                          "Principal": {
+                            "Service": "lambda.amazonaws.com"
+                          }
+                        }
+                      ],
+                      "Version": "2012-10-17"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_iam.CfnRole",
+                  "version": "2.128.0"
+                }
+              },
+              "DefaultPolicy": {
+                "id": "DefaultPolicy",
+                "path": "HawkbitTimestreamStack/hawkbitFromKinesisToTimestreamLambdaRole/DefaultPolicy",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "HawkbitTimestreamStack/hawkbitFromKinesisToTimestreamLambdaRole/DefaultPolicy/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                      "aws:cdk:cloudformation:props": {
+                        "policyDocument": {
+                          "Statement": [
+                            {
+                              "Action": [
+                                "kinesis:DescribeStream",
+                                "kinesis:DescribeStreamSummary",
+                                "kinesis:GetRecords",
+                                "kinesis:GetShardIterator",
+                                "kinesis:ListShards",
+                                "kinesis:ListStreams",
+                                "kinesis:SubscribeToShard",
+                                "kms:DescribeKey",
+                                "logs:CreateLogGroup",
+                                "logs:CreateLogStream",
+                                "logs:PutLogEvents",
+                                "s3:ListAllMyBuckets",
+                                "timestream:*"
+                              ],
+                              "Effect": "Allow",
+                              "Resource": "*"
+                            },
+                            {
+                              "Action": "kms:CreateGrant",
+                              "Condition": {
+                                "ForAnyValue:StringEquals": {
+                                  "kms:EncryptionContextKeys": "aws:timestream:database-name"
+                                }
+                              },
+                              "Effect": "Allow",
+                              "Resource": "*"
+                            },
+                            {
+                              "Action": "kms:CreateGrant",
+                              "Condition": {
+                                "Bool": {
+                                  "kms:GrantIsForAWSResource": true
+                                }
+                              },
+                              "Effect": "Allow",
+                              "Resource": "*"
+                            },
+                            {
+                              "Action": "kms:CreateGrant",
+                              "Condition": {
+                                "StringLike": {
+                                  "kms:ViaService": "timestream.*.amazonaws.com"
+                                }
+                              },
+                              "Effect": "Allow",
+                              "Resource": "*"
+                            },
+                            {
+                              "Action": "logs:CreateLogGroup",
+                              "Effect": "Allow",
+                              "Resource": {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:aws:logs:",
+                                    {
+                                      "Ref": "AWS::Region"
+                                    },
+                                    ":",
+                                    {
+                                      "Ref": "AWS::AccountId"
+                                    },
+                                    ":*"
+                                  ]
+                                ]
+                              }
+                            },
+                            {
+                              "Action": [
+                                "logs:CreateLogStream",
+                                "logs:PutLogEvents"
+                              ],
+                              "Effect": "Allow",
+                              "Resource": {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:aws:logs:",
+                                    {
+                                      "Ref": "AWS::Region"
+                                    },
+                                    ":",
+                                    {
+                                      "Ref": "AWS::AccountId"
+                                    },
+                                    ":log-group:/aws/lambda/hawkbitFromKinesisToTimestream:*"
+                                  ]
+                                ]
+                              }
+                            },
+                            {
+                              "Action": [
+                                "kinesis:DescribeStream",
+                                "kinesis:DescribeStreamConsumer",
+                                "kinesis:DescribeStreamSummary",
+                                "kinesis:GetRecords",
+                                "kinesis:GetShardIterator",
+                                "kinesis:ListShards",
+                                "kinesis:ListStreams",
+                                "kinesis:SubscribeToShard"
+                              ],
+                              "Effect": "Allow",
+                              "Resource": {
+                                "Fn::GetAtt": [
+                                  "hawkbitDeviceDataE2948235",
+                                  "Arn"
+                                ]
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "policyName": "hawkbitFromKinesisToTimestreamLambdaRoleDefaultPolicy5327E181",
+                        "roles": [
+                          {
+                            "Ref": "hawkbitFromKinesisToTimestreamLambdaRole64CCF60D"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
+                      "version": "2.128.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_iam.Policy",
+                  "version": "2.128.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_iam.Role",
+              "version": "2.128.0"
+            }
+          },
+          "hawkbitFromKinesisToTimestream": {
+            "id": "hawkbitFromKinesisToTimestream",
+            "path": "HawkbitTimestreamStack/hawkbitFromKinesisToTimestream",
+            "children": {
+              "Code": {
+                "id": "Code",
+                "path": "HawkbitTimestreamStack/hawkbitFromKinesisToTimestream/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "HawkbitTimestreamStack/hawkbitFromKinesisToTimestream/Code/Stage",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.AssetStaging",
+                      "version": "2.128.0"
+                    }
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "HawkbitTimestreamStack/hawkbitFromKinesisToTimestream/Code/AssetBucket",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3.BucketBase",
+                      "version": "2.128.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
+                  "version": "2.128.0"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "HawkbitTimestreamStack/hawkbitFromKinesisToTimestream/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": "cdk-hnb659fds-assets-668487117877-eu-west-1",
+                      "s3Key": "0b2bb3bae06588b818fce87c603d7be035671f26907513977e49fe4e01c63281.zip"
+                    },
+                    "functionName": "hawkbitFromKinesisToTimestream",
+                    "handler": "hawkbitFromKinesisToTimestream.lambda_handler",
+                    "role": {
+                      "Fn::GetAtt": [
+                        "hawkbitFromKinesisToTimestreamLambdaRole64CCF60D",
+                        "Arn"
+                      ]
+                    },
+                    "runtime": "python3.11",
+                    "timeout": 60
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_lambda.CfnFunction",
+                  "version": "2.128.0"
+                }
+              },
+              "KinesisEventSource:HawkbitTimestreamStackhawkbitDeviceData5DBA0277": {
+                "id": "KinesisEventSource:HawkbitTimestreamStackhawkbitDeviceData5DBA0277",
+                "path": "HawkbitTimestreamStack/hawkbitFromKinesisToTimestream/KinesisEventSource:HawkbitTimestreamStackhawkbitDeviceData5DBA0277",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "HawkbitTimestreamStack/hawkbitFromKinesisToTimestream/KinesisEventSource:HawkbitTimestreamStackhawkbitDeviceData5DBA0277/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Lambda::EventSourceMapping",
+                      "aws:cdk:cloudformation:props": {
+                        "batchSize": 100,
+                        "eventSourceArn": {
+                          "Fn::GetAtt": [
+                            "hawkbitDeviceDataE2948235",
+                            "Arn"
+                          ]
+                        },
+                        "functionName": {
+                          "Ref": "hawkbitFromKinesisToTimestream93F11078"
+                        },
+                        "startingPosition": "LATEST"
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_lambda.CfnEventSourceMapping",
+                      "version": "2.128.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_lambda.EventSourceMapping",
+                  "version": "2.128.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_lambda.Function",
+              "version": "2.128.0"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "HawkbitTimestreamStack/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "HawkbitTimestreamStack/CDKMetadata/Default",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.CfnResource",
+                  "version": "2.128.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "constructs.Construct",
+              "version": "10.3.0"
+            }
+          },
+          "BootstrapVersion": {
+            "id": "BootstrapVersion",
+            "path": "HawkbitTimestreamStack/BootstrapVersion",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnParameter",
+              "version": "2.128.0"
+            }
+          },
+          "CheckBootstrapVersion": {
+            "id": "CheckBootstrapVersion",
+            "path": "HawkbitTimestreamStack/CheckBootstrapVersion",
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.CfnRule",
+              "version": "2.128.0"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "aws-cdk-lib.Stack",
+          "version": "2.128.0"
         }
       },
       "HawkbitPipelineCppStack": {
@@ -1525,7 +2245,7 @@
                     "path": "HawkbitPipelineCppStack/HawkbitCppCustomBuildImageRepo/PathResolvedCodeAsset/Stage",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.AssetStaging",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   },
                   "AssetBucket": {
@@ -1533,13 +2253,13 @@
                     "path": "HawkbitPipelineCppStack/HawkbitCppCustomBuildImageRepo/PathResolvedCodeAsset/AssetBucket",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_s3.BucketBase",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "Resource": {
@@ -1560,7 +2280,7 @@
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_codecommit.CfnRepository",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "HawkbitPipelineCppStackhawkbitdevicec40130EA7-main-EventRule": {
@@ -1625,19 +2345,19 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_events.CfnRule",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_events.Rule",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               }
             },
             "constructInfo": {
               "fqn": "aws-cdk-lib.aws_codecommit.Repository",
-              "version": "2.101.1"
+              "version": "2.128.0"
             }
           },
           "hawkbitCppCustomImageBuildRole": {
@@ -1649,7 +2369,7 @@
                 "path": "HawkbitPipelineCppStack/hawkbitCppCustomImageBuildRole/ImporthawkbitCppCustomImageBuildRole",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.Resource",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "Resource": {
@@ -1674,7 +2394,7 @@
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_iam.CfnRole",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "DefaultPolicy": {
@@ -1909,19 +2629,19 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_iam.Policy",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               }
             },
             "constructInfo": {
               "fqn": "aws-cdk-lib.aws_iam.Role",
-              "version": "2.101.1"
+              "version": "2.128.0"
             }
           },
           "HawkbitCppBlogRepo": {
@@ -1945,7 +2665,7 @@
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_ecr.CfnRepository",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "AutoDeleteImagesCustomResource": {
@@ -1957,19 +2677,19 @@
                     "path": "HawkbitPipelineCppStack/HawkbitCppBlogRepo/AutoDeleteImagesCustomResource/Default",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CfnResource",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CustomResource",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               }
             },
             "constructInfo": {
               "fqn": "aws-cdk-lib.aws_ecr.Repository",
-              "version": "2.101.1"
+              "version": "2.128.0"
             }
           },
           "Custom::ECRAutoDeleteImagesCustomResourceProvider": {
@@ -1981,7 +2701,7 @@
                 "path": "HawkbitPipelineCppStack/Custom::ECRAutoDeleteImagesCustomResourceProvider/Staging",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.AssetStaging",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "Role": {
@@ -1989,7 +2709,7 @@
                 "path": "HawkbitPipelineCppStack/Custom::ECRAutoDeleteImagesCustomResourceProvider/Role",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnResource",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "Handler": {
@@ -1997,13 +2717,13 @@
                 "path": "HawkbitPipelineCppStack/Custom::ECRAutoDeleteImagesCustomResourceProvider/Handler",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnResource",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               }
             },
             "constructInfo": {
-              "fqn": "aws-cdk-lib.CustomResourceProvider",
-              "version": "2.101.1"
+              "fqn": "aws-cdk-lib.CustomResourceProviderBase",
+              "version": "2.128.0"
             }
           },
           "HawkbitCppCustomBuildImageBuild": {
@@ -2112,13 +2832,13 @@
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_codebuild.CfnProject",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               }
             },
             "constructInfo": {
               "fqn": "aws-cdk-lib.aws_codebuild.Project",
-              "version": "2.101.1"
+              "version": "2.128.0"
             }
           },
           "codepipeline-${Token[AWS.Region.7]}-833521754963": {
@@ -2126,7 +2846,7 @@
             "path": "HawkbitPipelineCppStack/codepipeline-${Token[AWS.Region.7]}-833521754963",
             "constructInfo": {
               "fqn": "aws-cdk-lib.aws_s3.BucketBase",
-              "version": "2.101.1"
+              "version": "2.128.0"
             }
           },
           "hawkbit-device-c": {
@@ -2142,7 +2862,7 @@
                     "path": "HawkbitPipelineCppStack/hawkbit-device-c/Role/ImportRole",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.Resource",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   },
                   "Resource": {
@@ -2167,7 +2887,7 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_iam.CfnRole",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   },
                   "DefaultPolicy": {
@@ -2254,19 +2974,19 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
-                          "version": "2.101.1"
+                          "version": "2.128.0"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_iam.Policy",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_iam.Role",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "Resource": {
@@ -2370,7 +3090,7 @@
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_codepipeline.CfnPipeline",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "Source": {
@@ -2390,7 +3110,7 @@
                             "path": "HawkbitPipelineCppStack/hawkbit-device-c/Source/CodeCommit/CodePipelineActionRole/ImportCodePipelineActionRole",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.Resource",
-                              "version": "2.101.1"
+                              "version": "2.128.0"
                             }
                           },
                           "Resource": {
@@ -2415,7 +3135,7 @@
                             },
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.aws_iam.CfnRole",
-                              "version": "2.101.1"
+                              "version": "2.128.0"
                             }
                           },
                           "DefaultPolicy": {
@@ -2500,19 +3220,19 @@
                                 },
                                 "constructInfo": {
                                   "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
-                                  "version": "2.101.1"
+                                  "version": "2.128.0"
                                 }
                               }
                             },
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.aws_iam.Policy",
-                              "version": "2.101.1"
+                              "version": "2.128.0"
                             }
                           }
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_iam.Role",
-                          "version": "2.101.1"
+                          "version": "2.128.0"
                         }
                       }
                     },
@@ -2536,7 +3256,7 @@
                     "path": "HawkbitPipelineCppStack/hawkbit-device-c/EventsRole/ImportEventsRole",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.Resource",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   },
                   "Resource": {
@@ -2561,7 +3281,7 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_iam.CfnRole",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   },
                   "DefaultPolicy": {
@@ -2604,19 +3324,19 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
-                          "version": "2.101.1"
+                          "version": "2.128.0"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_iam.Policy",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_iam.Role",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "Build": {
@@ -2636,7 +3356,7 @@
                             "path": "HawkbitPipelineCppStack/hawkbit-device-c/Build/Build/CodePipelineActionRole/ImportCodePipelineActionRole",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.Resource",
-                              "version": "2.101.1"
+                              "version": "2.128.0"
                             }
                           },
                           "Resource": {
@@ -2661,7 +3381,7 @@
                             },
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.aws_iam.CfnRole",
-                              "version": "2.101.1"
+                              "version": "2.128.0"
                             }
                           },
                           "DefaultPolicy": {
@@ -2703,19 +3423,19 @@
                                 },
                                 "constructInfo": {
                                   "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
-                                  "version": "2.101.1"
+                                  "version": "2.128.0"
                                 }
                               }
                             },
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.aws_iam.Policy",
-                              "version": "2.101.1"
+                              "version": "2.128.0"
                             }
                           }
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_iam.Role",
-                          "version": "2.101.1"
+                          "version": "2.128.0"
                         }
                       }
                     },
@@ -2733,7 +3453,7 @@
             },
             "constructInfo": {
               "fqn": "aws-cdk-lib.aws_codepipeline.Pipeline",
-              "version": "2.101.1"
+              "version": "2.128.0"
             }
           },
           "HawkbitDeviceC": {
@@ -2749,7 +3469,7 @@
                     "path": "HawkbitPipelineCppStack/HawkbitDeviceC/PathResolvedCodeAsset/Stage",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.AssetStaging",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   },
                   "AssetBucket": {
@@ -2757,13 +3477,13 @@
                     "path": "HawkbitPipelineCppStack/HawkbitDeviceC/PathResolvedCodeAsset/AssetBucket",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_s3.BucketBase",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "Resource": {
@@ -2784,7 +3504,7 @@
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_codecommit.CfnRepository",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "HawkbitPipelineCppStackhawkbitdevice7D7E3922EventRule": {
@@ -2849,19 +3569,19 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_events.CfnRule",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_events.Rule",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               }
             },
             "constructInfo": {
               "fqn": "aws-cdk-lib.aws_codecommit.Repository",
-              "version": "2.101.1"
+              "version": "2.128.0"
             }
           },
           "HawkbitDeviceBuildC": {
@@ -2877,7 +3597,7 @@
                     "path": "HawkbitPipelineCppStack/HawkbitDeviceBuildC/Role/ImportRole",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.Resource",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   },
                   "Resource": {
@@ -2902,7 +3622,7 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_iam.CfnRole",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   },
                   "DefaultPolicy": {
@@ -3055,19 +3775,19 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
-                          "version": "2.101.1"
+                          "version": "2.128.0"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_iam.Policy",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_iam.Role",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "Resource": {
@@ -3160,13 +3880,13 @@
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_codebuild.CfnProject",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               }
             },
             "constructInfo": {
               "fqn": "aws-cdk-lib.aws_codebuild.Project",
-              "version": "2.101.1"
+              "version": "2.128.0"
             }
           },
           "hawkbitDeploySoftwareOnHawkbitServerLambdaRole": {
@@ -3178,7 +3898,7 @@
                 "path": "HawkbitPipelineCppStack/hawkbitDeploySoftwareOnHawkbitServerLambdaRole/ImporthawkbitDeploySoftwareOnHawkbitServerLambdaRole",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.Resource",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "Resource": {
@@ -3203,7 +3923,7 @@
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_iam.CfnRole",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "DefaultPolicy": {
@@ -3302,19 +4022,19 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_iam.Policy",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               }
             },
             "constructInfo": {
               "fqn": "aws-cdk-lib.aws_iam.Role",
-              "version": "2.101.1"
+              "version": "2.128.0"
             }
           },
           "hawkbitDeploySoftwareOnHawkbitServer": {
@@ -3330,7 +4050,7 @@
                     "path": "HawkbitPipelineCppStack/hawkbitDeploySoftwareOnHawkbitServer/Code/Stage",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.AssetStaging",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   },
                   "AssetBucket": {
@@ -3338,13 +4058,13 @@
                     "path": "HawkbitPipelineCppStack/hawkbitDeploySoftwareOnHawkbitServer/Code/AssetBucket",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_s3.BucketBase",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "Resource": {
@@ -3371,7 +4091,7 @@
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_lambda.CfnFunction",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "LogRetention": {
@@ -3383,13 +4103,13 @@
                     "path": "HawkbitPipelineCppStack/hawkbitDeploySoftwareOnHawkbitServer/LogRetention/Resource",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CfnResource",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_logs.LogRetention",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "LogGroup": {
@@ -3397,13 +4117,13 @@
                 "path": "HawkbitPipelineCppStack/hawkbitDeploySoftwareOnHawkbitServer/LogGroup",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.Resource",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               }
             },
             "constructInfo": {
               "fqn": "aws-cdk-lib.aws_lambda.Function",
-              "version": "2.101.1"
+              "version": "2.128.0"
             }
           },
           "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a": {
@@ -3419,7 +4139,7 @@
                     "path": "HawkbitPipelineCppStack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/Code/Stage",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.AssetStaging",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   },
                   "AssetBucket": {
@@ -3427,13 +4147,13 @@
                     "path": "HawkbitPipelineCppStack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/Code/AssetBucket",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_s3.BucketBase",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "ServiceRole": {
@@ -3445,7 +4165,7 @@
                     "path": "HawkbitPipelineCppStack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/ImportServiceRole",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.Resource",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   },
                   "Resource": {
@@ -3484,7 +4204,7 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_iam.CfnRole",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   },
                   "DefaultPolicy": {
@@ -3520,19 +4240,19 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
-                          "version": "2.101.1"
+                          "version": "2.128.0"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_iam.Policy",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_iam.Role",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "Resource": {
@@ -3540,13 +4260,487 @@
                 "path": "HawkbitPipelineCppStack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/Resource",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnResource",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               }
             },
             "constructInfo": {
               "fqn": "constructs.Construct",
               "version": "10.3.0"
+            }
+          },
+          "hawkbitRolloutSoftwareOnDeviceLambdaRole": {
+            "id": "hawkbitRolloutSoftwareOnDeviceLambdaRole",
+            "path": "HawkbitPipelineCppStack/hawkbitRolloutSoftwareOnDeviceLambdaRole",
+            "children": {
+              "ImporthawkbitRolloutSoftwareOnDeviceLambdaRole": {
+                "id": "ImporthawkbitRolloutSoftwareOnDeviceLambdaRole",
+                "path": "HawkbitPipelineCppStack/hawkbitRolloutSoftwareOnDeviceLambdaRole/ImporthawkbitRolloutSoftwareOnDeviceLambdaRole",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.128.0"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "HawkbitPipelineCppStack/hawkbitRolloutSoftwareOnDeviceLambdaRole/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                  "aws:cdk:cloudformation:props": {
+                    "assumeRolePolicyDocument": {
+                      "Statement": [
+                        {
+                          "Action": "sts:AssumeRole",
+                          "Effect": "Allow",
+                          "Principal": {
+                            "Service": "lambda.amazonaws.com"
+                          }
+                        }
+                      ],
+                      "Version": "2012-10-17"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_iam.CfnRole",
+                  "version": "2.128.0"
+                }
+              },
+              "DefaultPolicy": {
+                "id": "DefaultPolicy",
+                "path": "HawkbitPipelineCppStack/hawkbitRolloutSoftwareOnDeviceLambdaRole/DefaultPolicy",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "HawkbitPipelineCppStack/hawkbitRolloutSoftwareOnDeviceLambdaRole/DefaultPolicy/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                      "aws:cdk:cloudformation:props": {
+                        "policyDocument": {
+                          "Statement": [
+                            {
+                              "Action": [
+                                "codepipeline:PutJobFailureResult",
+                                "codepipeline:PutJobSuccessResult",
+                                "iam:ListGroups",
+                                "iam:ListRoles",
+                                "iam:ListUsers",
+                                "kms:CreateAlias",
+                                "kms:CreateKey",
+                                "kms:DeleteAlias",
+                                "kms:Describe*",
+                                "kms:GenerateRandom",
+                                "kms:Get*",
+                                "kms:List*",
+                                "kms:TagResource",
+                                "kms:UntagResource",
+                                "ssm:Describe*",
+                                "ssm:Get*",
+                                "ssm:List*"
+                              ],
+                              "Effect": "Allow",
+                              "Resource": "*"
+                            },
+                            {
+                              "Action": [
+                                "logs:CreateLogStream",
+                                "logs:PutLogEvents"
+                              ],
+                              "Effect": "Allow",
+                              "Resource": {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:aws:logs:",
+                                    {
+                                      "Ref": "AWS::Region"
+                                    },
+                                    ":",
+                                    {
+                                      "Ref": "AWS::AccountId"
+                                    },
+                                    ":log-group:/aws/lambda/hawkbitRolloutSoftwareOnDevice:*"
+                                  ]
+                                ]
+                              }
+                            },
+                            {
+                              "Action": "logs:CreateLogGroup",
+                              "Effect": "Allow",
+                              "Resource": {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:aws:logs:",
+                                    {
+                                      "Ref": "AWS::Region"
+                                    },
+                                    ":",
+                                    {
+                                      "Ref": "AWS::AccountId"
+                                    },
+                                    ":*"
+                                  ]
+                                ]
+                              }
+                            },
+                            {
+                              "Action": "logs:*",
+                              "Effect": "Allow",
+                              "Resource": "arn:aws:logs:*:*:*"
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "policyName": "hawkbitRolloutSoftwareOnDeviceLambdaRoleDefaultPolicyE0E51F51",
+                        "roles": [
+                          {
+                            "Ref": "hawkbitRolloutSoftwareOnDeviceLambdaRole0A9AF537"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
+                      "version": "2.128.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_iam.Policy",
+                  "version": "2.128.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_iam.Role",
+              "version": "2.128.0"
+            }
+          },
+          "hawkbitRolloutSoftwareOnDevice": {
+            "id": "hawkbitRolloutSoftwareOnDevice",
+            "path": "HawkbitPipelineCppStack/hawkbitRolloutSoftwareOnDevice",
+            "children": {
+              "Code": {
+                "id": "Code",
+                "path": "HawkbitPipelineCppStack/hawkbitRolloutSoftwareOnDevice/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "HawkbitPipelineCppStack/hawkbitRolloutSoftwareOnDevice/Code/Stage",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.AssetStaging",
+                      "version": "2.128.0"
+                    }
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "HawkbitPipelineCppStack/hawkbitRolloutSoftwareOnDevice/Code/AssetBucket",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3.BucketBase",
+                      "version": "2.128.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
+                  "version": "2.128.0"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "HawkbitPipelineCppStack/hawkbitRolloutSoftwareOnDevice/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": "cdk-hnb659fds-assets-668487117877-eu-west-1",
+                      "s3Key": "98e89e10efc80fe40afe63f97d3a3e8a75e10485f0cb6650d1b90850c2989ba7.zip"
+                    },
+                    "functionName": "hawkbitRolloutSoftwareOnDevice",
+                    "handler": "hawkbitRolloutSoftwareOnDevice.lambda_handler",
+                    "role": {
+                      "Fn::GetAtt": [
+                        "hawkbitRolloutSoftwareOnDeviceLambdaRole0A9AF537",
+                        "Arn"
+                      ]
+                    },
+                    "runtime": "python3.11",
+                    "timeout": 60
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_lambda.CfnFunction",
+                  "version": "2.128.0"
+                }
+              },
+              "LogRetention": {
+                "id": "LogRetention",
+                "path": "HawkbitPipelineCppStack/hawkbitRolloutSoftwareOnDevice/LogRetention",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "HawkbitPipelineCppStack/hawkbitRolloutSoftwareOnDevice/LogRetention/Resource",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.CfnResource",
+                      "version": "2.128.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_logs.LogRetention",
+                  "version": "2.128.0"
+                }
+              },
+              "LogGroup": {
+                "id": "LogGroup",
+                "path": "HawkbitPipelineCppStack/hawkbitRolloutSoftwareOnDevice/LogGroup",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.128.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_lambda.Function",
+              "version": "2.128.0"
+            }
+          },
+          "hawkbitAssignSoftwareToDeviceLambdaRole": {
+            "id": "hawkbitAssignSoftwareToDeviceLambdaRole",
+            "path": "HawkbitPipelineCppStack/hawkbitAssignSoftwareToDeviceLambdaRole",
+            "children": {
+              "ImporthawkbitAssignSoftwareToDeviceLambdaRole": {
+                "id": "ImporthawkbitAssignSoftwareToDeviceLambdaRole",
+                "path": "HawkbitPipelineCppStack/hawkbitAssignSoftwareToDeviceLambdaRole/ImporthawkbitAssignSoftwareToDeviceLambdaRole",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.128.0"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "HawkbitPipelineCppStack/hawkbitAssignSoftwareToDeviceLambdaRole/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                  "aws:cdk:cloudformation:props": {
+                    "assumeRolePolicyDocument": {
+                      "Statement": [
+                        {
+                          "Action": "sts:AssumeRole",
+                          "Effect": "Allow",
+                          "Principal": {
+                            "Service": "lambda.amazonaws.com"
+                          }
+                        }
+                      ],
+                      "Version": "2012-10-17"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_iam.CfnRole",
+                  "version": "2.128.0"
+                }
+              },
+              "DefaultPolicy": {
+                "id": "DefaultPolicy",
+                "path": "HawkbitPipelineCppStack/hawkbitAssignSoftwareToDeviceLambdaRole/DefaultPolicy",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "HawkbitPipelineCppStack/hawkbitAssignSoftwareToDeviceLambdaRole/DefaultPolicy/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                      "aws:cdk:cloudformation:props": {
+                        "policyDocument": {
+                          "Statement": [
+                            {
+                              "Action": [
+                                "codepipeline:PutJobFailureResult",
+                                "codepipeline:PutJobSuccessResult",
+                                "iam:ListGroups",
+                                "iam:ListRoles",
+                                "iam:ListUsers",
+                                "kms:CreateAlias",
+                                "kms:CreateKey",
+                                "kms:DeleteAlias",
+                                "kms:Describe*",
+                                "kms:GenerateRandom",
+                                "kms:Get*",
+                                "kms:List*",
+                                "kms:TagResource",
+                                "kms:UntagResource",
+                                "ssm:Describe*",
+                                "ssm:Get*",
+                                "ssm:List*"
+                              ],
+                              "Effect": "Allow",
+                              "Resource": "*"
+                            },
+                            {
+                              "Action": [
+                                "logs:CreateLogStream",
+                                "logs:PutLogEvents"
+                              ],
+                              "Effect": "Allow",
+                              "Resource": {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:aws:logs:",
+                                    {
+                                      "Ref": "AWS::Region"
+                                    },
+                                    ":",
+                                    {
+                                      "Ref": "AWS::AccountId"
+                                    },
+                                    ":log-group:/aws/lambda/hawkbitAssignSoftwareToDevice:*"
+                                  ]
+                                ]
+                              }
+                            },
+                            {
+                              "Action": "logs:CreateLogGroup",
+                              "Effect": "Allow",
+                              "Resource": {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:aws:logs:",
+                                    {
+                                      "Ref": "AWS::Region"
+                                    },
+                                    ":",
+                                    {
+                                      "Ref": "AWS::AccountId"
+                                    },
+                                    ":*"
+                                  ]
+                                ]
+                              }
+                            },
+                            {
+                              "Action": "logs:*",
+                              "Effect": "Allow",
+                              "Resource": "arn:aws:logs:*:*:*"
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "policyName": "hawkbitAssignSoftwareToDeviceLambdaRoleDefaultPolicy57E8F21F",
+                        "roles": [
+                          {
+                            "Ref": "hawkbitAssignSoftwareToDeviceLambdaRoleD5E27275"
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
+                      "version": "2.128.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_iam.Policy",
+                  "version": "2.128.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_iam.Role",
+              "version": "2.128.0"
+            }
+          },
+          "hawkbitAssignSoftwareToDevice": {
+            "id": "hawkbitAssignSoftwareToDevice",
+            "path": "HawkbitPipelineCppStack/hawkbitAssignSoftwareToDevice",
+            "children": {
+              "Code": {
+                "id": "Code",
+                "path": "HawkbitPipelineCppStack/hawkbitAssignSoftwareToDevice/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "HawkbitPipelineCppStack/hawkbitAssignSoftwareToDevice/Code/Stage",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.AssetStaging",
+                      "version": "2.128.0"
+                    }
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "HawkbitPipelineCppStack/hawkbitAssignSoftwareToDevice/Code/AssetBucket",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.aws_s3.BucketBase",
+                      "version": "2.128.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
+                  "version": "2.128.0"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "HawkbitPipelineCppStack/hawkbitAssignSoftwareToDevice/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": "cdk-hnb659fds-assets-668487117877-eu-west-1",
+                      "s3Key": "e80440be1e8b58ab3dbfae1f8c80b0d7aa77c099d4438f2a18beecb2237e3244.zip"
+                    },
+                    "functionName": "hawkbitAssignSoftwareToDevice",
+                    "handler": "hawkbitAssignSoftwareToDevice.lambda_handler",
+                    "role": {
+                      "Fn::GetAtt": [
+                        "hawkbitAssignSoftwareToDeviceLambdaRoleD5E27275",
+                        "Arn"
+                      ]
+                    },
+                    "runtime": "python3.11",
+                    "timeout": 60
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_lambda.CfnFunction",
+                  "version": "2.128.0"
+                }
+              },
+              "LogRetention": {
+                "id": "LogRetention",
+                "path": "HawkbitPipelineCppStack/hawkbitAssignSoftwareToDevice/LogRetention",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "HawkbitPipelineCppStack/hawkbitAssignSoftwareToDevice/LogRetention/Resource",
+                    "constructInfo": {
+                      "fqn": "aws-cdk-lib.CfnResource",
+                      "version": "2.128.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.aws_logs.LogRetention",
+                  "version": "2.128.0"
+                }
+              },
+              "LogGroup": {
+                "id": "LogGroup",
+                "path": "HawkbitPipelineCppStack/hawkbitAssignSoftwareToDevice/LogGroup",
+                "constructInfo": {
+                  "fqn": "aws-cdk-lib.Resource",
+                  "version": "2.128.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "aws-cdk-lib.aws_lambda.Function",
+              "version": "2.128.0"
             }
           },
           "hawkbit-device": {
@@ -3562,7 +4756,7 @@
                     "path": "HawkbitPipelineCppStack/hawkbit-device/Role/ImportRole",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.Resource",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   },
                   "Resource": {
@@ -3587,7 +4781,7 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_iam.CfnRole",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   },
                   "DefaultPolicy": {
@@ -3661,7 +4855,19 @@
                                     },
                                     {
                                       "Fn::GetAtt": [
+                                        "hawkbitdevicehawkbitAssignSoftwareToDeviceCodePipelineActionRoleF640F75C",
+                                        "Arn"
+                                      ]
+                                    },
+                                    {
+                                      "Fn::GetAtt": [
                                         "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRole79AF71EC",
+                                        "Arn"
+                                      ]
+                                    },
+                                    {
+                                      "Fn::GetAtt": [
+                                        "hawkbitdevicehawkbitRolloutSoftwareOnDeviceCodePipelineActionRole1DF76D2A",
                                         "Arn"
                                       ]
                                     }
@@ -3680,19 +4886,19 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
-                          "version": "2.101.1"
+                          "version": "2.128.0"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_iam.Policy",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_iam.Role",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "Resource": {
@@ -3716,6 +4922,16 @@
                         ]
                       }
                     },
+                    "disableInboundStageTransitions": [
+                      {
+                        "reason": "Stage is not needed now",
+                        "stageName": "hawkbitRolloutSoftwareOnDevice"
+                      },
+                      {
+                        "reason": "Stage is not needed now",
+                        "stageName": "hawkbitAssignSoftwareToDevice"
+                      }
+                    ],
                     "name": "hawkbit-device",
                     "roleArn": {
                       "Fn::GetAtt": [
@@ -3834,13 +5050,87 @@
                             "namespace": "LambdaVariables"
                           }
                         ]
+                      },
+                      {
+                        "name": "hawkbitRolloutSoftwareOnDevice",
+                        "actions": [
+                          {
+                            "name": "hawkbitRolloutSoftwareOnDevice",
+                            "inputArtifacts": [
+                              {
+                                "name": "DeploySoftwareOnHawkbitServerArtifacts"
+                              }
+                            ],
+                            "outputArtifacts": [
+                              {
+                                "name": "hawkbitRolloutSoftwareOnDeviceArtifacts"
+                              }
+                            ],
+                            "actionTypeId": {
+                              "category": "Invoke",
+                              "version": "1",
+                              "owner": "AWS",
+                              "provider": "Lambda"
+                            },
+                            "configuration": {
+                              "FunctionName": {
+                                "Ref": "hawkbitRolloutSoftwareOnDevice26BB56D7"
+                              },
+                              "UserParameters": "#{LambdaVariables.DistributioSet}"
+                            },
+                            "runOrder": 1,
+                            "roleArn": {
+                              "Fn::GetAtt": [
+                                "hawkbitdevicehawkbitRolloutSoftwareOnDeviceCodePipelineActionRole1DF76D2A",
+                                "Arn"
+                              ]
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "name": "hawkbitAssignSoftwareToDevice",
+                        "actions": [
+                          {
+                            "name": "hawkbitAssignSoftwareToDevice",
+                            "inputArtifacts": [
+                              {
+                                "name": "DeploySoftwareOnHawkbitServerArtifacts"
+                              }
+                            ],
+                            "outputArtifacts": [
+                              {
+                                "name": "hawkbitAssignSoftwareToDeviceArtifacts"
+                              }
+                            ],
+                            "actionTypeId": {
+                              "category": "Invoke",
+                              "version": "1",
+                              "owner": "AWS",
+                              "provider": "Lambda"
+                            },
+                            "configuration": {
+                              "FunctionName": {
+                                "Ref": "hawkbitAssignSoftwareToDevice1BBCF15D"
+                              },
+                              "UserParameters": "#{LambdaVariables.DistributioSet}"
+                            },
+                            "runOrder": 1,
+                            "roleArn": {
+                              "Fn::GetAtt": [
+                                "hawkbitdevicehawkbitAssignSoftwareToDeviceCodePipelineActionRoleF640F75C",
+                                "Arn"
+                              ]
+                            }
+                          }
+                        ]
                       }
                     ]
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_codepipeline.CfnPipeline",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "Source": {
@@ -3860,7 +5150,7 @@
                             "path": "HawkbitPipelineCppStack/hawkbit-device/Source/CodeCommit/CodePipelineActionRole/ImportCodePipelineActionRole",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.Resource",
-                              "version": "2.101.1"
+                              "version": "2.128.0"
                             }
                           },
                           "Resource": {
@@ -3885,7 +5175,7 @@
                             },
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.aws_iam.CfnRole",
-                              "version": "2.101.1"
+                              "version": "2.128.0"
                             }
                           },
                           "DefaultPolicy": {
@@ -3970,19 +5260,19 @@
                                 },
                                 "constructInfo": {
                                   "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
-                                  "version": "2.101.1"
+                                  "version": "2.128.0"
                                 }
                               }
                             },
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.aws_iam.Policy",
-                              "version": "2.101.1"
+                              "version": "2.128.0"
                             }
                           }
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_iam.Role",
-                          "version": "2.101.1"
+                          "version": "2.128.0"
                         }
                       }
                     },
@@ -4006,7 +5296,7 @@
                     "path": "HawkbitPipelineCppStack/hawkbit-device/EventsRole/ImportEventsRole",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.Resource",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   },
                   "Resource": {
@@ -4031,7 +5321,7 @@
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_iam.CfnRole",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   },
                   "DefaultPolicy": {
@@ -4074,19 +5364,19 @@
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
-                          "version": "2.101.1"
+                          "version": "2.128.0"
                         }
                       }
                     },
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_iam.Policy",
-                      "version": "2.101.1"
+                      "version": "2.128.0"
                     }
                   }
                 },
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.aws_iam.Role",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               },
               "Build": {
@@ -4106,7 +5396,7 @@
                             "path": "HawkbitPipelineCppStack/hawkbit-device/Build/Build/CodePipelineActionRole/ImportCodePipelineActionRole",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.Resource",
-                              "version": "2.101.1"
+                              "version": "2.128.0"
                             }
                           },
                           "Resource": {
@@ -4131,7 +5421,7 @@
                             },
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.aws_iam.CfnRole",
-                              "version": "2.101.1"
+                              "version": "2.128.0"
                             }
                           },
                           "DefaultPolicy": {
@@ -4173,19 +5463,19 @@
                                 },
                                 "constructInfo": {
                                   "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
-                                  "version": "2.101.1"
+                                  "version": "2.128.0"
                                 }
                               }
                             },
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.aws_iam.Policy",
-                              "version": "2.101.1"
+                              "version": "2.128.0"
                             }
                           }
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_iam.Role",
-                          "version": "2.101.1"
+                          "version": "2.128.0"
                         }
                       }
                     },
@@ -4217,7 +5507,7 @@
                             "path": "HawkbitPipelineCppStack/hawkbit-device/hawkbitDeploySoftwareOnHawkbitServer/hawkbitDeploySoftwareOnHawkbitServer/CodePipelineActionRole/ImportCodePipelineActionRole",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.Resource",
-                              "version": "2.101.1"
+                              "version": "2.128.0"
                             }
                           },
                           "Resource": {
@@ -4242,7 +5532,7 @@
                             },
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.aws_iam.CfnRole",
-                              "version": "2.101.1"
+                              "version": "2.128.0"
                             }
                           },
                           "DefaultPolicy": {
@@ -4342,19 +5632,357 @@
                                 },
                                 "constructInfo": {
                                   "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
-                                  "version": "2.101.1"
+                                  "version": "2.128.0"
                                 }
                               }
                             },
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.aws_iam.Policy",
-                              "version": "2.101.1"
+                              "version": "2.128.0"
                             }
                           }
                         },
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.aws_iam.Role",
-                          "version": "2.101.1"
+                          "version": "2.128.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "constructs.Construct",
+                      "version": "10.3.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "constructs.Construct",
+                  "version": "10.3.0"
+                }
+              },
+              "hawkbitRolloutSoftwareOnDevice": {
+                "id": "hawkbitRolloutSoftwareOnDevice",
+                "path": "HawkbitPipelineCppStack/hawkbit-device/hawkbitRolloutSoftwareOnDevice",
+                "children": {
+                  "hawkbitRolloutSoftwareOnDevice": {
+                    "id": "hawkbitRolloutSoftwareOnDevice",
+                    "path": "HawkbitPipelineCppStack/hawkbit-device/hawkbitRolloutSoftwareOnDevice/hawkbitRolloutSoftwareOnDevice",
+                    "children": {
+                      "CodePipelineActionRole": {
+                        "id": "CodePipelineActionRole",
+                        "path": "HawkbitPipelineCppStack/hawkbit-device/hawkbitRolloutSoftwareOnDevice/hawkbitRolloutSoftwareOnDevice/CodePipelineActionRole",
+                        "children": {
+                          "ImportCodePipelineActionRole": {
+                            "id": "ImportCodePipelineActionRole",
+                            "path": "HawkbitPipelineCppStack/hawkbit-device/hawkbitRolloutSoftwareOnDevice/hawkbitRolloutSoftwareOnDevice/CodePipelineActionRole/ImportCodePipelineActionRole",
+                            "constructInfo": {
+                              "fqn": "aws-cdk-lib.Resource",
+                              "version": "2.128.0"
+                            }
+                          },
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "HawkbitPipelineCppStack/hawkbit-device/hawkbitRolloutSoftwareOnDevice/hawkbitRolloutSoftwareOnDevice/CodePipelineActionRole/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                              "aws:cdk:cloudformation:props": {
+                                "assumeRolePolicyDocument": {
+                                  "Statement": [
+                                    {
+                                      "Action": "sts:AssumeRole",
+                                      "Effect": "Allow",
+                                      "Principal": {
+                                        "AWS": "arn:aws:iam::668487117877:root"
+                                      }
+                                    }
+                                  ],
+                                  "Version": "2012-10-17"
+                                }
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "aws-cdk-lib.aws_iam.CfnRole",
+                              "version": "2.128.0"
+                            }
+                          },
+                          "DefaultPolicy": {
+                            "id": "DefaultPolicy",
+                            "path": "HawkbitPipelineCppStack/hawkbit-device/hawkbitRolloutSoftwareOnDevice/hawkbitRolloutSoftwareOnDevice/CodePipelineActionRole/DefaultPolicy",
+                            "children": {
+                              "Resource": {
+                                "id": "Resource",
+                                "path": "HawkbitPipelineCppStack/hawkbit-device/hawkbitRolloutSoftwareOnDevice/hawkbitRolloutSoftwareOnDevice/CodePipelineActionRole/DefaultPolicy/Resource",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                                  "aws:cdk:cloudformation:props": {
+                                    "policyDocument": {
+                                      "Statement": [
+                                        {
+                                          "Action": "lambda:ListFunctions",
+                                          "Effect": "Allow",
+                                          "Resource": "*"
+                                        },
+                                        {
+                                          "Action": "lambda:InvokeFunction",
+                                          "Effect": "Allow",
+                                          "Resource": [
+                                            {
+                                              "Fn::GetAtt": [
+                                                "hawkbitRolloutSoftwareOnDevice26BB56D7",
+                                                "Arn"
+                                              ]
+                                            },
+                                            {
+                                              "Fn::Join": [
+                                                "",
+                                                [
+                                                  {
+                                                    "Fn::GetAtt": [
+                                                      "hawkbitRolloutSoftwareOnDevice26BB56D7",
+                                                      "Arn"
+                                                    ]
+                                                  },
+                                                  ":*"
+                                                ]
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "Action": [
+                                            "s3:Abort*",
+                                            "s3:DeleteObject*",
+                                            "s3:GetBucket*",
+                                            "s3:GetObject*",
+                                            "s3:List*",
+                                            "s3:PutObject",
+                                            "s3:PutObjectLegalHold",
+                                            "s3:PutObjectRetention",
+                                            "s3:PutObjectTagging",
+                                            "s3:PutObjectVersionTagging"
+                                          ],
+                                          "Effect": "Allow",
+                                          "Resource": [
+                                            {
+                                              "Fn::Join": [
+                                                "",
+                                                [
+                                                  "arn:aws:s3:::codepipeline-",
+                                                  {
+                                                    "Ref": "AWS::Region"
+                                                  },
+                                                  "-833521754963"
+                                                ]
+                                              ]
+                                            },
+                                            {
+                                              "Fn::Join": [
+                                                "",
+                                                [
+                                                  "arn:aws:s3:::codepipeline-",
+                                                  {
+                                                    "Ref": "AWS::Region"
+                                                  },
+                                                  "-833521754963/*"
+                                                ]
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "Version": "2012-10-17"
+                                    },
+                                    "policyName": "hawkbitdevicehawkbitRolloutSoftwareOnDeviceCodePipelineActionRoleDefaultPolicy43B9D91A",
+                                    "roles": [
+                                      {
+                                        "Ref": "hawkbitdevicehawkbitRolloutSoftwareOnDeviceCodePipelineActionRole1DF76D2A"
+                                      }
+                                    ]
+                                  }
+                                },
+                                "constructInfo": {
+                                  "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
+                                  "version": "2.128.0"
+                                }
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "aws-cdk-lib.aws_iam.Policy",
+                              "version": "2.128.0"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_iam.Role",
+                          "version": "2.128.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "constructs.Construct",
+                      "version": "10.3.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "constructs.Construct",
+                  "version": "10.3.0"
+                }
+              },
+              "hawkbitAssignSoftwareToDevice": {
+                "id": "hawkbitAssignSoftwareToDevice",
+                "path": "HawkbitPipelineCppStack/hawkbit-device/hawkbitAssignSoftwareToDevice",
+                "children": {
+                  "hawkbitAssignSoftwareToDevice": {
+                    "id": "hawkbitAssignSoftwareToDevice",
+                    "path": "HawkbitPipelineCppStack/hawkbit-device/hawkbitAssignSoftwareToDevice/hawkbitAssignSoftwareToDevice",
+                    "children": {
+                      "CodePipelineActionRole": {
+                        "id": "CodePipelineActionRole",
+                        "path": "HawkbitPipelineCppStack/hawkbit-device/hawkbitAssignSoftwareToDevice/hawkbitAssignSoftwareToDevice/CodePipelineActionRole",
+                        "children": {
+                          "ImportCodePipelineActionRole": {
+                            "id": "ImportCodePipelineActionRole",
+                            "path": "HawkbitPipelineCppStack/hawkbit-device/hawkbitAssignSoftwareToDevice/hawkbitAssignSoftwareToDevice/CodePipelineActionRole/ImportCodePipelineActionRole",
+                            "constructInfo": {
+                              "fqn": "aws-cdk-lib.Resource",
+                              "version": "2.128.0"
+                            }
+                          },
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "HawkbitPipelineCppStack/hawkbit-device/hawkbitAssignSoftwareToDevice/hawkbitAssignSoftwareToDevice/CodePipelineActionRole/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                              "aws:cdk:cloudformation:props": {
+                                "assumeRolePolicyDocument": {
+                                  "Statement": [
+                                    {
+                                      "Action": "sts:AssumeRole",
+                                      "Effect": "Allow",
+                                      "Principal": {
+                                        "AWS": "arn:aws:iam::668487117877:root"
+                                      }
+                                    }
+                                  ],
+                                  "Version": "2012-10-17"
+                                }
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "aws-cdk-lib.aws_iam.CfnRole",
+                              "version": "2.128.0"
+                            }
+                          },
+                          "DefaultPolicy": {
+                            "id": "DefaultPolicy",
+                            "path": "HawkbitPipelineCppStack/hawkbit-device/hawkbitAssignSoftwareToDevice/hawkbitAssignSoftwareToDevice/CodePipelineActionRole/DefaultPolicy",
+                            "children": {
+                              "Resource": {
+                                "id": "Resource",
+                                "path": "HawkbitPipelineCppStack/hawkbit-device/hawkbitAssignSoftwareToDevice/hawkbitAssignSoftwareToDevice/CodePipelineActionRole/DefaultPolicy/Resource",
+                                "attributes": {
+                                  "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                                  "aws:cdk:cloudformation:props": {
+                                    "policyDocument": {
+                                      "Statement": [
+                                        {
+                                          "Action": "lambda:ListFunctions",
+                                          "Effect": "Allow",
+                                          "Resource": "*"
+                                        },
+                                        {
+                                          "Action": "lambda:InvokeFunction",
+                                          "Effect": "Allow",
+                                          "Resource": [
+                                            {
+                                              "Fn::GetAtt": [
+                                                "hawkbitAssignSoftwareToDevice1BBCF15D",
+                                                "Arn"
+                                              ]
+                                            },
+                                            {
+                                              "Fn::Join": [
+                                                "",
+                                                [
+                                                  {
+                                                    "Fn::GetAtt": [
+                                                      "hawkbitAssignSoftwareToDevice1BBCF15D",
+                                                      "Arn"
+                                                    ]
+                                                  },
+                                                  ":*"
+                                                ]
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "Action": [
+                                            "s3:Abort*",
+                                            "s3:DeleteObject*",
+                                            "s3:GetBucket*",
+                                            "s3:GetObject*",
+                                            "s3:List*",
+                                            "s3:PutObject",
+                                            "s3:PutObjectLegalHold",
+                                            "s3:PutObjectRetention",
+                                            "s3:PutObjectTagging",
+                                            "s3:PutObjectVersionTagging"
+                                          ],
+                                          "Effect": "Allow",
+                                          "Resource": [
+                                            {
+                                              "Fn::Join": [
+                                                "",
+                                                [
+                                                  "arn:aws:s3:::codepipeline-",
+                                                  {
+                                                    "Ref": "AWS::Region"
+                                                  },
+                                                  "-833521754963"
+                                                ]
+                                              ]
+                                            },
+                                            {
+                                              "Fn::Join": [
+                                                "",
+                                                [
+                                                  "arn:aws:s3:::codepipeline-",
+                                                  {
+                                                    "Ref": "AWS::Region"
+                                                  },
+                                                  "-833521754963/*"
+                                                ]
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "Version": "2012-10-17"
+                                    },
+                                    "policyName": "hawkbitdevicehawkbitAssignSoftwareToDeviceCodePipelineActionRoleDefaultPolicy73C49DD8",
+                                    "roles": [
+                                      {
+                                        "Ref": "hawkbitdevicehawkbitAssignSoftwareToDeviceCodePipelineActionRoleF640F75C"
+                                      }
+                                    ]
+                                  }
+                                },
+                                "constructInfo": {
+                                  "fqn": "aws-cdk-lib.aws_iam.CfnPolicy",
+                                  "version": "2.128.0"
+                                }
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "aws-cdk-lib.aws_iam.Policy",
+                              "version": "2.128.0"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.aws_iam.Role",
+                          "version": "2.128.0"
                         }
                       }
                     },
@@ -4372,7 +6000,7 @@
             },
             "constructInfo": {
               "fqn": "aws-cdk-lib.aws_codepipeline.Pipeline",
-              "version": "2.101.1"
+              "version": "2.128.0"
             }
           },
           "CDKMetadata": {
@@ -4384,7 +6012,7 @@
                 "path": "HawkbitPipelineCppStack/CDKMetadata/Default",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnResource",
-                  "version": "2.101.1"
+                  "version": "2.128.0"
                 }
               }
             },
@@ -4398,7 +6026,7 @@
             "path": "HawkbitPipelineCppStack/BootstrapVersion",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnParameter",
-              "version": "2.101.1"
+              "version": "2.128.0"
             }
           },
           "CheckBootstrapVersion": {
@@ -4406,13 +6034,13 @@
             "path": "HawkbitPipelineCppStack/CheckBootstrapVersion",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnRule",
-              "version": "2.101.1"
+              "version": "2.128.0"
             }
           }
         },
         "constructInfo": {
           "fqn": "aws-cdk-lib.Stack",
-          "version": "2.101.1"
+          "version": "2.128.0"
         }
       },
       "Tree": {
@@ -4426,7 +6054,7 @@
     },
     "constructInfo": {
       "fqn": "aws-cdk-lib.App",
-      "version": "2.101.1"
+      "version": "2.128.0"
     }
   }
 }

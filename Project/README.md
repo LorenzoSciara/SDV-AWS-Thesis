@@ -1,4 +1,5 @@
 # Project
+
 This is the project for the job, as well as the practical example. The project follows the following schema:
 
 thesis-repository/

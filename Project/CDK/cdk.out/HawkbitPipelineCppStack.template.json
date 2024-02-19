@@ -580,8 +580,12 @@
     "hawkbitdeviceBuildCodePipelineActionRole00C9FE02",
     "hawkbitdeviceEventsRoleDefaultPolicy3CC5FBBF",
     "hawkbitdeviceEventsRole726D97B9",
+    "hawkbitdevicehawkbitAssignSoftwareToDeviceCodePipelineActionRoleDefaultPolicy73C49DD8",
+    "hawkbitdevicehawkbitAssignSoftwareToDeviceCodePipelineActionRoleF640F75C",
     "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRoleDefaultPolicyA7E2761B",
     "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRole79AF71EC",
+    "hawkbitdevicehawkbitRolloutSoftwareOnDeviceCodePipelineActionRoleDefaultPolicy43B9D91A",
+    "hawkbitdevicehawkbitRolloutSoftwareOnDeviceCodePipelineActionRole1DF76D2A",
     "hawkbitdevice4D38CBED",
     "hawkbitdeviceRoleDefaultPolicyAD24F563",
     "hawkbitdeviceRoleF21FF7F1",
@@ -671,8 +675,12 @@
     "hawkbitdeviceBuildCodePipelineActionRole00C9FE02",
     "hawkbitdeviceEventsRoleDefaultPolicy3CC5FBBF",
     "hawkbitdeviceEventsRole726D97B9",
+    "hawkbitdevicehawkbitAssignSoftwareToDeviceCodePipelineActionRoleDefaultPolicy73C49DD8",
+    "hawkbitdevicehawkbitAssignSoftwareToDeviceCodePipelineActionRoleF640F75C",
     "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRoleDefaultPolicyA7E2761B",
     "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRole79AF71EC",
+    "hawkbitdevicehawkbitRolloutSoftwareOnDeviceCodePipelineActionRoleDefaultPolicy43B9D91A",
+    "hawkbitdevicehawkbitRolloutSoftwareOnDeviceCodePipelineActionRole1DF76D2A",
     "hawkbitdevice4D38CBED",
     "hawkbitdeviceRoleDefaultPolicyAD24F563",
     "hawkbitdeviceRoleF21FF7F1",
@@ -785,8 +793,12 @@
     "hawkbitdeviceBuildCodePipelineActionRole00C9FE02",
     "hawkbitdeviceEventsRoleDefaultPolicy3CC5FBBF",
     "hawkbitdeviceEventsRole726D97B9",
+    "hawkbitdevicehawkbitAssignSoftwareToDeviceCodePipelineActionRoleDefaultPolicy73C49DD8",
+    "hawkbitdevicehawkbitAssignSoftwareToDeviceCodePipelineActionRoleF640F75C",
     "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRoleDefaultPolicyA7E2761B",
     "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRole79AF71EC",
+    "hawkbitdevicehawkbitRolloutSoftwareOnDeviceCodePipelineActionRoleDefaultPolicy43B9D91A",
+    "hawkbitdevicehawkbitRolloutSoftwareOnDeviceCodePipelineActionRole1DF76D2A",
     "hawkbitdevice4D38CBED",
     "hawkbitdeviceRoleDefaultPolicyAD24F563",
     "hawkbitdeviceRoleF21FF7F1",
@@ -818,8 +830,12 @@
     "hawkbitdeviceBuildCodePipelineActionRole00C9FE02",
     "hawkbitdeviceEventsRoleDefaultPolicy3CC5FBBF",
     "hawkbitdeviceEventsRole726D97B9",
+    "hawkbitdevicehawkbitAssignSoftwareToDeviceCodePipelineActionRoleDefaultPolicy73C49DD8",
+    "hawkbitdevicehawkbitAssignSoftwareToDeviceCodePipelineActionRoleF640F75C",
     "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRoleDefaultPolicyA7E2761B",
     "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRole79AF71EC",
+    "hawkbitdevicehawkbitRolloutSoftwareOnDeviceCodePipelineActionRoleDefaultPolicy43B9D91A",
+    "hawkbitdevicehawkbitRolloutSoftwareOnDeviceCodePipelineActionRole1DF76D2A",
     "hawkbitdevice4D38CBED",
     "hawkbitdeviceRoleDefaultPolicyAD24F563",
     "hawkbitdeviceRoleF21FF7F1",
@@ -907,8 +923,12 @@
     "hawkbitdeviceBuildCodePipelineActionRole00C9FE02",
     "hawkbitdeviceEventsRoleDefaultPolicy3CC5FBBF",
     "hawkbitdeviceEventsRole726D97B9",
+    "hawkbitdevicehawkbitAssignSoftwareToDeviceCodePipelineActionRoleDefaultPolicy73C49DD8",
+    "hawkbitdevicehawkbitAssignSoftwareToDeviceCodePipelineActionRoleF640F75C",
     "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRoleDefaultPolicyA7E2761B",
     "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRole79AF71EC",
+    "hawkbitdevicehawkbitRolloutSoftwareOnDeviceCodePipelineActionRoleDefaultPolicy43B9D91A",
+    "hawkbitdevicehawkbitRolloutSoftwareOnDeviceCodePipelineActionRole1DF76D2A",
     "hawkbitdevice4D38CBED",
     "hawkbitdeviceRoleDefaultPolicyAD24F563",
     "hawkbitdeviceRoleF21FF7F1",
@@ -940,8 +960,12 @@
     "hawkbitdeviceBuildCodePipelineActionRole00C9FE02",
     "hawkbitdeviceEventsRoleDefaultPolicy3CC5FBBF",
     "hawkbitdeviceEventsRole726D97B9",
+    "hawkbitdevicehawkbitAssignSoftwareToDeviceCodePipelineActionRoleDefaultPolicy73C49DD8",
+    "hawkbitdevicehawkbitAssignSoftwareToDeviceCodePipelineActionRoleF640F75C",
     "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRoleDefaultPolicyA7E2761B",
     "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRole79AF71EC",
+    "hawkbitdevicehawkbitRolloutSoftwareOnDeviceCodePipelineActionRoleDefaultPolicy43B9D91A",
+    "hawkbitdevicehawkbitRolloutSoftwareOnDeviceCodePipelineActionRole1DF76D2A",
     "hawkbitdevice4D38CBED",
     "hawkbitdeviceRoleDefaultPolicyAD24F563",
     "hawkbitdeviceRoleF21FF7F1",
@@ -987,8 +1011,12 @@
     "hawkbitdeviceBuildCodePipelineActionRole00C9FE02",
     "hawkbitdeviceEventsRoleDefaultPolicy3CC5FBBF",
     "hawkbitdeviceEventsRole726D97B9",
+    "hawkbitdevicehawkbitAssignSoftwareToDeviceCodePipelineActionRoleDefaultPolicy73C49DD8",
+    "hawkbitdevicehawkbitAssignSoftwareToDeviceCodePipelineActionRoleF640F75C",
     "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRoleDefaultPolicyA7E2761B",
     "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRole79AF71EC",
+    "hawkbitdevicehawkbitRolloutSoftwareOnDeviceCodePipelineActionRoleDefaultPolicy43B9D91A",
+    "hawkbitdevicehawkbitRolloutSoftwareOnDeviceCodePipelineActionRole1DF76D2A",
     "hawkbitdevice4D38CBED",
     "hawkbitdeviceRoleDefaultPolicyAD24F563",
     "hawkbitdeviceRoleF21FF7F1",
@@ -1020,8 +1048,12 @@
     "hawkbitdeviceBuildCodePipelineActionRole00C9FE02",
     "hawkbitdeviceEventsRoleDefaultPolicy3CC5FBBF",
     "hawkbitdeviceEventsRole726D97B9",
+    "hawkbitdevicehawkbitAssignSoftwareToDeviceCodePipelineActionRoleDefaultPolicy73C49DD8",
+    "hawkbitdevicehawkbitAssignSoftwareToDeviceCodePipelineActionRoleF640F75C",
     "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRoleDefaultPolicyA7E2761B",
     "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRole79AF71EC",
+    "hawkbitdevicehawkbitRolloutSoftwareOnDeviceCodePipelineActionRoleDefaultPolicy43B9D91A",
+    "hawkbitdevicehawkbitRolloutSoftwareOnDeviceCodePipelineActionRole1DF76D2A",
     "hawkbitdevice4D38CBED",
     "hawkbitdeviceRoleDefaultPolicyAD24F563",
     "hawkbitdeviceRoleF21FF7F1",
@@ -1066,8 +1098,12 @@
     "hawkbitdeviceBuildCodePipelineActionRole00C9FE02",
     "hawkbitdeviceEventsRoleDefaultPolicy3CC5FBBF",
     "hawkbitdeviceEventsRole726D97B9",
+    "hawkbitdevicehawkbitAssignSoftwareToDeviceCodePipelineActionRoleDefaultPolicy73C49DD8",
+    "hawkbitdevicehawkbitAssignSoftwareToDeviceCodePipelineActionRoleF640F75C",
     "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRoleDefaultPolicyA7E2761B",
     "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRole79AF71EC",
+    "hawkbitdevicehawkbitRolloutSoftwareOnDeviceCodePipelineActionRoleDefaultPolicy43B9D91A",
+    "hawkbitdevicehawkbitRolloutSoftwareOnDeviceCodePipelineActionRole1DF76D2A",
     "hawkbitdevice4D38CBED",
     "hawkbitdeviceRoleDefaultPolicyAD24F563",
     "hawkbitdeviceRoleF21FF7F1",
@@ -1636,7 +1672,7 @@
     "Timeout": 900,
     "Code": {
      "S3Bucket": "cdk-hnb659fds-assets-668487117877-eu-west-1",
-     "S3Key": "5bc602ecde93c947efe5899ae355f999986a1acbe610b1c0b9c468d738857555.zip"
+     "S3Key": "4e26bf2d0a26f2097fb2b261f22bb51e3f6b4b52635777b1e54edbd8e2d58c35.zip"
     },
     "Role": {
      "Fn::GetAtt": [
@@ -1651,9 +1687,339 @@
    ],
    "Metadata": {
     "aws:cdk:path": "HawkbitPipelineCppStack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/Resource",
-    "aws:asset:path": "asset.5bc602ecde93c947efe5899ae355f999986a1acbe610b1c0b9c468d738857555",
+    "aws:asset:path": "asset.4e26bf2d0a26f2097fb2b261f22bb51e3f6b4b52635777b1e54edbd8e2d58c35",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Code"
+   }
+  },
+  "hawkbitRolloutSoftwareOnDeviceLambdaRole0A9AF537": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbitRolloutSoftwareOnDeviceLambdaRole/Resource"
+   }
+  },
+  "hawkbitRolloutSoftwareOnDeviceLambdaRoleDefaultPolicyE0E51F51": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "codepipeline:PutJobFailureResult",
+        "codepipeline:PutJobSuccessResult",
+        "iam:ListGroups",
+        "iam:ListRoles",
+        "iam:ListUsers",
+        "kms:CreateAlias",
+        "kms:CreateKey",
+        "kms:DeleteAlias",
+        "kms:Describe*",
+        "kms:GenerateRandom",
+        "kms:Get*",
+        "kms:List*",
+        "kms:TagResource",
+        "kms:UntagResource",
+        "ssm:Describe*",
+        "ssm:Get*",
+        "ssm:List*"
+       ],
+       "Effect": "Allow",
+       "Resource": "*"
+      },
+      {
+       "Action": [
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          "arn:aws:logs:",
+          {
+           "Ref": "AWS::Region"
+          },
+          ":",
+          {
+           "Ref": "AWS::AccountId"
+          },
+          ":log-group:/aws/lambda/hawkbitRolloutSoftwareOnDevice:*"
+         ]
+        ]
+       }
+      },
+      {
+       "Action": "logs:CreateLogGroup",
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          "arn:aws:logs:",
+          {
+           "Ref": "AWS::Region"
+          },
+          ":",
+          {
+           "Ref": "AWS::AccountId"
+          },
+          ":*"
+         ]
+        ]
+       }
+      },
+      {
+       "Action": "logs:*",
+       "Effect": "Allow",
+       "Resource": "arn:aws:logs:*:*:*"
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "hawkbitRolloutSoftwareOnDeviceLambdaRoleDefaultPolicyE0E51F51",
+    "Roles": [
+     {
+      "Ref": "hawkbitRolloutSoftwareOnDeviceLambdaRole0A9AF537"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbitRolloutSoftwareOnDeviceLambdaRole/DefaultPolicy/Resource"
+   }
+  },
+  "hawkbitRolloutSoftwareOnDevice26BB56D7": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Code": {
+     "S3Bucket": "cdk-hnb659fds-assets-668487117877-eu-west-1",
+     "S3Key": "98e89e10efc80fe40afe63f97d3a3e8a75e10485f0cb6650d1b90850c2989ba7.zip"
+    },
+    "FunctionName": "hawkbitRolloutSoftwareOnDevice",
+    "Handler": "hawkbitRolloutSoftwareOnDevice.lambda_handler",
+    "Role": {
+     "Fn::GetAtt": [
+      "hawkbitRolloutSoftwareOnDeviceLambdaRole0A9AF537",
+      "Arn"
+     ]
+    },
+    "Runtime": "python3.11",
+    "Timeout": 60
+   },
+   "DependsOn": [
+    "hawkbitRolloutSoftwareOnDeviceLambdaRoleDefaultPolicyE0E51F51",
+    "hawkbitRolloutSoftwareOnDeviceLambdaRole0A9AF537"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbitRolloutSoftwareOnDevice/Resource",
+    "aws:asset:path": "asset.98e89e10efc80fe40afe63f97d3a3e8a75e10485f0cb6650d1b90850c2989ba7.zip",
+    "aws:asset:is-bundled": false,
+    "aws:asset:property": "Code"
+   }
+  },
+  "hawkbitRolloutSoftwareOnDeviceLogRetentionA73075DA": {
+   "Type": "Custom::LogRetention",
+   "Properties": {
+    "ServiceToken": {
+     "Fn::GetAtt": [
+      "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A",
+      "Arn"
+     ]
+    },
+    "LogGroupName": {
+     "Fn::Join": [
+      "",
+      [
+       "/aws/lambda/",
+       {
+        "Ref": "hawkbitRolloutSoftwareOnDevice26BB56D7"
+       }
+      ]
+     ]
+    },
+    "RetentionInDays": 1
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbitRolloutSoftwareOnDevice/LogRetention/Resource"
+   }
+  },
+  "hawkbitAssignSoftwareToDeviceLambdaRoleD5E27275": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbitAssignSoftwareToDeviceLambdaRole/Resource"
+   }
+  },
+  "hawkbitAssignSoftwareToDeviceLambdaRoleDefaultPolicy57E8F21F": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "codepipeline:PutJobFailureResult",
+        "codepipeline:PutJobSuccessResult",
+        "iam:ListGroups",
+        "iam:ListRoles",
+        "iam:ListUsers",
+        "kms:CreateAlias",
+        "kms:CreateKey",
+        "kms:DeleteAlias",
+        "kms:Describe*",
+        "kms:GenerateRandom",
+        "kms:Get*",
+        "kms:List*",
+        "kms:TagResource",
+        "kms:UntagResource",
+        "ssm:Describe*",
+        "ssm:Get*",
+        "ssm:List*"
+       ],
+       "Effect": "Allow",
+       "Resource": "*"
+      },
+      {
+       "Action": [
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          "arn:aws:logs:",
+          {
+           "Ref": "AWS::Region"
+          },
+          ":",
+          {
+           "Ref": "AWS::AccountId"
+          },
+          ":log-group:/aws/lambda/hawkbitAssignSoftwareToDevice:*"
+         ]
+        ]
+       }
+      },
+      {
+       "Action": "logs:CreateLogGroup",
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          "arn:aws:logs:",
+          {
+           "Ref": "AWS::Region"
+          },
+          ":",
+          {
+           "Ref": "AWS::AccountId"
+          },
+          ":*"
+         ]
+        ]
+       }
+      },
+      {
+       "Action": "logs:*",
+       "Effect": "Allow",
+       "Resource": "arn:aws:logs:*:*:*"
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "hawkbitAssignSoftwareToDeviceLambdaRoleDefaultPolicy57E8F21F",
+    "Roles": [
+     {
+      "Ref": "hawkbitAssignSoftwareToDeviceLambdaRoleD5E27275"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbitAssignSoftwareToDeviceLambdaRole/DefaultPolicy/Resource"
+   }
+  },
+  "hawkbitAssignSoftwareToDevice1BBCF15D": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Code": {
+     "S3Bucket": "cdk-hnb659fds-assets-668487117877-eu-west-1",
+     "S3Key": "e80440be1e8b58ab3dbfae1f8c80b0d7aa77c099d4438f2a18beecb2237e3244.zip"
+    },
+    "FunctionName": "hawkbitAssignSoftwareToDevice",
+    "Handler": "hawkbitAssignSoftwareToDevice.lambda_handler",
+    "Role": {
+     "Fn::GetAtt": [
+      "hawkbitAssignSoftwareToDeviceLambdaRoleD5E27275",
+      "Arn"
+     ]
+    },
+    "Runtime": "python3.11",
+    "Timeout": 60
+   },
+   "DependsOn": [
+    "hawkbitAssignSoftwareToDeviceLambdaRoleDefaultPolicy57E8F21F",
+    "hawkbitAssignSoftwareToDeviceLambdaRoleD5E27275"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbitAssignSoftwareToDevice/Resource",
+    "aws:asset:path": "asset.e80440be1e8b58ab3dbfae1f8c80b0d7aa77c099d4438f2a18beecb2237e3244.zip",
+    "aws:asset:is-bundled": false,
+    "aws:asset:property": "Code"
+   }
+  },
+  "hawkbitAssignSoftwareToDeviceLogRetentionC61DB5AC": {
+   "Type": "Custom::LogRetention",
+   "Properties": {
+    "ServiceToken": {
+     "Fn::GetAtt": [
+      "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A",
+      "Arn"
+     ]
+    },
+    "LogGroupName": {
+     "Fn::Join": [
+      "",
+      [
+       "/aws/lambda/",
+       {
+        "Ref": "hawkbitAssignSoftwareToDevice1BBCF15D"
+       }
+      ]
+     ]
+    },
+    "RetentionInDays": 1
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbitAssignSoftwareToDevice/LogRetention/Resource"
    }
   },
   "hawkbitdeviceRoleF21FF7F1": {
@@ -1740,7 +2106,19 @@
         },
         {
          "Fn::GetAtt": [
+          "hawkbitdevicehawkbitAssignSoftwareToDeviceCodePipelineActionRoleF640F75C",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::GetAtt": [
           "hawkbitdevicehawkbitDeploySoftwareOnHawkbitServerCodePipelineActionRole79AF71EC",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::GetAtt": [
+          "hawkbitdevicehawkbitRolloutSoftwareOnDeviceCodePipelineActionRole1DF76D2A",
           "Arn"
          ]
         }
@@ -1778,6 +2156,16 @@
      },
      "Type": "S3"
     },
+    "DisableInboundStageTransitions": [
+     {
+      "Reason": "Stage is not needed now",
+      "StageName": "hawkbitRolloutSoftwareOnDevice"
+     },
+     {
+      "Reason": "Stage is not needed now",
+      "StageName": "hawkbitAssignSoftwareToDevice"
+     }
+    ],
     "Name": "hawkbit-device",
     "RoleArn": {
      "Fn::GetAtt": [
@@ -1896,6 +2284,80 @@
        }
       ],
       "Name": "hawkbitDeploySoftwareOnHawkbitServer"
+     },
+     {
+      "Actions": [
+       {
+        "ActionTypeId": {
+         "Category": "Invoke",
+         "Owner": "AWS",
+         "Provider": "Lambda",
+         "Version": "1"
+        },
+        "Configuration": {
+         "FunctionName": {
+          "Ref": "hawkbitRolloutSoftwareOnDevice26BB56D7"
+         },
+         "UserParameters": "#{LambdaVariables.DistributioSet}"
+        },
+        "InputArtifacts": [
+         {
+          "Name": "DeploySoftwareOnHawkbitServerArtifacts"
+         }
+        ],
+        "Name": "hawkbitRolloutSoftwareOnDevice",
+        "OutputArtifacts": [
+         {
+          "Name": "hawkbitRolloutSoftwareOnDeviceArtifacts"
+         }
+        ],
+        "RoleArn": {
+         "Fn::GetAtt": [
+          "hawkbitdevicehawkbitRolloutSoftwareOnDeviceCodePipelineActionRole1DF76D2A",
+          "Arn"
+         ]
+        },
+        "RunOrder": 1
+       }
+      ],
+      "Name": "hawkbitRolloutSoftwareOnDevice"
+     },
+     {
+      "Actions": [
+       {
+        "ActionTypeId": {
+         "Category": "Invoke",
+         "Owner": "AWS",
+         "Provider": "Lambda",
+         "Version": "1"
+        },
+        "Configuration": {
+         "FunctionName": {
+          "Ref": "hawkbitAssignSoftwareToDevice1BBCF15D"
+         },
+         "UserParameters": "#{LambdaVariables.DistributioSet}"
+        },
+        "InputArtifacts": [
+         {
+          "Name": "DeploySoftwareOnHawkbitServerArtifacts"
+         }
+        ],
+        "Name": "hawkbitAssignSoftwareToDevice",
+        "OutputArtifacts": [
+         {
+          "Name": "hawkbitAssignSoftwareToDeviceArtifacts"
+         }
+        ],
+        "RoleArn": {
+         "Fn::GetAtt": [
+          "hawkbitdevicehawkbitAssignSoftwareToDeviceCodePipelineActionRoleF640F75C",
+          "Arn"
+         ]
+        },
+        "RunOrder": 1
+       }
+      ],
+      "Name": "hawkbitAssignSoftwareToDevice"
      }
     ]
    },
@@ -2221,10 +2683,232 @@
     "aws:cdk:path": "HawkbitPipelineCppStack/hawkbit-device/hawkbitDeploySoftwareOnHawkbitServer/hawkbitDeploySoftwareOnHawkbitServer/CodePipelineActionRole/DefaultPolicy/Resource"
    }
   },
+  "hawkbitdevicehawkbitRolloutSoftwareOnDeviceCodePipelineActionRole1DF76D2A": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "AWS": "arn:aws:iam::668487117877:root"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbit-device/hawkbitRolloutSoftwareOnDevice/hawkbitRolloutSoftwareOnDevice/CodePipelineActionRole/Resource"
+   }
+  },
+  "hawkbitdevicehawkbitRolloutSoftwareOnDeviceCodePipelineActionRoleDefaultPolicy43B9D91A": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": "lambda:ListFunctions",
+       "Effect": "Allow",
+       "Resource": "*"
+      },
+      {
+       "Action": "lambda:InvokeFunction",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "hawkbitRolloutSoftwareOnDevice26BB56D7",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "hawkbitRolloutSoftwareOnDevice26BB56D7",
+             "Arn"
+            ]
+           },
+           ":*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": [
+        "s3:Abort*",
+        "s3:DeleteObject*",
+        "s3:GetBucket*",
+        "s3:GetObject*",
+        "s3:List*",
+        "s3:PutObject",
+        "s3:PutObjectLegalHold",
+        "s3:PutObjectRetention",
+        "s3:PutObjectTagging",
+        "s3:PutObjectVersionTagging"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:aws:s3:::codepipeline-",
+           {
+            "Ref": "AWS::Region"
+           },
+           "-833521754963"
+          ]
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:aws:s3:::codepipeline-",
+           {
+            "Ref": "AWS::Region"
+           },
+           "-833521754963/*"
+          ]
+         ]
+        }
+       ]
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "hawkbitdevicehawkbitRolloutSoftwareOnDeviceCodePipelineActionRoleDefaultPolicy43B9D91A",
+    "Roles": [
+     {
+      "Ref": "hawkbitdevicehawkbitRolloutSoftwareOnDeviceCodePipelineActionRole1DF76D2A"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbit-device/hawkbitRolloutSoftwareOnDevice/hawkbitRolloutSoftwareOnDevice/CodePipelineActionRole/DefaultPolicy/Resource"
+   }
+  },
+  "hawkbitdevicehawkbitAssignSoftwareToDeviceCodePipelineActionRoleF640F75C": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "AWS": "arn:aws:iam::668487117877:root"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbit-device/hawkbitAssignSoftwareToDevice/hawkbitAssignSoftwareToDevice/CodePipelineActionRole/Resource"
+   }
+  },
+  "hawkbitdevicehawkbitAssignSoftwareToDeviceCodePipelineActionRoleDefaultPolicy73C49DD8": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": "lambda:ListFunctions",
+       "Effect": "Allow",
+       "Resource": "*"
+      },
+      {
+       "Action": "lambda:InvokeFunction",
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "hawkbitAssignSoftwareToDevice1BBCF15D",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "hawkbitAssignSoftwareToDevice1BBCF15D",
+             "Arn"
+            ]
+           },
+           ":*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": [
+        "s3:Abort*",
+        "s3:DeleteObject*",
+        "s3:GetBucket*",
+        "s3:GetObject*",
+        "s3:List*",
+        "s3:PutObject",
+        "s3:PutObjectLegalHold",
+        "s3:PutObjectRetention",
+        "s3:PutObjectTagging",
+        "s3:PutObjectVersionTagging"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:aws:s3:::codepipeline-",
+           {
+            "Ref": "AWS::Region"
+           },
+           "-833521754963"
+          ]
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           "arn:aws:s3:::codepipeline-",
+           {
+            "Ref": "AWS::Region"
+           },
+           "-833521754963/*"
+          ]
+         ]
+        }
+       ]
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "hawkbitdevicehawkbitAssignSoftwareToDeviceCodePipelineActionRoleDefaultPolicy73C49DD8",
+    "Roles": [
+     {
+      "Ref": "hawkbitdevicehawkbitAssignSoftwareToDeviceCodePipelineActionRoleF640F75C"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitPipelineCppStack/hawkbit-device/hawkbitAssignSoftwareToDevice/hawkbitAssignSoftwareToDevice/CodePipelineActionRole/DefaultPolicy/Resource"
+   }
+  },
   "CDKMetadata": {
    "Type": "AWS::CDK::Metadata",
    "Properties": {
-    "Analytics": "v2:deflate64:H4sIAAAAAAAA/31Ry07DMBD8lt4dQ9ovoEicOETmAyrHWcI2tjfyo6iy8u9snKBeEKeZndmnfZTtcyvbg/6OjRmmxmIvy0fSZhIsXYqhAQw5h0kWBTNFTBTu4vXTP6JFxNNFxwgpypcVOJbnbCZIZx1BwA08W0VlC7WScRGoHUu0Syt2ZNHU3htbBJjw39h1uT6jHWTpAl3BpFq80c2ecQaLHjhjZzVl54uw2vWDluUte5OQ/Or+cnZpjPKdRgWJT6hSPZAfaEQ/CgWRcjDcM8dE7hGue/5p8XI3HCAsorunL/JPJ/4A2R4P14jYhMxTHEi14Q8lygSsnQEAAA=="
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/32QPW7DMAyFz5JdZvOzZG0CdOpgOAcIFJl1GUuiIVIJAsF3L2ynyFJ0eh/5SIriFjbbPaxX9i6Va/vK0wXKSa3rjb3LuThu0XEIpFAaHFhIOT3M8Su+otHI7mxFUAXeJzGyg0N2PerBChq8YVSB0mSPc2f2OBqyAUrDz9SkNXty8+yFRoMu/ffstNwlk2+h1Imv6HRuXnCxBxrQU0Qo9ZPmkiePxttwaS2UjxydEsfJ/eXReO4EPrlrUDEuqfmDJ7Udxc40KJyTQ3PMohxe4bTnn1ad+EYtpukwo6kf+s3xbQebNWy2q6sQVSlHpYDQLPoD9Q1p9aEBAAA="
    },
    "Metadata": {
     "aws:cdk:path": "HawkbitPipelineCppStack/CDKMetadata/Default"

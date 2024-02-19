@@ -1,22 +1,31 @@
 {
  "Resources": {
-  "HawkbitCppCustomBuildImageRepo7E5BBA3F": {
-   "Type": "AWS::CodeCommit::Repository",
+  "hawkbitDeviceDataE2948235": {
+   "Type": "AWS::Kinesis::Stream",
    "Properties": {
-    "Code": {
-     "BranchName": "main",
-     "S3": {
-      "Bucket": "cdk-hnb659fds-assets-668487117877-eu-west-1",
-      "Key": "d5522f5717bfb6a41f6e94155b2d9427e5be0e8b8f2341278a0b4f9a5d91548d.zip"
-     }
+    "Name": "hawkbitDeviceData",
+    "RetentionPeriodHours": 24,
+    "StreamEncryption": {
+     "Fn::If": [
+      "AwsCdkKinesisEncryptedStreamsUnsupportedRegions",
+      {
+       "Ref": "AWS::NoValue"
+      },
+      {
+       "EncryptionType": "KMS",
+       "KeyId": "alias/aws/kinesis"
+      }
+     ]
     },
-    "RepositoryName": "HawkbitCppCustomBuildImage"
+    "StreamModeDetails": {
+     "StreamMode": "ON_DEMAND"
+    }
    },
    "Metadata": {
-    "aws:cdk:path": "HawkbitTimestreamStack/HawkbitCppCustomBuildImageRepo/Resource"
+    "aws:cdk:path": "HawkbitTimestreamStack/hawkbitDeviceData/Resource"
    }
   },
-  "hawkbitCppCustomImageBuildRole095CEDD7": {
+  "hawkbitDeviceToKinesis90D2B23A": {
    "Type": "AWS::IAM::Role",
    "Properties": {
     "AssumeRolePolicyDocument": {
@@ -25,223 +34,509 @@
        "Action": "sts:AssumeRole",
        "Effect": "Allow",
        "Principal": {
-        "Service": "codebuild.amazonaws.com"
+        "Service": "iot.amazonaws.com"
        }
       }
      ],
      "Version": "2012-10-17"
-    }
+    },
+    "RoleName": "hawkbitDeviceToKinesis"
    },
    "Metadata": {
-    "aws:cdk:path": "HawkbitTimestreamStack/hawkbitCppCustomImageBuildRole/Resource"
+    "aws:cdk:path": "HawkbitTimestreamStack/hawkbitDeviceToKinesis/Resource"
    }
   },
-  "HawkbitCppCustomBuildImageBuildRoleF3A6A862": {
-   "Type": "AWS::IAM::Role",
-   "Properties": {
-    "AssumeRolePolicyDocument": {
-     "Statement": [
-      {
-       "Action": "sts:AssumeRole",
-       "Effect": "Allow",
-       "Principal": {
-        "Service": "codebuild.amazonaws.com"
-       }
-      }
-     ],
-     "Version": "2012-10-17"
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "HawkbitTimestreamStack/HawkbitCppCustomBuildImageBuild/Role/Resource"
-   }
-  },
-  "HawkbitCppCustomBuildImageBuildRoleDefaultPolicy4A0F2805": {
+  "hawkbitDeviceToKinesisDefaultPolicy576DBDFC": {
    "Type": "AWS::IAM::Policy",
    "Properties": {
     "PolicyDocument": {
      "Statement": [
       {
-       "Action": "codecommit:GitPull",
+       "Action": "kinesis:*",
        "Effect": "Allow",
        "Resource": {
         "Fn::GetAtt": [
-         "HawkbitCppCustomBuildImageRepo7E5BBA3F",
+         "hawkbitDeviceDataE2948235",
          "Arn"
-        ]
-       }
-      },
-      {
-       "Action": [
-        "logs:CreateLogGroup",
-        "logs:CreateLogStream",
-        "logs:PutLogEvents"
-       ],
-       "Effect": "Allow",
-       "Resource": [
-        {
-         "Fn::Join": [
-          "",
-          [
-           "arn:aws:logs:eu-west-1:668487117877:log-group:/aws/codebuild/",
-           {
-            "Ref": "HawkbitCppCustomBuildImageBuild66108212"
-           },
-           ":*"
-          ]
-         ]
-        },
-        {
-         "Fn::Join": [
-          "",
-          [
-           "arn:aws:logs:eu-west-1:668487117877:log-group:/aws/codebuild/",
-           {
-            "Ref": "HawkbitCppCustomBuildImageBuild66108212"
-           }
-          ]
-         ]
-        }
-       ]
-      },
-      {
-       "Action": [
-        "codebuild:BatchPutCodeCoverages",
-        "codebuild:BatchPutTestCases",
-        "codebuild:CreateReport",
-        "codebuild:CreateReportGroup",
-        "codebuild:UpdateReport"
-       ],
-       "Effect": "Allow",
-       "Resource": {
-        "Fn::Join": [
-         "",
-         [
-          "arn:aws:codebuild:eu-west-1:668487117877:report-group/",
-          {
-           "Ref": "HawkbitCppCustomBuildImageBuild66108212"
-          },
-          "-*"
-         ]
         ]
        }
       }
      ],
      "Version": "2012-10-17"
     },
-    "PolicyName": "HawkbitCppCustomBuildImageBuildRoleDefaultPolicy4A0F2805",
+    "PolicyName": "hawkbitDeviceToKinesisDefaultPolicy576DBDFC",
     "Roles": [
      {
-      "Ref": "HawkbitCppCustomBuildImageBuildRoleF3A6A862"
+      "Ref": "hawkbitDeviceToKinesis90D2B23A"
      }
     ]
    },
    "Metadata": {
-    "aws:cdk:path": "HawkbitTimestreamStack/HawkbitCppCustomBuildImageBuild/Role/DefaultPolicy/Resource"
+    "aws:cdk:path": "HawkbitTimestreamStack/hawkbitDeviceToKinesis/DefaultPolicy/Resource"
    }
   },
-  "HawkbitCppCustomBuildImageBuild66108212": {
-   "Type": "AWS::CodeBuild::Project",
+  "fromDeviceToKinesis": {
+   "Type": "AWS::IoT::TopicRule",
    "Properties": {
-    "Artifacts": {
-     "Type": "NO_ARTIFACTS"
-    },
-    "Cache": {
-     "Type": "NO_CACHE"
-    },
-    "EncryptionKey": "alias/aws/s3",
-    "Environment": {
-     "ComputeType": "BUILD_GENERAL1_SMALL",
-     "EnvironmentVariables": [
+    "RuleName": "HawkbitDeviceDataToKinesis",
+    "TopicRulePayload": {
+     "Actions": [
       {
-       "Name": "ECR_REGISTRY",
-       "Type": "PLAINTEXT",
-       "Value": {
+       "Kinesis": {
+        "PartitionKey": "${DeviceID}",
+        "RoleArn": {
+         "Fn::GetAtt": [
+          "hawkbitDeviceToKinesis90D2B23A",
+          "Arn"
+         ]
+        },
+        "StreamName": {
+         "Ref": "hawkbitDeviceDataE2948235"
+        }
+       }
+      }
+     ],
+     "Sql": "SELECT * FROM 'device/HawkbitDevice001/telemetry'"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitTimestreamStack/fromDeviceToKinesis"
+   }
+  },
+  "hawkbitDevice": {
+   "Type": "AWS::Timestream::Database",
+   "Properties": {
+    "DatabaseName": "hawkbitDevice"
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitTimestreamStack/hawkbitDevice"
+   }
+  },
+  "ABS": {
+   "Type": "AWS::Timestream::Table",
+   "Properties": {
+    "DatabaseName": "hawkbitDevice",
+    "RetentionProperties": {
+     "MemoryStoreRetentionPeriodInHours": {
+      "Ref": "memoryRetentionParam"
+     },
+     "MagneticStoreRetentionPeriodInDays": {
+      "Ref": "magneticRetentionParam"
+     }
+    },
+    "Schema": {
+     "CompositePartitionKey": [
+      {
+       "EnforcementInRecord": "REQUIRED",
+       "Name": "DeviceID",
+       "Type": "DIMENSION"
+      }
+     ]
+    },
+    "TableName": "ABS"
+   },
+   "DependsOn": [
+    "hawkbitDevice"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "HawkbitTimestreamStack/ABS"
+   }
+  },
+  "Airbag": {
+   "Type": "AWS::Timestream::Table",
+   "Properties": {
+    "DatabaseName": "hawkbitDevice",
+    "RetentionProperties": {
+     "MemoryStoreRetentionPeriodInHours": {
+      "Ref": "memoryRetentionParam"
+     },
+     "MagneticStoreRetentionPeriodInDays": {
+      "Ref": "magneticRetentionParam"
+     }
+    },
+    "Schema": {
+     "CompositePartitionKey": [
+      {
+       "EnforcementInRecord": "REQUIRED",
+       "Name": "DeviceID",
+       "Type": "DIMENSION"
+      }
+     ]
+    },
+    "TableName": "Airbag"
+   },
+   "DependsOn": [
+    "hawkbitDevice"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "HawkbitTimestreamStack/Airbag"
+   }
+  },
+  "AirConditioning": {
+   "Type": "AWS::Timestream::Table",
+   "Properties": {
+    "DatabaseName": "hawkbitDevice",
+    "RetentionProperties": {
+     "MemoryStoreRetentionPeriodInHours": {
+      "Ref": "memoryRetentionParam"
+     },
+     "MagneticStoreRetentionPeriodInDays": {
+      "Ref": "magneticRetentionParam"
+     }
+    },
+    "Schema": {
+     "CompositePartitionKey": [
+      {
+       "EnforcementInRecord": "REQUIRED",
+       "Name": "DeviceID",
+       "Type": "DIMENSION"
+      }
+     ]
+    },
+    "TableName": "AirConditioning"
+   },
+   "DependsOn": [
+    "hawkbitDevice"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "HawkbitTimestreamStack/AirConditioning"
+   }
+  },
+  "Battery": {
+   "Type": "AWS::Timestream::Table",
+   "Properties": {
+    "DatabaseName": "hawkbitDevice",
+    "RetentionProperties": {
+     "MemoryStoreRetentionPeriodInHours": {
+      "Ref": "memoryRetentionParam"
+     },
+     "MagneticStoreRetentionPeriodInDays": {
+      "Ref": "magneticRetentionParam"
+     }
+    },
+    "Schema": {
+     "CompositePartitionKey": [
+      {
+       "EnforcementInRecord": "REQUIRED",
+       "Name": "DeviceID",
+       "Type": "DIMENSION"
+      }
+     ]
+    },
+    "TableName": "Battery"
+   },
+   "DependsOn": [
+    "hawkbitDevice"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "HawkbitTimestreamStack/Battery"
+   }
+  },
+  "Engine": {
+   "Type": "AWS::Timestream::Table",
+   "Properties": {
+    "DatabaseName": "hawkbitDevice",
+    "RetentionProperties": {
+     "MemoryStoreRetentionPeriodInHours": {
+      "Ref": "memoryRetentionParam"
+     },
+     "MagneticStoreRetentionPeriodInDays": {
+      "Ref": "magneticRetentionParam"
+     }
+    },
+    "Schema": {
+     "CompositePartitionKey": [
+      {
+       "EnforcementInRecord": "REQUIRED",
+       "Name": "DeviceID",
+       "Type": "DIMENSION"
+      }
+     ]
+    },
+    "TableName": "Engine"
+   },
+   "DependsOn": [
+    "hawkbitDevice"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "HawkbitTimestreamStack/Engine"
+   }
+  },
+  "HeatSeats": {
+   "Type": "AWS::Timestream::Table",
+   "Properties": {
+    "DatabaseName": "hawkbitDevice",
+    "RetentionProperties": {
+     "MemoryStoreRetentionPeriodInHours": {
+      "Ref": "memoryRetentionParam"
+     },
+     "MagneticStoreRetentionPeriodInDays": {
+      "Ref": "magneticRetentionParam"
+     }
+    },
+    "Schema": {
+     "CompositePartitionKey": [
+      {
+       "EnforcementInRecord": "REQUIRED",
+       "Name": "DeviceID",
+       "Type": "DIMENSION"
+      }
+     ]
+    },
+    "TableName": "HeatSeats"
+   },
+   "DependsOn": [
+    "hawkbitDevice"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "HawkbitTimestreamStack/HeatSeats"
+   }
+  },
+  "hawkbitFromKinesisToTimestreamLambdaRole64CCF60D": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitTimestreamStack/hawkbitFromKinesisToTimestreamLambdaRole/Resource"
+   }
+  },
+  "hawkbitFromKinesisToTimestreamLambdaRoleDefaultPolicy5327E181": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "kinesis:DescribeStream",
+        "kinesis:DescribeStreamSummary",
+        "kinesis:GetRecords",
+        "kinesis:GetShardIterator",
+        "kinesis:ListShards",
+        "kinesis:ListStreams",
+        "kinesis:SubscribeToShard",
+        "kms:DescribeKey",
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents",
+        "s3:ListAllMyBuckets",
+        "timestream:*"
+       ],
+       "Effect": "Allow",
+       "Resource": "*"
+      },
+      {
+       "Action": "kms:CreateGrant",
+       "Condition": {
+        "ForAnyValue:StringEquals": {
+         "kms:EncryptionContextKeys": "aws:timestream:database-name"
+        }
+       },
+       "Effect": "Allow",
+       "Resource": "*"
+      },
+      {
+       "Action": "kms:CreateGrant",
+       "Condition": {
+        "Bool": {
+         "kms:GrantIsForAWSResource": true
+        }
+       },
+       "Effect": "Allow",
+       "Resource": "*"
+      },
+      {
+       "Action": "kms:CreateGrant",
+       "Condition": {
+        "StringLike": {
+         "kms:ViaService": "timestream.*.amazonaws.com"
+        }
+       },
+       "Effect": "Allow",
+       "Resource": "*"
+      },
+      {
+       "Action": "logs:CreateLogGroup",
+       "Effect": "Allow",
+       "Resource": {
         "Fn::Join": [
          "",
          [
-          {
-           "Ref": "AWS::AccountId"
-          },
-          ".ecr.",
+          "arn:aws:logs:",
           {
            "Ref": "AWS::Region"
           },
-          ".amazonaws.com/cpp-blog"
+          ":",
+          {
+           "Ref": "AWS::AccountId"
+          },
+          ":*"
          ]
         ]
        }
       },
       {
-       "Name": "ECR_PATH",
-       "Type": "PLAINTEXT",
-       "Value": {
+       "Action": [
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+       ],
+       "Effect": "Allow",
+       "Resource": {
         "Fn::Join": [
          "",
          [
-          {
-           "Ref": "AWS::AccountId"
-          },
-          ".ecr.",
+          "arn:aws:logs:",
           {
            "Ref": "AWS::Region"
           },
-          ".amazonaws.com"
+          ":",
+          {
+           "Ref": "AWS::AccountId"
+          },
+          ":log-group:/aws/lambda/hawkbitFromKinesisToTimestream:*"
          ]
+        ]
+       }
+      },
+      {
+       "Action": [
+        "kinesis:DescribeStream",
+        "kinesis:DescribeStreamConsumer",
+        "kinesis:DescribeStreamSummary",
+        "kinesis:GetRecords",
+        "kinesis:GetShardIterator",
+        "kinesis:ListShards",
+        "kinesis:ListStreams",
+        "kinesis:SubscribeToShard"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::GetAtt": [
+         "hawkbitDeviceDataE2948235",
+         "Arn"
         ]
        }
       }
      ],
-     "Image": "aws/codebuild/standard:1.0",
-     "ImagePullCredentialsType": "CODEBUILD",
-     "PrivilegedMode": true,
-     "Type": "LINUX_CONTAINER"
+     "Version": "2012-10-17"
     },
-    "Name": "HawkbitCppCustomBuildImage",
-    "ServiceRole": {
+    "PolicyName": "hawkbitFromKinesisToTimestreamLambdaRoleDefaultPolicy5327E181",
+    "Roles": [
+     {
+      "Ref": "hawkbitFromKinesisToTimestreamLambdaRole64CCF60D"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "HawkbitTimestreamStack/hawkbitFromKinesisToTimestreamLambdaRole/DefaultPolicy/Resource"
+   }
+  },
+  "hawkbitFromKinesisToTimestream93F11078": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Code": {
+     "S3Bucket": "cdk-hnb659fds-assets-668487117877-eu-west-1",
+     "S3Key": "0b2bb3bae06588b818fce87c603d7be035671f26907513977e49fe4e01c63281.zip"
+    },
+    "FunctionName": "hawkbitFromKinesisToTimestream",
+    "Handler": "hawkbitFromKinesisToTimestream.lambda_handler",
+    "Role": {
      "Fn::GetAtt": [
-      "HawkbitCppCustomBuildImageBuildRoleF3A6A862",
+      "hawkbitFromKinesisToTimestreamLambdaRole64CCF60D",
       "Arn"
      ]
     },
-    "Source": {
-     "BuildSpec": "buildspec.yml",
-     "Location": {
-      "Fn::GetAtt": [
-       "HawkbitCppCustomBuildImageRepo7E5BBA3F",
-       "CloneUrlHttp"
-      ]
-     },
-     "Type": "CODECOMMIT"
-    },
-    "SourceVersion": "master"
+    "Runtime": "python3.11",
+    "Timeout": 60
    },
+   "DependsOn": [
+    "hawkbitFromKinesisToTimestreamLambdaRoleDefaultPolicy5327E181",
+    "hawkbitFromKinesisToTimestreamLambdaRole64CCF60D"
+   ],
    "Metadata": {
-    "aws:cdk:path": "HawkbitTimestreamStack/HawkbitCppCustomBuildImageBuild/Resource"
+    "aws:cdk:path": "HawkbitTimestreamStack/hawkbitFromKinesisToTimestream/Resource",
+    "aws:asset:path": "asset.0b2bb3bae06588b818fce87c603d7be035671f26907513977e49fe4e01c63281.zip",
+    "aws:asset:is-bundled": false,
+    "aws:asset:property": "Code"
    }
   },
-  "HawkbitCppBlogRepo9F7F41CD": {
-   "Type": "AWS::ECR::Repository",
+  "hawkbitFromKinesisToTimestreamKinesisEventSourceHawkbitTimestreamStackhawkbitDeviceData5DBA027779E72F9F": {
+   "Type": "AWS::Lambda::EventSourceMapping",
    "Properties": {
-    "RepositoryName": "hawkbit-cpp-blog"
+    "BatchSize": 100,
+    "EventSourceArn": {
+     "Fn::GetAtt": [
+      "hawkbitDeviceDataE2948235",
+      "Arn"
+     ]
+    },
+    "FunctionName": {
+     "Ref": "hawkbitFromKinesisToTimestream93F11078"
+    },
+    "StartingPosition": "LATEST"
    },
-   "UpdateReplacePolicy": "Retain",
-   "DeletionPolicy": "Retain",
    "Metadata": {
-    "aws:cdk:path": "HawkbitTimestreamStack/HawkbitCppBlogRepo/Resource"
+    "aws:cdk:path": "HawkbitTimestreamStack/hawkbitFromKinesisToTimestream/KinesisEventSource:HawkbitTimestreamStackhawkbitDeviceData5DBA0277/Resource"
    }
   },
   "CDKMetadata": {
    "Type": "AWS::CDK::Metadata",
    "Properties": {
-    "Analytics": "v2:deflate64:H4sIAAAAAAAA/32PTQ7CQAiFz+KeotUTWC/Q1AOYkaJifzDDNKZp5u5OWxN3rt4D8vhgj/kux3zj3pZR3WStXHE6B0cNpNZlIq2ZtOsk4FTxS02C+hFOt/5XRbDDxZlxMDzOkmosBmo4FM4YxHUprC0vsVlLbYWWLauLMHOug7Q1TqXXJ1NYpquNwOT/8CMs2HT2Xfo7VGw6eFpxXx+hHMND++0hPYz5fvM0kcwPfZCOsVr1A7OaJYANAQAA"
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/2VPwW6DMAz9lt6DV+DS68q226QKeq9MMJ1LSBAOrSqUf58Stl12es/Pfs92AXlxgP0OH5LpbsgMt7A2HvWg8CGXdWBLwhK1mXBUVW83FhTjCGvtDEUx4ckZ1s9Ybiwodh6q3p7dxLpeDCnPI0kKgLXq7Rt6bFFSxBlbQ0EZHNsOYf1YrPbsbGz98fc7Wd+4Zdb0idPE9hrb/9WgpLygCHmB1whKSjgueiB/RKEQXZWzHafUmiSZ0+U440ieZpV8jcfrz5bfqaBOT//l7EsJ+R7yYncT5mxebPwN6g2/AUltOrBYAQAA"
    },
    "Metadata": {
     "aws:cdk:path": "HawkbitTimestreamStack/CDKMetadata/Default"
    }
   }
  },
+ "Conditions": {
+  "AwsCdkKinesisEncryptedStreamsUnsupportedRegions": {
+   "Fn::Or": [
+    {
+     "Fn::Equals": [
+      {
+       "Ref": "AWS::Region"
+      },
+      "cn-north-1"
+     ]
+    },
+    {
+     "Fn::Equals": [
+      {
+       "Ref": "AWS::Region"
+      },
+      "cn-northwest-1"
+     ]
+    }
+   ]
+  }
+ },
  "Parameters": {
+  "memoryRetentionParam": {
+   "Type": "Number",
+   "Default": 12,
+   "Description": "The duration (in hours) for which data must be retained in the memory store per table.",
+   "MaxValue": 8766,
+   "MinValue": 1
+  },
+  "magneticRetentionParam": {
+   "Type": "Number",
+   "Default": 5,
+   "Description": "The duration (in days) for which data must be retained in the magnetic store per table.",
+   "MaxValue": 73000,
+   "MinValue": 1
+  },
   "BootstrapVersion": {
    "Type": "AWS::SSM::Parameter::Value<String>",
    "Default": "/cdk-bootstrap/hnb659fds/version",
