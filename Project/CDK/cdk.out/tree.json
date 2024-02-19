@@ -108,7 +108,7 @@
                       {
                         "Ref": "AWS::AccountId"
                       },
-                      ":cert/Null"
+                      ":cert/b8956865d3477bc52a0f62dbf2e563535d4b76329af6d8f49f50e1059e45f674"
                     ]
                   ]
                 }
@@ -137,7 +137,7 @@
                       {
                         "Ref": "AWS::AccountId"
                       },
-                      ":cert/Null"
+                      ":cert/b8956865d3477bc52a0f62dbf2e563535d4b76329af6d8f49f50e1059e45f674"
                     ]
                   ]
                 },
@@ -2841,9 +2841,9 @@
               "version": "2.128.0"
             }
           },
-          "codepipeline-${Token[AWS.Region.7]}-833521754963": {
-            "id": "codepipeline-${Token[AWS.Region.7]}-833521754963",
-            "path": "HawkbitPipelineCppStack/codepipeline-${Token[AWS.Region.7]}-833521754963",
+          "codepipeline-${Token[AWS.Region.4]}-833521754963": {
+            "id": "codepipeline-${Token[AWS.Region.4]}-833521754963",
+            "path": "HawkbitPipelineCppStack/codepipeline-${Token[AWS.Region.4]}-833521754963",
             "constructInfo": {
               "fqn": "aws-cdk-lib.aws_s3.BucketBase",
               "version": "2.128.0"

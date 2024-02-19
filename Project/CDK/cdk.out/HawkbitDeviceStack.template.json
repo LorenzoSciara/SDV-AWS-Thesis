@@ -87,7 +87,7 @@
        {
         "Ref": "AWS::AccountId"
        },
-       ":cert/Null"
+       ":cert/b8956865d3477bc52a0f62dbf2e563535d4b76329af6d8f49f50e1059e45f674"
       ]
      ]
     }
@@ -114,7 +114,7 @@
        {
         "Ref": "AWS::AccountId"
        },
-       ":cert/Null"
+       ":cert/b8956865d3477bc52a0f62dbf2e563535d4b76329af6d8f49f50e1059e45f674"
       ]
      ]
     },
@@ -136,7 +136,7 @@
       "Arn"
      ]
     },
-    "Delete": "{\"action\":\"UpdateCertificate\",\"service\":\"Iot\",\"parameters\":{\"certificateId\":\"Null\",\"newStatus\":\"INACTIVE\"}}",
+    "Delete": "{\"action\":\"UpdateCertificate\",\"service\":\"Iot\",\"parameters\":{\"certificateId\":\"b8956865d3477bc52a0f62dbf2e563535d4b76329af6d8f49f50e1059e45f674\",\"newStatus\":\"INACTIVE\"}}",
     "InstallLatestAwsSdk": false
    },
    "DependsOn": [
@@ -248,7 +248,7 @@
       "Arn"
      ]
     },
-    "Delete": "{\"action\":\"DeleteCertificate\",\"service\":\"Iot\",\"parameters\":{\"certificateId\":\"Null\",\"forceDelete\":\"True\"}}",
+    "Delete": "{\"action\":\"DeleteCertificate\",\"service\":\"Iot\",\"parameters\":{\"certificateId\":\"b8956865d3477bc52a0f62dbf2e563535d4b76329af6d8f49f50e1059e45f674\",\"forceDelete\":\"True\"}}",
     "InstallLatestAwsSdk": false
    },
    "DependsOn": [
