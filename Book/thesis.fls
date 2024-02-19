@@ -434,6 +434,13 @@ OUTPUT chapters\02\state_of_the_art.aux
 INPUT .\chapters\02\state_of_the_art.tex
 INPUT .\chapters\02\state_of_the_art.tex
 INPUT chapters\02\state_of_the_art.tex
+INPUT .\images\costs_of_errors_correction_in_software_development.png
+INPUT .\images\costs_of_errors_correction_in_software_development.png
+INPUT .\images\costs_of_errors_correction_in_software_development.png
+INPUT .\images\costs_of_errors_correction_in_software_development.png
+INPUT .\images\costs_of_errors_correction_in_software_development.png
+INPUT .\images\costs_of_errors_correction_in_software_development.png
+INPUT .\images\costs_of_errors_correction_in_software_development.png
 INPUT .\chapters\03\proofOfConcept.tex
 INPUT .\chapters\03\proofOfConcept.tex
 OUTPUT chapters\03\proofOfConcept.aux
