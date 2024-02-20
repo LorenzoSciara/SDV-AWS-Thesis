@@ -7,7 +7,7 @@
      "BranchName": "main",
      "S3": {
       "Bucket": "cdk-hnb659fds-assets-668487117877-eu-west-1",
-      "Key": "c0bba09c0ed529d1cdbb3adf1ac508741b5ed1ba751cb8993c8c85823c424136.zip"
+      "Key": "692260587183a3a9410a2b507f68f4b7de6ad056a1eadd4628490cc5e5c2dcc4.zip"
      }
     },
     "RepositoryName": "HawkbitCppCustomBuildImage"
@@ -1121,7 +1121,7 @@
      "BranchName": "master",
      "S3": {
       "Bucket": "cdk-hnb659fds-assets-668487117877-eu-west-1",
-      "Key": "d29e20a238ce413d10e5d49cc306bace38a67d80416cf439981dd065bc380199.zip"
+      "Key": "7569f03d2ebed5e79fb3315b1a151dbc8ca2d7dd4412edc37dddc07b81ab1719.zip"
      }
     },
     "RepositoryName": "HawkbitDeviceC"

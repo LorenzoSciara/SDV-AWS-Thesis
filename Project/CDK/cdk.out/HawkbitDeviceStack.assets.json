@@ -15,7 +15,7 @@
         }
       }
     },
-    "8b221ff660236f08285048c2f1e2a001fe1407f692abdcb5d1941adbbfa000f9": {
+    "1ec03ba673715a84b30a20da135904e40c7db46727eef2dec9e83d5b2a492516": {
       "source": {
         "path": "HawkbitDeviceStack.template.json",
         "packaging": "file"
@@ -23,7 +23,7 @@
       "destinations": {
         "668487117877-eu-west-1": {
           "bucketName": "cdk-hnb659fds-assets-668487117877-eu-west-1",
-          "objectKey": "8b221ff660236f08285048c2f1e2a001fe1407f692abdcb5d1941adbbfa000f9.json",
+          "objectKey": "1ec03ba673715a84b30a20da135904e40c7db46727eef2dec9e83d5b2a492516.json",
           "region": "eu-west-1",
           "assumeRoleArn": "arn:${AWS::Partition}:iam::668487117877:role/cdk-hnb659fds-file-publishing-role-668487117877-eu-west-1"
         }
