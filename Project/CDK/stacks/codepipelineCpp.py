@@ -106,6 +106,7 @@ class HawkbitPipelineCppStack(Stack):
                 branch_or_ref="master"
             ),
             environment=codebuild.BuildEnvironment(
+                build_image=codebuild.LinuxBuildImage.AMAZON_LINUX_2_ARM_2,
                 privileged=True
             ),
             role=codebuild_role,
@@ -167,7 +168,7 @@ class HawkbitPipelineCppStack(Stack):
             ]
         )
 
-        # CodeBuild project that builds the Docker image
+        # CodeBuild project that use the Docker image
         hawkbit_build = codebuild.Project(
             self, "HawkbitDeviceBuildC",
             build_spec=codebuild.BuildSpec.from_source_filename(

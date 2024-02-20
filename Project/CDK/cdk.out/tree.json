@@ -108,7 +108,7 @@
                       {
                         "Ref": "AWS::AccountId"
                       },
-                      ":cert/55d07bea49fc4234136fcb42155a05ce00b48e9d0833994e6493a367972a062f"
+                      ":cert/779edf1651338e0a577dda844ab27f83b68a1d2dd583631e984687ae97d2703d"
                     ]
                   ]
                 }
@@ -137,7 +137,7 @@
                       {
                         "Ref": "AWS::AccountId"
                       },
-                      ":cert/55d07bea49fc4234136fcb42155a05ce00b48e9d0833994e6493a367972a062f"
+                      ":cert/779edf1651338e0a577dda844ab27f83b68a1d2dd583631e984687ae97d2703d"
                     ]
                   ]
                 },
@@ -2744,11 +2744,11 @@
                     },
                     "encryptionKey": "alias/aws/s3",
                     "environment": {
-                      "type": "LINUX_CONTAINER",
-                      "image": "aws/codebuild/standard:1.0",
+                      "type": "ARM_CONTAINER",
+                      "image": "aws/codebuild/amazonlinux2-aarch64-standard:2.0",
                       "imagePullCredentialsType": "CODEBUILD",
                       "privilegedMode": true,
-                      "computeType": "BUILD_GENERAL1_SMALL",
+                      "computeType": "BUILD_GENERAL1_LARGE",
                       "environmentVariables": [
                         {
                           "name": "ecr",
@@ -2841,9 +2841,9 @@
               "version": "2.128.0"
             }
           },
-          "codepipeline-${Token[AWS.Region.4]}-833521754963": {
-            "id": "codepipeline-${Token[AWS.Region.4]}-833521754963",
-            "path": "HawkbitPipelineCppStack/codepipeline-${Token[AWS.Region.4]}-833521754963",
+          "codepipeline-${Token[AWS.Region.7]}-833521754963": {
+            "id": "codepipeline-${Token[AWS.Region.7]}-833521754963",
+            "path": "HawkbitPipelineCppStack/codepipeline-${Token[AWS.Region.7]}-833521754963",
             "constructInfo": {
               "fqn": "aws-cdk-lib.aws_s3.BucketBase",
               "version": "2.128.0"

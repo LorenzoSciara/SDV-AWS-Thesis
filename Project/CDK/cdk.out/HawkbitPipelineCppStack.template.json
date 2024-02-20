@@ -470,7 +470,7 @@
     },
     "EncryptionKey": "alias/aws/s3",
     "Environment": {
-     "ComputeType": "BUILD_GENERAL1_SMALL",
+     "ComputeType": "BUILD_GENERAL1_LARGE",
      "EnvironmentVariables": [
       {
        "Name": "ecr",
@@ -530,10 +530,10 @@
        "Value": "v1"
       }
      ],
-     "Image": "aws/codebuild/standard:1.0",
+     "Image": "aws/codebuild/amazonlinux2-aarch64-standard:2.0",
      "ImagePullCredentialsType": "CODEBUILD",
      "PrivilegedMode": true,
-     "Type": "LINUX_CONTAINER"
+     "Type": "ARM_CONTAINER"
     },
     "Name": "HawkbitCppCustomBuildImage",
     "ServiceRole": {
