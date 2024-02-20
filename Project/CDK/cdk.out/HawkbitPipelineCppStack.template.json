@@ -1361,7 +1361,7 @@
     },
     "EncryptionKey": "alias/aws/s3",
     "Environment": {
-     "ComputeType": "BUILD_GENERAL1_SMALL",
+     "ComputeType": "BUILD_GENERAL1_LARGE",
      "Image": {
       "Fn::Join": [
        "",
@@ -1413,7 +1413,7 @@
      },
      "ImagePullCredentialsType": "SERVICE_ROLE",
      "PrivilegedMode": true,
-     "Type": "LINUX_CONTAINER"
+     "Type": "ARM_CONTAINER"
     },
     "Name": "HawkbitDeviceBuildC",
     "ServiceRole": {

@@ -179,7 +179,7 @@ class HawkbitPipelineCppStack(Stack):
             ),
             environment=codebuild.BuildEnvironment(
                 privileged=True,
-                 build_image=codebuild.LinuxBuildImage.from_ecr_repository(ecr_repository, "v1")
+                 build_image=codebuild.LinuxArmBuildImage.from_ecr_repository(ecr_repository, "v1")
             ),
             project_name="HawkbitDeviceBuildC"
         )
