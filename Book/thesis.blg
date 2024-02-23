@@ -27,13 +27,13 @@ Database file #1: bibliography.bib
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 Warning--empty journal in ieeeSoftwareDefinedVehicle
 Warning--empty journal in StormReplySite
-Warning--empty journal in SDVBosh
+Warning--empty journal in SDVBosch
 Warning--empty journal in SDVRenault
 
 Done.
 You've used 12 entries,
             4087 wiz_defined-function locations,
-            907 strings with 9909 characters,
+            907 strings with 9913 characters,
 and the built_in function-call counts, 6214 in all, are:
 = -- 538
 > -- 113
