@@ -92,4 +92,17 @@ D.~Slama, A.~Nonnenmacher, and T.~Irawan, ``The software-defined vehicle,''
   \url{https://www.bosch-mobility.com/media/global/mobility-topics/mobility-topics/software-defined-vehicle/}
 \BIBentrySTDinterwordspacing
 
+\bibitem{SDVBosh}
+\BIBentryALTinterwordspacing
+L.~P. Achim~Nonnenmacher and P.~S. defined Vehicle., ``What is a
+  software-defined vehicle in your opinion?'' 2024. [Online]. Available:
+  \url{https://www.bosch-mobility.com/en/mobility-topics/software-defined-vehicle/?gad_source=1}
+\BIBentrySTDinterwordspacing
+
+\bibitem{SDVRenault}
+\BIBentryALTinterwordspacing
+R.~Group, ``What is software defined vehicle?'' 2024. [Online]. Available:
+  \url{https://www.renaultgroup.com/en/news-on-air/news/all-about-software-defined-vehicle/}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}

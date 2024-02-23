@@ -6,7 +6,7 @@
 \chapter{Introduction} \label{ch:introduction}
 
 \section{Context}
-The automotive industry stands out as one of the fastest-growing sectors, playing a significant role as both an employer and an investor in research and development; at the same time, it represents one of the most crucial domains for the European Union's economy. As reported in the article (Source: \cite{automotiveInCentralEurope}), in 2015, 21 million motor vehicles of all types were produced in Europe, representing a 23\% share in the global production of more than 90 million units.
+The automotive industry stands out as one of the fastest-growing sectors, playing a significant role as both an employer and an investor in research and development; at the same time, it represents one of the most crucial domains for the European Union's economy. As reported in the article \cite{automotiveInCentralEurope}, in 2015, 21 million motor vehicles of all types were produced in Europe, representing a 23\% share in the global production of more than 90 million units.
 
 \begin{figure}[h]  % 'h' significa che la figura viene posizionata qui
   \centering
@@ -20,13 +20,13 @@ In the evolving landscape of automotive technology, the imperative for automotiv
 \begin{figure}[h]  % 'h' significa che la figura viene posizionata qui
   \centering
   \includegraphics[width=0.9\textwidth]{images/vehicle_processors.png}  % Sostituisci 'nome_immagine' con il nome del tuo file immagine e l'estensione
-  \caption{An incomplete overview of computers in a modern car Source: \cite{ieeeSoftwareDefinedVehicle}}
+  \caption{An incomplete overview of computers in a modern car \cite{ieeeSoftwareDefinedVehicle}}
   \label{fig:VheicleProcessors}
 \end{figure}
 
 However, the proliferation of processors within vehicles, orchestrating communication to manage diverse components, presents a formidable challenge; each component often integrates a processor with unique logics, diverging from the logics embedded in processors of other components. Complicating matters further, these components are frequently supplied by companies with proprietary management logics, not readily accessible to the automotive companies themselves.
 
-In addressing this intricate scenario, the transformative concept of a Software Defined Vehicle (SDV) comes to the forefront. Defined as "any vehicle that manages its operations, adds functionality, and enables new features primarily or entirely through software" (Source: \cite{blackberrySDV}), the notion of SDV offers a comprehensive solution to the challenges posed by the intricate interplay of software and hardware in modern vehicles.
+In addressing this intricate scenario, the transformative concept of a Software Defined Vehicle (SDV) comes to the forefront. Defined as "any vehicle that manages its operations, adds functionality, and enables new features primarily or entirely through software"  \cite{blackberrySDV}, the notion of SDV offers a comprehensive solution to the challenges posed by the intricate interplay of software and hardware in modern vehicles.
 
 Effectively navigating the development of SDV technology necessitates a collaborative approach across diverse companies, particularly in the realms of hardware and cloud computing. This collaborative synergy is exemplified in the realization of our project, made possible through the partnership with Storm Reply.
 
@@ -51,7 +51,7 @@ According to the official AWS description page \cite{AWSGlobalInfrastructure} th
 \begin{figure}[h]  % 'h' significa che la figura viene posizionata qui
   \centering
   \includegraphics[width=0.3\textwidth]{images/AWSMagicQuadrantForCloud.png}  % Sostituisci 'nome_immagine' con il nome del tuo file immagine e l'estensione
-  \caption{Here are a series of market research reports published by IT consulting firm Gartner that rely on proprietary qualitative data analysis methods to demonstrate market trends, such as direction, maturity and participants. Source: \cite{GartnerMagicQuadrant}}
+  \caption{Here are a series of market research reports published by IT consulting firm Gartner that rely on proprietary qualitative data analysis methods to demonstrate market trends, such as direction, maturity and participants. \cite{GartnerMagicQuadrant}}
   \label{fig:AWSMagicQuadrantForCloud}
 \end{figure}
 
@@ -70,12 +70,12 @@ In the automotive context, the use of Software Defined Vehicle (SDV) plays a cru
 
 The central objective of this thesis is to propose a Software Defined Vehicle solution capable of eliminating various phases of the software production pipeline. This would result in significant time and cost savings, enabling the investment of these resources in other sectors. Since, by definition, a Software Defined Vehicle is characterized by the ability to undergo software updates dynamically and flexibly, this solution offers significant security advantages in various aspects:
 \begin{enumerate}
-  \item Human Safety Critical Security: From the moment that a vehicle can be classified as safety critical (as it is reported in the standard ISO 26262-1:2018 of the ISO society where is said that "safety is one of the key issues in the development of road vehicles"  Source: \cite{ISO26262}), the elimination of software vulnerabilities related to the vehicle's systems is crucial for the overall safety of the vehicle itself.  
+  \item Human Safety Critical Security: From the moment that a vehicle can be classified as safety critical (as it is reported in the standard ISO 26262-1:2018 of the ISO society where is said that "safety is one of the key issues in the development of road vehicles" \cite{ISO26262}), the elimination of software vulnerabilities related to the vehicle's systems is crucial for the overall safety of the vehicle itself.  
   \item Intrinsic Software Security: This approach allows for the prevention and resolution of vulnerabilities unknown at the time of software design, contributing to ensuring a high standard of security.
 \end{enumerate}
 
 Consequently, the use of Software Defined Vehicle aims to completely separate software and hardware, allowing the production of high-level software on entirely generalized hardware systems. This results in significant savings in terms of time and money for hardware production, along with providing an advantage in terms of security due to the simplification of software.
 
-For example, as demonstrated by NIST in the research on the Analysis Of The Impact Of Software Complexity (Source: \cite{NISTCodeComplexity}), the increase in software complexity in different cases results in less analyzable programs. In some instances, the same vulnerability analysis tool may detect vulnerabilities, while in others, analyzing the same code, it may not. 
+For example, as demonstrated by NIST in the research on the Analysis Of The Impact Of Software Complexity \cite{NISTCodeComplexity}, the increase in software complexity in different cases results in less analyzable programs. In some instances, the same vulnerability analysis tool may detect vulnerabilities, while in others, analyzing the same code, it may not. 
 
 From a practical standpoint, the project's goal is to provide, through the use of AWS services, a cloud infrastructure capable of managing the Software Defined Vehicle both in terms of software production and data analysis.

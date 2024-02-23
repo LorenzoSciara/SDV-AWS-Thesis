@@ -27,47 +27,49 @@ Database file #1: bibliography.bib
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 Warning--empty journal in ieeeSoftwareDefinedVehicle
 Warning--empty journal in StormReplySite
+Warning--empty journal in SDVBosh
+Warning--empty journal in SDVRenault
 
 Done.
-You've used 10 entries,
+You've used 12 entries,
             4087 wiz_defined-function locations,
-            897 strings with 9534 characters,
-and the built_in function-call counts, 5469 in all, are:
-= -- 477
-> -- 100
+            907 strings with 9909 characters,
+and the built_in function-call counts, 6214 in all, are:
+= -- 538
+> -- 113
 < -- 24
-+ -- 49
-- -- 20
-* -- 283
-:= -- 1034
-add.period$ -- 20
-call.type$ -- 10
-change.case$ -- 10
++ -- 55
+- -- 23
+* -- 317
+:= -- 1185
+add.period$ -- 24
+call.type$ -- 12
+change.case$ -- 12
 chr.to.int$ -- 45
-cite$ -- 12
-duplicate$ -- 413
-empty$ -- 418
-format.name$ -- 25
-if$ -- 1189
+cite$ -- 16
+duplicate$ -- 476
+empty$ -- 482
+format.name$ -- 29
+if$ -- 1346
 int.to.chr$ -- 0
-int.to.str$ -- 10
-missing$ -- 69
-newline$ -- 73
-num.names$ -- 10
-pop$ -- 155
+int.to.str$ -- 12
+missing$ -- 80
+newline$ -- 83
+num.names$ -- 12
+pop$ -- 187
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 420
+skip$ -- 479
 stack$ -- 0
-substring$ -- 118
-swap$ -- 282
+substring$ -- 120
+swap$ -- 313
 text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 10
-warning$ -- 2
-while$ -- 23
-width$ -- 12
-write$ -- 139
-(There were 2 warnings)
+type$ -- 12
+warning$ -- 4
+while$ -- 25
+width$ -- 14
+write$ -- 159
+(There were 4 warnings)
