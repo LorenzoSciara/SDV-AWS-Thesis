@@ -365,7 +365,7 @@
    "Properties": {
     "Code": {
      "S3Bucket": "cdk-hnb659fds-assets-668487117877-eu-west-1",
-     "S3Key": "7f18a11296f35510ee16538afec983ed6312e12afbf81b777089a9f8e34e2474.zip"
+     "S3Key": "dd5711540f04e06aa955d7f4862fc04e8cdea464cb590dae91ed2976bb78098e.zip"
     },
     "Timeout": 900,
     "MemorySize": 128,
@@ -384,7 +384,7 @@
    ],
    "Metadata": {
     "aws:cdk:path": "HawkbitServerStack/Custom::VpcRestrictDefaultSGCustomResourceProvider/Handler",
-    "aws:asset:path": "asset.7f18a11296f35510ee16538afec983ed6312e12afbf81b777089a9f8e34e2474",
+    "aws:asset:path": "asset.dd5711540f04e06aa955d7f4862fc04e8cdea464cb590dae91ed2976bb78098e",
     "aws:asset:property": "Code"
    }
   },
@@ -610,7 +610,7 @@
    "Properties": {
     "Code": {
      "S3Bucket": "cdk-hnb659fds-assets-668487117877-eu-west-1",
-     "S3Key": "17c16a3854838fd3ff4bda08146122a6701f33b9c86ae17f415ad0dc47a97544.zip"
+     "S3Key": "ed6cd104ff5f101d06dae8cb2b87cc6e6d69b9a22055b467ea6cae10ff023023.zip"
     },
     "Handler": "index.handler",
     "Role": {
@@ -627,7 +627,7 @@
    ],
    "Metadata": {
     "aws:cdk:path": "HawkbitServerStack/AWS679f53fac002430cb0da5b7982bd2287/Resource",
-    "aws:asset:path": "asset.17c16a3854838fd3ff4bda08146122a6701f33b9c86ae17f415ad0dc47a97544",
+    "aws:asset:path": "asset.ed6cd104ff5f101d06dae8cb2b87cc6e6d69b9a22055b467ea6cae10ff023023",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Code"
    }
@@ -747,7 +747,7 @@
   "CDKMetadata": {
    "Type": "AWS::CDK::Metadata",
    "Properties": {
-    "Analytics": "v2:deflate64:H4sIAAAAAAAA/21R0W7CMAz8Ft5DtsIXANLQtJeqTLwiNxjwaBMUO0NV1X+fKZRq0558Pl9y52Rms9fMZhO48tTtz9OKSttuBNzZKLVr0c1su704szr4bb4yeSorcptUepQbN6IiJMFPKCsc+ZFbMAdHIBT8U3wD714wqnINgldoHjaPbiEa5FSj7w0+sMmBonn3LOAdmg26FEmadQzp0pv+JQZpZwhq2xbhHm6owziP4UBK5UF36zPcUWcqqMs96IuQP1Yowb8l7/olnkDVA+4Mz3fAjMJ2cSva22VyZ5QlsKYokEOKGn2VWEI9tprp/5FG+6Y9RtPfpx9z1CTG9ZpdfIjU7cq/z3Umb+QU/MtcP9hms8kXE01j8kI12uJefwBd+/3G/QEAAA=="
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/3VPy26DQAz8ltw324RceiVIraJeVlDlGpmNSdzAbrT2FiHEv1eQB2qlnmY8HnvsRK+TV71aQMtLe7wsayp1XwjYi4KWDz3aRPf7q1VZ5fYmUyaWNdkilg5l1GaW+yj4CWWNsz5rKbO3BELePc0j2TnB4FDeQbCF7h5zr1IRsOcG3RTwgZ0BCmrnWMBZVAXaGEi69+DjdQr9KzysgyJodJ/723EPfLRN8BXVqIyvyU433NigamjKI+i+IHeqUbx7i85OTzxJVj3FQfHmAMworNMRFG/0NtoLyhYYB5Uj+xgsqiyy+GYuK/dPywT/TUcM47yadhYCJ3InZSffIdyNrNOWf88OynRy9u5lo9crvU4WX0y0DNEJNajzG/4AuISw8wECAAA="
    },
    "Metadata": {
     "aws:cdk:path": "HawkbitServerStack/CDKMetadata/Default"

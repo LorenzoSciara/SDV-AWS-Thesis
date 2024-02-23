@@ -1,51 +1,60 @@
-# hawkBit Device Simulator
+# Project
 
-The device simulator handles software update commands from the update server. It is designed to be used very conveniently, 
-for example, from within a browser. Hence, all the endpoints use the GET verb.
+This is the project for the job, as well as the practical example. The project follows the following schema:
 
-## Run on your own workstation
+```bash
+thesis-repository/
+|-- Book/
+    |-- ...
+|-- Project/
+    |-- CDK/
+    |-- GrafanaDashboards/
+    |-- Lorenzo_Device/
+    |-- Lorenzo_Device1/
+    |-- Lorenzo_Device2/
+    |-- pytests/
+    |-- src/
+    |-- target/
+    |-- TCUc/
+    |-- TCUcpp/
+    `-- documentation/
 ```
-java -jar examples/hawkbit-device-simulator/target/hawkbit-device-simulator-*-SNAPSHOT.jar
-```
-Or:
-```
-run org.eclipse.hawkbit.simulator.DeviceSimulator
-```
+## CDK
 
-## hawkBit APIs
+The `CDK` directory contains the code for the cdk stack that is used to buld the entire AWS infrastructure. A better explaination is given in the CDK directory.
 
-The simulator supports `DDI` as well as the `DMF` integration APIs.
+## GrafanaDashboards
 
-In case there is no AMQP message broker (like rabbitMQ) running, you can disable the AMQP support for the device simulator, so the simulator is not trying to connect to an amqp message broker.
+The `GrafanaDashboards` directory contains the grafana json for the dashboard used for analize the data in the Timestream Database.
 
-Configuration property `hawkbit.device.simulator.amqp.enabled=false`
+## Lorenzo_Device
 
-## Usage
+The `Lorenzo_Device` directory contains the simulator of a hawkbit device. A better explaination is given in the Lorenzo_Device directory
 
-### REST API
-The device simulator exposes an REST-API which can be used to trigger device creation.
+## Lorenzo_Device1
 
-Optional parameters:
-* name : name prefix simulated devices (default: "dmfSimulated"), followed by counter
-* amount : number of simulated devices (default: 20, capped at: 4000)
-* tenant : in a multi-tenant ready hawkBit installation (default: "DEFAULT")
-* api : the API which should be used for the simulated device either `dmf` or `ddi` (default: "dmf")
-* endpoint :  URL which defines the hawkbit DDI base endpoint (default: "http://localhost:8080")
-* polldelay : number in seconds of the delay when DDI simulated devices should poll the endpoint (default: "30")
-* gatewaytoken : an hawkbit gateway token to be used in case hawkbit does not allow anonymous access for DDI devices (default: "")
+The `Lorenzo_Device1` directory contains the simulator of the TCU system that create data for every component. It is the version before the update download.
 
+## Lorenzo_Device2
 
-Example: for 20 simulated devices by DMF API (default)
-```
-http://localhost:8083/start
-```
+The `Lorenzo_Device2` directory contains the simulator of the TCU system that create data for every component. It is the version that will be upload in the codecommit and on the hawkbit server for the update on the device.
 
-Example: for 10 simulated devices that start with the name prefix "activeSim":
-```
-http://localhost:8083/start?amount=10&name=activeSim
-```
+## pytests
 
-Example: for 5 simulated devices that start with the name prefix "ddi" using the Direct Device Integration API (http) authenticated by given gateway token, a pool interval of 10 seconds and a custom port for the DDI service.:
-```
-http://localhost:8083/start?amount=5&name=ddi&api=ddi&gatewaytoken=d5F2mmlARiMuMOquRmLlxW4xZFHy4mEV&polldelay=10&endpoint=http://localhost:8085
-```
+The `pytests` directory contains te tests for the Lorenzo_Device1 unit. they are in python and pytest tool is needed.
+
+## src
+
+The `src` directory contains the Java code for the Hawbit device simulator. With the use of Maven it produce the executable file responsable for the connection with the server.
+
+## target
+
+The `target` directory contains the results of the Maven operations on src directory.
+
+## TCUc
+
+The `TCUc` directory contains C code fot the simulation of a C TCU. It is used for the build phase of the codepipeline of compiled projects.
+
+## TCUcpp
+
+The `TCUcpp` directory contains C++ code fot the simulation of a C++ TCU. It is not used but was a possible solution for the build phase of the codepipeline of compiled projects.

@@ -44,15 +44,16 @@ def telemetry_handler(): #Function that manage the telemetry data sending to IoT
                 subprocess.run(["chmod", "+x", file_path], check=True)
                 launch_project(file_path)
                 break
+            elif project_type == "python":
+                for sub in subsystems:
+                    values[sub.get_name()] = sub.get_info(t)
+                    values["Timestamp"] = datetime.isoformat(datetime.utcnow())
+                    values["DeviceID"] = f"{VIN}"
+                    print(values)
+                    messageFinal=json.dumps(values)
+                    mqttc.publish(publish_topic, messageFinal, 0)
             else:
                 print("Impossibile determinare il tipo di progetto.")
-            for sub in subsystems:
-                values[sub.get_name()] = sub.get_info(t)
-            values["Timestamp"] = datetime.isoformat(datetime.utcnow())
-            values["DeviceID"] = f"{VIN}"
-            print(values)
-            messageFinal=json.dumps(values)
-            mqttc.publish(publish_topic, messageFinal, 0)
             t = t +1
             print("\n\n\n")
             time.sleep(1)
