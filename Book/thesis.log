@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.3)  25 FEB 2024 17:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.3)  25 FEB 2024 18:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -543,9 +543,6 @@ Package: listings 2023/02/27 1.9 (Carsten Heinz)
 
 LaTeX Warning: Label `fig:WorldAutomobileProduction' multiply defined.
 
-
-LaTeX Warning: Label `fig:AWSMagicQuadrantForCloud' multiply defined.
-
 ) (chapters/03/proofOfConcept.aux) (chapters/04/concluding_remarks.aux) (chapters/06/conclusions.aux))
 \openout1 = `thesis.aux'.
 
@@ -857,10 +854,10 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: DDC68993544A65C4844819B309C65EAB;2244.
  ) 
 Here is how much of TeX's memory you used:
- 23706 strings out of 474542
- 440956 string characters out of 5743503
+ 23707 strings out of 474542
+ 440978 string characters out of 5743503
  1939978 words of memory out of 5000000
- 45433 multiletter control sequences out of 15000+600000
+ 45434 multiletter control sequences out of 15000+600000
  569678 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  138i,13n,135p,1407b,2686s stack positions out of 10000i,1000n,20000p,200000b,200000s
