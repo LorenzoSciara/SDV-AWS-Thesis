@@ -89,5 +89,15 @@ From a user experience point of view, two other significant benefits can be iden
 
 For automotive companies, the benefits mentioned so far can bring direct benefits to the industry. In support of this, Stellantis reports that: "the team in Poland will contribute to the global software creation network that is key to Stellantis' work in creating software-defined vehicles (SDVs) that offer customer-focused features throughout the vehicle's life span, including updates and features that will be added years after the vehicle is manufactured. “Creating an infrastructure inside our vehicles that easily and seamlessly adapts to meet driver expectations is a key element of Stellantis' global drive to deliver cutting edge mobility. Stellantis' software-driven strategy deploys next-generation tech platforms, building on existing connected vehicle capabilities to transform how customers interact with their vehicles and to generate €20 billion in incremental annual revenues by 2030".
 
-Inoltre la il paradigma SDV porta un vantaggio dal punto di vista della filiare produttiva del software (Documento amazon https://aws.amazon.com/blogs/industries/building-an-automotive-embedded-linux-image-for-edge-using-arm-graviton-yocto-project-soafee/)
-Ciò porta un guadagno in termini di tempo e di conseguenza anche di costi per l'azienda.
+Inoltre la il paradigma SDV porta un vantaggio dal punto di vista della filiare produttiva del software. Nello scenario odierno della produzione software possono esserci due meccanismi di sviluppo:
+\begin{itemize}
+    \item una modalità più tradizionalista in cui il software viene prodotto direttamente sul sistema, quindi sul processore stesso. Questa soluzione sicuramente è la più sconveniente in quanto richiederebbe un sovrautilizzo inutile di processori, quindi uno spreco di risorse e di denaro e di tempo.
+    \item in alternativa gli sviluppatori si affidano a ingombranti strumenti di emulazione del sistema operativo sulla macchina host e al processo di compilazione incrociata, che utilizza un compilatore speciale per creare codice eseguibile per il sistema target. Una volta che il codice è sul sistema di sviluppo, è possibile eseguire un test finale di integrazione e convalida, ma la scalabilità è limitata al numero di piattaforme hardware fisiche. 
+\end{itemize}
+
+I flussi di lavoro tipici per lo sviluppo, l'integrazione e la convalida dei sistemi embedded sono i seguenti \cite{DevelopersWorkflow}:
+
+Come esposto nei capitoli successivi, grazie all'utilizzo del software defined vehicle, quindi a sistemi operativi che si basano su architetture general porpouse per costruire una parità tra cloud e edge system, è possibile ridurre the embedded developers' workflow to cut many of the steps that are now no longer required as shown in the below diagram \cite{DevelopersWorkflow}:
+
+\subsection{pinitiatives}
+(ARCHITETTURA DEL SDV CON RIFERIMENTO A ARM E AWS SOAFEE )

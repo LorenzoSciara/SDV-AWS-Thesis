@@ -29,47 +29,48 @@ Warning--empty journal in ieeeSoftwareDefinedVehicle
 Warning--empty journal in StormReplySite
 Warning--empty journal in SDVBosch
 Warning--empty journal in SDVRenault
+Warning--empty journal in DevelopersWorkflow
 
 Done.
-You've used 14 entries,
+You've used 15 entries,
             4087 wiz_defined-function locations,
-            920 strings with 10589 characters,
-and the built_in function-call counts, 7330 in all, are:
-= -- 635
-> -- 143
+            925 strings with 10897 characters,
+and the built_in function-call counts, 7726 in all, are:
+= -- 667
+> -- 152
 < -- 26
-+ -- 69
-- -- 30
-* -- 374
-:= -- 1390
-add.period$ -- 28
-call.type$ -- 14
-change.case$ -- 14
++ -- 73
+- -- 32
+* -- 394
+:= -- 1467
+add.period$ -- 30
+call.type$ -- 15
+change.case$ -- 15
 chr.to.int$ -- 45
-cite$ -- 18
-duplicate$ -- 566
-empty$ -- 568
-format.name$ -- 38
-if$ -- 1596
+cite$ -- 20
+duplicate$ -- 599
+empty$ -- 601
+format.name$ -- 41
+if$ -- 1680
 int.to.chr$ -- 0
-int.to.str$ -- 14
-missing$ -- 97
-newline$ -- 93
-num.names$ -- 14
-pop$ -- 230
+int.to.str$ -- 15
+missing$ -- 103
+newline$ -- 98
+num.names$ -- 15
+pop$ -- 248
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 564
+skip$ -- 594
 stack$ -- 0
-substring$ -- 126
-swap$ -- 373
+substring$ -- 127
+swap$ -- 390
 text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 14
-warning$ -- 4
-while$ -- 29
-width$ -- 16
-write$ -- 183
-(There were 4 warnings)
+type$ -- 15
+warning$ -- 5
+while$ -- 30
+width$ -- 17
+write$ -- 193
+(There were 5 warnings)

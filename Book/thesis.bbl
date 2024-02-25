@@ -94,8 +94,8 @@ D.~Slama, A.~Nonnenmacher, and T.~Irawan, ``The software-defined vehicle,''
 
 \bibitem{SDVBosch}
 \BIBentryALTinterwordspacing
-L.~P. Achim~Nonnenmacher and P.~S. defined Vehicle., ``What is a
-  software-defined vehicle in your opinion?'' 2024. [Online]. Available:
+A.~Nonnenmacher and L.~Product, ``What is a software-defined vehicle in your
+  opinion?'' 2024. [Online]. Available:
   \url{https://www.bosch-mobility.com/en/mobility-topics/software-defined-vehicle/?gad_source=1}
 \BIBentrySTDinterwordspacing
 
@@ -120,6 +120,14 @@ K.~T. Selvi, N.~Praveena, K.~Pratheksha, S.~Ragunanthan, and R.~Thamilselvan,
   using machine learning,'' \emph{Second International Conference on Artificial
   Intelligence and Smart Energy (ICAIS)}, p.~1, 2022. [Online]. Available:
   \url{https://ieeexplore.ieee.org/document/9742716}
+\BIBentrySTDinterwordspacing
+
+\bibitem{DevelopersWorkflow}
+\BIBentryALTinterwordspacing
+L.~H.~M. da~Ros~Gomes and S.~Goscik, ``Building an automotive embedded linux
+  image for edge and cloud using arm-based graviton instances, yocto project,
+  and soafee,'' 2022. [Online]. Available:
+  \url{https://aws.amazon.com/blogs/industries/building-an-automotive-embedded-linux-image-for-edge-using-arm-graviton-yocto-project-soafee/}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}
