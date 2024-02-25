@@ -31,45 +31,45 @@ Warning--empty journal in SDVBosch
 Warning--empty journal in SDVRenault
 
 Done.
-You've used 12 entries,
+You've used 14 entries,
             4087 wiz_defined-function locations,
-            907 strings with 9913 characters,
-and the built_in function-call counts, 6214 in all, are:
-= -- 538
-> -- 113
-< -- 24
-+ -- 55
-- -- 23
-* -- 317
-:= -- 1185
-add.period$ -- 24
-call.type$ -- 12
-change.case$ -- 12
+            920 strings with 10589 characters,
+and the built_in function-call counts, 7330 in all, are:
+= -- 635
+> -- 143
+< -- 26
++ -- 69
+- -- 30
+* -- 374
+:= -- 1390
+add.period$ -- 28
+call.type$ -- 14
+change.case$ -- 14
 chr.to.int$ -- 45
-cite$ -- 16
-duplicate$ -- 476
-empty$ -- 482
-format.name$ -- 29
-if$ -- 1346
+cite$ -- 18
+duplicate$ -- 566
+empty$ -- 568
+format.name$ -- 38
+if$ -- 1596
 int.to.chr$ -- 0
-int.to.str$ -- 12
-missing$ -- 80
-newline$ -- 83
-num.names$ -- 12
-pop$ -- 187
+int.to.str$ -- 14
+missing$ -- 97
+newline$ -- 93
+num.names$ -- 14
+pop$ -- 230
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 479
+skip$ -- 564
 stack$ -- 0
-substring$ -- 120
-swap$ -- 313
-text.length$ -- 9
+substring$ -- 126
+swap$ -- 373
+text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 12
+type$ -- 14
 warning$ -- 4
-while$ -- 25
-width$ -- 14
-write$ -- 159
+while$ -- 29
+width$ -- 16
+write$ -- 183
 (There were 4 warnings)

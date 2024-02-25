@@ -105,4 +105,21 @@ R.~Group, ``What is software defined vehicle?'' 2024. [Online]. Available:
   \url{https://www.renaultgroup.com/en/news-on-air/news/all-about-software-defined-vehicle/}
 \BIBentrySTDinterwordspacing
 
+\bibitem{PredictDefectsOfTiresInHeavyVehicle}
+\BIBentryALTinterwordspacing
+B.~J.~R. G and R.~P, ``Iot based system to predict the defects of tires in
+  heavy vehicle,'' \emph{International Conference on Sustainable Communication
+  Networks and Application (ICSCNA)}, p.~1, 2023. [Online]. Available:
+  \url{https://ieeexplore.ieee.org/document/10370342}
+\BIBentrySTDinterwordspacing
+
+\bibitem{AirPressureSystemFailurePrediction}
+\BIBentryALTinterwordspacing
+K.~T. Selvi, N.~Praveena, K.~Pratheksha, S.~Ragunanthan, and R.~Thamilselvan,
+  ``Air pressure system failure prediction and classification in scania trucks
+  using machine learning,'' \emph{Second International Conference on Artificial
+  Intelligence and Smart Energy (ICAIS)}, p.~1, 2022. [Online]. Available:
+  \url{https://ieeexplore.ieee.org/document/9742716}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}
