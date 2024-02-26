@@ -51,6 +51,13 @@ M.~KARLSSON and L.~SCHÖNBECK, ``Department of technology management and
   \url{https://odr.chalmers.se/server/api/core/bitstreams/077c3440-c033-418e-92ed-eda5dd638c5f/content}
 \BIBentrySTDinterwordspacing
 
+\bibitem{SoafeeArchitecture}
+\BIBentryALTinterwordspacing
+S.~project ND~Matt~Spencer, ``Architecture overview,'' 2023. [Online].
+  Available:
+  \url{https://architecture.docs.soafee.io/en/latest/contents/architecture.html}
+\BIBentrySTDinterwordspacing
+
 \bibitem{blackberrySDV}
 \BIBentryALTinterwordspacing
 B.~QNX, ``What is a software-defined vehicle?'' \emph{Software-Defined
