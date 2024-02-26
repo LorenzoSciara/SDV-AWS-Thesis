@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.3)  26 FEB 2024 15:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.3)  26 FEB 2024 16:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -808,17 +808,17 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2.3}) h
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.113 
-       <./images/today_developer_workflow.png>]) [22
+       <./images/today_developer_workflow.png>] [22
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.193 \include{chapters/02/state_of_the_art}
-                                             <./images/future_developers_workflow.png>]
+l.128 T
+       he SOAFEE paradigm is base very sophisticated architecture. <./images/future_developers_workflow.png>]) [23]
 \openout2 = `chapters/03/proofOfConcept.aux'.
 
  (chapters/03/proofOfConcept.tex
 Chapter 3.
-) [23
+) [24
 
 
 
@@ -828,7 +828,7 @@ Chapter 3.
 
  (chapters/04/concluding_remarks.tex
 Chapter 4.
-) [24
+) [25
 
 
 
@@ -838,7 +838,7 @@ Chapter 4.
 
  (chapters/06/conclusions.tex
 Chapter 5.
-) [25
+) [26
 
 
 
@@ -848,7 +848,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--45
 \OT1/cmr/m/n/12 com / Gartner-[]Magic-[]Quadrant-[]for-[]Cloud-[]AI-[]Developer-[]Services . html ? trk =
  []
 
-[26
+[27
 
 
 
@@ -857,7 +857,7 @@ Overfull \hbox (104.38672pt too wide) in paragraph at lines 127--132
 \OT1/cmr/m/n/12 building-[]an-[]automotive-[]embedded-[]linux-[]image-[]for-[]edge-[]using-[]arm-[]graviton-[]yocto-[]project-[]soafee/$[][] 
  []
 
-) [27] (thesis.aux (chapters/00/abstract.aux) (chapters/01/introduction.aux) (chapters/02/state_of_the_art.aux) (chapters/03/proofOfConcept.aux) (chapters/04/concluding_remarks.aux) (chapters/06/conclusions.aux))
+) [28] (thesis.aux (chapters/00/abstract.aux) (chapters/01/introduction.aux) (chapters/02/state_of_the_art.aux) (chapters/03/proofOfConcept.aux) (chapters/04/concluding_remarks.aux) (chapters/06/conclusions.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -870,17 +870,17 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 59D227F017719A79EA06B95D776DAF37;2308.
  ) 
 Here is how much of TeX's memory you used:
- 23728 strings out of 474542
- 441724 string characters out of 5743503
+ 23735 strings out of 474542
+ 441788 string characters out of 5743503
  1939978 words of memory out of 5000000
- 45450 multiletter control sequences out of 15000+600000
+ 45451 multiletter control sequences out of 15000+600000
  569678 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  138i,13n,135p,1407b,2686s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Lorenzo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (27 pages, 3543564 bytes).
+Output written on thesis.pdf (28 pages, 3546788 bytes).
 PDF statistics:
- 465 PDF objects out of 1000 (max. 8388607)
- 86 named destinations out of 1000 (max. 500000)
+ 478 PDF objects out of 1000 (max. 8388607)
+ 92 named destinations out of 1000 (max. 500000)
  338 words of extra memory for PDF output out of 10000 (max. 10000000)
 

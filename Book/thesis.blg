@@ -30,47 +30,48 @@ Warning--empty journal in StormReplySite
 Warning--empty journal in SDVBosch
 Warning--empty journal in SDVRenault
 Warning--empty journal in DevelopersWorkflow
+Warning--empty journal in SoafeeProject
 
 Done.
-You've used 15 entries,
+You've used 16 entries,
             4087 wiz_defined-function locations,
-            925 strings with 10897 characters,
-and the built_in function-call counts, 7726 in all, are:
-= -- 667
-> -- 152
+            930 strings with 10994 characters,
+and the built_in function-call counts, 8075 in all, are:
+= -- 696
+> -- 156
 < -- 26
-+ -- 73
-- -- 32
-* -- 394
-:= -- 1467
-add.period$ -- 30
-call.type$ -- 15
-change.case$ -- 15
++ -- 75
+- -- 33
+* -- 410
+:= -- 1541
+add.period$ -- 32
+call.type$ -- 16
+change.case$ -- 16
 chr.to.int$ -- 45
-cite$ -- 20
-duplicate$ -- 599
-empty$ -- 601
-format.name$ -- 41
-if$ -- 1680
+cite$ -- 22
+duplicate$ -- 629
+empty$ -- 632
+format.name$ -- 42
+if$ -- 1753
 int.to.chr$ -- 0
-int.to.str$ -- 15
-missing$ -- 103
-newline$ -- 98
-num.names$ -- 15
-pop$ -- 248
+int.to.str$ -- 16
+missing$ -- 108
+newline$ -- 103
+num.names$ -- 16
+pop$ -- 262
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 594
+skip$ -- 621
 stack$ -- 0
-substring$ -- 127
-swap$ -- 390
+substring$ -- 128
+swap$ -- 404
 text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 15
-warning$ -- 5
-while$ -- 30
-width$ -- 17
-write$ -- 193
-(There were 5 warnings)
+type$ -- 16
+warning$ -- 6
+while$ -- 31
+width$ -- 18
+write$ -- 203
+(There were 6 warnings)

@@ -130,4 +130,10 @@ L.~H.~M. da~Ros~Gomes and S.~Goscik, ``Building an automotive embedded linux
   \url{https://aws.amazon.com/blogs/industries/building-an-automotive-embedded-linux-image-for-edge-using-arm-graviton-yocto-project-soafee/}
 \BIBentrySTDinterwordspacing
 
+\bibitem{SoafeeProject}
+\BIBentryALTinterwordspacing
+S.~project, ``Achieving software-defined vehicles,'' 2023. [Online]. Available:
+  \url{https://www.soafee.io/}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}

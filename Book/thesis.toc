@@ -16,24 +16,24 @@
 \contentsline {subsection}{\numberline {2.2.1}Enablers}{19}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Benefits}{19}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}initiatives}{22}{subsection.2.2.3}%
-\contentsline {chapter}{\numberline {3}Proof Of Concept}{23}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Amazon Web Services}{23}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Introduction}{23}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Used services}{23}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}Design}{23}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Architecture}{23}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Security}{23}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}Implementation}{23}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Code}{23}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Tools}{23}{subsection.3.3.2}%
-\contentsline {section}{\numberline {3.4}Test and Validation}{23}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}RPi demo}{23}{subsection.3.4.1}%
-\contentsline {chapter}{\numberline {4}Conclding Remarks}{24}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Contribution Recaps}{24}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Have we meet the PoC goals?}{24}{subsection.4.1.1}%
-\contentsline {section}{\numberline {4.2}Future Works}{24}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Transform the poc in a product}{24}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Virtual workbenches}{24}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Manage additional Use Cases (ML, Cockpit Apps, remote ECU etc..)}{24}{subsection.4.2.3}%
-\contentsline {chapter}{\numberline {5}Conclusions}{25}{chapter.5}%
-\contentsline {chapter}{Bibliography}{26}{chapter.5}%
+\contentsline {chapter}{\numberline {3}Proof Of Concept}{24}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Amazon Web Services}{24}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Introduction}{24}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Used services}{24}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Design}{24}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Architecture}{24}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Security}{24}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Implementation}{24}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Code}{24}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Tools}{24}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}Test and Validation}{24}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}RPi demo}{24}{subsection.3.4.1}%
+\contentsline {chapter}{\numberline {4}Conclding Remarks}{25}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Contribution Recaps}{25}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Have we meet the PoC goals?}{25}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}Future Works}{25}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Transform the poc in a product}{25}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Virtual workbenches}{25}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Manage additional Use Cases (ML, Cockpit Apps, remote ECU etc..)}{25}{subsection.4.2.3}%
+\contentsline {chapter}{\numberline {5}Conclusions}{26}{chapter.5}%
+\contentsline {chapter}{Bibliography}{27}{chapter.5}%
