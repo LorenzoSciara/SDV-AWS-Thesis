@@ -89,15 +89,27 @@ From a user experience point of view, two other significant benefits can be iden
 
 For automotive companies, the benefits mentioned so far can bring direct benefits to the industry. In support of this, Stellantis reports that: "the team in Poland will contribute to the global software creation network that is key to Stellantis' work in creating software-defined vehicles (SDVs) that offer customer-focused features throughout the vehicle's life span, including updates and features that will be added years after the vehicle is manufactured. “Creating an infrastructure inside our vehicles that easily and seamlessly adapts to meet driver expectations is a key element of Stellantis' global drive to deliver cutting edge mobility. Stellantis' software-driven strategy deploys next-generation tech platforms, building on existing connected vehicle capabilities to transform how customers interact with their vehicles and to generate €20 billion in incremental annual revenues by 2030".
 
-Inoltre la il paradigma SDV porta un vantaggio dal punto di vista della filiare produttiva del software. Nello scenario odierno della produzione software possono esserci due meccanismi di sviluppo:
+In addition, the SDV paradigm brings an advantage from a software production pipeline perspective. In today's software production scenario, there can be two development mechanisms:
 \begin{itemize}
-    \item una modalità più tradizionalista in cui il software viene prodotto direttamente sul sistema, quindi sul processore stesso. Questa soluzione sicuramente è la più sconveniente in quanto richiederebbe un sovrautilizzo inutile di processori, quindi uno spreco di risorse e di denaro e di tempo.
-    \item in alternativa gli sviluppatori si affidano a ingombranti strumenti di emulazione del sistema operativo sulla macchina host e al processo di compilazione incrociata, che utilizza un compilatore speciale per creare codice eseguibile per il sistema target. Una volta che il codice è sul sistema di sviluppo, è possibile eseguire un test finale di integrazione e convalida, ma la scalabilità è limitata al numero di piattaforme hardware fisiche. 
+    \item A more traditional mode in which software is created directly on the system, hence on the processor itself. This is undoubtedly the most inconvenient solution, as it would require unnecessary overuse of processors, wasting resources, money and time.
+    \item Alternatively, developers rely on cumbersome operating system emulation tools on the host machine and the cross-compilation process, which uses a dedicated compiler to produce executable code for the target system. Once the code is on the development system, a final integration and validation test can be performed, but scalability is limited to the number of physical hardware platforms. 
 \end{itemize}
 
-I flussi di lavoro tipici per lo sviluppo, l'integrazione e la convalida dei sistemi embedded sono i seguenti \cite{DevelopersWorkflow}:
+Typical workflows for the development, integration and validation of embedded systems are as follows \cite{DevelopersWorkflow}:
+\begin{figure}[h]  % 'h' significa che la figura viene posizionata qui
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/today_developer_workflow.png}  % Sostituisci 'nome_immagine' con il nome del tuo file immagine e l'estensione
+    \caption{today development, integration, and validation workflows for embedded systems}
+    \label{fig:TodayDeveloperWorkflow}
+\end{figure}
 
-Come esposto nei capitoli successivi, grazie all'utilizzo del software defined vehicle, quindi a sistemi operativi che si basano su architetture general porpouse per costruire una parità tra cloud e edge system, è possibile ridurre the embedded developers' workflow to cut many of the steps that are now no longer required as shown in the below diagram \cite{DevelopersWorkflow}:
+As explained in the following chapters, by using the software defined vehicle, i.e. operating systems that rely on general purpose porpouse architectures to provide parity between cloud and edge systems, it is possible to reduce the embedded developer's workflow to remove many of the steps that are now no longer required, as shown in the diagram below \cite{DevelopersWorkflow}:
+\begin{figure}[h]  % 'h' significa che la figura viene posizionata qui
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/future_developers_workflow.png}  % Sostituisci 'nome_immagine' con il nome del tuo file immagine e l'estensione
+    \caption{future development, integration, and validation workflows for embedded systems}
+    \label{fig:FutureDevelopersWorkflow}
+\end{figure}
 
-\subsection{pinitiatives}
+\subsection{initiatives}
 (ARCHITETTURA DEL SDV CON RIFERIMENTO A ARM E AWS SOAFEE )
