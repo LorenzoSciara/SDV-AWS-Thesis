@@ -55,16 +55,39 @@ The current shift towards a digital experience is possible thanks to vehicle des
 
 The simultaneous efforts of major automotive companies such as Bosch, Renault and Stellantis, in collaboration with leading computer developers such as Arm, BlackBerry and AWS, have given rise to the Software Defined Vehicle concept, which they define as "any vehicle that manages its own operations, adds functionality and enables new features primarily or entirely through software" \cite{blackberrySDV}.
 
-It is evident that the Software Defined Vehicle represents the future of the automotive industry, promising an enriched and enduring user experience, coupled with the evolution of automotive technologies. This section further elucidates the current state of the industry, highlighting the key players that are working in the industry as a enablers to develop the SDV technologies, and  the benefits of this innovation.
+The Software Defined Vehicle solution is nowadays being considered by several companies as the manifesto of a new era of vehicle development. An example is given by the Renault Group, which in an overview of its products describes: "Today, it is already possible to make remote updates of some vehicles via the Firmware Over The Air (FOTA) system. This keeps the vehicle safe by making it easier and faster to improve the on-board system and apply patches. Tomorrow, the Software Defined Vehicle's flexible and scalable architecture will enable the faster development and integration of new features throughout the vehicle lifecycle, directly into the cloud, that is, in secure online servers accessible from anywhere and anytime" \cite{SDVRenault}. 
+
+It is evident that Software Defined Vehicles represent the future of the automotive industry, promising an enriched and sustainable user experience as vehicle technologies evolve. This section further clarifies the current state of the industry, highlighting the key enablers that are allowing the development of the SDV paradigm and the benefits of this innovation.
 
 \subsection{Enablers}
-The software defined vehicle solution is nowadays being considered by several companies as the manifesto of a new era of vehicle development. An example is given by the renault group, which in an overview of its products describes: "Today, it is already possible to make remote updates of some vehicles via the Firmware Over The Air (FOTA) system. This keeps the vehicle safe by making it easier and faster to improve the on-board system and apply patches. Tomorrow, the Software Defined Vehicle's flexible and scalable architecture will enable the faster development and integration of new features throughout the vehicle lifecycle, directly into the cloud, that is, in secure online servers accessible from anywhere and anytime" \cite{SDVRenault}. 
 
-Two key technology players, Arm and AWS, have played a pivotal role in advancing SDV by working together to define standards that accelerate technology development.
+There are mainly three fundamental technologies that contribute to the realisation of the Software Defined Vehicle: standardized hardware, cloud and over-the-air (OTA) updates via OTA servers, all developed by leading companies in the computing industry. In this section, each technology will be analysed with reference to concrete examples from the current market.
+
 \begin{itemize}
-    \item \textbf{Arm:} a leading semiconductor design and software company, is a pillar in the advancement of SDV technology. Focusing on the development of energy-efficient processors and technologies, Arm's contributions enable SDVs to efficiently manage their operations, add functionality and introduce new features through the development of general-purpose processors that can be used in the cloud for software development and maintenance, and in the vehicle itself to maintain computing continuity.
-    \item \textbf{Amazon Web Services (AWS):} a global leader in cloud computing, offers scalable and secure solutions for real-time application updates, enhanced connectivity, and efficient data management. The AWS services and technologies will be in depth described in the futher chapters.
+    \item \textbf{Standardized hardware} 
+    
+    One of the most important aspects of Software Defined Vehicle is the separation of software from hardware. To achieve this, it is essential to move away from the approach of using dedicated hardware for each vehicle component system, and instead favour an approach based on general purpose processors that are as centralised as possible. This transition not only promotes ease of software development and scalability, but also offers the opportunity to create parity between the virtual development and test environment and the real execution environment.
+    
+    Several players in the semiconductor industry have stepped up to the challenge of realising this vision, including Arm. Through the development of energy-efficient processors, Arm is present in every part of the vehicle, from high-performance systems in advanced driver assistance systems (ADAS), automated driving (AD), in-vehicle infotainment (IVI) and digital cockpits, to gateway, body and microcontroller endpoints \cite{ArmAutomotive}. The aim is to create Arm-based MCUs that enable implementation of a common architecture, scalability between applications to meet processing requirements, software reuse and reduced development costs.
+    
+    Another major player is Qualcomm, which is being adopted by the Renault Group through its Snapdragon Digital Chassis vehicle architecture, a set of cloud-connected platforms for telematics and connectivity, digital cockpits, assistance and driver autonomy.
+
+    \item \textbf{Cloud} 
+    
+    Using a cloud platform that offers scalable and secure solutions for real-time application updates, increased connectivity and efficient data management is essential for SDV. 
+
+    Well-known companies such as Amazon Web Services (AWS) and Google Cloud are already present in the automotive industry as partners of partner of many automotive companies. The AWS services and technologies will be in depth described in the futher chapters.
+ 
+    \item \textbf{Over-The-Air updates}
+    
+    An Over-The-Air (OTA) update is the remote and wireless transfer of applications, services, firmware and configurations from a server to a target device. This process takes place over an available network, preferably the Internet. The main purposes of OTA are to remotely update software or firmware, provide power-safe procedures to ensure that the device will boot even if power is lost during the update process, maintain a robust implementation, ensure data protection and reduce overall maintenance costs. \cite{Open-sourceSWUpdate}
+
+    In the context of the thesis, it is crucial to acknowledge that the implementation of OTA updates may increase the vulnerability of automotive systems to hacking and other cyber attacks. These vulnerabilities could potentially be exploited by hackers to gain unauthorised access to private information, take remote control of the vehicle or even cause it to malfunction. Another significant issue is the leakage of information about updates and their sources. This can enable malicious actors to introduce viruses and malware, further exacerbating the security risks associated with OTA updates \cite{EnhancedMulti-LevelSecureUpdate}. 
+    
+    For compiting an OTA update are necessary both a client on the vehicle that wait and check for imcoming updates, and a server that make the update broadcast available for all the connected device. In this scenario can be considered Autosar that is a standard and open source architecture for intelligent mobility \cite{AutosarAbout} which has a dedicate platform for client and server management of OTA updates. Another example is rappresentated by Hawkbit CONTINUARE A PARLARE DI HAWKBIT E POI FARE RIFERIMENTO A GREENGRASS 
+    \item \textbf{MQTT communication}
 \end{itemize}
+
 
 The collaborative efforts of this two companies contribute to shaping a future where vehicles are not only defined by their physical attributes but are also dynamic entities capable of continual software-driven enhancements and innovations.
 
@@ -111,9 +134,7 @@ As explained in the following chapters, by using the software defined vehicle, i
     \label{fig:FutureDevelopersWorkflow}
 \end{figure}
 
-\subsection{initiatives}
-\textbf{SOAFEE}
-
+\subsection{initiatives: SOAFEE}
 In 2021 Arm, AWS, and other founding members announced the Scalable Open Architecture for Embedded Edge (SOAFEE) Special Interest Group, which brings together automakers, semiconductor, and cloud technology leaders to define a new open-standards based architecture to implement the lowest levels of a software-defined vehicle stack. \cite{DevelopersWorkflow}
 
 SOAFE is created to achive Software Defined Vehicle, and for doing that four-pillar principle are used \cite{SoafeeProject}:

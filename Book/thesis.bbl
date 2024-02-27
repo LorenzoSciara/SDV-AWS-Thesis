@@ -53,8 +53,7 @@ M.~KARLSSON and L.~SCHÖNBECK, ``Department of technology management and
 
 \bibitem{SoafeeArchitecture}
 \BIBentryALTinterwordspacing
-S.~project ND~Matt~Spencer, ``Architecture overview,'' 2023. [Online].
-  Available:
+S.~project and M.~Spencer, ``Architecture,'' 2023. [Online]. Available:
   \url{https://architecture.docs.soafee.io/en/latest/contents/architecture.html}
 \BIBentrySTDinterwordspacing
 
@@ -110,6 +109,35 @@ A.~Nonnenmacher and L.~Product, ``What is a software-defined vehicle in your
 \BIBentryALTinterwordspacing
 R.~Group, ``What is software defined vehicle?'' 2024. [Online]. Available:
   \url{https://www.renaultgroup.com/en/news-on-air/news/all-about-software-defined-vehicle/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{ArmAutomotive}
+\BIBentryALTinterwordspacing
+Arm, ``Do you have the right tools?'' 2024. [Online]. Available:
+  \url{https://www.arm.com/developer-hub/embedded-systems/automotive-tools}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Open-sourceSWUpdate}
+\BIBentryALTinterwordspacing
+A.~K. Srivastava, K.~CS, D.~Lilaramani, R.~R, and K.~Sree, ``An open-source
+  swupdate and hawkbit framework for ota updates of risc-v based resource
+  constrained devices,'' \emph{2nd International Conference on Communication,
+  Computing and Industry 4.0}, p.~1, 2022. [Online]. Available:
+  \url{https://ieeexplore.ieee.org/document/9689433}
+\BIBentrySTDinterwordspacing
+
+\bibitem{EnhancedMulti-LevelSecureUpdate}
+\BIBentryALTinterwordspacing
+M.~Helmy and M.~Mahmoud, ``Enhanced multi-level secure over-the-air update
+  system using adaptive autosar,'' \emph{International Conference on Computer
+  and Applications}, p.~1, 2023. [Online]. Available:
+  \url{https://ieeexplore.ieee.org/document/10401797}
+\BIBentrySTDinterwordspacing
+
+\bibitem{AutosarAbout}
+\BIBentryALTinterwordspacing
+Autosar, ``Vision,'' 2024. [Online]. Available:
+  \url{https://www.autosar.org/about}
 \BIBentrySTDinterwordspacing
 
 \bibitem{PredictDefectsOfTiresInHeavyVehicle}

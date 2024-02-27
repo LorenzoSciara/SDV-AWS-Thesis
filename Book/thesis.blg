@@ -30,49 +30,51 @@ Warning--empty journal in SoafeeArchitecture
 Warning--empty journal in StormReplySite
 Warning--empty journal in SDVBosch
 Warning--empty journal in SDVRenault
+Warning--empty journal in ArmAutomotive
+Warning--empty journal in AutosarAbout
 Warning--empty journal in DevelopersWorkflow
 Warning--empty journal in SoafeeProject
 
 Done.
-You've used 17 entries,
+You've used 21 entries,
             4087 wiz_defined-function locations,
-            935 strings with 11153 characters,
-and the built_in function-call counts, 8424 in all, are:
-= -- 725
-> -- 160
-< -- 26
-+ -- 77
-- -- 34
-* -- 426
-:= -- 1615
-add.period$ -- 34
-call.type$ -- 17
-change.case$ -- 17
+            957 strings with 11954 characters,
+and the built_in function-call counts, 10285 in all, are:
+= -- 883
+> -- 203
+< -- 28
++ -- 97
+- -- 44
+* -- 518
+:= -- 1971
+add.period$ -- 42
+call.type$ -- 21
+change.case$ -- 21
 chr.to.int$ -- 45
-cite$ -- 24
-duplicate$ -- 659
-empty$ -- 663
-format.name$ -- 43
-if$ -- 1826
+cite$ -- 30
+duplicate$ -- 812
+empty$ -- 813
+format.name$ -- 56
+if$ -- 2233
 int.to.chr$ -- 0
-int.to.str$ -- 17
-missing$ -- 113
-newline$ -- 108
-num.names$ -- 17
-pop$ -- 276
+int.to.str$ -- 21
+missing$ -- 141
+newline$ -- 128
+num.names$ -- 21
+pop$ -- 351
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 648
+skip$ -- 791
 stack$ -- 0
-substring$ -- 129
-swap$ -- 418
-text.length$ -- 11
+substring$ -- 137
+swap$ -- 509
+text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 17
-warning$ -- 7
-while$ -- 32
-width$ -- 19
-write$ -- 213
-(There were 7 warnings)
+type$ -- 21
+warning$ -- 9
+while$ -- 38
+width$ -- 23
+write$ -- 257
+(There were 9 warnings)
