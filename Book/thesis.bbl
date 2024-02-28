@@ -140,6 +140,19 @@ Autosar, ``Vision,'' 2024. [Online]. Available:
   \url{https://www.autosar.org/about}
 \BIBentrySTDinterwordspacing
 
+\bibitem{MQTTVersion5.0}
+\BIBentryALTinterwordspacing
+A.~Banks, E.~Briggs, K.~Borgendale, and R.~Gupta, ``Mqtt version 5.0,''
+  \emph{OASIS Standard}, pp. 10 -- 13, 2020. [Online]. Available:
+  \url{https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.pdf}
+\BIBentrySTDinterwordspacing
+
+\bibitem{MQTTAWS}
+\BIBentryALTinterwordspacing
+AWS, ``What are mqtt components?'' 2024. [Online]. Available:
+  \url{https://aws.amazon.com/it/what-is/mqtt/}
+\BIBentrySTDinterwordspacing
+
 \bibitem{PredictDefectsOfTiresInHeavyVehicle}
 \BIBentryALTinterwordspacing
 B.~J.~R. G and R.~P, ``Iot based system to predict the defects of tires in
