@@ -7,8 +7,8 @@ Reallocating 'name_of_file' (item size: 1) to 29 items.
 A level-1 auxiliary file: chapters/01/introduction.aux
 Reallocating 'name_of_file' (item size: 1) to 33 items.
 A level-1 auxiliary file: chapters/02/state_of_the_art.aux
-Reallocating 'name_of_file' (item size: 1) to 31 items.
-A level-1 auxiliary file: chapters/03/proofOfConcept.aux
+Reallocating 'name_of_file' (item size: 1) to 33 items.
+A level-1 auxiliary file: chapters/03/proof_of_concept.aux
 Reallocating 'name_of_file' (item size: 1) to 35 items.
 A level-1 auxiliary file: chapters/04/concluding_remarks.aux
 Reallocating 'name_of_file' (item size: 1) to 28 items.
@@ -39,7 +39,7 @@ Warning--empty journal in SoafeeProject
 Done.
 You've used 23 entries,
             4087 wiz_defined-function locations,
-            969 strings with 12225 characters,
+            969 strings with 12227 characters,
 and the built_in function-call counts, 11554 in all, are:
 = -- 989
 > -- 232

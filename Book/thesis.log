@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.3)  28 FEB 2024 01:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.3)  1 MAR 2024 13:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -543,7 +543,7 @@ Package: listings 2023/02/27 1.9 (Carsten Heinz)
 
 LaTeX Warning: Label `fig:WorldAutomobileProduction' multiply defined.
 
-) (chapters/03/proofOfConcept.aux) (chapters/04/concluding_remarks.aux) (chapters/06/conclusions.aux))
+) (chapters/03/proof_of_concept.aux) (chapters/04/concluding_remarks.aux) (chapters/06/conclusions.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
@@ -843,21 +843,24 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2.6}) h
                                                   \__shipout_drop_firstpage_...
 l.193 \include{chapters/02/state_of_the_art}
                                              <./images/SOAFEE_architecture.png>]
-\openout2 = `chapters/03/proofOfConcept.aux'.
+\openout2 = `chapters/03/proof_of_concept.aux'.
 
- (chapters/03/proofOfConcept.tex
+ (chapters/03/proof_of_concept.tex
 Chapter 3.
-) [26
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [26
 
 
 
 
-]
+] [27]
 \openout2 = `chapters/04/concluding_remarks.aux'.
 
  (chapters/04/concluding_remarks.tex
 Chapter 4.
-) [27
+) [28
 
 
 
@@ -867,7 +870,7 @@ Chapter 4.
 
  (chapters/06/conclusions.tex
 Chapter 5.
-) [28
+) [29
 
 
 
@@ -877,7 +880,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--45
 \OT1/cmr/m/n/12 com / Gartner-[]Magic-[]Quadrant-[]for-[]Cloud-[]AI-[]Developer-[]Services . html ? trk =
  []
 
-[29
+[30
 
 
 
@@ -886,7 +889,7 @@ Overfull \hbox (104.38672pt too wide) in paragraph at lines 175--180
 \OT1/cmr/m/n/12 building-[]an-[]automotive-[]embedded-[]linux-[]image-[]for-[]edge-[]using-[]arm-[]graviton-[]yocto-[]project-[]soafee/$[][] 
  []
 
-) [30] (thesis.aux (chapters/00/abstract.aux) (chapters/01/introduction.aux) (chapters/02/state_of_the_art.aux) (chapters/03/proofOfConcept.aux) (chapters/04/concluding_remarks.aux) (chapters/06/conclusions.aux))
+) [31] (thesis.aux (chapters/00/abstract.aux) (chapters/01/introduction.aux) (chapters/02/state_of_the_art.aux) (chapters/03/proof_of_concept.aux) (chapters/04/concluding_remarks.aux) (chapters/06/conclusions.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -899,17 +902,17 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 9EAD686A3F8D8CC63EC9A660C70ADDAF;2319.
  ) 
 Here is how much of TeX's memory you used:
- 23769 strings out of 474542
- 442608 string characters out of 5743503
+ 23770 strings out of 474542
+ 442665 string characters out of 5743503
  1939978 words of memory out of 5000000
  45474 multiletter control sequences out of 15000+600000
  569678 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  138i,13n,135p,1420b,2686s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Lorenzo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (30 pages, 3702595 bytes).
+Output written on thesis.pdf (31 pages, 3705713 bytes).
 PDF statistics:
- 524 PDF objects out of 1000 (max. 8388607)
- 103 named destinations out of 1000 (max. 500000)
+ 529 PDF objects out of 1000 (max. 8388607)
+ 104 named destinations out of 1000 (max. 500000)
  348 words of extra memory for PDF output out of 10000 (max. 10000000)
 
