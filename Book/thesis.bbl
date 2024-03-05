@@ -31,7 +31,7 @@ Vošta and Kocourek, ``Competitiveness of the european automobile industry in
 
 \bibitem{ieeeSoftwareDefinedVehicle}
 \BIBentryALTinterwordspacing
-R.~Saracco, ``Sdv: Software defined vehicles,'' 2021. [Online]. Available:
+R.~Saracco. (2021) Sdv: Software defined vehicles. [Online]. Available:
   \url{https://cmte.ieee.org/futuredirections/2022/11/01/sdv-software-defined-vehicles/}
 \BIBentrySTDinterwordspacing
 
@@ -53,7 +53,7 @@ M.~KARLSSON and L.~SCHÖNBECK, ``Department of technology management and
 
 \bibitem{SoafeeArchitecture}
 \BIBentryALTinterwordspacing
-S.~project and M.~Spencer, ``Architecture,'' 2023. [Online]. Available:
+S.~project and M.~Spencer. (2023) Architecture. [Online]. Available:
   \url{https://architecture.docs.soafee.io/en/latest/contents/architecture.html}
 \BIBentrySTDinterwordspacing
 
@@ -113,7 +113,7 @@ R.~Group, ``What is software defined vehicle?'' 2024. [Online]. Available:
 
 \bibitem{ArmAutomotive}
 \BIBentryALTinterwordspacing
-Arm, ``Do you have the right tools?'' 2024. [Online]. Available:
+Arm. (2024) Do you have the right tools? [Online]. Available:
   \url{https://www.arm.com/developer-hub/embedded-systems/automotive-tools}
 \BIBentrySTDinterwordspacing
 
@@ -149,7 +149,7 @@ A.~Banks, E.~Briggs, K.~Borgendale, and R.~Gupta, ``Mqtt version 5.0,''
 
 \bibitem{MQTTAWS}
 \BIBentryALTinterwordspacing
-AWS, ``What are mqtt components?'' 2024. [Online]. Available:
+AWS. (2024) What are mqtt components? [Online]. Available:
   \url{https://aws.amazon.com/it/what-is/mqtt/}
 \BIBentrySTDinterwordspacing
 
@@ -186,49 +186,64 @@ S.~project, ``Achieving software-defined vehicles,'' 2023. [Online]. Available:
 
 \bibitem{EuAmazonWebServices}
 \BIBentryALTinterwordspacing
-AWS, ``Amazon web services,'' 2024. [Online]. Available:
+AWS. (2024) Amazon web services. [Online]. Available:
   \url{https://www.aboutamazon.eu/what-we-do/amazon-web-services}
 \BIBentrySTDinterwordspacing
 
 \bibitem{WhatIsAWS}
 \BIBentryALTinterwordspacing
-------, ``Cloud computing with aws,'' 2024. [Online]. Available:
+------. (2024) Cloud computing with aws. [Online]. Available:
   \url{https://aws.amazon.com/what-is-aws/}
 \BIBentrySTDinterwordspacing
 
 \bibitem{AboutAWS}
 \BIBentryALTinterwordspacing
-------, ``About aws,'' 2024. [Online]. Available:
+------. (2024) About aws. [Online]. Available:
   \url{https://docs.aws.amazon.com/whitepapers/latest/gxp-systems-on-aws/about-aws.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{NISTCloudComputing}
+\BIBentryALTinterwordspacing
+A.~S. Rebecca M.~Blank, ``The nist definition of cloud computing,''
+  \emph{National Institute of Standards and Technology Special Publication
+  800-145}, p.~1, 2012. [Online]. Available:
+  \url{https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-145.pdf}
+\BIBentrySTDinterwordspacing
+
+\bibitem{AWSRegions}
+\BIBentryALTinterwordspacing
+AWS. (2024) Use aws regions. Accessed: 05 03, 2024. [Online]. Available:
+  \url{https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/region-selection.html}
 \BIBentrySTDinterwordspacing
 
 \bibitem{AWSWhatIsCloudComputing}
 \BIBentryALTinterwordspacing
-------, ``What is cloud computing?'' 2024. [Online]. Available:
+------. (2024) What is cloud computing? [Online]. Available:
   \url{https://aws.amazon.com/what-is-cloud-computing/}
 \BIBentrySTDinterwordspacing
 
 \bibitem{AWSCloudComputing}
 \BIBentryALTinterwordspacing
-------, ``Aws cloud security,'' 2024. [Online]. Available:
+------. (2024) Aws cloud security. [Online]. Available:
   \url{https://docs.aws.amazon.com/whitepapers/latest/gxp-systems-on-aws/aws-cloud-security.html}
 \BIBentrySTDinterwordspacing
 
 \bibitem{AWSSecurity}
 \BIBentryALTinterwordspacing
-------, ``Aws cloud security,'' 2024. [Online]. Available:
+------. (2024) Aws cloud security. [Online]. Available:
   \url{https://aws.amazon.com/security/}
 \BIBentrySTDinterwordspacing
 
 \bibitem{AWSCertificationsAndAttestations}
 \BIBentryALTinterwordspacing
-------, ``Gxp,'' 2024. [Online]. Available:
+------. (2024) Gxp. [Online]. Available:
   \url{https://docs.aws.amazon.com/whitepapers/latest/gxp-systems-on-aws/aws-certifications-and-attestations.html}
 \BIBentrySTDinterwordspacing
 
 \bibitem{GxPCompliance}
 \BIBentryALTinterwordspacing
-------, ``Aws certifications and attestations,'' 2024. [Online]. Available:
+------. (2024) Aws certifications and attestations. Accessed: 02 29, 2024.
+  [Online]. Available:
   \url{https://aws.amazon.com/compliance/gxp-part-11-annex-11/?nc1=h_ls}
 \BIBentrySTDinterwordspacing
 
