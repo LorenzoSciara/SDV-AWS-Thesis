@@ -29,45 +29,45 @@ Warning--empty journal in StormReplySite
 Warning--empty journal in AutosarAbout
 
 Done.
-You've used 34 entries,
+You've used 35 entries,
             4087 wiz_defined-function locations,
-            1017 strings with 13772 characters,
-and the built_in function-call counts, 15624 in all, are:
-= -- 1326
-> -- 276
-< -- 38
-+ -- 133
-- -- 60
-* -- 644
-:= -- 2915
-add.period$ -- 71
-call.type$ -- 34
-change.case$ -- 37
+            1025 strings with 13980 characters,
+and the built_in function-call counts, 16124 in all, are:
+= -- 1376
+> -- 280
+< -- 39
++ -- 135
+- -- 61
+* -- 665
+:= -- 3012
+add.period$ -- 73
+call.type$ -- 35
+change.case$ -- 38
 chr.to.int$ -- 69
-cite$ -- 36
-duplicate$ -- 1196
-empty$ -- 1313
-format.name$ -- 73
-if$ -- 3443
+cite$ -- 37
+duplicate$ -- 1239
+empty$ -- 1353
+format.name$ -- 74
+if$ -- 3557
 int.to.chr$ -- 0
-int.to.str$ -- 34
-missing$ -- 250
-newline$ -- 193
-num.names$ -- 34
-pop$ -- 684
+int.to.str$ -- 35
+missing$ -- 256
+newline$ -- 198
+num.names$ -- 35
+pop$ -- 697
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1221
+skip$ -- 1264
 stack$ -- 0
-substring$ -- 196
-swap$ -- 803
-text.length$ -- 15
+substring$ -- 203
+swap$ -- 831
+text.length$ -- 16
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 34
+type$ -- 35
 warning$ -- 2
-while$ -- 56
-width$ -- 36
-write$ -- 394
+while$ -- 58
+width$ -- 37
+write$ -- 406
 (There were 2 warnings)

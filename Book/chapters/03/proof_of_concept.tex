@@ -7,6 +7,7 @@
      commentstyle=\color{black},
      morecomment=[l]{-}
  }
+ 
 \chapter{Proof Of Concept} \label{ch:proofOfConcept}
 
 As the analysis in previous chapters has shown, the Software Defined Vehicle is a pivotal advancement in the evolution of the entire automotive industry toward a safer, more efficient, and more sustainable future. This chapter explores the Proof of Concept (PoC) phase within the context of the thesis, aiming to validate the feasibility and efficacy of implementing SDV technologies. The main objective of this chapter is to translate theoretical concepts into concrete results, demonstrating the practical application of SDV in real-world situations. Through the PoC, we aim to confirm the fundamental principles and features of SDV, including its potential impact on vehicle performance, user experience, and overall safety.
@@ -50,10 +51,45 @@ The analysis thus far has focused on cloud computing, specifically the essential
     \item \textbf{hybrid cloud: } The hybrid cloud is a combination of two or more separate cloud infrastructures, private or public, connected by technology to facilitate data and application portability. It allows organizations to leverage the cloud for its efficiency and cost savings while also maintaining on-site security, privacy, and control.
 \end{itemize}
 
-%https://ieeexplore.ieee.org/document/8114187?denied=
-%https://ieeexplore.ieee.org/document/9044834
+Exploring the many benefits of cloud computing, the focus now shifts to a comprehensive analysis of the main value patterns of cloud computing, with some charts and graphs to help clarify the outlook.
 
-AGGIUNGERE UNA PARTE RIGUARDANTE I VANTAGGI IN TERMINI DI COSTI DEL CLOUD COMPUTING CON UNO SCHEMA O FOTO
+When analyzing the resources required by a business, it becomes clear that satisfying demand through local services and resources often requires a monetary expenditure of resources that exceeds actual demand. This results in a wastage of resources that could be allocated more efficiently. On the other hand, the opposite situation may also occur, as shown in \ref{tab:OperatingExpenditureValueModel} within the same domain, where there is a higher demand than the available resources. The adoption of cloud computing transforms this paradigm. With AWS, you can pay only for the computing resources you consume and exclusively for the amount you utilize. This approach enables more cost-effective and streamlined resource utilization.
+\begin{table}[h]
+    \begin{tikzpicture}
+        \begin{axis}[xlabel={Time}, ylabel={Resources}, legend style={at={(1.4,0.8)},anchor=north},]
+            % Fixed Resources line
+            \addplot[blue,mark=none, dotted] coordinates {(0,40) (10,40) (10,80) (20,80)};
+            \addlegendentry{Fixed Resources}
+        
+            % Actual Demand line
+            \addplot[red,mark=none, smooth] coordinates {(0,0) (5,20) (7.5,10) (10,37) (12.5,35) (15, 50) (17.5, 90) (20, 70)};
+            \addlegendentry{Actual Demand}
+        
+            % Cloud Elasticity line
+            \addplot[blue,mark=none, smooth, dash dot] coordinates {(0,2) (5,22) (7.5,12) (10,39) (12.5,37) (15, 52) (17.5, 93) (20, 73)};
+            \addlegendentry{Cloud Elasticity}
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Operating expenditure value model \cite{CloudComputing}}
+    \label{tab:OperatingExpenditureValueModel}
+\end{table}
+
+Cloud computing also reduces costs by aggregating resources needed by different companies in a transparent way to consumers. In addition to shortening the time to market and increasing earnings, cloud computing allows for access to resources anytime and anywhere, optimizing resource management with lower latency and a better experience as it is shown in ref{LocationFlexibilityValueModel}.
+\begin{table}[h]
+    \begin{tikzpicture}
+        \begin{axis}[xlabel={Location}, ylabel={Availability}, ytick={10,80}, yticklabels={Low, High}, legend style={at={(1.4,0.8)},anchor=north},]
+            % Traditional Computing line
+            \addplot[blue,mark=none,] coordinates {(0,20) (5,30) (7.5,35) (10,40) (12.5,35) (15, 50) (17.5, 60) (20, 55)};
+            \addlegendentry{Traditional Computing}
+        
+            % Cloud Computing line
+            \addplot[blue,mark=none, smooth, dotted] coordinates {(0,80) (5,80) (10,80) (15, 80) (20, 80)};
+            \addlegendentry{Cloud Computing}
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Location flexibility value model \cite{CloudComputing}}
+    \label{tab:LocationFlexibilityValueModel}
+\end{table}
 
 UTILIZZARE IL SEGUETE TESTO COME DISCORSO CONCLUSIVO SUL CLOUD COMPUTING
 Cloud computing is the on-demand delivery of IT resources over the Internet with pay-as-you-go pricing. Instead of buying, owning, and maintaining physical data centers and servers, you can access technology services, such as computing power, storage, and databases, on an as-needed basis from a cloud provider like Amazon Web Services (AWS). Organizations of every type, size, and industry are using the cloud for a wide variety of use cases, such as data backup, disaster recovery, email, virtual desktops, software development and testing, big data analytics, and customer-facing web applications. For example, healthcare companies are using the cloud to develop more personalized treatments for patients. Financial services companies are using the cloud to power real-time fraud detection and prevention. And video game makers are using the cloud to deliver online games to millions of players around the world. 
@@ -61,6 +97,11 @@ The cloud gives you easy access to a broad range of technologies so that you can
 With cloud computing, you don't have to over-provision resources up front to handle peak levels of business activity in the future. Instead, you provision the amount of resources that you actually need. You can scale these resources up or down to instantly grow and shrink capacity as your business needs change.
 The cloud allows you to trade fixed expenses (such as data centers and physical servers) for variable expenses, and only pay for IT as you consume it. Plus, the variable expenses are much lower than what you would pay to do it yourself because of the economies of scale. 
 With the cloud, you can expand to new geographic regions and deploy globally in minutes.
+
+
+%https://ieeexplore.ieee.org/document/8114187?denied=
+%https://ieeexplore.ieee.org/document/9044834
+
 
 
 \subsection{Security}

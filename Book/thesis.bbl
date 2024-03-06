@@ -57,6 +57,13 @@ S.~project and M.~Spencer. (2023) Architecture. [Online]. Available:
   \url{https://architecture.docs.soafee.io/en/latest/contents/architecture.html}
 \BIBentrySTDinterwordspacing
 
+\bibitem{CloudComputing}
+\BIBentryALTinterwordspacing
+N.~B. Ruparelia, ``Cloud computing,'' \emph{The MIT Press Essential Knowledge
+  Series}, p. 278, 2016. [Online]. Available:
+  \url{https://ebookcentral.proquest.com/lib/polito-ebooks/reader.action?docID=4527741&query=cloud+computing+}
+\BIBentrySTDinterwordspacing
+
 \bibitem{blackberrySDV}
 \BIBentryALTinterwordspacing
 B.~QNX, ``What is a software-defined vehicle?'' \emph{Software-Defined
@@ -224,7 +231,7 @@ AWS. (2024) Use aws regions. Accessed: 05 03, 2024. [Online]. Available:
 
 \bibitem{AWSPrivatePublicHybrid}
 \BIBentryALTinterwordspacing
-------. (2024) Selecting the right cloud for workloads – differences between
+------. (2024) Selecting the right cloud for workloads - differences between
   public, private, and hybrid. Accessed: 05 03, 2024. [Online]. Available:
   \url{https://docs.aws.amazon.com/whitepapers/latest/public-sector-cloud-transformation/selecting-the-right-cloud-for-workloads-differences-between-public-private-and-hybrid.html}
 \BIBentrySTDinterwordspacing
