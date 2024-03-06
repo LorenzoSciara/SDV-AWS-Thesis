@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.3)  6 MAR 2024 00:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.3)  6 MAR 2024 12:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -852,15 +852,15 @@ Chapter 3.
 
 
 
-] [27] [28]
-Underfull \vbox (badness 3333) has occurred while \output is active []
+] [27] [28] [29] [30] [31] [32] [33])
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [29] [30] [31] [32] [33]) [34]
+ [34] [35]
 \openout2 = `chapters/04/concluding_remarks.aux'.
 
  (chapters/04/concluding_remarks.tex
 Chapter 4.
-) [35
+) [36
 
 
 
@@ -870,7 +870,7 @@ Chapter 4.
 
  (chapters/06/conclusions.tex
 Chapter 5.
-) [36
+) [37
 
 
 
@@ -880,16 +880,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--45
 \OT1/cmr/m/n/12 com / Gartner-[]Magic-[]Quadrant-[]for-[]Cloud-[]AI-[]Developer-[]Services . html ? trk =
  []
 
-[37
+[38
 
 
 
-] [38]
-Underfull \hbox (badness 10000) in paragraph at lines 239--242
+]
+Underfull \hbox (badness 1412) in paragraph at lines 227--231
+[]\OT1/cmr/m/n/12 ------. (2024) Se-lect-ing the right cloud for work-loads
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--231
+\OT1/cmr/m/n/12 aws . amazon . com / whitepapers / latest / public-[]sector-[]cloud-[]transformation /
+ []
+
+
+Overfull \hbox (44.37622pt too wide) in paragraph at lines 227--231
+\OT1/cmr/m/n/12 selecting-[]the-[]right-[]cloud-[]for-[]workloads-[]dierences-[]between-[]public-[]private-[]and-[]hybrid .
+ []
+
+[39]
+Underfull \hbox (badness 10000) in paragraph at lines 246--249
 \OT1/cmr/m/n/12 whitepapers / latest / gxp-[]systems-[]on-[]aws / aws-[]certi^^Lcations-[]and-[]attestations .
  []
 
-) [39] (thesis.aux (chapters/00/abstract.aux) (chapters/01/introduction.aux) (chapters/02/state_of_the_art.aux) (chapters/03/proof_of_concept.aux) (chapters/04/concluding_remarks.aux) (chapters/06/conclusions.aux))
+) [40] (thesis.aux (chapters/00/abstract.aux) (chapters/01/introduction.aux) (chapters/02/state_of_the_art.aux) (chapters/03/proof_of_concept.aux) (chapters/04/concluding_remarks.aux) (chapters/06/conclusions.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -902,17 +917,17 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 8844C722DDC76BDC4294CF8E4A8ED261;2325.
  ) 
 Here is how much of TeX's memory you used:
- 23800 strings out of 474542
- 443127 string characters out of 5743503
- 1942978 words of memory out of 5000000
- 45486 multiletter control sequences out of 15000+600000
+ 23803 strings out of 474542
+ 443185 string characters out of 5743503
+ 1943978 words of memory out of 5000000
+ 45487 multiletter control sequences out of 15000+600000
  569678 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  138i,13n,135p,2660b,2686s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Lorenzo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (39 pages, 3741584 bytes).
+Output written on thesis.pdf (40 pages, 3745833 bytes).
 PDF statistics:
- 609 PDF objects out of 1000 (max. 8388607)
- 122 named destinations out of 1000 (max. 500000)
+ 619 PDF objects out of 1000 (max. 8388607)
+ 124 named destinations out of 1000 (max. 500000)
  348 words of extra memory for PDF output out of 10000 (max. 10000000)
 

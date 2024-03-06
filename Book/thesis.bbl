@@ -100,14 +100,14 @@ D.~Slama, A.~Nonnenmacher, and T.~Irawan, ``The software-defined vehicle,''
 
 \bibitem{SDVBosch}
 \BIBentryALTinterwordspacing
-A.~Nonnenmacher and L.~Product, ``What is a software-defined vehicle in your
-  opinion?'' 2024. [Online]. Available:
+A.~Nonnenmacher and L.~Product. (2024) What is a software-defined vehicle in
+  your opinion? [Online]. Available:
   \url{https://www.bosch-mobility.com/en/mobility-topics/software-defined-vehicle/?gad_source=1}
 \BIBentrySTDinterwordspacing
 
 \bibitem{SDVRenault}
 \BIBentryALTinterwordspacing
-R.~Group, ``What is software defined vehicle?'' 2024. [Online]. Available:
+R.~Group. (2024) What is software defined vehicle? [Online]. Available:
   \url{https://www.renaultgroup.com/en/news-on-air/news/all-about-software-defined-vehicle/}
 \BIBentrySTDinterwordspacing
 
@@ -172,15 +172,15 @@ K.~T. Selvi, N.~Praveena, K.~Pratheksha, S.~Ragunanthan, and R.~Thamilselvan,
 
 \bibitem{DevelopersWorkflow}
 \BIBentryALTinterwordspacing
-L.~H.~M. da~Ros~Gomes and S.~Goscik, ``Building an automotive embedded linux
-  image for edge and cloud using arm-based graviton instances, yocto project,
-  and soafee,'' 2022. [Online]. Available:
+L.~H.~M. da~Ros~Gomes and S.~Goscik. (2022) Building an automotive embedded
+  linux image for edge and cloud using arm-based graviton instances, yocto
+  project, and soafee. [Online]. Available:
   \url{https://aws.amazon.com/blogs/industries/}
 \BIBentrySTDinterwordspacing
 
 \bibitem{SoafeeProject}
 \BIBentryALTinterwordspacing
-S.~project, ``Achieving software-defined vehicles,'' 2023. [Online]. Available:
+S.~project. (2023) Achieving software-defined vehicles. [Online]. Available:
   \url{https://www.soafee.io/}
 \BIBentrySTDinterwordspacing
 
@@ -220,6 +220,13 @@ AWS. (2024) Use aws regions. Accessed: 05 03, 2024. [Online]. Available:
 \BIBentryALTinterwordspacing
 ------. (2024) What is cloud computing? [Online]. Available:
   \url{https://aws.amazon.com/what-is-cloud-computing/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{AWSPrivatePublicHybrid}
+\BIBentryALTinterwordspacing
+------. (2024) Selecting the right cloud for workloads – differences between
+  public, private, and hybrid. Accessed: 05 03, 2024. [Online]. Available:
+  \url{https://docs.aws.amazon.com/whitepapers/latest/public-sector-cloud-transformation/selecting-the-right-cloud-for-workloads-differences-between-public-private-and-hybrid.html}
 \BIBentrySTDinterwordspacing
 
 \bibitem{AWSCloudComputing}
