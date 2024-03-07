@@ -267,10 +267,53 @@ AWS. (2024) Fedramp. Accessed: 05 03, 2024. [Online]. Available:
   \url{https://aws.amazon.com/compliance/fedramp/}
 \BIBentrySTDinterwordspacing
 
-\bibitem{GxPCompliance}
+\bibitem{ISO9001}
 \BIBentryALTinterwordspacing
-------. (2024) Gxp. Accessed: 02 29, 2024. [Online]. Available:
-  \url{https://aws.amazon.com/compliance/gxp-part-11-annex-11/?nc1=h_ls}
+ISO. (2015) Iso 9001:2015 quality management systems requirements. Accessed: 05
+  03, 2024. [Online]. Available: \url{https://www.iso.org/standard/62085.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{AWSISO9001}
+\BIBentryALTinterwordspacing
+AWS. (2024) Iso 9001:2015 compliance. Accessed: 05 03, 2024. [Online].
+  Available: \url{https://aws.amazon.com/compliance/iso-9001-faqs/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{ISOIEC27001}
+\BIBentryALTinterwordspacing
+------. (2024) Iso/iec 27001:2022. Accessed: 05 03, 2024. [Online]. Available:
+  \url{https://aws.amazon.com/compliance/iso-27001-faqs/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{ISOIEC27017}
+\BIBentryALTinterwordspacing
+ISO. (2015) Iso/iec 27017:2015 information technology security techniques.
+  Accessed: 05 03, 2024. [Online]. Available:
+  \url{https://www.iso.org/standard/43757.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{AWSISOIEC27017}
+\BIBentryALTinterwordspacing
+AWS. (2024) Iso/iec 27017:2015 compliance. Accessed: 05 03, 2024. [Online].
+  Available: \url{https://aws.amazon.com/compliance/iso-27017-faqs/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{AWSISOIEC27018}
+\BIBentryALTinterwordspacing
+------. (2024) Iso/iec 27018:2019 compliance. Accessed: 05 03, 2024. [Online].
+  Available: \url{https://aws.amazon.com/compliance/iso-27018-faqs/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{AWSHITRUSTCSF}
+\BIBentryALTinterwordspacing
+------. (2024) Hitrust csf. Accessed: 05 03, 2024. [Online]. Available:
+  \url{https://aws.amazon.com/compliance/hitrust/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{AWSCSA}
+\BIBentryALTinterwordspacing
+------. (2024) Cloud security alliance (csa). Accessed: 05 03, 2024. [Online].
+  Available: \url{https://aws.amazon.com/compliance/csa/}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.3)  7 MAR 2024 13:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.3)  7 MAR 2024 19:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1102,13 +1102,13 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.109     \item \textbf
-                       {ISO/IEC 27017: } ISO/IEC 27017:2015 provides guidanc... <./images/AWSSOC.png>]
-Overfull \hbox (5.08981pt too wide) in paragraph at lines 111--112
-[]\OT1/cmr/bx/n/12 HITRUST:  \OT1/cmr/m/n/12 The Health In-for-ma-tion Trust Al-liance Com-mon Se-cu-rity Frame-
+l.110     \item \textbf
+                       {ISO/IEC 27018:} ISO 27018 is a global code of practi... <./images/AWSSOC.png>]
+Overfull \hbox (2.08981pt too wide) in paragraph at lines 111--112
+[]\OT1/cmr/bx/n/12 HITRUST: \OT1/cmr/m/n/12 The Health In-for-ma-tion Trust Al-liance Com-mon Se-cu-rity Frame-
  []
 
-[33]) [34]
+) [33]
 \openout2 = `chapters/04/proof_of_concept.aux'.
 
  (chapters/04/proof_of_concept.tex
@@ -1116,17 +1116,17 @@ Chapter 4.
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [35
+ [34
 
 
 
 
-] [36]
+] [35]
 \openout2 = `chapters/05/concluding_remarks.aux'.
 
  (chapters/05/concluding_remarks.tex
 Chapter 5.
-) [37
+) [36
 
 
 
@@ -1136,7 +1136,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--45
 \OT1/cmr/m/n/12 com / Gartner-[]Magic-[]Quadrant-[]for-[]Cloud-[]AI-[]Developer-[]Services . html ? trk =
  []
 
-[38
+[37
 
 
 
@@ -1155,26 +1155,26 @@ Overfull \hbox (44.37622pt too wide) in paragraph at lines 210--214
 \OT1/cmr/m/n/12 selecting-[]the-[]right-[]cloud-[]for-[]workloads-[]dierences-[]between-[]public-[]private-[]and-[]hybrid .
  []
 
-[39]) [40] (thesis.aux (chapters/00/abstract.aux) (chapters/01/introduction.aux) (chapters/02/state_of_the_art.aux) (chapters/03/cloud_computing_and_amazon_web_services.aux) (chapters/04/proof_of_concept.aux) (chapters/05/concluding_remarks.aux))
+[38]) [39] (thesis.aux (chapters/00/abstract.aux) (chapters/01/introduction.aux) (chapters/02/state_of_the_art.aux) (chapters/03/cloud_computing_and_amazon_web_services.aux) (chapters/04/proof_of_concept.aux) (chapters/05/concluding_remarks.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 74A232BC9B2AD77A02914BB4623C1969;2368.
+(rerunfilecheck)             Checksum: 3FF41722102B94A8B0140F9F0660154E;2368.
  ) 
 Here is how much of TeX's memory you used:
- 44187 strings out of 474542
- 1017918 string characters out of 5743503
+ 44200 strings out of 474542
+ 1018096 string characters out of 5743503
  1945978 words of memory out of 5000000
- 65526 multiletter control sequences out of 15000+600000
+ 65533 multiletter control sequences out of 15000+600000
  569678 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  138i,20n,135p,1420b,2668s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Lorenzo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (40 pages, 3903433 bytes).
+Output written on thesis.pdf (39 pages, 3904264 bytes).
 PDF statistics:
- 649 PDF objects out of 1000 (max. 8388607)
- 130 named destinations out of 1000 (max. 500000)
+ 668 PDF objects out of 1000 (max. 8388607)
+ 136 named destinations out of 1000 (max. 500000)
  365 words of extra memory for PDF output out of 10000 (max. 10000000)
 
