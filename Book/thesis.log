@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.3)  7 MAR 2024 01:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.3)  7 MAR 2024 13:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -928,12 +928,12 @@ Package hyperref Warning: Option `colorlinks' has already been used,
 (hyperref)                setting the option has no effect on input line 4.
 
 Chapter 1.
-<images/automotive_world production.png, id=274, 379.91937pt x 170.6375pt>
+<images/automotive_world production.png, id=276, 379.91937pt x 170.6375pt>
 File: images/automotive_world production.png Graphic file (type png)
 <use images/automotive_world production.png>
 Package pdftex.def Info: images/automotive_world production.png  used on input line 13.
 (pdftex.def)             Requested size: 380.2495pt x 170.79068pt.
-<images/vehicle_processors.png, id=278, 682.55pt x 431.6125pt>
+<images/vehicle_processors.png, id=280, 682.55pt x 431.6125pt>
 File: images/vehicle_processors.png Graphic file (type png)
 <use images/vehicle_processors.png>
 Package pdftex.def Info: images/vehicle_processors.png  used on input line 22.
@@ -952,7 +952,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}) h
                                                   \__shipout_drop_firstpage_...
 l.28 
       <./images/automotive_world production.png>]
-<images/Storm_Reply_logo.png, id=288, 169.57843pt x 52.92212pt>
+<images/Storm_Reply_logo.png, id=290, 169.57843pt x 52.92212pt>
 File: images/Storm_Reply_logo.png Graphic file (type png)
 <use images/Storm_Reply_logo.png>
 Package pdftex.def Info: images/Storm_Reply_logo.png  used on input line 42.
@@ -967,7 +967,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.1.2}) h
                                                   \__shipout_drop_firstpage_...
 l.48 
       <./images/vehicle_processors.png>]
-<images/AWSMagicQuadrantForCloud.png, id=298, 362.9811pt x 401.5pt>
+<images/AWSMagicQuadrantForCloud.png, id=300, 362.9811pt x 401.5pt>
 File: images/AWSMagicQuadrantForCloud.png Graphic file (type png)
 <use images/AWSMagicQuadrantForCloud.png>
 Package pdftex.def Info: images/AWSMagicQuadrantForCloud.png  used on input line 53.
@@ -993,7 +993,7 @@ Chapter 2.
 
 
 ]
-<images/costs_of_errors_correction_in_software_development.png, id=328, 369.38pt x 337.76187pt>
+<images/costs_of_errors_correction_in_software_development.png, id=330, 369.38pt x 337.76187pt>
 File: images/costs_of_errors_correction_in_software_development.png Graphic file (type png)
 <use images/costs_of_errors_correction_in_software_development.png>
 Package pdftex.def Info: images/costs_of_errors_correction_in_software_development.png  used on input line 36.
@@ -1004,7 +1004,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1}) h
                                                   \__shipout_drop_firstpage_...
 l.42 \end{itemize}
                    <./images/costs_of_errors_correction_in_software_development.png>] [18] [19] [20]
-<images/MQTTProtocol.png, id=364, 559.08875pt x 289.58188pt>
+<images/MQTTProtocol.png, id=366, 559.08875pt x 289.58188pt>
 File: images/MQTTProtocol.png Graphic file (type png)
 <use images/MQTTProtocol.png>
 Package pdftex.def Info: images/MQTTProtocol.png  used on input line 100.
@@ -1015,7 +1015,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2}) h
                                                   \__shipout_drop_firstpage_...
 l.115     \item \textbf
                        {Human Safety Critical Security:} The ability of SDV ... <./images/MQTTProtocol.png>]
-<images/window_of_exposure.png, id=375, 801.74532pt x 365.86688pt>
+<images/window_of_exposure.png, id=377, 801.74532pt x 365.86688pt>
 File: images/window_of_exposure.png Graphic file (type png)
 <use images/window_of_exposure.png>
 Package pdftex.def Info: images/window_of_exposure.png  used on input line 119.
@@ -1026,7 +1026,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2.3}) h
                                                   \__shipout_drop_firstpage_...
 l.128 
        <./images/window_of_exposure.png>]
-<images/today_developer_workflow.png, id=384, 804.75656pt x 429.10312pt>
+<images/today_developer_workflow.png, id=386, 804.75656pt x 429.10312pt>
 File: images/today_developer_workflow.png Graphic file (type png)
 <use images/today_developer_workflow.png>
 Package pdftex.def Info: images/today_developer_workflow.png  used on input line 140.
@@ -1035,7 +1035,7 @@ Package pdftex.def Info: images/today_developer_workflow.png  used on input line
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/future_developers_workflow.png, id=386, 832.61063pt x 420.82219pt>
+<images/future_developers_workflow.png, id=388, 832.61063pt x 420.82219pt>
 File: images/future_developers_workflow.png Graphic file (type png)
 <use images/future_developers_workflow.png>
 Package pdftex.def Info: images/future_developers_workflow.png  used on input line 148.
@@ -1054,7 +1054,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2.5}) h
                                                   \__shipout_drop_firstpage_...
 l.162 \end{enumerate}
                       <./images/today_developer_workflow.png> <./images/future_developers_workflow.png>]
-<images/SOAFEE_architecture.png, id=405, 440.14438pt x 313.17pt>
+<images/SOAFEE_architecture.png, id=407, 440.14438pt x 313.17pt>
 File: images/SOAFEE_architecture.png Graphic file (type png)
 <use images/SOAFEE_architecture.png>
 Package pdftex.def Info: images/SOAFEE_architecture.png  used on input line 170.
@@ -1088,7 +1088,27 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.3.2}) ha
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.79 
-     ] [30] [31] [32] [33] [34]) [35]
+     ] [30]
+<images/AWSSOC.png, id=457, 193.72375pt x 179.67125pt>
+File: images/AWSSOC.png Graphic file (type png)
+<use images/AWSSOC.png>
+Package pdftex.def Info: images/AWSSOC.png  used on input line 102.
+(pdftex.def)             Requested size: 168.99834pt x 156.74039pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[31] [32
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.109     \item \textbf
+                       {ISO/IEC 27017: } ISO/IEC 27017:2015 provides guidanc... <./images/AWSSOC.png>]
+Overfull \hbox (5.08981pt too wide) in paragraph at lines 111--112
+[]\OT1/cmr/bx/n/12 HITRUST:  \OT1/cmr/m/n/12 The Health In-for-ma-tion Trust Al-liance Com-mon Se-cu-rity Frame-
+ []
+
+[33]) [34]
 \openout2 = `chapters/04/proof_of_concept.aux'.
 
  (chapters/04/proof_of_concept.tex
@@ -1096,17 +1116,17 @@ Chapter 4.
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [36
+ [35
 
 
 
 
-] [37]
+] [36]
 \openout2 = `chapters/05/concluding_remarks.aux'.
 
  (chapters/05/concluding_remarks.tex
 Chapter 5.
-) [38
+) [37
 
 
 
@@ -1116,7 +1136,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--45
 \OT1/cmr/m/n/12 com / Gartner-[]Magic-[]Quadrant-[]for-[]Cloud-[]AI-[]Developer-[]Services . html ? trk =
  []
 
-[39
+[38
 
 
 
@@ -1135,12 +1155,7 @@ Overfull \hbox (44.37622pt too wide) in paragraph at lines 210--214
 \OT1/cmr/m/n/12 selecting-[]the-[]right-[]cloud-[]for-[]workloads-[]dierences-[]between-[]public-[]private-[]and-[]hybrid .
  []
 
-[40]
-Underfull \hbox (badness 10000) in paragraph at lines 253--256
-\OT1/cmr/m/n/12 whitepapers / latest / gxp-[]systems-[]on-[]aws / aws-[]certi^^Lcations-[]and-[]attestations .
- []
-
-) [41] (thesis.aux (chapters/00/abstract.aux) (chapters/01/introduction.aux) (chapters/02/state_of_the_art.aux) (chapters/03/cloud_computing_and_amazon_web_services.aux) (chapters/04/proof_of_concept.aux) (chapters/05/concluding_remarks.aux))
+[39]) [40] (thesis.aux (chapters/00/abstract.aux) (chapters/01/introduction.aux) (chapters/02/state_of_the_art.aux) (chapters/03/cloud_computing_and_amazon_web_services.aux) (chapters/04/proof_of_concept.aux) (chapters/05/concluding_remarks.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -1149,17 +1164,17 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 74A232BC9B2AD77A02914BB4623C1969;2368.
  ) 
 Here is how much of TeX's memory you used:
- 44176 strings out of 474542
- 1017702 string characters out of 5743503
+ 44187 strings out of 474542
+ 1017918 string characters out of 5743503
  1945978 words of memory out of 5000000
- 65517 multiletter control sequences out of 15000+600000
+ 65526 multiletter control sequences out of 15000+600000
  569678 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 138i,20n,135p,2683b,2668s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 138i,20n,135p,1420b,2668s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Lorenzo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (41 pages, 3757470 bytes).
+Output written on thesis.pdf (40 pages, 3903433 bytes).
 PDF statistics:
- 643 PDF objects out of 1000 (max. 8388607)
- 128 named destinations out of 1000 (max. 500000)
- 360 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 649 PDF objects out of 1000 (max. 8388607)
+ 130 named destinations out of 1000 (max. 500000)
+ 365 words of extra memory for PDF output out of 10000 (max. 10000000)
 

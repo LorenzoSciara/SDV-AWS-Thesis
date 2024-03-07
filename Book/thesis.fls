@@ -636,6 +636,13 @@ OUTPUT chapters\03\cloud_computing_and_amazon_web_services.aux
 INPUT .\chapters\03\cloud_computing_and_amazon_web_services.tex
 INPUT .\chapters\03\cloud_computing_and_amazon_web_services.tex
 INPUT chapters\03\cloud_computing_and_amazon_web_services.tex
+INPUT .\images\AWSSOC.png
+INPUT .\images\AWSSOC.png
+INPUT .\images\AWSSOC.png
+INPUT .\images\AWSSOC.png
+INPUT .\images\AWSSOC.png
+INPUT .\images\AWSSOC.png
+INPUT .\images\AWSSOC.png
 INPUT .\chapters\04\proof_of_concept.tex
 INPUT .\chapters\04\proof_of_concept.tex
 OUTPUT chapters\04\proof_of_concept.aux

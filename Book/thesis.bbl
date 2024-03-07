@@ -250,14 +250,26 @@ AWS. (2024) Use aws regions. Accessed: 05 03, 2024. [Online]. Available:
 
 \bibitem{AWSCertificationsAndAttestations}
 \BIBentryALTinterwordspacing
-------. (2024) Gxp. [Online]. Available:
+------. (2024) Aws certifications and attestations. [Online]. Available:
   \url{https://docs.aws.amazon.com/whitepapers/latest/gxp-systems-on-aws/aws-certifications-and-attestations.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{AWSSOC3}
+\BIBentryALTinterwordspacing
+I.~o. i.~a. Amazon.com. (2023) System and organization controls 3 (soc 3)
+  report. [Online]. Available:
+  \url{https://d1.awsstatic.com/whitepapers/compliance/AWS_SOC3.pdf}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Fedramp}
+\BIBentryALTinterwordspacing
+AWS. (2024) Fedramp. Accessed: 05 03, 2024. [Online]. Available:
+  \url{https://aws.amazon.com/compliance/fedramp/}
 \BIBentrySTDinterwordspacing
 
 \bibitem{GxPCompliance}
 \BIBentryALTinterwordspacing
-------. (2024) Aws certifications and attestations. Accessed: 02 29, 2024.
-  [Online]. Available:
+------. (2024) Gxp. Accessed: 02 29, 2024. [Online]. Available:
   \url{https://aws.amazon.com/compliance/gxp-part-11-annex-11/?nc1=h_ls}
 \BIBentrySTDinterwordspacing
 
