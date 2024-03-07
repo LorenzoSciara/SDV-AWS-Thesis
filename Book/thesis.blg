@@ -7,12 +7,12 @@ Reallocating 'name_of_file' (item size: 1) to 29 items.
 A level-1 auxiliary file: chapters/01/introduction.aux
 Reallocating 'name_of_file' (item size: 1) to 33 items.
 A level-1 auxiliary file: chapters/02/state_of_the_art.aux
+Reallocating 'name_of_file' (item size: 1) to 56 items.
+A level-1 auxiliary file: chapters/03/cloud_computing_and_amazon_web_services.aux
 Reallocating 'name_of_file' (item size: 1) to 33 items.
-A level-1 auxiliary file: chapters/03/proof_of_concept.aux
+A level-1 auxiliary file: chapters/04/proof_of_concept.aux
 Reallocating 'name_of_file' (item size: 1) to 35 items.
-A level-1 auxiliary file: chapters/04/concluding_remarks.aux
-Reallocating 'name_of_file' (item size: 1) to 28 items.
-A level-1 auxiliary file: chapters/06/conclusions.aux
+A level-1 auxiliary file: chapters/05/concluding_remarks.aux
 Reallocating 'name_of_file' (item size: 1) to 9 items.
 The style file: IEEEtran.bst
 Reallocating 'name_of_file' (item size: 1) to 13 items.
@@ -31,7 +31,7 @@ Warning--empty journal in AutosarAbout
 Done.
 You've used 35 entries,
             4087 wiz_defined-function locations,
-            1025 strings with 13980 characters,
+            1025 strings with 14008 characters,
 and the built_in function-call counts, 16124 in all, are:
 = -- 1376
 > -- 280
@@ -39,7 +39,7 @@ and the built_in function-call counts, 16124 in all, are:
 + -- 135
 - -- 61
 * -- 665
-:= -- 3012
+:= -- 3011
 add.period$ -- 73
 call.type$ -- 35
 change.case$ -- 38
@@ -48,7 +48,7 @@ cite$ -- 37
 duplicate$ -- 1239
 empty$ -- 1353
 format.name$ -- 74
-if$ -- 3557
+if$ -- 3558
 int.to.chr$ -- 0
 int.to.str$ -- 35
 missing$ -- 256

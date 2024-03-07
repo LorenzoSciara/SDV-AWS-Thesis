@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.3)  6 MAR 2024 19:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.3)  7 MAR 2024 01:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -760,7 +760,7 @@ File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 File: listings.cfg 2023/02/27 1.9 listings configuration
 ))
 Package: listings 2023/02/27 1.9 (Carsten Heinz)
-) (thesis.aux (chapters/00/abstract.aux) (chapters/01/introduction.aux) (chapters/02/state_of_the_art.aux) (chapters/03/proof_of_concept.aux) (chapters/04/concluding_remarks.aux) (chapters/06/conclusions.aux))
+) (thesis.aux (chapters/00/abstract.aux) (chapters/01/introduction.aux) (chapters/02/state_of_the_art.aux) (chapters/03/cloud_computing_and_amazon_web_services.aux) (chapters/04/proof_of_concept.aux) (chapters/05/concluding_remarks.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
@@ -1065,49 +1065,46 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2.6}) h
                                                   \__shipout_drop_firstpage_...
 l.194 \include{chapters/02/state_of_the_art}
                                              <./images/SOAFEE_architecture.png>]
-\openout2 = `chapters/03/proof_of_concept.aux'.
+\openout2 = `chapters/03/cloud_computing_and_amazon_web_services.aux'.
 
- (chapters/03/proof_of_concept.tex
+ (chapters/03/cloud_computing_and_amazon_web_services.tex
 Chapter 3.
 [26
 
 
 
 
-] [27] [28] [29]
-Package pgfplots info on input line 59: Overriding colorspace to rgb due to xcolor configuration.
-Package pgfplots info on input line 80: Overriding colorspace to rgb due to xcolor configuration.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[30
+] [27]
+Package pgfplots info on input line 43: Overriding colorspace to rgb due to xcolor configuration.
+ [28]
+Package pgfplots info on input line 64: Overriding colorspace to rgb due to xcolor configuration.
+ [29
 pdfTeX warning (ext4): destination with the same identifier (name{table.3.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.100 
-      ] [31
+l.79 
+     
 pdfTeX warning (ext4): destination with the same identifier (name{table.3.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.113 
-      ] [32] [33] [34])
+l.79 
+     ] [30] [31] [32] [33] [34]) [35]
+\openout2 = `chapters/04/proof_of_concept.aux'.
+
+ (chapters/04/proof_of_concept.tex
+Chapter 4.
+)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [35] [36]
-\openout2 = `chapters/04/concluding_remarks.aux'.
-
- (chapters/04/concluding_remarks.tex
-Chapter 4.
-) [37
+ [36
 
 
 
 
-]
-\openout2 = `chapters/06/conclusions.aux'.
+] [37]
+\openout2 = `chapters/05/concluding_remarks.aux'.
 
- (chapters/06/conclusions.tex
+ (chapters/05/concluding_remarks.tex
 Chapter 5.
 ) [38
 
@@ -1123,44 +1120,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--45
 
 
 
-] [40]
-Underfull \hbox (badness 1412) in paragraph at lines 234--238
+]
+Underfull \hbox (badness 1412) in paragraph at lines 210--214
 []\OT1/cmr/m/n/12 ------. (2024) Se-lect-ing the right cloud for work-loads
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 234--238
+Underfull \hbox (badness 10000) in paragraph at lines 210--214
 \OT1/cmr/m/n/12 aws . amazon . com / whitepapers / latest / public-[]sector-[]cloud-[]transformation /
  []
 
 
-Overfull \hbox (44.37622pt too wide) in paragraph at lines 234--238
+Overfull \hbox (44.37622pt too wide) in paragraph at lines 210--214
 \OT1/cmr/m/n/12 selecting-[]the-[]right-[]cloud-[]for-[]workloads-[]dierences-[]between-[]public-[]private-[]and-[]hybrid .
  []
 
-
+[40]
 Underfull \hbox (badness 10000) in paragraph at lines 253--256
 \OT1/cmr/m/n/12 whitepapers / latest / gxp-[]systems-[]on-[]aws / aws-[]certi^^Lcations-[]and-[]attestations .
  []
 
-) [41] (thesis.aux (chapters/00/abstract.aux) (chapters/01/introduction.aux) (chapters/02/state_of_the_art.aux) (chapters/03/proof_of_concept.aux) (chapters/04/concluding_remarks.aux) (chapters/06/conclusions.aux))
+) [41] (thesis.aux (chapters/00/abstract.aux) (chapters/01/introduction.aux) (chapters/02/state_of_the_art.aux) (chapters/03/cloud_computing_and_amazon_web_services.aux) (chapters/04/proof_of_concept.aux) (chapters/05/concluding_remarks.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 8844C722DDC76BDC4294CF8E4A8ED261;2325.
+(rerunfilecheck)             Checksum: 74A232BC9B2AD77A02914BB4623C1969;2368.
  ) 
 Here is how much of TeX's memory you used:
- 44178 strings out of 474542
- 1017065 string characters out of 5743503
- 1944978 words of memory out of 5000000
- 65519 multiletter control sequences out of 15000+600000
+ 44176 strings out of 474542
+ 1017702 string characters out of 5743503
+ 1945978 words of memory out of 5000000
+ 65517 multiletter control sequences out of 15000+600000
  569678 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 138i,20n,135p,2660b,2686s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 138i,20n,135p,2683b,2668s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Lorenzo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (41 pages, 3757130 bytes).
+Output written on thesis.pdf (41 pages, 3757470 bytes).
 PDF statistics:
  643 PDF objects out of 1000 (max. 8388607)
  128 named destinations out of 1000 (max. 500000)

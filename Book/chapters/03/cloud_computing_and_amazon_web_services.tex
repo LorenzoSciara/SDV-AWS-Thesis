@@ -8,26 +8,10 @@
      morecomment=[l]{-}
  }
  
-\chapter{Proof Of Concept} \label{ch:proofOfConcept}
+\chapter{Cloud Computing and Amazon Web Services} \label{ch:CloudComputingAndAmazonWebServices}
 
-As the analysis in previous chapters has shown, the Software Defined Vehicle is a pivotal advancement in the evolution of the entire automotive industry toward a safer, more efficient, and more sustainable future. This chapter explores the Proof of Concept (PoC) phase within the context of the thesis, aiming to validate the feasibility and efficacy of implementing SDV technologies. The main objective of this chapter is to translate theoretical concepts into concrete results, demonstrating the practical application of SDV in real-world situations. Through the PoC, we aim to confirm the fundamental principles and features of SDV, including its potential impact on vehicle performance, user experience, and overall safety.
-The multifaceted nature of SDV requires a structured approach to its implementation, taking into account factors such as standardized hardware, cloud integration, and over-the-air (OTA) updates. To achieve this, a PoC was designed to address these components individually and holistically, ensuring a seamless integration that aligns with the envisioned paradigm shift in automotive manufacturing. Furthermore, this chapter aims to demonstrate the collaborative efforts with industry-leading technologies and platforms, highlighting the strategic partnerships forged with key players in the automotive and software development sectors. By aligning with renowned entities, the PoC aims to leverage their expertise, technologies, and frameworks, thereby enhancing the robustness and scalability of the SDV ecosystem.
-Test and Validation are the concluding phases of this chapter, where the Proof of Concept is subjected to real-world scenarios. A demonstration involving a Raspberry Pi (RPi) serves as a tangible validation of the implemented SDV functionalities. This section serves as the litmus test, affirming the seamless orchestration of SDV within the envisioned architecture.
-The exploration of the POC begins by detailing the services and technologies offered by Amazon Web Services (AWS) in the IoT and automotive fields that are essential for project implementation.
-
-\section{Amazon Web Services}
-
-Amazon Web Services (AWS) is a widely adopted cloud solution with over 200 fully featured services available globally across multiple data centers. It is used by millions of customers, from emerging startups to industry giants and government agencies, as the cloud platform of choice to reduce costs, increase agility, and accelerate innovation \cite{EuAmazonWebServices}.
-
-AWS stands out by providing a broad set of services, including infrastructure technologies as well as cutting-edge capabilities such as machine learning, artificial intelligence, data lakes, analytics, and the Internet of Things. This extensive service portfolio facilitates the fast, easy and cost-effective migration of existing applications to the cloud and the creation of diverse digital solutions. AWS provides purpose-built databases for various application types, allowing users to choose the most suitable tool for optimal cost and performance. The depth of AWS services is unmatched, providing customers with a comprehensive toolkit for diverse computing needs.
-
-Beyond its vast offerings, AWS has a large and dynamic global community with millions of active customers and tens of thousands of partners. This inclusive ecosystem spans industries and business sizes, with startups, enterprises, and public sector entities leveraging AWS for a myriad of use cases. The AWS Partner Network (APN) solidifies this network with thousands of system integrators and independent software vendors who adapt their technology to work on AWS.
-
-AWS demonstrates its commitment to innovation through continuous technological advancements. In 2014, AWS launched AWS Lambda, which pioneered serverless computing. This allows developers to run their code without the need to provision or manage servers. Another example is Amazon SageMaker, a fully managed machine learning service that empowers developers to use machine learning without any previous experience.
-
-Rooted in more than 17 years of operational experience, AWS offers unmatched reliability, security, and performance \cite{WhatIsAWS}. Since its establishment in 2006, AWS has become a globally trusted platform, revolutionizing IT infrastructure services by providing a highly reliable, scalable, and cost-effective cloud solution for businesses worldwide in the form of web services with pay-as-you-go pricing \cite{AboutAWS}. One of the key benefits of cloud computing is the ability to replace a company's initial capital expenditures required for infrastructure with low costs that vary as needed and can scale with the business; The characteristics of cloud computing are analyzed in depth below.
-
-\subsection{Cloud Computing}
+As the analysis in previous chapters has shown, the Software Defined Vehicle is a pivotal advancement in the evolution of the entire automotive industry toward a safer, more efficient, and more sustainable future. Cloud computing is a crucial resource for SDV development due to its facilitation of development through its features and benefits. In the following section, cloud computing technologies will be analyzed in detail, focusing on one of the most important providers, Amazon Web Services.
+\section{Cloud Computing}
 The National Institute of Standards and Technology (NIST) provides the most comprehensive definition of cloud computing: "Cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction. This cloud model is composed of five essential characteristics, three service models, and four deployment models" \cite{NISTCloudComputing}. This allows for a thorough analysis of the features of cloud computing in relation to AWS services, starting with the five essential characteristics.
 \begin{itemize}
     \item \textbf{On-demand self-service:} Consumers can access and allocate computing resources autonomously, such as server time and network storage, without direct involvement with service providers. AWS offers a vast cloud infrastructure with over 200 fully-featured services that consumers can easily access and use from their AWS account.
@@ -37,7 +21,7 @@ The National Institute of Standards and Technology (NIST) provides the most comp
     \item \textbf{Measured service:} Cloud systems efficiently manage resources through automated control and optimization, utilizing metering capabilities tailored to specific services such as storage, processing, bandwidth, and user accounts. For instance, AWS has infrastructure worldwide, allowing for easy deployment of applications in multiple physical locations. The proximity to end-users reduces latency and enhances their experience. This feature allows for clear and objective monitoring, control, and reporting of resource usage by both providers and consumers.
 \end{itemize}
 
-The three primary types of cloud computing are Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS). These options provide different levels of control, flexibility, and management, enabling users to customize services to meet their specific needs \cite{AWSWhatIsCloudComputing}.
+The three primary types of cloud computing are Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS). These options provide different levels of control, flexibility, and management, allowing users to configure services to meet their specific requirements.
 \begin{itemize}
     \item \textbf{Infrastructure as a Service (IaaS): } Consumers are able to utilize and deploy fundamental computing resources, including processing, storage, and networks. However, they only have control over operating systems, storage, and applications, as the cloud infrastructure is managed by the provider. Consumer control over some networking components is limited. Infrastructure as a Service (IaaS) provides a high level of flexibility and management control over IT resources. It is similar in practice to existing IT resources that many IT departments and developers are already familiar with. 
     \item \textbf{Platform as a Service (PaaS): } Consumers can deploy their applications on the cloud infrastructure using the programming languages, libraries, services, and tools supported by the provider. The provider manages the underlying cloud infrastructure, including network, servers, operating systems, and storage, while consumers maintain control over their applications and configuration settings. This approach improves efficiency by eliminating the need to manage resource procurement, capacity allocation, software maintenance, patching, or any other tasks involved in running your application. 
@@ -58,7 +42,7 @@ When analyzing the resources required by a business, it becomes clear that satis
     \begin{tikzpicture}
         \begin{axis}[xlabel={Time}, ylabel={Resources}, legend style={at={(1.4,0.8)},anchor=north},]
             % Fixed Resources line
-            \addplot[blue,mark=none, dotted] coordinates {(0,40) (10,40) (10,80) (20,80)};
+            \addplot[blue,mark=none, dash dot] coordinates {(0,40) (10,40) (10,80) (20,80)};
             \addlegendentry{Fixed Resources}
         
             % Actual Demand line
@@ -66,7 +50,7 @@ When analyzing the resources required by a business, it becomes clear that satis
             \addlegendentry{Actual Demand}
         
             % Cloud Elasticity line
-            \addplot[blue,mark=none, smooth, dash dot] coordinates {(0,2) (5,22) (7.5,12) (10,39) (12.5,37) (15, 52) (17.5, 93) (20, 73)};
+            \addplot[blue,mark=none, smooth] coordinates {(0,2) (5,22) (7.5,12) (10,39) (12.5,37) (15, 52) (17.5, 93) (20, 73)};
             \addlegendentry{Cloud Elasticity}
         \end{axis}
     \end{tikzpicture}
@@ -77,13 +61,13 @@ When analyzing the resources required by a business, it becomes clear that satis
 Cloud computing also reduces costs by aggregating resources needed by different companies in a transparent way to consumers. In addition to shortening the time to market and increasing earnings, cloud computing allows for access to resources anytime and anywhere, optimizing resource management with lower latency and a better experience as it is shown in ref{LocationFlexibilityValueModel}.
 \begin{table}[h]
     \begin{tikzpicture}
-        \begin{axis}[xlabel={Location}, ylabel={Availability}, ytick={10,80}, yticklabels={Low, High}, legend style={at={(1.4,0.8)},anchor=north},]
+        \begin{axis}[xtick={}, xlabel={Location}, ylabel={Availability}, ytick={10,80}, yticklabels={Low, High}, legend style={at={(1.4,0.8)},anchor=north},]
             % Traditional Computing line
-            \addplot[blue,mark=none,] coordinates {(0,20) (5,30) (7.5,35) (10,40) (12.5,35) (15, 50) (17.5, 60) (20, 55)};
+            \addplot[blue,mark=none, dash dot] coordinates {(0,10) (5,30) (7.5,35) (10,40) (12.5,35) (15, 50) (17.5, 60) (20, 55)};
             \addlegendentry{Traditional Computing}
         
             % Cloud Computing line
-            \addplot[blue,mark=none, smooth, dotted] coordinates {(0,80) (5,80) (10,80) (15, 80) (20, 80)};
+            \addplot[blue,mark=none, smooth,] coordinates {(0,80) (5,80) (10,80) (15, 80) (20, 80)};
             \addlegendentry{Cloud Computing}
         \end{axis}
     \end{tikzpicture}
@@ -91,18 +75,19 @@ Cloud computing also reduces costs by aggregating resources needed by different 
     \label{tab:LocationFlexibilityValueModel}
 \end{table}
 
-UTILIZZARE IL SEGUETE TESTO COME DISCORSO CONCLUSIVO SUL CLOUD COMPUTING
-Cloud computing is the on-demand delivery of IT resources over the Internet with pay-as-you-go pricing. Instead of buying, owning, and maintaining physical data centers and servers, you can access technology services, such as computing power, storage, and databases, on an as-needed basis from a cloud provider like Amazon Web Services (AWS). Organizations of every type, size, and industry are using the cloud for a wide variety of use cases, such as data backup, disaster recovery, email, virtual desktops, software development and testing, big data analytics, and customer-facing web applications. For example, healthcare companies are using the cloud to develop more personalized treatments for patients. Financial services companies are using the cloud to power real-time fraud detection and prevention. And video game makers are using the cloud to deliver online games to millions of players around the world. 
-The cloud gives you easy access to a broad range of technologies so that you can innovate faster and build nearly anything that you can imagine. You can quickly spin up resources as you need them-from infrastructure services, such as compute, storage, and databases, to Internet of Things, machine learning, data lakes and analytics, and much more. You can deploy technology services in a matter of minutes, and get from idea to implementation several orders of magnitude faster than before. This gives you the freedom to experiment, test new ideas to differentiate customer experiences, and transform your business.
-With cloud computing, you don't have to over-provision resources up front to handle peak levels of business activity in the future. Instead, you provision the amount of resources that you actually need. You can scale these resources up or down to instantly grow and shrink capacity as your business needs change.
-The cloud allows you to trade fixed expenses (such as data centers and physical servers) for variable expenses, and only pay for IT as you consume it. Plus, the variable expenses are much lower than what you would pay to do it yourself because of the economies of scale. 
-With the cloud, you can expand to new geographic regions and deploy globally in minutes.
+In conclusion, cloud computing, exemplified by platforms like Amazon Web Services (AWS), enables organizations to access IT resources on-demand via the Internet. This is facilitated by pay-as-you-go pricing models, which liberate organizations from the burdens of procuring, owning, and maintaining physical infrastructure. Cloud computing has a wide range of applications across industries, including the automotive sector. One of the main benefits of cloud computing is its dynamic scalability, which improves operational efficiency and reduces costs by utilizing resources more cost-effectively. This is due to the economies of scale inherent in cloud services, resulting in significantly lower variable expenses compared to self-managed infrastructure \cite{AWSWhatIsCloudComputing}. The characteristics of Amazon Web Services are analyzed in depth below.
 
+\section{Amazon Web Services}
 
-%https://ieeexplore.ieee.org/document/8114187?denied=
-%https://ieeexplore.ieee.org/document/9044834
+Amazon Web Services (AWS) is a widely adopted cloud solution with over 200 fully featured services available globally across multiple data centers. It is used by millions of customers, from emerging startups to industry giants and government agencies, as the cloud platform of choice to reduce costs, increase agility, and accelerate innovation \cite{EuAmazonWebServices}.
 
+AWS stands out by providing a broad set of services, including infrastructure technologies as well as cutting-edge capabilities such as machine learning, artificial intelligence, data lakes, analytics, and the Internet of Things. This extensive service portfolio facilitates the fast, easy and cost-effective migration of existing applications to the cloud and the creation of diverse digital solutions. AWS provides purpose-built databases for various application types, allowing users to choose the most suitable tool for optimal cost and performance. The depth of AWS services is unmatched, providing customers with a comprehensive toolkit for diverse computing needs.
 
+Beyond its vast offerings, AWS has a large and dynamic global community with millions of active customers and tens of thousands of partners. This inclusive ecosystem spans industries and business sizes, with startups, enterprises, and public sector entities leveraging AWS for a myriad of use cases. The AWS Partner Network (APN) solidifies this network with thousands of system integrators and independent software vendors who adapt their technology to work on AWS.
+
+AWS demonstrates its commitment to innovation through continuous technological advancements. In 2014, AWS launched AWS Lambda, which pioneered serverless computing. This allows developers to run their code without the need to provision or manage servers. Another example is Amazon SageMaker, a fully managed machine learning service that empowers developers to use machine learning without any previous experience.
+
+Rooted in more than 17 years of operational experience, AWS offers unmatched reliability, security, and performance \cite{WhatIsAWS}. Since its establishment in 2006, AWS has become a globally trusted platform, revolutionizing IT infrastructure services by providing a highly reliable, scalable, and cost-effective cloud solution for businesses worldwide in the form of web services with pay-as-you-go pricing \cite{AboutAWS}. One of the key benefits of cloud computing is the ability to replace a company's initial capital expenditures required for infrastructure with low costs that vary as needed and can scale with the business.
 
 \subsection{Security}
 One of the pillars of AWS is the security of its systems and services; data la natura della tesi analizziamo più nel dettaglio questa caratteristica.
@@ -128,14 +113,5 @@ The AWS global infrastructure is designed and managed according to security best
 \end{itemize}
 
 GxP is an acronym that refers to the regulations and guidelines applicable to life sciences organizations that make food and medical products such as drugs, medical devices, and medical software applications. The overall intent of GxP requirements is to ensure that food and medical products are safe for consumers and to ensure the integrity of data used to make product-related safety decisions. The term GxP encompasses a broad range of compliance-related activities such as Good Laboratory Practices (GLP), Good Clinical Practices (GCP), Good Manufacturing Practices (GMP), and others, each of which has product-specific requirements that life sciences organizations must implement based on the 1) type of products they make and 2) country in which their products are sold. When life sciences organizations use computerized systems to perform certain GxP activities, they must ensure that the computerized GxP system is developed, validated, and operated appropriately for the intended use of the system. \cite{GxPCompliance}
+
 \subsection{Used services}
-
-\section{Design}
-\subsection{Architecture}
-
-\section{Implementation}
-\subsection{Code}
-\subsection{Tools}
-
-\section{Test and Validation}
-\subsection{RPi demo}

@@ -191,24 +191,6 @@ S.~project. (2023) Achieving software-defined vehicles. [Online]. Available:
   \url{https://www.soafee.io/}
 \BIBentrySTDinterwordspacing
 
-\bibitem{EuAmazonWebServices}
-\BIBentryALTinterwordspacing
-AWS. (2024) Amazon web services. [Online]. Available:
-  \url{https://www.aboutamazon.eu/what-we-do/amazon-web-services}
-\BIBentrySTDinterwordspacing
-
-\bibitem{WhatIsAWS}
-\BIBentryALTinterwordspacing
-------. (2024) Cloud computing with aws. [Online]. Available:
-  \url{https://aws.amazon.com/what-is-aws/}
-\BIBentrySTDinterwordspacing
-
-\bibitem{AboutAWS}
-\BIBentryALTinterwordspacing
-------. (2024) About aws. [Online]. Available:
-  \url{https://docs.aws.amazon.com/whitepapers/latest/gxp-systems-on-aws/about-aws.html}
-\BIBentrySTDinterwordspacing
-
 \bibitem{NISTCloudComputing}
 \BIBentryALTinterwordspacing
 A.~S. Rebecca M.~Blank, ``The nist definition of cloud computing,''
@@ -223,17 +205,35 @@ AWS. (2024) Use aws regions. Accessed: 05 03, 2024. [Online]. Available:
   \url{https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/region-selection.html}
 \BIBentrySTDinterwordspacing
 
+\bibitem{AWSPrivatePublicHybrid}
+\BIBentryALTinterwordspacing
+------. (2024) Selecting the right cloud for workloads - differences between
+  public, private, and hybrid. Accessed: 05 03, 2024. [Online]. Available:
+  \url{https://docs.aws.amazon.com/whitepapers/latest/public-sector-cloud-transformation/selecting-the-right-cloud-for-workloads-differences-between-public-private-and-hybrid.html}
+\BIBentrySTDinterwordspacing
+
 \bibitem{AWSWhatIsCloudComputing}
 \BIBentryALTinterwordspacing
 ------. (2024) What is cloud computing? [Online]. Available:
   \url{https://aws.amazon.com/what-is-cloud-computing/}
 \BIBentrySTDinterwordspacing
 
-\bibitem{AWSPrivatePublicHybrid}
+\bibitem{EuAmazonWebServices}
 \BIBentryALTinterwordspacing
-------. (2024) Selecting the right cloud for workloads - differences between
-  public, private, and hybrid. Accessed: 05 03, 2024. [Online]. Available:
-  \url{https://docs.aws.amazon.com/whitepapers/latest/public-sector-cloud-transformation/selecting-the-right-cloud-for-workloads-differences-between-public-private-and-hybrid.html}
+------. (2024) Amazon web services. [Online]. Available:
+  \url{https://www.aboutamazon.eu/what-we-do/amazon-web-services}
+\BIBentrySTDinterwordspacing
+
+\bibitem{WhatIsAWS}
+\BIBentryALTinterwordspacing
+------. (2024) Cloud computing with aws. [Online]. Available:
+  \url{https://aws.amazon.com/what-is-aws/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{AboutAWS}
+\BIBentryALTinterwordspacing
+------. (2024) About aws. [Online]. Available:
+  \url{https://docs.aws.amazon.com/whitepapers/latest/gxp-systems-on-aws/about-aws.html}
 \BIBentrySTDinterwordspacing
 
 \bibitem{AWSCloudComputing}
