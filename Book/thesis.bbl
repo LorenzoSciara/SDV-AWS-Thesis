@@ -57,9 +57,16 @@ S.~project and M.~Spencer. (2023) Architecture. [Online]. Available:
   \url{https://architecture.docs.soafee.io/en/latest/contents/architecture.html}
 \BIBentrySTDinterwordspacing
 
+\bibitem{AWSSDK}
+\BIBentryALTinterwordspacing
+AWS. (2024) What's the aws sdk for javascript? Accessed: 06 03, 2024. [Online].
+  Available:
+  \url{https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/welcome.html}
+\BIBentrySTDinterwordspacing
+
 \bibitem{AWSIoTCore}
 \BIBentryALTinterwordspacing
-AWS. (2024) What is aws iot? Accessed: 06 03, 2024. [Online]. Available:
+------. (2024) What is aws iot? Accessed: 06 03, 2024. [Online]. Available:
   \url{https://docs.aws.amazon.com/iot/latest/developerguide/what-is-aws-iot.html}
 \BIBentrySTDinterwordspacing
 

@@ -649,6 +649,13 @@ OUTPUT chapters\04\proof_of_concept.aux
 INPUT .\chapters\04\proof_of_concept.tex
 INPUT .\chapters\04\proof_of_concept.tex
 INPUT chapters\04\proof_of_concept.tex
+INPUT .\images\AWSSDK.png
+INPUT .\images\AWSSDK.png
+INPUT .\images\AWSSDK.png
+INPUT .\images\AWSSDK.png
+INPUT .\images\AWSSDK.png
+INPUT .\images\AWSSDK.png
+INPUT .\images\AWSSDK.png
 INPUT .\images\AWSIoTCore.png
 INPUT .\images\AWSIoTCore.png
 INPUT .\images\AWSIoTCore.png
