@@ -57,6 +57,12 @@ S.~project and M.~Spencer. (2023) Architecture. [Online]. Available:
   \url{https://architecture.docs.soafee.io/en/latest/contents/architecture.html}
 \BIBentrySTDinterwordspacing
 
+\bibitem{AWSIoTCore}
+\BIBentryALTinterwordspacing
+AWS. (2024) What is aws iot? Accessed: 06 03, 2024. [Online]. Available:
+  \url{https://docs.aws.amazon.com/iot/latest/developerguide/what-is-aws-iot.html}
+\BIBentrySTDinterwordspacing
+
 \bibitem{CloudComputing}
 \BIBentryALTinterwordspacing
 N.~B. Ruparelia, ``Cloud computing,'' \emph{The MIT Press Essential Knowledge
@@ -314,6 +320,19 @@ AWS. (2024) Iso/iec 27017:2015 compliance. Accessed: 05 03, 2024. [Online].
 \BIBentryALTinterwordspacing
 ------. (2024) Cloud security alliance (csa). Accessed: 05 03, 2024. [Online].
   Available: \url{https://aws.amazon.com/compliance/csa/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{WhatIsTheAWSCDK}
+\BIBentryALTinterwordspacing
+------. (2024) What is the aws cdk? Accessed: 06 03, 2024. [Online]. Available:
+  \url{https://docs.aws.amazon.com/cdk/v2/guide/home.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{AWSIoTGreengrass}
+\BIBentryALTinterwordspacing
+------. (2024) What is aws iot greengrass? Accessed: 06 03, 2024. [Online].
+  Available:
+  \url{https://docs.aws.amazon.com/greengrass/v2/developerguide/what-is-iot-greengrass.html}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}

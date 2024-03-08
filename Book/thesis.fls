@@ -649,6 +649,13 @@ OUTPUT chapters\04\proof_of_concept.aux
 INPUT .\chapters\04\proof_of_concept.tex
 INPUT .\chapters\04\proof_of_concept.tex
 INPUT chapters\04\proof_of_concept.tex
+INPUT .\images\AWSIoTCore.png
+INPUT .\images\AWSIoTCore.png
+INPUT .\images\AWSIoTCore.png
+INPUT .\images\AWSIoTCore.png
+INPUT .\images\AWSIoTCore.png
+INPUT .\images\AWSIoTCore.png
+INPUT .\images\AWSIoTCore.png
 INPUT .\chapters\05\concluding_remarks.tex
 INPUT .\chapters\05\concluding_remarks.tex
 OUTPUT chapters\05\concluding_remarks.aux
