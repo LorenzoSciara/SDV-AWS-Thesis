@@ -348,4 +348,29 @@ AWS. (2024) Iso/iec 27017:2015 compliance. Accessed: 05 03, 2024. [Online].
   03, 2024. [Online]. Available: \url{https://docs.aws.amazon.com/iam/}
 \BIBentrySTDinterwordspacing
 
+\bibitem{AWSLambda}
+\BIBentryALTinterwordspacing
+------. (2024) Aws lambda documentation. Accessed: 06 03, 2024. [Online].
+  Available: \url{https://docs.aws.amazon.com/lambda/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{AWSCodebuild}
+\BIBentryALTinterwordspacing
+------. (2024) What is aws codebuild? Accessed: 06 03, 2024. [Online].
+  Available:
+  \url{https://docs.aws.amazon.com/codebuild/latest/userguide/welcome.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{AWSCodecommit}
+\BIBentryALTinterwordspacing
+------. (2024) Aws codecommit documentation. Accessed: 06 03, 2024. [Online].
+  Available: \url{https://docs.aws.amazon.com/codecommit/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{AWSamazonS3}
+\BIBentryALTinterwordspacing
+------. (2024) What is amazon s3? Accessed: 06 03, 2024. [Online]. Available:
+  \url{https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}

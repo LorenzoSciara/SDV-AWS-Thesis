@@ -19,4 +19,5 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces The high level rappresentation of the AWS SDK for JavaScript v3 \cite {AWSSDK}}}{35}{figure.4.1}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces AWS IoT Core connection system beetween IoT device and AWS service \cite {AWSIoTCore}}}{36}{figure.4.2}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Amazon S3 high level storing rappresentation}}{38}{figure.4.3}%
 \addvspace {10\p@ }
