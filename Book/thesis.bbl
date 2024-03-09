@@ -342,4 +342,10 @@ AWS. (2024) Iso/iec 27017:2015 compliance. Accessed: 05 03, 2024. [Online].
   \url{https://docs.aws.amazon.com/greengrass/v2/developerguide/what-is-iot-greengrass.html}
 \BIBentrySTDinterwordspacing
 
+\bibitem{AWSIAM}
+\BIBentryALTinterwordspacing
+------. (2024) Aws identity and access management documentation. Accessed: 06
+  03, 2024. [Online]. Available: \url{https://docs.aws.amazon.com/iam/}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}

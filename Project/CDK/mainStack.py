@@ -16,7 +16,7 @@ if (status is None):
 app = cdk.App()
 HawkbitDeviceStack(app, "HawkbitDeviceStack", env=cdk.Environment(account=os.getenv('CDK_DEFAULT_ACCOUNT'), region="eu-west-1"), status=status)
 HawkbitServerStack(app, "HawkbitServerStack", env=cdk.Environment(account=os.getenv('CDK_DEFAULT_ACCOUNT'), region="eu-west-1"),)
-#HawkbitPipelineStack(app, "HawkbitPipelineStack", env=cdk.Environment(account=os.getenv('CDK_DEFAULT_ACCOUNT'), region="eu-west-1"),)
+#HawkbitPipelineStack(app, "HawkbitPipelineStack", env=cdk.Environment(account=os.getenv('CDK_DEFAULT_ACCOUNT'), region="eu-west-1"),) #Pipeline for Python codecommit and codedoploy
 HawkbitTimestreamStack(app, "HawkbitTimestreamStack", env=cdk.Environment(account=os.getenv('CDK_DEFAULT_ACCOUNT'), region="eu-west-1"),)
 HawkbitPipelineCppStack(app, "HawkbitPipelineCppStack", env=cdk.Environment(account=os.getenv('CDK_DEFAULT_ACCOUNT'), region="eu-west-1"),)
 app.synth()
