@@ -663,6 +663,13 @@ INPUT .\images\AWSIoTCore.png
 INPUT .\images\AWSIoTCore.png
 INPUT .\images\AWSIoTCore.png
 INPUT .\images\AWSIoTCore.png
+INPUT .\images\AWSCodepipeline.png
+INPUT .\images\AWSCodepipeline.png
+INPUT .\images\AWSCodepipeline.png
+INPUT .\images\AWSCodepipeline.png
+INPUT .\images\AWSCodepipeline.png
+INPUT .\images\AWSCodepipeline.png
+INPUT .\images\AWSCodepipeline.png
 INPUT .\images\AWSS3.png
 INPUT .\images\AWSS3.png
 INPUT .\images\AWSS3.png
@@ -670,6 +677,13 @@ INPUT .\images\AWSS3.png
 INPUT .\images\AWSS3.png
 INPUT .\images\AWSS3.png
 INPUT .\images\AWSS3.png
+INPUT .\images\AWSECR.png
+INPUT .\images\AWSECR.png
+INPUT .\images\AWSECR.png
+INPUT .\images\AWSECR.png
+INPUT .\images\AWSECR.png
+INPUT .\images\AWSECR.png
+INPUT .\images\AWSECR.png
 INPUT .\chapters\05\concluding_remarks.tex
 INPUT .\chapters\05\concluding_remarks.tex
 OUTPUT chapters\05\concluding_remarks.aux

@@ -70,6 +70,18 @@ AWS. (2024) What's the aws sdk for javascript? Accessed: 06 03, 2024. [Online].
   \url{https://docs.aws.amazon.com/iot/latest/developerguide/what-is-aws-iot.html}
 \BIBentrySTDinterwordspacing
 
+\bibitem{AWSCodepipeline}
+\BIBentryALTinterwordspacing
+------. (2024) Aws codepipeline. Accessed: 06 03, 2024. [Online]. Available:
+  \url{https://aws.amazon.com/codepipeline/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{AWSECR}
+\BIBentryALTinterwordspacing
+------. (2024) Amazon elastic container registry. Accessed: 06 03, 2024.
+  [Online]. Available: \url{https://aws.amazon.com/it/ecr/}
+\BIBentrySTDinterwordspacing
+
 \bibitem{CloudComputing}
 \BIBentryALTinterwordspacing
 N.~B. Ruparelia, ``Cloud computing,'' \emph{The MIT Press Essential Knowledge
@@ -371,6 +383,13 @@ AWS. (2024) Iso/iec 27017:2015 compliance. Accessed: 05 03, 2024. [Online].
 \BIBentryALTinterwordspacing
 ------. (2024) What is amazon s3? Accessed: 06 03, 2024. [Online]. Available:
   \url{https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{AmazonECR}
+\BIBentryALTinterwordspacing
+------. (2024) What is amazon elastic container registry? Accessed: 06 03,
+  2024. [Online]. Available:
+  \url{https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}
