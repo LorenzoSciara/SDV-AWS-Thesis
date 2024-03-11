@@ -82,6 +82,13 @@ AWS. (2024) What's the aws sdk for javascript? Accessed: 06 03, 2024. [Online].
   [Online]. Available: \url{https://aws.amazon.com/it/ecr/}
 \BIBentrySTDinterwordspacing
 
+\bibitem{AmazonKinesis}
+\BIBentryALTinterwordspacing
+------. (2024) Amazon kinesis data streams terminology and concepts. Accessed:
+  06 03, 2024. [Online]. Available:
+  \url{https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html}
+\BIBentrySTDinterwordspacing
+
 \bibitem{CloudComputing}
 \BIBentryALTinterwordspacing
 N.~B. Ruparelia, ``Cloud computing,'' \emph{The MIT Press Essential Knowledge
@@ -402,6 +409,13 @@ AWS. (2024) Iso/iec 27017:2015 compliance. Accessed: 05 03, 2024. [Online].
 \BIBentryALTinterwordspacing
 ------. (2024) Aws systems manager documentation. Accessed: 06 03, 2024.
   [Online]. Available: \url{https://docs.aws.amazon.com/systems-manager/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{AWSKinesis}
+\BIBentryALTinterwordspacing
+------. (2024) What is amazon kinesis data streams? Accessed: 06 03, 2024.
+  [Online]. Available:
+  \url{https://docs.aws.amazon.com/streams/latest/dev/introduction.html}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}

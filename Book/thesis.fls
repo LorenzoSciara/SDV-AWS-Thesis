@@ -684,6 +684,13 @@ INPUT .\images\AWSECR.png
 INPUT .\images\AWSECR.png
 INPUT .\images\AWSECR.png
 INPUT .\images\AWSECR.png
+INPUT .\images\AmazonKinesis.png
+INPUT .\images\AmazonKinesis.png
+INPUT .\images\AmazonKinesis.png
+INPUT .\images\AmazonKinesis.png
+INPUT .\images\AmazonKinesis.png
+INPUT .\images\AmazonKinesis.png
+INPUT .\images\AmazonKinesis.png
 INPUT .\chapters\05\concluding_remarks.tex
 INPUT .\chapters\05\concluding_remarks.tex
 OUTPUT chapters\05\concluding_remarks.aux
