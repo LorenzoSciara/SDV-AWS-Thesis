@@ -98,7 +98,7 @@ B.~QNX, ``What is a software-defined vehicle?'' \emph{Software-Defined
 
 \bibitem{StormReplySite}
 \BIBentryALTinterwordspacing
-S.~Reply, ``Who we are,'' 2024. [Online]. Available:
+S.~Reply. (2024) Who we are. [Online]. Available:
   \url{https://www.reply.com/storm-reply/en/}
 \BIBentrySTDinterwordspacing
 
@@ -168,7 +168,7 @@ M.~Helmy and M.~Mahmoud, ``Enhanced multi-level secure over-the-air update
 
 \bibitem{AutosarAbout}
 \BIBentryALTinterwordspacing
-Autosar, ``Vision,'' 2024. [Online]. Available:
+Autosar. (2024) Vision. [Online]. Available:
   \url{https://www.autosar.org/about}
 \BIBentrySTDinterwordspacing
 
@@ -390,6 +390,18 @@ AWS. (2024) Iso/iec 27017:2015 compliance. Accessed: 05 03, 2024. [Online].
 ------. (2024) What is amazon elastic container registry? Accessed: 06 03,
   2024. [Online]. Available:
   \url{https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{AWSEC2}
+\BIBentryALTinterwordspacing
+------. (2024) What is amazon ec2? Accessed: 06 03, 2024. [Online]. Available:
+  \url{https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{AWSSM}
+\BIBentryALTinterwordspacing
+------. (2024) Aws systems manager documentation. Accessed: 06 03, 2024.
+  [Online]. Available: \url{https://docs.aws.amazon.com/systems-manager/}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}

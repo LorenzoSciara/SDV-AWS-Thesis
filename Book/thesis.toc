@@ -22,18 +22,18 @@
 \contentsline {subsection}{\numberline {3.2.1}Security}{31}{subsection.3.2.1}%
 \contentsline {chapter}{\numberline {4}Proof Of Concept}{34}{chapter.4}%
 \contentsline {section}{\numberline {4.1}AWS Used Services}{34}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Design}{39}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Architecture}{39}{subsection.4.2.1}%
-\contentsline {section}{\numberline {4.3}Implementation}{39}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Code}{39}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Tools}{39}{subsection.4.3.2}%
-\contentsline {section}{\numberline {4.4}Test and Validation}{39}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}RPi demo}{39}{subsection.4.4.1}%
-\contentsline {chapter}{\numberline {5}Conclding Remarks}{40}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Contribution Recaps}{40}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Have we meet the PoC goals?}{40}{subsection.5.1.1}%
-\contentsline {section}{\numberline {5.2}Future Works}{40}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Transform the poc in a product}{40}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Virtual workbenches}{40}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Manage additional Use Cases (ML, Cockpit Apps, remote ECU etc..)}{40}{subsection.5.2.3}%
-\contentsline {chapter}{Bibliography}{41}{subsection.5.2.3}%
+\contentsline {section}{\numberline {4.2}Design}{40}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Architecture}{40}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.3}Implementation}{40}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Code}{40}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Tools}{40}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Test and Validation}{40}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}RPi demo}{40}{subsection.4.4.1}%
+\contentsline {chapter}{\numberline {5}Conclding Remarks}{41}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Contribution Recaps}{41}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Have we meet the PoC goals?}{41}{subsection.5.1.1}%
+\contentsline {section}{\numberline {5.2}Future Works}{41}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Transform the poc in a product}{41}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Virtual workbenches}{41}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Manage additional Use Cases (ML, Cockpit Apps, remote ECU etc..)}{41}{subsection.5.2.3}%
+\contentsline {chapter}{Bibliography}{42}{subsection.5.2.3}%
