@@ -78,12 +78,26 @@ As discussed in previous chapters, the development of SDV technology requires a 
     \item Amazon Cloudwatch: Amazon CloudWatch is a system to monitor the Amazon Web Services (AWS) resources and the applications running on the infrastructure in real time. With the use of CloudWatch it is possible to collect and track metrics from other AWS services such as Lambda, which are numeric variables that can be measured and analyzed for resources applications \cite{AWSCloudwatch}. Practically this service represents the center for viewing and analyzing logs from the various AWS services in use.
 \end{itemize}
 
-\section{Design}
-\subsection{Architecture}
+All of the previously listed services have been useful, both as an active part in the project's realization and as potential options for the project's implementation, which will be analyzed below. The analysis of the POC will start with a description of the project's design, followed by an analysis of how the various services are actively involved in the project, and then an analysis of the interaction between the various elements that make up the architecture.
 
-\section{Implementation}
-\subsection{Code}
-\subsection{Tools}
+\section{Architectural design}
+This section delves into the heart of the project implementation, starting with a high-level view of the various systems that make up its realization and transitioning to a visualization of the interactions between the various elements.
+
+The study and analysis of the Software Defined Vehicle case study revealed that three fundamental elements were essential to create a concrete example of SDV implementation:
+\begin{itemize}
+    \item TCU simulator: The TCU simulator is a system that replicates the basic functions of a telematic control unit (TCU). The system has the capability to send data packets and receive updates from a cloud server structure.
+    \item Cloud infrastructure: The cloud infrastructure must be capable of managing both the data from the TCU and the update function.
+    \item Data viewer:  The data viewer is a platform that enables the visualization of manipulated and processed data in a manner that clearly displays changes in data behavior resulting from variations in the data and updates to the TCU.
+\end{itemize}
+
+With these three elements, a practical implementation made it possible to achieve what should happen in an SDV: having a vehicle system capable of updating itself via Over The Air updates. To support this implementation, it was necessary to use the services previously mentioned for creating the cloud infrastructure through the services made available by AWS.
+
+Now, let's look at the components of the POC in detail through a high-level architectural representation of the previously introduced elements and a more detailed analysis of the code that compose them.
+
+\subsection{TCU Simulator}
+PARLARE DEL FATTO CHE L'IMPLEMENTAZIONE DEL CODICE è STATA FATTA IN TRE FASI: PRIMA CON UNINTERFACCIA E POCHI DATI GENERATI, POI SENZA INTERFACCIA E UNA ATTIVAZIONE DIRETTA DELL'INVIO DI DATI CON PYTHON POI CON C++ POI CON C. SPIEGARE OGNI SINGOLO ELEMENTO DELLA TCU FACENDO RIFERIMENTO ANCHE ALLA SCHEDA ED EVENTUALMENTE DARE LA COMPOSIZIONE DI UN GUADRO CHE PIANO PIANO SI COSTRUISCE PER CREARE L'INTERA TCU
+\subsection{Cloud Infrastructure}
+\subsection{Data Viewer}
 
 \section{Test and Validation}
 \subsection{RPi demo}
