@@ -418,4 +418,25 @@ AWS. (2024) Iso/iec 27017:2015 compliance. Accessed: 05 03, 2024. [Online].
   \url{https://docs.aws.amazon.com/streams/latest/dev/introduction.html}
 \BIBentrySTDinterwordspacing
 
+\bibitem{AWSTimestream}
+\BIBentryALTinterwordspacing
+------. (2024) What is amazon timestream? Accessed: 06 03, 2024. [Online].
+  Available:
+  \url{https://docs.aws.amazon.com/timestream/latest/developerguide/what-is-timestream.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{AWSDynamoDB}
+\BIBentryALTinterwordspacing
+------. (2024) What is amazon dynamodb? Accessed: 06 03, 2024. [Online].
+  Available:
+  \url{https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{AWSCloudwatch}
+\BIBentryALTinterwordspacing
+------. (2024) What is amazon cloudwatch? Accessed: 06 03, 2024. [Online].
+  Available:
+  \url{https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}
