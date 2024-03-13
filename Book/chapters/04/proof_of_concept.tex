@@ -95,6 +95,95 @@ With these three elements, a practical implementation made it possible to achiev
 Now, let's look at the components of the POC in detail through a high-level architectural representation of the previously introduced elements and a more detailed analysis of the code that compose them.
 
 \subsection{TCU Simulator}
+Come telematic control unit (TCU) in questo progetto si intende un sistema harware in grado di generare in qualche modo dei dati provenienti da una o più sottosistemi dei un eventuale veicolo, raccoglierli, per poi essere pronti per essere inviati all'esterno del veicolo. Per prendere familiarità con questo tipo di strutture e per dare forma al progetto di esempio, è stato necessario simulare una TCU in modo tale ceh fosse il più vicino possibile ad un sistema reale, senza però avere la disponibilità di un veicolo vero e proprio. Quindi riducendo ai minimi termini il concetto è stata presa come punto di arrivo di TCU una scheda raspberry pi che fosse in grado di generare dati telemetrici.
+
+\begin{figure}[h]  % 'h' significa che la figura viene posizionata qui
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/raspberrypi.png}  % Sostituisci 'nome_immagine' con il nome del tuo file immagine e l'estensione
+    \caption{Illustration of a RaspberryPi board with its periferics \cite{raspberrypi}}
+    \label{fig:raspberrypi}
+\end{figure}
+
+Come riportato in figura \ref{fig:raspberrypi} una RaspberryPi è una scheda contenente tutto il necessario per funzionare come un sistema indipendente a cui possono essere attaccate diverse periferiche, per questo motivo rappresenta l'ideale astrazione di una TCU general porpous necessaria per la realizzazione del caso di studio del SOC del SDV.
+
+Prima di mettere mano alla raspberry però è stata necessaria una fase priliminare di realizzazione del progetto su macchina virtuale, il ciò ha facilitato notevolmente lo sviluppo e il test del codice scritto.
+
+Il simulatore, nelle sue diverse fasi di sviluppo è stato pensato composto da 4 diverse componenti software, ognuna caratterizzata dalle proprie funzionalità:
+\begin{itemize}
+    \item Elemento responsabile del collegamento al cloud server per l'invio di dati telematici;
+    \item Elemento per il collegamento al server cloud per l'aggiornamento dell'unità telematica;
+    \item Elemento per la generazione dei dati telematici;
+    \item Elemento per l'update locale dell'unità telematica.
+\end{itemize}
+
+Questi 4 elementi sono orchestrati da uno script esterno che gestisce l'avvio dell'unità di simulazione tramite linea di comando. 
+Analizzando nel dettaglio questi 4 elementi, il primo elemento in ordine cronologico preso come studio è stato l'elemnto responsabile al collegamento del sistema con l'infrastruttura cloud tramite protocllo MQTT. Questo elemento, ovviamente ha richiesto come azione preliminare la presenza di un servizio attivo di IoT Core lato cloud che come analizzeremo in seguito genera un certificato con annessa coppia di chiavi pubblica e privata per garantire l'identità del dispositivo. La disscussione relativa all'infrastruttura cloud verrà analizzata in seguito. 
+
+Per permettere il collegamento alla piattaforma cloud analizziamo il seguente codice \ref{lst:MQTTConnection} viene lanciato uno script Python che tramite la funzione AWSIoTMQTTClient della libreria AWSIoTPythonSDK.MQTTLib crea il collegamento, se possibile, con il server IoT Core per poi potergli inviare i dati. In particolare con mqttc = AWSIoTMQTTClient(VIN) viene creato il Clien MQTT, mentre con mqttc.configureEndpoint(ENDPOINT, 8883) is configured the host name and port number the client tries to connect to e con mqttc.configureCredentials(ROOT_CA_FILEPATH, PRIVATE_KEY_FILEPATH, CERT_FILEPATH) vengono forniti e configurati i certificati di autenticazione. Da notare che i file sono infatti salvati in locale sul dispositivo e devono essere accessibili dallo script di collegamento. Il collwgamento MQTT verrà fatto sul topic device/{VIN}/telemetry, quindi il servizio AWS che sarà collegato al topic tramite le opportune policies, come vedremo in seguito sarà in grado di ricevere i dati inviati.
+
+\begin{lstlisting}[language=Python, caption={MQTT connection to the IoT Core AWS service}, label=lst:MQTTConnection]
+    from AWSIoTPythonSDK.MQTTLib import AWSIoTMQTTClient
+
+    certificate_path="./Permanent/Certificates/"
+
+    def telemetry_handler(): #Function that manage the telemetry data sending to IoTCore via mqtt protocol
+        global mqttc
+        global connection_event
+        #Thing connection
+        VIN = "HawkbitDevice001"  ##This is the Thing name
+        ENDPOINT = "a1tbrylx7y3p3t-ats.iot.eu-west-1.amazonaws.com"
+        CERT_FILEPATH = f"{certificate_path}{VIN}.cert.pem"
+        PRIVATE_KEY_FILEPATH = f"{certificate_path}{VIN}.private.key"
+        ROOT_CA_FILEPATH = f"{certificate_path}root-CA.crt"
+        mqttc = AWSIoTMQTTClient(VIN)
+        # Make sure you use the correct region!
+        mqttc.configureEndpoint(ENDPOINT, 8883)
+        mqttc.configureCredentials(ROOT_CA_FILEPATH, PRIVATE_KEY_FILEPATH, CERT_FILEPATH)
+        # Connect to the gateway
+        if mqttc.connect():
+            print("Connected to IoT core. Now the device sends its telemetry every 1 seconds")
+            connection_event.set() #Send connected signal to the main
+            publish_topic = f"device/{VIN}/telemetry"
+\end{lstlisting}
+
+Il secondo elemento in analisi utilizzato per la realizzazione del simulatore è l'elemento che permette la connessione con il OTA Server per permettere il riconoscimento e il downolad degli aggiornamenti OTA. Questo è stato possibile tramite l'utilizzo come base di partenza del "Device Simulator" messo a disposizione in maniera aperta dal Hawkbit stesso. In questo caso si tratta di uno script Java che sfrutta l'interfaccia del Server Hawkbit pr collegarsi al server e rimanere in ascolto per attendere la presenza di aggiornamenti dedicarti al dispositivco stesso.
+Il collegamento viene fatto in automatico all'avvio del codice tramite le Simulation properties impostate, in particolare ai fini del progetto sperimentale il nome del device viene impostato in modo statico in SimulationProperties.java come private String name = "HawkbitDevice001"; mentre l'ip del server a cui connettersi viene preso come input in DeviceSimulator.java da System.setProperty("spring.rabbitmq.host", newHost); in cui newHost contiene l'informazione presa come input.
+\begin{lstlisting}[language=Java, caption={Hawbit Device simulator source code}, label=lst:HawkbitDeviceSimulator]
+    private static long getOverallRead(final CloseableHttpResponse response, final MessageDigest md, final String url) throws IOException {
+        long overallread = 0L;
+        String[] urlParts = url.split("/");
+        File downloadFolder = new File("./TCU/downloads");
+        if (!downloadFolder.exists()) { //If "Download" folder doesn't exist
+            boolean created = downloadFolder.mkdirs();
+            if (!created) {
+                System.err.println("Error in the directory creation!");
+            }
+        }
+        File downloadFile = new File("./TCU/downloads/"+urlParts[10]);
+        try (FileOutputStream outputStream = new FileOutputStream(downloadFile);
+        final BufferedOutputStream bos = new BufferedOutputStream(new DigestOutputStream(outputStream, md))) {
+            try (BufferedInputStream bis = new BufferedInputStream(response.getEntity().getContent())) {
+                byte[] buffer = new byte[8192]; //byte dimension from createBuffer of ByteStream.class
+                int bytesRead;
+                while ((bytesRead = bis.read(buffer)) != -1) {
+                    bos.write(buffer, 0, bytesRead); //Here only for the md hash correctness.
+                    overallread += bytesRead;
+                }
+            }
+        }
+        return overallread;
+    }
+\end{lstlisting}
+In seguito, come mostrato nelle parti salienti del codice sorgente di DeviceSimulatorUpdater.java, nel momento in cui il dispositivo riceve un segnale di download, dopo aver eseguito diversi controlli di sicurezza, questo viene avviato e i dati ricevuti vengono inseriti nella cartella specifica "./TCU/downloads/" tramite l'utilizzo di uno stream che prende i dati in arrivo dal collegamento e li inserisce nella cartella selezionata, con il nome del file ricavato dall'url di download. 
+
+in un primo momento come un elemento che potesse interagire con l'utente: sostanzialmente il simulatore si occupava di fare 3 cose:
+\begin{itemize}
+    \item Catturare gli input da utente;
+    \item Raccogliere i dati ed inviarli al cloud;
+    \item Riconoscere la presenza di aggiornamenti, quindi restartare il sistema con l'aggiornamento avvenuto.
+\end{itemize}
+SPIEGARE OGNI ELEMENTO CON CODICE ANNESSO
+
 PARLARE DEL FATTO CHE L'IMPLEMENTAZIONE DEL CODICE è STATA FATTA IN TRE FASI: PRIMA CON UNINTERFACCIA E POCHI DATI GENERATI, POI SENZA INTERFACCIA E UNA ATTIVAZIONE DIRETTA DELL'INVIO DI DATI CON PYTHON POI CON C++ POI CON C. SPIEGARE OGNI SINGOLO ELEMENTO DELLA TCU FACENDO RIFERIMENTO ANCHE ALLA SCHEDA ED EVENTUALMENTE DARE LA COMPOSIZIONE DI UN GUADRO CHE PIANO PIANO SI COSTRUISCE PER CREARE L'INTERA TCU
 \subsection{Cloud Infrastructure}
 \subsection{Data Viewer}
