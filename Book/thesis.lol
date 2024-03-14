@@ -2,3 +2,4 @@
 \contentsline {lstlisting}{\numberline {4.2}Simulation properties of the Hawkbit Device Simulator}{44}{lstlisting.4.2}%
 \contentsline {lstlisting}{\numberline {4.3}Input arguments to set the ip of the OTA server to contact}{44}{lstlisting.4.3}%
 \contentsline {lstlisting}{\numberline {4.4}Downloading files from the OTA server to the specific device simulator folder}{44}{lstlisting.4.4}%
+\contentsline {lstlisting}{\numberline {4.5}TCU orchestrator that collects data from other subsystems}{46}{lstlisting.4.5}%
