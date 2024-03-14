@@ -24,4 +24,6 @@
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Example of how Amazon ECR works in production and for pulling images \cite {AWSECR}}}{39}{figure.4.5}%
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Illustration of the high-level architecture of Kinesis Data Streams with some examples of services that use the output of the stream. \cite {AmazonKinesis}}}{40}{figure.4.6}%
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Illustration of a RaspberryPi board with its periferics \cite {raspberrypi}}}{42}{figure.4.7}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Update log file of the Device Simulator}}{45}{figure.4.8}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces A snapshot of the first version of the TCU interface}}{46}{figure.4.9}%
 \addvspace {10\p@ }

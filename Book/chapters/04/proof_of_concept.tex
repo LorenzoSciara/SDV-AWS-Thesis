@@ -119,7 +119,7 @@ An external script manages the startup of the simulation unit via command line u
 
 Analyzing these four elements in detail, the first element in chronological order was the component responsible for connecting the system to the cloud infrastructure via the MQTT protocol. This component required the presence of an active cloud-side IoT Core service, which, as we will discuss later, generates a certificate with an attached public and private key pair to ensure the device's identity. The consideration of the cloud infrastructure will be analyzed later when the cloud infrastructure is discussed.
 
-In order to establish a connection to the cloud platform, the following code snippet from Listing \ref{lst:MQTTConnection} is analyzed. The Python script launches and establishes a connection to the IoT Core server using the function specified on line 1 from the designated library. This enables the data to be sent to the server. The code on line 12 creates an MQTT client. On line 13, the code configures the client's host name and port number. Finally, on line 14, the code is configured with the authentication certificates. It is important to note that these files are stored locally on the device and must be accessed by the linking script. The MQTT connection will be established on the topic specified on line 19. This will enable the AWS service, which will be connected to the topic through appropriate policies (as we will see later), to receive the transmitted data.
+In order to establish a connection to the cloud platform, the following code snippet from listing \ref{lst:MQTTConnection} is analyzed. The Python script launches and establishes a connection to the IoT Core server using the function specified on line 1 from the designated library. This enables the data to be sent to the server. The code on line 12 creates an MQTT client. On line 13, the code configures the client's host name and port number. Finally, on line 14, the code is configured with the authentication certificates. It is important to note that these files are stored locally on the device and must be accessed by the linking script. The MQTT connection will be established on the topic specified on line 19. This will enable the AWS service, which will be connected to the topic through appropriate policies (as we will see later), to receive the transmitted data.
 
 \begin{lstlisting}[language=Python, caption={MQTT connection to the IoT Core AWS service}, label=lst:MQTTConnection, linerange={1-23}]
 from AWSIoTPythonSDK.MQTTLib import AWSIoTMQTTClient
@@ -200,9 +200,28 @@ private static long getOverallRead(final CloseableHttpResponse response, final M
 }
 \end{lstlisting}
 
-Il terzo componente del simulatore è rappresentato dal cuore della TCU ovvero il sistema in grado di generare i dati simulati del veicolo. Questo elemento ha subito diverse modifiche nel corso dello sviluppo, in particolare in un primo momento era stato pensato come un elemento che comprendesse una interfaccia utente tramite linea di comando.
-CODICE DA UBUNTU PER L'INPUT UTENTE 
-In particolare come mostrato a linea 1 del codice il simulatore, una volta avviato, era in grado, in base ai comandi dati dall'utente tramite linea di comando, di aumentare fino ad un valore limite o diminuire la sua "velocità" fino ad arrestarsi.
+During the TCU software update phase, at the time the server sends the update, the device in charge of listening for the update receives the update signal and the update download, the log file is written. The file is created in a specially created location each time the system is booted, or it is overwritten if it already exists. It will print a confirmation if the download was successful \ref{fig:update_log_HDS}, and the cause of the error if the download was unsuccessful.
+
+\begin{figure}[h]  % 'h' significa che la figura viene posizionata qui
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/update_log_HDS.png}  % Sostituisci 'nome_immagine' con il nome del tuo file immagine e l'estensione
+    \caption{Update log file of the Device Simulator}
+    \label{fig:update_log_HDS}
+\end{figure} 
+
+The third component of the simulator is the heart of the TCU, which is the system that can generate the simulated vehicle data that changes in a progressive manner over time. This component has undergone several modifications during the course of development, in particular it was initially designed as a command line interface device.
+
+More specifically, as shown in Figure \ref{fig:telemetryV1}, in the first version of the simulator, once started, based on commands given by the user via the command line, it was able to increase or decrease its "speed" to a limit until it stopped. The speed information, which varied over time, was sent every second to the component that manages communication with the IoT Core server and then sent to the server.
+
+\begin{figure}[h]  % 'h' significa che la figura viene posizionata qui
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/telemetryV1.png}  % Sostituisci 'nome_immagine' con il nome del tuo file immagine e l'estensione
+    \caption{A snapshot of the first version of the TCU interface}
+    \label{fig:telemetryV1}
+\end{figure} 
+
+In this case, there were two different versions of the speed handler code: the first one represented the initial state of the simulated vehicle, while the second one represented the vehicle after the update. In this way, it was clear that the update of the vehicle had occurred.
+
 In un secondo momento è stato deciso di aumentare il numero di dati telemetrici forniti in modo tale da poter raccogliere e analizzare sul cloud un numero di valori più realistici a discapito però di una generazione predefinita e non decisa dall'utente. Questa soluzione ha risolto il fatto che una TCU reale non presenterebbe una interfaccia grafica, ma semplicemente raccoglierebbe i dati generati dai sottosistemi presenti nel veicolo in funzione del tempo. In questo caso si arrivati a costruire 5 sottosistemi in grado di generare dati in funzione del tempo in modo più o meno realistico, poi questi dati vengono raccolti da uno script orchestrante che li aggrega per renderli pronti per essere inviati al servizio cloud in ascolto.
 CODICE DELLA TCU PYTHON ATTUALE
 
