@@ -124,10 +124,9 @@ In order to establish a connection to the cloud platform, the following code sni
 \begin{lstlisting}[language=Python, caption={MQTT connection to the IoT Core AWS service}, label=lst:MQTTConnection, linerange={1-23}]
 from AWSIoTPythonSDK.MQTTLib import AWSIoTMQTTClient
 certificate_path="./Permanent/Certificates/"
-def telemetry_handler(): #Function that manage the telemetry data sending to IoTCore via mqtt protocol
+def telemetry_handler():
     global mqttc
     global connection_event
-    #Thing connection
     VIN = "HawkbitDevice001"  ##This is the Thing name
     ENDPOINT = "**********.amazonaws.com" #This field contains the aws region
     CERT_FILEPATH = f"{certificate_path}{VIN}.cert.pem"
@@ -136,7 +135,6 @@ def telemetry_handler(): #Function that manage the telemetry data sending to IoT
     mqttc = AWSIoTMQTTClient(VIN)
     mqttc.configureEndpoint(ENDPOINT, 8883)
     mqttc.configureCredentials(ROOT_CA_FILEPATH, PRIVATE_KEY_FILEPATH, CERT_FILEPATH)
-    # Connect to the gateway
     if mqttc.connect():
         print("Connected to IoT core. Now the device sends its telemetry every 1 seconds")
         connection_event.set() #Send connected signal to the main
@@ -145,14 +143,12 @@ def telemetry_handler(): #Function that manage the telemetry data sending to IoT
 
 The second item of analysis used in the realization of the simulator is the component that allows connecting to the OTA server to detect and download OTA updates. This was made possible by utilizing the 'Device Simulator' provided by Hawkbit. The simulator is a Java script that takes advantage of the Hawkbit Server interface to connect to the server and listen for updates specifically targeted to the device.
 
-%Il collegamento viene fatto in automatico all'avvio del codice tramite le Simulation properties impostate, in particolare ai fini del progetto sperimentale il nome del device viene impostato in modo statico in \texttt{SimulationProperties.java} come \texttt{private String name = "HawkbitDevice001";} mentre l'ip del server a cui connettersi viene preso come input in \texttt{DeviceSimulator.java} da \texttt{System.setProperty("spring.rabbitmq.host", newHost);} in cui newHost contiene l'informazione presa come input.
-
 The code automatically establishes the connection when started through the simulation properties. For experimental design purposes, the device name is set statically as shown on line 2 of code fragment \ref{lst:SimulationPropertiesHDS}, while the server's IP address to connect to is taken as input in the provided code \ref{lst:ArgumentsHDS}, as shown on line 6.
 
 \begin{lstlisting}[language=Java, caption={Simulation properties of the Hawkbit Device Simulator}, label=lst:SimulationPropertiesHDS]
 public static class Autostart {
-    private String name = "HawkbitDevice001"; //name of the device
-    private int amount = 1; //number of the device
+    private String name = "HawkbitDevice001";
+    private int amount = 1;
     @NotEmpty
     private String tenant = "DEFAULT";
     private Protocol api = Protocol.DMF_AMQP;
@@ -175,7 +171,7 @@ public static void main(final String[] args) {
 }
 \end{lstlisting}
 
-As demonstrated in the relevant sections of source code \ref{lst:OverallReadHDS}, when the device receives a download signal, it performs a series of security checks before starting to download the received data into the folder specified in line 1 of the code, using a stream that takes the incoming data from the link and places it in the selected folder, with the filename obtained from the download URL.
+As demonstrated in the relevant sections of source code \ref{lst:OverallReadHDS}, when the device receives a download signal, it performs a series of security checks before starting to download the received data into the folder specified in line 4 of the code, using a stream that takes the incoming data from the link and places it in the selected folder, with the filename obtained from the download URL.
 
 \begin{lstlisting}[language=Java, caption={Downloading files from the OTA server to the specific device simulator folder}, label=lst:OverallReadHDS]
 private static long getOverallRead(final CloseableHttpResponse response, final MessageDigest md, final String url) throws IOException {
@@ -204,15 +200,12 @@ private static long getOverallRead(final CloseableHttpResponse response, final M
 }
 \end{lstlisting}
 
-in un primo momento come un elemento che potesse interagire con l'utente: sostanzialmente il simulatore si occupava di fare 3 cose:
-\begin{itemize}
-    \item Catturare gli input da utente;
-    \item Raccogliere i dati ed inviarli al cloud;
-    \item Riconoscere la presenza di aggiornamenti, quindi restartare il sistema con l'aggiornamento avvenuto.
-\end{itemize}
-SPIEGARE OGNI ELEMENTO CON CODICE ANNESSO
+Il terzo componente del simulatore è rappresentato dal cuore della TCU ovvero il sistema in grado di generare i dati simulati del veicolo. Questo elemento ha subito diverse modifiche nel corso dello sviluppo, in particolare in un primo momento era stato pensato come un elemento che comprendesse una interfaccia utente tramite linea di comando.
+CODICE DA UBUNTU PER L'INPUT UTENTE 
+In particolare come mostrato a linea 1 del codice il simulatore, una volta avviato, era in grado, in base ai comandi dati dall'utente tramite linea di comando, di aumentare fino ad un valore limite o diminuire la sua "velocità" fino ad arrestarsi.
+In un secondo momento è stato deciso di aumentare il numero di dati telemetrici forniti in modo tale da poter raccogliere e analizzare sul cloud un numero di valori più realistici a discapito però di una generazione predefinita e non decisa dall'utente. Questa soluzione ha risolto il fatto che una TCU reale non presenterebbe una interfaccia grafica, ma semplicemente raccoglierebbe i dati generati dai sottosistemi presenti nel veicolo in funzione del tempo. In questo caso si arrivati a costruire 5 sottosistemi in grado di generare dati in funzione del tempo in modo più o meno realistico, poi questi dati vengono raccolti da uno script orchestrante che li aggrega per renderli pronti per essere inviati al servizio cloud in ascolto.
+CODICE DELLA TCU PYTHON ATTUALE
 
-PARLARE DEL FATTO CHE L'IMPLEMENTAZIONE DEL CODICE è STATA FATTA IN TRE FASI: PRIMA CON UNINTERFACCIA E POCHI DATI GENERATI, POI SENZA INTERFACCIA E UNA ATTIVAZIONE DIRETTA DELL'INVIO DI DATI CON PYTHON POI CON C++ POI CON C. SPIEGARE OGNI SINGOLO ELEMENTO DELLA TCU FACENDO RIFERIMENTO ANCHE ALLA SCHEDA ED EVENTUALMENTE DARE LA COMPOSIZIONE DI UN GUADRO CHE PIANO PIANO SI COSTRUISCE PER CREARE L'INTERA TCU
 \subsection{Cloud Infrastructure}
 \subsection{Data Viewer}
 

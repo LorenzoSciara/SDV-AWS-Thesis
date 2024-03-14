@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.3)  14 MAR 2024 14:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.3)  14 MAR 2024 17:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1204,21 +1204,14 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
  [43] (C:\Users\Lorenzo\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 ) [44]
-Overfull \hbox (3.25758pt too wide) in paragraph at lines 194--195
+Overfull \hbox (3.25758pt too wide) in paragraph at lines 190--191
 [][][][][][][][][][][][][] 
  []
 
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Overfull \hbox (8.37875pt too wide) in paragraph at lines 215--216
-[]\OT1/cmr/m/n/12 PARLARE DEL FATTO CHE L'IMPLEMENTAZIONE DEL CODICE ^^Re STATA
- []
-
-
-Overfull \hbox (19.85101pt too wide) in paragraph at lines 215--216
-\OT1/cmr/m/n/12 FATTA IN TRE FASI: PRIMA CON UN-IN-TER-FAC-CIA E POCHI DATI GENERATI,
- []
-
-) [45] [46]
+ [45] [46]
 \openout2 = `chapters/05/concluding_remarks.aux'.
 
  (chapters/05/concluding_remarks.tex
@@ -1262,16 +1255,16 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  44949 strings out of 474542
- 1027368 string characters out of 5743503
- 2013978 words of memory out of 5000000
- 66169 multiletter control sequences out of 15000+600000
+ 1027352 string characters out of 5743503
+ 2015978 words of memory out of 5000000
+ 66171 multiletter control sequences out of 15000+600000
  570015 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  138i,20n,135p,1523b,4120s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Lorenzo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmitt10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (51 pages, 5175493 bytes).
+Output written on thesis.pdf (51 pages, 5175011 bytes).
 PDF statistics:
- 926 PDF objects out of 1000 (max. 8388607)
- 240 named destinations out of 1000 (max. 500000)
+ 924 PDF objects out of 1000 (max. 8388607)
+ 238 named destinations out of 1000 (max. 500000)
  392 words of extra memory for PDF output out of 10000 (max. 10000000)
 
