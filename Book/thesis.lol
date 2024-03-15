@@ -6,3 +6,5 @@
 \contentsline {lstlisting}{\numberline {4.6}TCU init file for the import of the TCU subsystems}{48}{lstlisting.4.6}%
 \contentsline {lstlisting}{\numberline {4.7}Battery subsystem return code}{48}{lstlisting.4.7}%
 \contentsline {lstlisting}{\numberline {4.8}Manifest example of compiled TCU simulator}{49}{lstlisting.4.8}%
+\contentsline {lstlisting}{\numberline {4.9}Main function of the update recognition system}{50}{lstlisting.4.9}%
+\contentsline {lstlisting}{\numberline {4.10}Code for performing actions when the designated download folder is changed}{51}{lstlisting.4.10}%

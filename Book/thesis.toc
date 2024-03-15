@@ -24,15 +24,15 @@
 \contentsline {section}{\numberline {4.1}AWS Used Services}{35}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Architectural design}{42}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}TCU Simulator}{43}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Cloud Infrastructure}{50}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Data Viewer}{50}{subsection.4.2.3}%
-\contentsline {section}{\numberline {4.3}Test and Validation}{50}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}RPi demo}{50}{subsection.4.3.1}%
-\contentsline {chapter}{\numberline {5}Conclding Remarks}{51}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Contribution Recaps}{51}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Have we meet the PoC goals?}{51}{subsection.5.1.1}%
-\contentsline {section}{\numberline {5.2}Future Works}{51}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Transform the poc in a product}{51}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Virtual workbenches}{51}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Manage additional Use Cases (ML, Cockpit Apps, remote ECU etc..)}{51}{subsection.5.2.3}%
-\contentsline {chapter}{Bibliography}{52}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {4.2.2}Cloud Infrastructure}{51}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Data Viewer}{51}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Test and Validation}{51}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}RPi demo}{51}{subsection.4.3.1}%
+\contentsline {chapter}{\numberline {5}Conclding Remarks}{52}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Contribution Recaps}{52}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Have we meet the PoC goals?}{52}{subsection.5.1.1}%
+\contentsline {section}{\numberline {5.2}Future Works}{52}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Transform the poc in a product}{52}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Virtual workbenches}{52}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Manage additional Use Cases (ML, Cockpit Apps, remote ECU etc..)}{52}{subsection.5.2.3}%
+\contentsline {chapter}{Bibliography}{53}{subsection.5.2.3}%

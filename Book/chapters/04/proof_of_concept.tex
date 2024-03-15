@@ -287,7 +287,57 @@ In order to be compatible with both the first and second versions of the simulat
 </project>
 \end{lstlisting}
 
+The TCU simulator's download recognition system is the last element to be explored in detail. It is capable of activating downloads and ensuring that new elements are fully functional within the TCU system. Essentially, it functions as an edge agent, providing some of the tasks that the AWS IoT Greengrass service would have performed in parallel if IoT Greengrass had been used on the edge device.
+\begin{lstlisting}[language=Python, caption={Main function of the update recognition system }, label=lst:UpdateRecognition]
+from watchdog.observers import Observer
+from watchdog.events import FileSystemEventHandler
+folder_to_watch = './TCU' # Define the folder to monitor
+def main():
+    global observer
+    while True:
+        observer = Observer() # Create an observer
+        event_handler = DownloadHandler()
+        observer.schedule(event_handler, folder_to_watch, recursive=True) # Attach the event handler to the observer
+        observer.daemon = True
+        observer.start() # Start the observer in a separate thread
+        observer.join()  # Wait for the observer to finish operations
 
+class DownloadHandler(FileSystemEventHandler):
+    def on_created(self, event):
+        update_file(event)
+                        
+    def on_modified(self, event):
+        update_file(event)
+\end{lstlisting}
+
+The Python script remains in an infinite loop, waiting for changes to the folder defined in line 3, using the libraries shown in lines 1 and 2 of code \ref{lst:UpdateRecognition}.
+If a folder is created or modified, and updates from the server infrastructure are downloaded (which will be analyzed in a later subsection), this program aims to detect the processes involved in the execution of the TCU simulator (as done in lines 3 and 12 of code \ref{lst:UpdateFile}) and kill the identified processes. Meanwhile, the update file will be identified by a compressed folder, as specified by the update pipeline (which will be analyzed later). The update files will then be extracted according to line 19 of the code. Finally, this component will reboot the entire system so that the update can be installed and take effect.
+\begin{lstlisting}[language=Python, caption={Code for performing actions when the designated download folder is changed}, label=lst:UpdateFile]
+def update_file(event):
+    global observer
+    process = subprocess.Popen(["pgrep", "-f", "OS.py"], stdout=subprocess.PIPE, text=True)
+    output, _ = process.communicate()
+    pid_to_kill_list = output.splitlines()
+    if not event.is_directory and ('downloads' in event.src_path): #If the new item is a directory
+        print(f"src_path type: {type(event.src_path)}")
+        print(f"New file downloaded: {event.src_path}")
+        for pid_to_kill in pid_to_kill_list:
+            print(f"Pid to kill: {pid_to_kill}")
+            os.kill(int(pid_to_kill), signal.SIGTERM)    
+        process = subprocess.Popen(["pgrep", "-f", "start.sh"], stdout=subprocess.PIPE, text=True)
+        output, _ = process.communicate()
+        pid_to_kill_list = output.splitlines()
+        for pid_to_kill in pid_to_kill_list:
+            print(f"Pid to kill: {pid_to_kill}")
+            os.kill(int(pid_to_kill), signal.SIGTERM) #Kill the process
+        if '.zip' in event.src_path:
+            with zipfile.ZipFile(event.src_path, 'r') as zip_ref:
+                zip_ref.extractall(folder_to_watch)
+        else:
+            shutil.copy(event.src_path, folder_to_watch)          
+        print("File updated!")
+        observer.stop()
+\end{lstlisting}
 \subsection{Cloud Infrastructure}
 \subsection{Data Viewer}
 
