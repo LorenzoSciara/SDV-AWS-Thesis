@@ -155,7 +155,7 @@ public static class Autostart {
     private String endpoint = "http://localhost:8080";
     private int pollDelay = (int) TimeUnit.MINUTES.toSeconds(30);
     private String gatewayToken = "";
-    \...
+    ...
 }
 \end{lstlisting}
 
@@ -235,9 +235,59 @@ for sub in subsystems:
     mqttc.publish(publish_topic, messageFinal, 0)    
 \end{lstlisting}
 
-Come mostrato nel codice \ref{lst:TCUOrchestrator} viene fatta una iterazione su ogni sottosistema presente nel simulatore, vengono raccolti i dati in formato Json e vengono inviati all'AWS IoT Core service tramite l'oggetto visto in precedenza \ref{lst:MQTTConnection} per il collegamento con il servizio stesso. Questo sistema permette di avere la massima modularità dei sottosistemi, quindi eventualmente di poterne aggiungere con aggiornamenti futuri, l'unico vincolo è di dover indicare nel file di Python init dei subsistem la lista dei sottosistemi presenti, quindi aggiungere eventuali nuovi sottosistemi presenti.
-Andiamo ora a esamiare nel dettaglio un sottosistema d'esempio preso tra i sottosistemi creati per il progetto, valutandone le funzioni più importanti.
-RIPORTARE IL CODICE DI UNO DEI SOTTOSISTEMI CON DESCRIZIONE. SOLO LE FUNZIONI PIù IMPORTANTI E NON TUTTO IL CODICE COME PER ESEMPIO LA FUNZIONE CHE METTE INSIEME TUTTI I DATI.
+As shown in code \ref{lst:TCUOrchestrator}, an iteration is performed on each subsystem present in the simulator, the data is collected in Json format and sent to the AWS IoT Core service through the previously seen object in script \ref{lst:MQTTConnection} to establish the connection with the service itself. This system allows you to have maximum modularity of the subsystems, therefore possibly being able to add new ones with future updates, the only constraint is to specify the list of present subsystems in the Python init \ref{lst:TCUInit} file and then add any new subsystems present.
+\begin{lstlisting}[language=Python, caption={TCU init file for the import of the TCU subsystems}, label=lst:TCUInit]
+from .airConditioning import AirConditioning
+from .airbag import Airbag
+from .heatedSeats import HeatedSeats
+from .abs import ABS
+from .engine import Engine
+from .battery import Battery
+subsystems = [Engine(), Battery(), AirConditioning(), Airbag(), HeatedSeats(), ABS()]  
+\end{lstlisting}
+
+Now, we will examine one of the sample subsystems developed for the project and assess its primary functions. A simulator has been implemented to generate data from a hypothetical vehicle battery in the case of hybrid or fully electric vehicles. This subsystem reports three main pieces of information: the energy added to the battery through regenerative braking, the total energy stored in the battery at a given moment, and the battery temperature at a given instant. The vehicle is considered a system where an electric motor provides energy during acceleration, causing a decrease in the battery's energy. During deceleration, part of the energy is stored in the battery through regenerative braking. The battery's temperature varies over time due to these operations.
+
+The functions listed in code block \ref{lst:BatterySubsystem} are the most important parts of the class composing the subsystem simulator. These functions practically identify the common parts of each subsystem present in the project. The telemetry data is first aggregated in a JSON format and then returned by these functions. Additionally, a function is required to return an identifying name of the subsystem. This name is useful to the orchestrator shown previously in \ref{lst:TCUOrchestrator} at line 2 for constructing the data packet to be sent to the server correctly.
+\begin{lstlisting}[language=Python, caption={Battery subsystem return code}, label=lst:BatterySubsystem]
+def get_info(self, time):
+    return {
+        "StateOfCharge" : self.stateOfCharge,
+        "BatteryTemperature": self.batteryTemperature,
+        "EnergyAdded" : self.energyAdded,
+    }
+def get_name(self):
+    return "Battery"  
+\end{lstlisting}
+During the updating phase, this data \ref{fig:TCUsimulatorP}, as well as all other subsystems, is created using a different algorithm. This ensures that when the telemetry data is analyzed, the download event is clearly visible. It is important to note that each Python subsystem has a related set of tests that can be utilized by the cloud structure, as analyzed further below.
+\begin{figure}[h]  % 'h' significa che la figura viene posizionata qui
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/TCUsimulatorP.png}  % Sostituisci 'nome_immagine' con il nome del tuo file immagine e l'estensione
+    \caption{A snapshot of the TCU simulator on the virtual machine}
+    \label{fig:TCUsimulatorP}
+\end{figure}
+
+In the final phase of the project, it was decided to modify the simulator to use a compiled script. This change makes the system more similar to a real world situation, since in a real environment there would be systems where it is not possible to have scripts based on interpreters such as the Python language, for reasons of size and resources, but where compiled programs are needed, which are more optimized. In order to do so and to give a concrete demonstration of the changes made to the infrastructure as analyzed in the following, it was decided to create a much simpler TCU simulator in C language (C simulator code). 
+\begin{figure}[h]  % 'h' significa che la figura viene posizionata qui
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/TCUsimulatorC.png}  % Sostituisci 'nome_immagine' con il nome del tuo file immagine e l'estensione
+    \caption{A snapshot of the TCU compiled simulator on the Raspberry Pi interface}
+    \label{fig:TCUsimulatorC}
+\end{figure}
+
+In order to be compatible with both the first and second versions of the simulator (for backward compatibility), it was also necessary to adapt the orchestrator element \ref{lst:TCUOrchestrator} to be capable of recognizing the type of simulator to which it would be interfaced with. To make this possible, a specification file indicating the type of simulator used \ref{lst:TCUManifest} was added to each TCU simulator.
+\begin{lstlisting}[language=c, caption={Manifest example of compiled TCU simulator}, label=lst:TCUManifest]
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project>
+    <name>C Project</name>
+    <language>C</language>
+    <compiler>gcc</compiler>
+    <build_command>gcc main.c -o main.exe</build_command>
+    <run_command>./main.exe</run_command>
+</project>
+\end{lstlisting}
+
+
 \subsection{Cloud Infrastructure}
 \subsection{Data Viewer}
 
