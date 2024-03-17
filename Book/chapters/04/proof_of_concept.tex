@@ -338,8 +338,20 @@ def update_file(event):
         print("File updated!")
         observer.stop()
 \end{lstlisting}
+
+\begin{figure}[h]  % 'h' significa che la figura viene posizionata qui
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/watchdog_log.png}  % Sostituisci 'nome_immagine' con il nome del tuo file immagine e l'estensione
+    \caption{A snapshot of the TCU recognition module logs}
+    \label{fig:Watchdog_log}
+\end{figure}
+
+The TCU simulator is composed of the three elements analyzed so far, and their evolution during the project made it possible to create a system compatible with systems based on ARM architectures, i.e. Raspberry Pi, capable of generating telemetry data and sending them to the cloud server connected through IoT Core, receiving updates, and rebooting the system to make the updates effective and active. Simulations were performed on virtual machines with x86 architecture processors. The project will proceed to real test phases on actual systems once all necessary information has been acquired.
+
 \subsection{Cloud Infrastructure}
+Now the core of the project will be analyzed in detail, which is the cloud structure that allows, through the services offered by AWS previously introduced, both the connection of the vehicle to send, analyze and manipulate data telemetry, and the cloud structure that allows the execution of the Hawkbit server for the deployment of the update. This part of the project, as well as the previous one of the TCU simulator, experienced several changes during the implementation of the project, starting from a more experimental part of analysis and study of the various services, passing through a part of use more concretely linked to the development of the project, always relying on the console visualization tools, to arrive at a phase of creation of the entire structure through CDK, by executing the various stacks using Python script. To avoid unnecessary repetition of operations, to simplify things, it was decided to directly analyze the structure of the stack built with CDK. In the following sections, each component of the structure will be examined in detail, assuming that there is already a general and theoretical knowledge of the various services used.
+
 \subsection{Data Viewer}
 
 \section{Test and Validation}
-\subsection{RPi demo}
+\subsection{RaspberryPi demo}
