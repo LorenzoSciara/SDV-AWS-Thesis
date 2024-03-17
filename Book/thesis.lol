@@ -8,3 +8,10 @@
 \contentsline {lstlisting}{\numberline {4.8}Manifest example of compiled TCU simulator}{49}{lstlisting.4.8}%
 \contentsline {lstlisting}{\numberline {4.9}Main function of the update recognition system}{50}{lstlisting.4.9}%
 \contentsline {lstlisting}{\numberline {4.10}Code for performing actions when the designated download folder is changed}{51}{lstlisting.4.10}%
+\contentsline {lstlisting}{\numberline {4.11}Code for the creation of IoT Core Thing and related policies}{52}{lstlisting.4.11}%
+\contentsline {lstlisting}{\numberline {4.12}Code for the creation of IoT Core Thing certificates and keys}{53}{lstlisting.4.12}%
+\contentsline {lstlisting}{\numberline {4.13}Code for the creation and destruction of IoT Core Thing certificates and keys from the CDK stack}{54}{lstlisting.4.13}%
+\contentsline {lstlisting}{\numberline {4.14}Code for the creation the EC2 Hawkbit server istance}{55}{lstlisting.4.14}%
+\contentsline {lstlisting}{\numberline {4.15}Code for opening the doors}{55}{lstlisting.4.15}%
+\contentsline {lstlisting}{\numberline {4.16}Code to run commands on the machine}{56}{lstlisting.4.16}%
+\contentsline {lstlisting}{\numberline {4.17}Hawkbit server Docker compose}{56}{lstlisting.4.17}%

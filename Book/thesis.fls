@@ -750,6 +750,10 @@ INPUT .\images\watchdog_log.png
 INPUT .\images\watchdog_log.png
 INPUT .\images\watchdog_log.png
 INPUT .\images\watchdog_log.png
+INPUT C:\Users\Lorenzo\AppData\Local\Programs\MiKTeX\tex\latex\base\ts1cmtt.fd
+INPUT C:\Users\Lorenzo\AppData\Local\Programs\MiKTeX\tex\latex\base\ts1cmtt.fd
+INPUT C:\Users\Lorenzo\AppData\Local\Programs\MiKTeX\tex\latex\base\ts1cmtt.fd
+INPUT C:\Users\Lorenzo\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tctt1200.tfm
 INPUT .\chapters\05\concluding_remarks.tex
 INPUT .\chapters\05\concluding_remarks.tex
 OUTPUT chapters\05\concluding_remarks.aux
@@ -781,6 +785,8 @@ INPUT .\chapters\05\concluding_remarks.aux
 INPUT chapters\05\concluding_remarks.aux
 INPUT .\thesis.out
 INPUT .\thesis.out
+INPUT C:\Users\Lorenzo\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tctt1200.pk
+INPUT C:\Users\Lorenzo\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tctt1200.pk
 INPUT C:\Users\Lorenzo\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
 INPUT C:\Users\Lorenzo\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
 INPUT C:\Users\Lorenzo\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb

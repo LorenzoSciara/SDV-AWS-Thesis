@@ -349,7 +349,180 @@ def update_file(event):
 The TCU simulator is composed of the three elements analyzed so far, and their evolution during the project made it possible to create a system compatible with systems based on ARM architectures, i.e. Raspberry Pi, capable of generating telemetry data and sending them to the cloud server connected through IoT Core, receiving updates, and rebooting the system to make the updates effective and active. Simulations were performed on virtual machines with x86 architecture processors. The project will proceed to real test phases on actual systems once all necessary information has been acquired.
 
 \subsection{Cloud Infrastructure}
+INSERIRE UNO SCHEMA LOGICO DELL'INFRASTRUTTURA CLOUD CON LE ICONE AWS E I COLLEGAMENTI TRA I VARI SERVIZI
+
 Now the core of the project will be analyzed in detail, which is the cloud structure that allows, through the services offered by AWS previously introduced, both the connection of the vehicle to send, analyze and manipulate data telemetry, and the cloud structure that allows the execution of the Hawkbit server for the deployment of the update. This part of the project, as well as the previous one of the TCU simulator, experienced several changes during the implementation of the project, starting from a more experimental part of analysis and study of the various services, passing through a part of use more concretely linked to the development of the project, always relying on the console visualization tools, to arrive at a phase of creation of the entire structure through CDK, by executing the various stacks using Python script. To avoid unnecessary repetition of operations, to simplify things, it was decided to directly analyze the structure of the stack built with CDK. In the following sections, each component of the structure will be examined in detail, assuming that there is already a general and theoretical knowledge of the various services used.
+
+The initial stack analyzed is related to the construction of IoT core services for device connectivity, that is, the connection of the TCU simulator to the cloud service for collecting telemetry data. In order to utilize the IoT core service, an IoT Core thing had to be defined, which can be described as the cloud-based version of the device's digital twin. After creating the IoT device assigning it a name (as shown in line 1 of code \ref{lst:AWSIoTThing}), policies were added to enable connection with the TCU simulator and exchange of telemetry data via the MQTT protocol (line 4).
+\begin{lstlisting}[language=Python, caption={Code for the creation of IoT Core Thing and related policies}, label=lst:AWSIoTThing]
+cfn_thing=iot.CfnThing(self, "HawkbitDevice",
+    thing_name="HawkbitDevice001"
+)
+cfn_policy = iot.CfnPolicy(self, "CfnPolicy", # Create a policy of the certificate
+    policy_document={
+    "Version":"2012-10-17",
+    "Statement":[{
+        "Effect":"Allow",
+        "Action":["iot:Connect"],
+        "Resource":[f"arn:aws:iot:"+region+":"+account+":client/" + cfn_thing.thing_name]
+    },
+    {
+        "Effect": "Allow",
+        "Action": ["iot:Publish"],
+        "Resource":[f"arn:aws:iot:"+region+":"+account+":topic/*"]
+    }]
+    },
+    policy_name=f"{cfn_thing.thing_name}IoTCertPolicy",
+)
+\end{lstlisting}
+Note that, in this and all other stacks, the region and account ID are taken directly from the CDK functionality.
+The process of creating certificates was then implemented using Boto3 functions to save resources. Code \ref{lst:BotoIoTThingCert} certificates and their related keys are generated using a string seed and saved in a local directory for use in the physical device. The certificates are then returned to the CDK for use by the stack in saving to the IoT Core thing. The two-second waiting period at line 23 is a precautionary measure to ensure the completion of the certificate creation operation.
+\begin{lstlisting}[language=Python, caption={Code for the creation of IoT Core Thing certificates and keys}, label=lst:BotoIoTThingCert]
+import boto3
+import os
+SECRET_NAME = "****"
+iot = boto3.client('iot', region_name='*****')
+def on_create(thing_name):
+    response = iot.create_keys_and_certificate(setAsActive=True)
+    certificate_id = response['certificateId']
+    certificate_pem = response['certificatePem']
+    key_pair = response['keyPair']
+    directory_path="./certificates"
+    if not os.path.exists(directory_path):
+        os.makedirs(directory_path)
+    file_path = os.path.join(directory_path, f"{thing_name}.private.key")
+    with open(file_path, 'w') as file:
+        file.write(key_pair['PrivateKey'])
+    file_path = os.path.join(directory_path, f"{thing_name}.public.key")
+    with open(file_path, 'w') as file:
+        file.write(key_pair['PublicKey'])
+    file_path = os.path.join(directory_path, f"{thing_name}.cert.pem")
+    with open(file_path, 'w') as file:
+        file.write(certificate_pem)
+    time.sleep(2)
+    return {
+        'PhysicalResourceId': certificate_id,
+        'Data': {
+            'certificateId': certificate_id
+        }
+    }
+\end{lstlisting}
+
+To enable the creation of security files via Boto3, separate from the CDK stack, a status variable was introduced to indicate the deploy or destroy status of the system \ref{lst:AWSIoTThingCert}. This was necessary to synchronize the deployment of the certificate and keys. Contrary to the rest of the mechanisms built into the CDK, the Boto3 functions are independent and not affected by the CDK commands. If this state variable had not been used, there would have been a misalignment between CDK stack for the IoT Core thing creation and Boto3 certificates. CDK functions can be used to destroy the certificate and keys as in line 5. Finally, the created certificate is linked to the relevant policy and to the IoT Core thing for proper usage.
+\begin{lstlisting}[language=Python, caption={Code for the creation and destruction of IoT Core Thing certificates and keys from the CDK stack}, label=lst:AWSIoTThingCert]
+if (status=="deploy"): # Creation of certificate with boto3
+    certificate=cert_handler(cfn_thing.thing_name)
+else:
+    certificate={"Data": {"certificateId": "Null"}}
+print(f"{certificate['Data']['certificateId']}")
+deactive_certificate_resource = cr.AwsCustomResource(self, "DeactiveCertificateResource",
+    on_delete=cr.AwsSdkCall(
+        service="Iot",
+        action="UpdateCertificate",
+        parameters={
+            "certificateId": f"{certificate['Data']['certificateId']}",
+            "newStatus": "INACTIVE",
+        },
+    ),
+    policy=cr.AwsCustomResourcePolicy.from_sdk_calls(
+        resources=cr.AwsCustomResourcePolicy.ANY_RESOURCE
+    )
+)
+delete_certificate_resource = cr.AwsCustomResource(self, "DeleteCertificateResource", # Destruction of certificates
+        service="Iot",
+        action="DeleteCertificate",
+        parameters={
+            "certificateId": f"{certificate['Data']['certificateId']}",
+            "forceDelete": f"{True}"
+        },
+    ),
+    policy=cr.AwsCustomResourcePolicy.from_sdk_calls(
+        resources=cr.AwsCustomResourcePolicy.ANY_RESOURCE
+    )
+)
+deactive_certificate_resource.node.add_dependency( delete_certificate_resource )
+\end{lstlisting}
+
+The next step in building the cloud infrastructure involves creating the necessary environment for the Hawkbit server. The idea is to use a basic EC2 machine to build the server on, which, as discussed later, will be contacted by the AWS Codepipeline via the server's API interfaces to deploy the updates. To create the EC2 instance, as shown in code \ref{lst:AWSEC2Istance}, requires a Virtual Private Cloud (VPC) network in which to insert the instance itself as in line 1, an Amazon Machine Image (AMI) that contains everything necessary for the computer to run properly (line 2), and a role that can provide the correct policies for the computer to function properly (line 3).
+
+\begin{lstlisting}[language=Python, caption={Code for the creation the EC2 Hawkbit server istance}, label=lst:AWSEC2Istance]
+vpc = ec2.Vpc(self, "VPC",
+    nat_gateways=0,
+    subnet_configuration=[ ec2.SubnetConfiguration( name="public",subnet_type=ec2.SubnetType.PUBLIC ) ]
+)
+generic_linux = ec2.MachineImage.generic_linux({  # AMI
+    'eu-west-1': 'ami-0905a3c97561e0b69',
+})
+role = iam.Role(self, "InstanceSSM", assumed_by=iam.ServicePrincipal("ec2.amazonaws.com")) 
+role.add_managed_policy( iam.ManagedPolicy.from_aws_managed_policy_name( "AmazonSSMManagedInstanceCore" ) )
+instance = ec2.Instance(self, "Instance", # Instance
+    instance_type=ec2.InstanceType("t2.small"),
+    machine_image=generic_linux,
+    vpc = vpc,
+    role = role,
+)
+\end{lstlisting}
+
+After creating the EC2 machine instance, it is necessary to modify its properties to ensure correct operation of the Hawkbit server. Specifically, two ports must be opened for HTTP connections \ref{lst:AWSEC2Ports}. This allows the server to be accessible to both the Codepipeline for deploying updates from the Codepipeline to the server, and the TCU simulator device for downloading updates from the server to the edge device \cite{HawkbitDockerCompose}.
+\begin{lstlisting}[language=Python, caption={Code for opening the doors}, label=lst:AWSEC2Ports]
+instance.connections.connections.allow_from_any_ipv4( ec2.Port.tcp(8080), "Allow inbound HTTP traffic" )
+instance.connections.connections.allow_from_any_ipv4( ec2.Port.tcp(5672), "Allow inbound HTTP traffic" )
+\end{lstlisting}
+
+At this step, it is possible to insert commands directly into the created machine, which are interpreted as command-line inputs necessary to start the server via the Docker image \ref{lst:AWSEC2Commands}. Specifically, a docker compose file is used to instantiate all the necessary server elements, including a database to record various information and a queue manager to manage external connections \ref{lst:AWSEC2DockerCompose}. Note that the properties mentioned in the code on line 36 are present in a local file. These properties are necessary to set the correct IP address in the server's Docker image interface. The docker compose file was created based on information from the Hawkbit guide.
+\begin{lstlisting}[language=Python, caption={Code to run commands on the machine}, label=lst:AWSEC2Commands]
+file_path = "./files/docker-compose.yml"
+with open(file_path, 'r') as file:
+    docker_compose = file.read()
+instance.user_data.add_commands(
+    'sudo apt-get update -y',
+    'sudo apt-get install -y docker-compose',
+    f'sudo echo -e "{docker_compose}" > /home/ubuntu/docker-compose.yml',
+    'sudo sed -i "s/\[server_ip_address\]/$(sudo curl -s http://169.254.169.254/latest/meta-data/public-ipv4)/g" /home/ubuntu/docker-compose.yml',
+    'sudo docker-compose -f /home/ubuntu/docker-compose.yml up -d',
+)
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python, caption={Hawkbit server Docker compose}, label=lst:AWSEC2DockerCompose]
+version: '3'
+services:
+    rabbitmq:
+    image: 'rabbitmq:3-management'
+    restart: always
+    ports:
+        - '15672:15672'
+        - '5672:5672'
+    labels:
+        NAME: 'rabbitmq'
+    mysql:
+    image: 'mysql:8.0'
+    environment:
+        MYSQL_DATABASE: 'hawkbit'
+        # MYSQL_USER: 'root' is created by default in the container for mysql 8.0+
+        MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
+    restart: always
+    ports:
+        - '3306:3306'
+    labels:
+        NAME: 'mysql'
+    hawkbit:
+    image: 'hawkbit/hawkbit-update-server:latest-mysql'
+    environment:
+        - 'SPRING_DATASOURCE_URL= jdbc:mariadb://mysql:3306/hawkbit'
+        - 'SPRING_RABBITMQ_HOST=rabbitmq'
+        - 'SPRING_RABBITMQ_USERNAME=guest'
+        - 'SPRING_RABBITMQ_PASSWORD=guest'
+        - 'SPRING_DATASOURCE_USERNAME=root'
+        - 'HAWKBIT_ARTIFACT_URL_PROTOCOLS_DOWNLOAD-HTTP_HOSTNAME= [server_ip_address]'
+        - 'HAWKBIT_ARTIFACT_URL_PROTOCOLS_DOWNLOAD-HTTP_IP= [server_ip_address]'
+    restart: always
+    ports:
+        - '8080:8080'
+    volumes:
+        - ./application.properties: /opt/hawkbit/application.properties
+    labels:
+        NAME: 'hawkbit'
+\end{lstlisting}
 
 \subsection{Data Viewer}
 

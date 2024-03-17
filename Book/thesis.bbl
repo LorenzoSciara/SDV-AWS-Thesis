@@ -445,4 +445,10 @@ AWS. (2024) Iso/iec 27017:2015 compliance. Accessed: 05 03, 2024. [Online].
   \url{https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html}
 \BIBentrySTDinterwordspacing
 
+\bibitem{HawkbitDockerCompose}
+\BIBentryALTinterwordspacing
+eclipse. (2024) From docker image. Accessed: 10 03, 2024. [Online]. Available:
+  \url{https://eclipse.dev/hawkbit/gettingstarted/}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}
