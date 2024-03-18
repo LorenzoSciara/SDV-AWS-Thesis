@@ -25,14 +25,14 @@
 \contentsline {section}{\numberline {4.2}Architectural design}{42}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}TCU Simulator}{43}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Cloud Infrastructure}{52}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Data Viewer}{57}{subsection.4.2.3}%
-\contentsline {section}{\numberline {4.3}Test and Validation}{57}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}RaspberryPi demo}{57}{subsection.4.3.1}%
-\contentsline {chapter}{\numberline {5}Conclding Remarks}{58}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Contribution Recaps}{58}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Have we meet the PoC goals?}{58}{subsection.5.1.1}%
-\contentsline {section}{\numberline {5.2}Future Works}{58}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Transform the poc in a product}{58}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Virtual workbenches}{58}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Manage additional Use Cases (ML, Cockpit Apps, remote ECU etc..)}{58}{subsection.5.2.3}%
-\contentsline {chapter}{Bibliography}{59}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {4.2.3}Data Viewer}{59}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Test and Validation}{59}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}RaspberryPi demo}{59}{subsection.4.3.1}%
+\contentsline {chapter}{\numberline {5}Conclding Remarks}{60}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Contribution Recaps}{60}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Have we meet the PoC goals?}{60}{subsection.5.1.1}%
+\contentsline {section}{\numberline {5.2}Future Works}{60}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Transform the poc in a product}{60}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Virtual workbenches}{60}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Manage additional Use Cases (ML, Cockpit Apps, remote ECU etc..)}{60}{subsection.5.2.3}%
+\contentsline {chapter}{Bibliography}{61}{subsection.5.2.3}%

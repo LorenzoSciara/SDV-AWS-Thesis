@@ -15,3 +15,6 @@
 \contentsline {lstlisting}{\numberline {4.15}Code for opening the doors}{55}{lstlisting.4.15}%
 \contentsline {lstlisting}{\numberline {4.16}Code to run commands on the machine}{56}{lstlisting.4.16}%
 \contentsline {lstlisting}{\numberline {4.17}Hawkbit server Docker compose}{56}{lstlisting.4.17}%
+\contentsline {lstlisting}{\numberline {4.18}Hawkbit server Docker compose}{57}{lstlisting.4.18}%
+\contentsline {lstlisting}{\numberline {4.19}CDK Code for the creation of the TCU simulator Codecommit repository}{58}{lstlisting.4.19}%
+\contentsline {lstlisting}{\numberline {4.20}CDK Code for the Codecommit source stage set up}{58}{lstlisting.4.20}%

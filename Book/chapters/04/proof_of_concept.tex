@@ -522,8 +522,64 @@ services:
         - ./application.properties: /opt/hawkbit/application.properties
     labels:
         NAME: 'hawkbit'
+    \end{lstlisting}
+
+The final step in the Hawkbit EC2 server stack involves saving the necessary parameters in the Parameter Store of the System Manager (SSM) to connect the AWS CodePipeline with the Hawkbit server via its APIs. For example, let's consider the saving of one of the parameters, specifically the IP address of the EC2 machine in Code \ref{lst:AWSEC2ParameterStore}. The interaction with the SSM was performed using custom components of the CDK. The identifying name of the parameter, the value, and the type of the variable to be saved are indicated from line 5. In this case, the variable will simply be saved as a String since it does not need to be obscured, this is different from the user's password, which is saved as SecureString. The address is retrieved from the newly created instance using CDK functions in the line 7 of the code. The Lambda functions utilized in the Codepipeline will then access the saved parameters as will be examined later.
+\begin{lstlisting}[language=Python, caption={Hawkbit server Docker compose}, label=lst:AWSEC2ParameterStore]
+    create_param3 = cr.AwsCustomResource(self, "CreateParam3",
+    on_create=cr.AwsSdkCall(
+        service="SSM",
+        action="PutParameter",
+        parameters={
+            "Name": "/hawkbitServer/ip_address",
+            "Value": f"{instance.instance_public_ip}",
+            "Type": "String"
+        },
+        physical_resource_id= cr.PhysicalResourceId.of("create_param3")
+    ),
+    on_delete=cr.AwsSdkCall(
+        service="SSM",
+        action="DeleteParameter",
+        parameters={
+            "Name": "/hawkbitServer/ip_address",
+        },
+        physical_resource_id= cr.PhysicalResourceId.of("delete_param3")
+    ),
+    policy=cr.AwsCustomResourcePolicy.from_sdk_calls(
+        resources=cr.AwsCustomResourcePolicy.ANY_RESOURCE
+    )
+)
 \end{lstlisting}
 
+Let's now analyze the construction of the pipeline for managing updates via Codepipeline. Two pipeline variants were elaborated during the development phase: one for managing updates via Python scripts, and one for managing compiled updates, written in the C language. To prevent description redundancy of the code, the two Codepipelines will be analyzed step by step. Common stages will be explained only once, while the specifics of the reference Codepipeline will be discussed for the discordant parts. The Stack for updates in C language will serve as a reference for the common parts of Codepipeline.
+To begin, create a Codecommit repository for the pipeline source \ref{lst:AWSCodecommitRepo}. The Codecommit repository will contain the code and functionality to update the TCU simulator unit seen previously. The update will be created from a local ZIP file as shown in line 4. For the C-compiled pipeline, use the source code provided in the zip file for compilation. The Python script for the Codepipeline Python does not require compilation and will be ready to run in theory.
+\begin{lstlisting}[language=Python, caption={CDK Code for the creation of the TCU simulator Codecommit repository}, label=lst:AWSCodecommitRepo]
+code_repo = codecommit.Repository(
+    self, "HawkbitDeviceC",
+    repository_name="HawkbitDeviceC",
+    code = codecommit.Code.from_zip_file( "./repos/Lorenzo_DeviceC.zip", "master" ) # Copies files from app directory to the repo as the initial commit
+)
+\end{lstlisting}
+
+The Codecommit repository is placed in the first stage of the pipeline, as shown in \ref{lst:AWSCodecommitSource}. Each Codepipeline stage can use an artifact as input and output. Since this is the first stage, only an output artifact is set, as shown in line 2. The pipelines require a default artifact bucket, which is an AWS S3 bucket or folder, as shown in line 1, and can be used by the pipeline if needed as will be shown in the actual pipeline creation phase later.
+\begin{lstlisting}[language=Python, caption={CDK Code for the Codecommit source stage set up}, label=lst:AWSCodecommitSource]
+artifact_bucket = s3.Bucket.from_bucket_arn(self, f"codepipeline-{region}-****", f"arn:aws:s3:::codepipeline-{region}-****") #default codepipeline bucket
+source_artifact = pipeline.Artifact("SourceArtifact")
+source_stage = pipeline.StageProps(
+    stage_name="Source",
+    actions=[
+        pipelineactions.CodeCommitSourceAction(
+            action_name="CodeCommit",
+            branch="master",
+            output=source_artifact,
+            repository=code_repo,
+            variables_namespace="SourceVariables"
+        )
+    ]
+)
+\end{lstlisting}
+Il prossimo stage necessita di una descrizione specifica per la pipeline Python e per la pipeline C. Si tratta dello stage di build. In particolare per lo stage di build del'update compilato in C è necessario creare un Codebuild stage ad hoc per la compilazione di script C in quanto non è direttamente supportato dal servizio AWS Codebuild. In particolare ANALIZZARE IL CODICE PER LA CREAZIONE DEL DOCKER CODEBUILD.
+Per quanto riguarda invece la pipeline Python, dal momento che per gli script python non è necessaria una vera e propria compilazione del codice, lo stage di build viene utilizzato come stage di test per lanciare i test costruiti ad hoc per il codice del repository. In particolare ANALIZZARE I TEST DI PYTSET E DIRE CHE SE CAMBIA IL CODICE DEVONO CAMBIARE ANCHE I TEST O SE VIENE AGGIUNTO CODICE DOVRANNO ESSERE AGGIUNTI ANCHE I RELATIVI TEST. 
 \subsection{Data Viewer}
 
 \section{Test and Validation}
