@@ -370,8 +370,7 @@ cfn_policy = iot.CfnPolicy(self, "CfnPolicy", # Create a policy of the certifica
         "Effect": "Allow",
         "Action": ["iot:Publish"],
         "Resource":[f"arn:aws:iot:"+region+":"+account+":topic/*"]
-    }]
-    },
+    }]},
     policy_name=f"{cfn_thing.thing_name}IoTCertPolicy",
 )
 \end{lstlisting}
@@ -404,8 +403,7 @@ def on_create(thing_name):
         'PhysicalResourceId': certificate_id,
         'Data': {
             'certificateId': certificate_id
-        }
-    }
+    }}
 \end{lstlisting}
 
 To enable the creation of security files via Boto3, separate from the CDK stack, a status variable was introduced to indicate the deploy or destroy status of the system \ref{lst:AWSIoTThingCert}. This was necessary to synchronize the deployment of the certificate and keys. Contrary to the rest of the mechanisms built into the CDK, the Boto3 functions are independent and not affected by the CDK commands. If this state variable had not been used, there would have been a misalignment between CDK stack for the IoT Core thing creation and Boto3 certificates. CDK functions can be used to destroy the certificate and keys as in line 5. Finally, the created certificate is linked to the relevant policy and to the IoT Core thing for proper usage.
@@ -422,24 +420,20 @@ deactive_certificate_resource = cr.AwsCustomResource(self, "DeactiveCertificateR
         parameters={
             "certificateId": f"{certificate['Data']['certificateId']}",
             "newStatus": "INACTIVE",
-        },
-    ),
+    },),
     policy=cr.AwsCustomResourcePolicy.from_sdk_calls(
         resources=cr.AwsCustomResourcePolicy.ANY_RESOURCE
-    )
-)
+))
 delete_certificate_resource = cr.AwsCustomResource(self, "DeleteCertificateResource", # Destruction of certificates
         service="Iot",
         action="DeleteCertificate",
         parameters={
             "certificateId": f"{certificate['Data']['certificateId']}",
             "forceDelete": f"{True}"
-        },
-    ),
+    },),
     policy=cr.AwsCustomResourcePolicy.from_sdk_calls(
         resources=cr.AwsCustomResourcePolicy.ANY_RESOURCE
-    )
-)
+))
 deactive_certificate_resource.node.add_dependency( delete_certificate_resource )
 \end{lstlisting}
 
@@ -547,8 +541,7 @@ The final step in the Hawkbit EC2 server stack involves saving the necessary par
     ),
     policy=cr.AwsCustomResourcePolicy.from_sdk_calls(
         resources=cr.AwsCustomResourcePolicy.ANY_RESOURCE
-    )
-)
+))
 \end{lstlisting}
 
 Let's now analyze the construction of the pipeline for managing updates via Codepipeline. Two pipeline variants were elaborated during the development phase: one for managing updates via Python scripts, and one for managing compiled updates, written in the C language. To prevent description redundancy of the code, the two Codepipelines will be analyzed step by step. Common stages will be explained only once, while the specifics of the reference Codepipeline will be discussed for the discordant parts. The Stack for updates in C language will serve as a reference for the common parts of Codepipeline.
@@ -574,12 +567,99 @@ source_stage = pipeline.StageProps(
             output=source_artifact,
             repository=code_repo,
             variables_namespace="SourceVariables"
-        )
-    ]
+)])
+\end{lstlisting}
+
+The next stage requires separate and specific descriptions for both the Python and C pipelines. This stage concerns the build process. Specifically, for the build stage of the compiled update in C, it is essential to establish a dedicated CodeBuild stage for compiling C scripts since it is not directly supported by the AWS CodeBuild service through the use of an ECR registry. A second supporting CodePipeline is created by following the steps shown in code \ref{lst:AWSCPipeline}. The first step involves creating a CodeCommit repository (at line 4) that contains the necessary information for building the new Codebuild module to compile the script. This includes a Dockerfile for configuring the image with the necessary command to be created and a configuration file for the second pipeline build phase. The second stage of this pipeline involves the Codebuild stage (line 20), which is the actual creation of the image, placed into a special ECR (line 15). This ECR is then used in the update pipeline. It is important to note that during the creation of the second pipeline different roles are created with the related policies for the interaction between the different components.
+\begin{lstlisting}[language=Python, caption={CDK Code for the Codepipeline for the C compiled file build creation}, label=lst:AWSCPipeline]
+C_custom_code_repo = codecommit.Repository(
+    self, "HawkbitCCustomBuildImageRepo",
+    repository_name="HawkbitCCustomBuildImage",
+    code= codecommit.Code.from_zip_file( "./repos/HawkbitCCustomBuildImage.zip", "main" )
+)
+source_stage_c = pipeline.StageProps(
+    stage_name="Source",
+    actions=[
+        pipelineactions.CodeCommitSourceAction(
+            action_name="CodeCommit",
+            branch="main",
+            output=source_artifact_c,
+            repository=C_custom_code_repo,
+    )])
+ecr_repository = ecr.Repository(self, "HawkbitCBlogRepo",
+    repository_name="hawkbit-C-blog",
+    removal_policy=RemovalPolicy.DESTROY,
+    auto_delete_images=True,
+)
+C_custom_build = codebuild.Project(
+    self, "HawkbitCCustomBuildImageBuild",
+    build_spec=codebuild.BuildSpec.from_source_filename(
+        "buildspec.yml"),
+    source=codebuild.Source.code_commit(
+        repository=C_custom_code_repo,
+        branch_or_ref="master"),
+    environment=codebuild.BuildEnvironment(
+        build_image= codebuild.LinuxBuildImage.AMAZON_LINUX_2_ARM_2,
+        privileged=True),
+    role=codebuild_role,
+    project_name="HawkbitCCustomBuildImage",
+    environment_variables={
+        'ecr': codebuild.BuildEnvironmentVariable(
+            value=ecr_repository.repository_uri),
+        'tag': codebuild.BuildEnvironmentVariable(
+            value='v1'),
+    },
+    timeout=Duration.minutes(60)
+)
+ecr_repository.grant_pull_push(C_custom_build)
+build_stage_c = pipeline.StageProps(
+    stage_name="Build",
+    actions=[
+        pipelineactions.CodeBuildAction(
+            action_name="Build",
+            project=C_custom_build,
+            input=source_artifact_c,
+)])
+C_custom_pipeline = pipeline.Pipeline(
+    self, "hawkbit-device-c",
+    pipeline_name="hawkbit-device-c",
+    artifact_bucket=artifact_bucket,
+    stages=[source_stage_c, build_stage_c]
 )
 \end{lstlisting}
-Il prossimo stage necessita di una descrizione specifica per la pipeline Python e per la pipeline C. Si tratta dello stage di build. In particolare per lo stage di build del'update compilato in C è necessario creare un Codebuild stage ad hoc per la compilazione di script C in quanto non è direttamente supportato dal servizio AWS Codebuild. In particolare ANALIZZARE IL CODICE PER LA CREAZIONE DEL DOCKER CODEBUILD.
-Per quanto riguarda invece la pipeline Python, dal momento che per gli script python non è necessaria una vera e propria compilazione del codice, lo stage di build viene utilizzato come stage di test per lanciare i test costruiti ad hoc per il codice del repository. In particolare ANALIZZARE I TEST DI PYTSET E DIRE CHE SE CAMBIA IL CODICE DEVONO CAMBIARE ANCHE I TEST O SE VIENE AGGIUNTO CODICE DOVRANNO ESSERE AGGIUNTI ANCHE I RELATIVI TEST. 
+
+In the initial Codepipeline, a machine is built during the stage to compile the C script from the Source stage using the image saved in the previously analyzed ECR. At this point, the build stage can compile and build the necessary C script for the update. The final result of this stage \ref{lst:AWSCodepipelineBuild} is an executable in the pipeline that contains the functionality produced by the C script in the Source stage.
+\begin{lstlisting}[language=Python, caption={CDK Code for the Codecommit build stage set up}, label=lst:AWSCodepipelineBuild]
+hawkbit_build = codebuild.Project(
+    self, "HawkbitDeviceBuildC",
+    build_spec=codebuild.BuildSpec.from_source_filename(
+        "buildspec.yml"),
+    source=codebuild.Source.code_commit(
+        repository=code_repo,
+        branch_or_ref="master"
+    ),
+    environment=codebuild.BuildEnvironment(
+        privileged=True,
+        build_image= codebuild.LinuxArmBuildImage.from_ecr_repository( ecr_repository, "v1")
+    ),
+    project_name="HawkbitDeviceBuildC"
+)
+build_stage = pipeline.StageProps(
+    stage_name="Build",
+    actions=[
+        pipelineactions.CodeBuildAction(
+            action_name="Build",
+            input=pipeline.Artifact("SourceArtifact"),
+            project=hawkbit_build,
+            outputs=[build_artifact]
+    )])
+\end{lstlisting}
+
+Regarding the Python pipeline, the build stage is utilized as a test stage to launch tests built specifically for the repository code. This is due to the fact that Python scripts do not require actual code compilation. Using the pytest tool, it is possible to initiate the battery of tests present in the code repository. This information is located in the build configuration file within the repository.
+
+In seguito, in entrambe le pipeline vengono dichiarati gli stage contenenti le lambda function responsabili della interazione con l'Hawkbit server tramite le sue API. In particolare sono presenti 3 lambda functions distribuite su tre diversi stage per dare una maggiore modularità: ANALIZZARE I TRE STAGE CON LE TRE LAMBDA SENZA PERò RIPORTARE TROPPO CODICE.
+
+Come ultimo punto viene dichiarata la pipeline con tutti gli stage necessari in modo tale che venga costruita correttamente. In pratica con questi stage è possibile effettuare un build se necessario, e un deploy degli aggiornamenti direttamente sul device TCU simulator tramite l'utilizzo del server Hawkbit e le sue funzionalità esposte con API.
 \subsection{Data Viewer}
 
 \section{Test and Validation}
