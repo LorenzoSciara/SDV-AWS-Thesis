@@ -657,9 +657,83 @@ build_stage = pipeline.StageProps(
 
 Regarding the Python pipeline, the build stage is utilized as a test stage to launch tests built specifically for the repository code. This is due to the fact that Python scripts do not require actual code compilation. Using the pytest tool, it is possible to initiate the battery of tests present in the code repository. This information is located in the build configuration file within the repository.
 
-In seguito, in entrambe le pipeline vengono dichiarati gli stage contenenti le lambda function responsabili della interazione con l'Hawkbit server tramite le sue API. In particolare sono presenti 3 lambda functions distribuite su tre diversi stage per dare una maggiore modularità: ANALIZZARE I TRE STAGE CON LE TRE LAMBDA SENZA PERò RIPORTARE TROPPO CODICE.
+The next stage of both pipelines contains Lambda functions that interact with the Hawkbit server through its API. To ensure greater modularity, there are three Lambda functions distributed over three different stages. As a first step, a dedicated role is created for each Lambda function. This role contains the necessary policies for the function to perform its tasks once associated with the Lambda.
+Starting from the deployment stage of the software update on the Hawkbit server, it is evident in code \ref{lst:AWSCodepipelineLambda} that the function is extracted from a local ZIP file and uploaded to the Lambda service, and this approach is followed for all subsequent Lambda stages.
+\begin{lstlisting}[language=Python, caption={CDK Code for the deploy software on Hawkbit server Lambda creation}, label=lst:AWSCodepipelineLambda]
+lambda_function = _lambda.Function(
+    self,"hawkbitDeploySoftwareOnHawkbitServer",
+    function_name="hawkbitDeploySoftwareOnHawkbitServer",
+    runtime=_lambda.Runtime.PYTHON_3_11,
+    code=_lambda.Code.from_asset( "./lambda/hawkbitDeploySoftwareOnHawkbitServer.zip"),
+    handler="hawkbitDeploySoftwareOnHawkbitServer.lambda_handler",
+    role=lambda_role,
+    log_retention=logs.RetentionDays.ONE_DAY,
+    timeout=Duration.seconds(60)
+)
+hawkbitDeploySoftwareOnHawkbitServer_stage = pipeline.StageProps(
+    stage_name="hawkbitDeploySoftwareOnHawkbitServer",
+    actions=[hawkbitDeploySoftwareOnHawkbitServer_invoke],
+)
+\end{lstlisting}
 
-Come ultimo punto viene dichiarata la pipeline con tutti gli stage necessari in modo tale che venga costruita correttamente. In pratica con questi stage è possibile effettuare un build se necessario, e un deploy degli aggiornamenti direttamente sul device TCU simulator tramite l'utilizzo del server Hawkbit e le sue funzionalità esposte con API.
+When analyzing the Lambda function, it can be seen that the calls to the Hawkbit Server API, after obtaining all the parameters necessary for execution, basically follow a fairly precise pattern. This is demonstrated in code \ref{lst:AWSLambdaSoftwareModule} for building the software module, which is the component of the Hawkbit server that contains the update file. It starts by specifying the URL of the server, then specifies the information to send in the request payload, then specifies the headers containing the authentication information, and finally sends the HTTP request.
+\begin{lstlisting}[language=Python, caption={Lambda code for the software module creation}, label=lst:AWSLambdaSoftwareModule]
+url = f"http://{server_ip}:8080/rest/v1/softwaremodules"
+payload = json.dumps([{
+    "name": project_name,
+    "version": project_version,
+    "type": "Application",
+    "description": "Hawkbit device simulator module from codecommit",
+    "vendor": "Reply",
+    "encrypted": False
+}])
+headers = {
+    'Content-Type': 'application/json',
+    'Authorization': auth_header
+}
+response = requests.request("POST", url, headers=headers, data=payload)
+if response.status_code != 201:
+    print(f"Error in the Software Module creation!  Error: {response.status_code}")
+    traceback.print_exc()
+    put_job_failure(job_id, 'Function exception: ')
+    return
+print('Software Module creation completed')
+\end{lstlisting}
+
+After creating the software module, the update file is retrieved from the S3 bucket where it was saved in the source stage and loaded into the module. Then the distribution set is created following the same pattern as the previous software module. In this experimental project, the distribution set only contains one software module. It is important to note that any errors in these steps, like in any lambda stage, will cause the pipeline to abort and report the error.
+
+After analyzing the Lambda stage, the hawkbit server now has a distribution set that includes a software module. This module contains the update file that needs to be downloaded to the TCU simulator device. The Codepipeline proceeds by creating two Lambda stages that perform similar operations: deploying the distribution set to the device connected to the OTA server. Specifically, in the first case reported in the code \ref{lst:AWSLambdaRollout} a roll-out is performed, creating a fleet of devices to which the update is scheduled. The pool of devices on which to roll out the update is selected by reviewing the devices currently connected to the OTA server, so given the nature of the project, the pool will consist of only one edge device. In the second case, however, the update is directly assigned to the device. Both stages essentially perform the same operation, but they use different APIs of the Hawkbit server. Executing one stage excludes the execution of the other. The stages are designed to provide the user with the maximum API usability. 
+\begin{lstlisting}[language=Python, caption={Lambda code for the roll out creation and execution}, label=lst:AWSLambdaRollout]
+url = f"http://{server_ip}:8080/rest/v1/rollouts"
+payload = json.dumps({
+    "createdBy": "Reply",
+    "createdAt": int(datetime.now().timestamp()),
+    "lastModifiedBy": "Reply",
+    "lastModifiedAt": int(datetime.now().timestamp()),
+    "name": f"{distribution_set['name']}{distribution_set['version']}",
+    "description": "Rollout on HawkbitDevice",
+    "targetFilterQuery": f"id=={target_names}*",
+    "distributionSetId": distribution_set['id'],
+    "amountGroups": 1,
+    "type": "forced"
+})
+headers = {
+    'Content-Type': 'application/json',
+    'Authorization': auth_header
+}
+response = requests.request("POST", url, headers=headers, data=payload)
+url = f"http://{server_ip}:8080/rest/v1/rollouts/{rollout_id}/start"
+payload = ""
+headers = {
+    'Content-Type': 'application/json',
+    'Authorization': auth_header
+}
+response = requests.request("POST", url, headers=headers, data=payload)
+\end{lstlisting}
+
+As a last point in both analyzed CDK implementations the pipeline is declared with all the necessary stages so that it is built correctly. In practice with these stages it is possible to build or a test the source code as needed, and perform a deployment of the updates directly to the TCU simulator device through the use of the Hawkbit server and its exposed API.
+
+L'ultimo stack dell'infrastruttura cloud creata tramite CDK è lo stack ver e proprio di raccolta dei dati tramite Timestream. 
 \subsection{Data Viewer}
 
 \section{Test and Validation}

@@ -20,3 +20,6 @@
 \contentsline {lstlisting}{\numberline {4.20}CDK Code for the Codecommit source stage set up}{58}{lstlisting.4.20}%
 \contentsline {lstlisting}{\numberline {4.21}CDK Code for the Codepipeline for the C compiled file build creation}{59}{lstlisting.4.21}%
 \contentsline {lstlisting}{\numberline {4.22}CDK Code for the Codecommit build stage set up}{60}{lstlisting.4.22}%
+\contentsline {lstlisting}{\numberline {4.23}CDK Code for the deploy software on Hawkbit server Lambda creation}{61}{lstlisting.4.23}%
+\contentsline {lstlisting}{\numberline {4.24}Lambda code for the software module creation}{62}{lstlisting.4.24}%
+\contentsline {lstlisting}{\numberline {4.25}Lambda code for the roll out creation and execution}{63}{lstlisting.4.25}%
