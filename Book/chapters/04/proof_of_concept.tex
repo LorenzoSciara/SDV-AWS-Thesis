@@ -611,15 +611,6 @@ C_custom_build = codebuild.Project(
     },
     timeout=Duration.minutes(60)
 )
-ecr_repository.grant_pull_push(C_custom_build)
-build_stage_c = pipeline.StageProps(
-    stage_name="Build",
-    actions=[
-        pipelineactions.CodeBuildAction(
-            action_name="Build",
-            project=C_custom_build,
-            input=source_artifact_c,
-)])
 C_custom_pipeline = pipeline.Pipeline(
     self, "hawkbit-device-c",
     pipeline_name="hawkbit-device-c",
@@ -644,6 +635,7 @@ hawkbit_build = codebuild.Project(
     ),
     project_name="HawkbitDeviceBuildC"
 )
+
 build_stage = pipeline.StageProps(
     stage_name="Build",
     actions=[
@@ -654,6 +646,12 @@ build_stage = pipeline.StageProps(
             outputs=[build_artifact]
     )])
 \end{lstlisting}
+\begin{figure}[h]  % 'h' significa che la figura viene posizionata qui
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/hawkbitCodepipeline.png}  % Sostituisci 'nome_immagine' con il nome del tuo file immagine e l'estensione
+    \caption{A snapshot of the Codepipeline Source stage}
+    \label{fig:HawkbitCodepipeline}
+\end{figure}
 
 Regarding the Python pipeline, the build stage is utilized as a test stage to launch tests built specifically for the repository code. This is due to the fact that Python scripts do not require actual code compilation. Using the pytest tool, it is possible to initiate the battery of tests present in the code repository. This information is located in the build configuration file within the repository.
 
@@ -732,9 +730,84 @@ response = requests.request("POST", url, headers=headers, data=payload)
 \end{lstlisting}
 
 As a last point in both analyzed CDK implementations the pipeline is declared with all the necessary stages so that it is built correctly. In practice with these stages it is possible to build or a test the source code as needed, and perform a deployment of the updates directly to the TCU simulator device through the use of the Hawkbit server and its exposed API.
+\begin{figure}[h]  % 'h' significa che la figura viene posizionata qui
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/hawkbit_server.png}  % Sostituisci 'nome_immagine' con il nome del tuo file immagine e l'estensione
+    \caption{A snapshot of the Hawkbit server during the deployment of the update on the device}
+    \label{fig:HawkbitServer}
+\end{figure}
+The final stack of the cloud infrastructure created by CDK is the actual data collection stack via Timestream. In this stack, a Kinesis stream is first created. The stream takes the data published to the channel created by the device via an SQL query and routes it to a new destination. Next, the database and tables needed to store the telemetry data are created. Then, the Kinesis stream is used as input, triggering the start of a Lambda function that takes the output data from the stream as input, decompresses and formats it so that it can be handled by Timestream, and finally sends it to the corresponding tables, which at this point already exist because they were created previously.
+Upon analyzing code \ref{lst:AWSKinesis} in detail, it becomes clear that once the Kinesis Stram has been created, it is assigned a role for reading data from the channel (line 1) and then, via a rule to be executed, is given the very instruction to read data from the channel (line 14).
+\begin{lstlisting}[language=Python, caption={CDK code for the creation of the Kinesis stream with its role and rule}, label=lst:AWSKinesis]
+kinesis_stream = kinesis.Stream(self, "hawkbitDeviceData",
+    stream_mode=kinesis.StreamMode.ON_DEMAND,
+    stream_name="hawkbitDeviceData"
+)
+device_to_kinesis_role = iam.Role(self, "hawkbitDeviceToKinesis", assumed_by=iam.ServicePrincipal("iot.amazonaws.com"),  role_name="hawkbitDeviceToKinesis")
+device_to_kinesis_role.add_to_policy(iam.PolicyStatement(
+    effect=iam.Effect.ALLOW,
+    actions=["kinesis:*"],
+    resources=[kinesis_stream.stream_arn],
+))
+device_to_kinesis_rule = iot.CfnTopicRule(self, "fromDeviceToKinesis",
+    rule_name="HawkbitDeviceDataToKinesis",
+    topic_rule_payload=iot.CfnTopicRule.TopicRulePayloadProperty(
+        sql="SELECT * FROM 'device/HawkbitDevice001/telemetry'",
+        actions=[iot.CfnTopicRule.ActionProperty(
+            kinesis=iot.CfnTopicRule.KinesisActionProperty(
+                role_arn=device_to_kinesis_role.role_arn,
+                stream_name=kinesis_stream.stream_name,
+                partition_key="${DeviceID}"
+),)]))
+\end{lstlisting}
+After creating the stream, the database is established. First, the general configuration settings are provided, including the data retention period and the identifying name. Then, the necessary tables shown in example code \ref{lst:AWSTimestreamTable} are created one by one. In this case, there are 5 tables since the TCU simulator device has 5 subsystems.
+\begin{lstlisting}[language=Python, caption={CDK code for the creation of the Battery table of the Timestream database}, label=lst:AWSTimestreamTable]
+Battery_table = timestream.CfnTable(self, "Battery", database_name=database.database_name,
+    schema=timestream.CfnTable.SchemaProperty(
+        composite_partition_key= [timestream.CfnTable.PartitionKeyProperty(
+            type="DIMENSION",
+            enforcement_in_record="REQUIRED",
+            name="DeviceID"
+    )]),
+    retention_properties=retention,
+    table_name="Battery",
+)
+Battery_table.add_dependency(database)
+\end{lstlisting}
+The lambda function is created at the end, with its policies attached to the role that was specifically created for it. As demonstrated in code \ref{lst:AWSTimestreamlambda}, the lambda is retrieved from a local file and imported into the AWS service. In this case, the lambda function processes the received data by formatting the JSON format into a flat one, so that there are no table sub-levels because they are not supported by the Timestream service, and organizes the data into the appropriate tables by making an association between the data name and the table name.
+\begin{lstlisting}[language=Python, caption={CDK code for the creation of Lambda function that takes data from Kinesis stream and sends it to the Timestream tables}, label=lst:AWSTimestreamlambda]
+lambda_function = _lambda.Function(
+    self,"hawkbitFromKinesisToTimestream",
+    function_name="hawkbitFromKinesisToTimestream",
+    runtime=_lambda.Runtime.PYTHON_3_11,
+    code=_lambda.Code.from_asset( "./lambda/hawkbitFromKinesisToTimestream.zip"),
+    handler="hawkbitFromKinesisToTimestream.lambda_handler",
+    role=lambda_role,
+    timeout=Duration.seconds(60),
+)
+lambda_function.add_event_source(eventSources.KinesisEventSource(
+    kinesis_stream,
+    batch_size=100,  # default
+    starting_position=_lambda.StartingPosition.LATEST
+))
+\end{lstlisting}
+Now that the entire cloud infrastructure system has been established, it is possible to gain a better understanding of the interactions between its various components. The system begins with four basic elements: the IoT Core thing, the Codepipeline pipeline, the Hawkbit server, and the Timestrem database. After creating the IoT Core device, it can retrieve data that will be stored in the Timestrem database. Updates can be deployed to the physical TCU simulator device through the Codepipeline pipeline and the Hawkbit server. After installation, the data received by IoT Core and stored in the database will undergo a change that can be detected during analysis. The process can be repeated indefinitely for any updates made to the code in the development repository.
 
-L'ultimo stack dell'infrastruttura cloud creata tramite CDK è lo stack ver e proprio di raccolta dei dati tramite Timestream. 
 \subsection{Data Viewer}
+Grafana was selected to visualize the data in the Timestream database. It natively supports linking to Timestream as a data source by providing account credentials. To use Grafana, start a Docker container containing the server to construct graphs using data from the chosen source, in this case, the Timestream project.
 
-\section{Test and Validation}
-\subsection{RaspberryPi demo}
+To utilize the Grafana server, a separate virtual machine was created to connect to the Timestream database using AWS credentials and retrieve the stored data. By querying the Timestream tables, real-time graphs can be generated as the database is continuously updated. It is important to maintain a consistent update cadence between the Timestream database and the Grafana server. These queries produce a dataset that is plotted and interpreted differently depending on the type of graph used.
+
+Real dashboards can be created by combining multiple graphs, even if they display the same data, to provide different perspectives. For the purposes of this project, it was decided to create three dashboards for three different taballe to represent data from the three most relevant subsystems of the TCU simulator. 
+
+With the use of these dashboards as shown in Figure \ref{fig:GrafanaABS}, it was possible to clearly represent the successful update of the TCU simulator device. For instance, this example shows the simulation of a vehicle's battery system. The dashboard displays two progressive data sets over time and one instantaneous data set. Specifically, the bottom left corner of the dashboard shows the battery temperature over time. From this information, it is evident that the temperature exhibits greater oscillations following the update, while remaining around a precise value. The total amount of energy present in the battery is also displayed at the bottom right, although it is not possible to detect the presence of the update due to the instantaneous nature of the data. Above, the graph shows the progression of energy added to the battery over time. It is evident that after the update, the addition of energy to the battery increased significantly after one second. This observation is based on the detected data. With this update, the goal is basically to simulate an improvement in performance related to the recovery of energy from regenerative braking, and this is shown in the graph both with the fact that after a certain moment the energy present in the battery is higher, and with the fact that the total net energy accumulated by regenerative braking is higher after the update.
+\begin{figure}[h]  % 'h' significa che la figura viene posizionata qui
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/grafana_Battery.png}  % Sostituisci 'nome_immagine' con il nome del tuo file immagine e l'estensione
+    \caption{A snapshot of the ABS graph on the Grafana server}
+    \label{fig:GrafanaABS}
+\end{figure}
+
+The dashboards for the ABS system of the TCU simulator are produced in Graphana. This allows for easy detection of updates through changes in the data. The data shows improved performance of regenerative braking, resulting in less energy needed for the physical brakes to apply to the discs. As a result, the simulated temperatures are lower. The dashboard for the vehicle's acceleration system is presented last.
+
+Per fare un riassunto completo di tutto il PoC il sistema interagisce nel modo descritto di seguito. Come prima cosa è necessario lanciare lo script CDK in modo tale da avere l'infrastruttura cloud di supporto attiva fin da subito. Così facendo verranno anche creati i certificati necessari al dispositivo per l'autenticazione. In secondo luogo, una volta posizionati corramente i certificati sarà necessario avviare il dispositivo TCU simulator fornendo il correttoindirizzo IP del Hawkbit server a cui collegarsi per futuri eventuali aggiornamenti. Una volta prodotti un certo numero di dati e analizzati nella dashboard Grafafana, sarà possibile effetuarel'aggiornamento. In particolare si potrà produrre un certo codice nel repository AWS Codecommit che rappresenterà il sorgente dell'aggiornamento. una volta effettuato un commit sul master branch, la pipeline si occuperà di fare il deploy dell'aggiornamento sul server Hawkbit e quindi sul dispositivo stesso. A questo punto il TCU simulator, in modo autonomo, una volta ricevuto l'aggiornamento, sarà in grado di posizionare le funzioni correttamente e riavviare il sistema in modo tale che l'aggiornamento possa funzionare in modo efficace. A questo punto si potrà valutare l'aggiornamento in due modi, o tramite i file di log prodotti direttamente sul dispositivo, nel caso in cui si avesse accesso diretto al dispositivo fisico, oppure tramite l'analisi dei dati prodotti dal TCU simulator a seguito dell'aggiornamento, che a questo punto saranno diversi da quelli iniziali. Tutta l'esecuzione di questo articolato sistema è stata confermata, come vedremo in seguito, nella fase di test con la demo sul dispositivo reale Raspberry Pi.

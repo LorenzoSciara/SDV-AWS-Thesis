@@ -23,3 +23,6 @@
 \contentsline {lstlisting}{\numberline {4.23}CDK Code for the deploy software on Hawkbit server Lambda creation}{61}{lstlisting.4.23}%
 \contentsline {lstlisting}{\numberline {4.24}Lambda code for the software module creation}{62}{lstlisting.4.24}%
 \contentsline {lstlisting}{\numberline {4.25}Lambda code for the roll out creation and execution}{63}{lstlisting.4.25}%
+\contentsline {lstlisting}{\numberline {4.26}CDK code for the creation of the Kinesis stream with its role and rule}{64}{lstlisting.4.26}%
+\contentsline {lstlisting}{\numberline {4.27}CDK code for the creation of the Battery table of the Timestream database}{65}{lstlisting.4.27}%
+\contentsline {lstlisting}{\numberline {4.28}CDK code for the creation of Lambda function that takes data from Kinesis stream and sends it to the Timestream tables}{65}{lstlisting.4.28}%
