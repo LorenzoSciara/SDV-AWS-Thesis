@@ -18,18 +18,21 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces AWS System and Organization Controls Logo}}{33}{figure.3.1}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces The high level rappresentation of the AWS SDK for JavaScript v3 \cite {AWSSDK}}}{36}{figure.4.1}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces AWS IoT Core connection system beetween IoT device and AWS service \cite {AWSIoTCore}}}{37}{figure.4.2}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces AWS IoT Core connection system beetween IoT device and AWS service \cite {AWSIoTCore}}}{36}{figure.4.2}%
 \contentsline {figure}{\numberline {4.3}{\ignorespaces An example of a CodePipeline in which some stages are reported \cite {AWSCodepipeline}}}{38}{figure.4.3}%
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Amazon S3 high level storing rappresentation}}{39}{figure.4.4}%
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Example of how Amazon ECR works in production and for pulling images \cite {AWSECR}}}{40}{figure.4.5}%
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Illustration of the high-level architecture of Kinesis Data Streams with some examples of services that use the output of the stream. \cite {AmazonKinesis}}}{41}{figure.4.6}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Illustration of a RaspberryPi board with its periferics \cite {raspberrypi}}}{43}{figure.4.7}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Update log file of the Device Simulator}}{46}{figure.4.8}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces A snapshot of the first version of the TCU interface}}{47}{figure.4.9}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces A snapshot of the TCU simulator on the virtual machine}}{49}{figure.4.10}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces A snapshot of the TCU compiled simulator on the Raspberry Pi interface}}{49}{figure.4.11}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces A snapshot of the TCU recognition module logs}}{51}{figure.4.12}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces A snapshot of the Codepipeline Source stage}}{61}{figure.4.13}%
-\contentsline {figure}{\numberline {4.14}{\ignorespaces A snapshot of the Hawkbit server during the deployment of the update on the device}}{64}{figure.4.14}%
-\contentsline {figure}{\numberline {4.15}{\ignorespaces A snapshot of the ABS graph on the Grafana server}}{67}{figure.4.15}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces The high level rappresentation of the ASW services for the data managing}}{42}{figure.4.7}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces The high level rappresentation of the ASW services for the update managing}}{42}{figure.4.8}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Illustration of a RaspberryPi board with its periferics \cite {raspberrypi}}}{46}{figure.5.1}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Update log file of the Device Simulator}}{49}{figure.5.2}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces A snapshot of the first version of the TCU interface}}{49}{figure.5.3}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces A snapshot of the TCU simulator on the virtual machine}}{51}{figure.5.4}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces A snapshot of the TCU compiled simulator on the Raspberry Pi interface}}{52}{figure.5.5}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces A snapshot of the TCU recognition module logs}}{54}{figure.5.6}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces A snapshot of the Codepipeline Source stage}}{63}{figure.5.7}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces A snapshot of the Hawkbit server during the deployment of the update on the device}}{66}{figure.5.8}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces A snapshot of the ABS graph on the Grafana server}}{69}{figure.5.9}%
 \addvspace {10\p@ }
