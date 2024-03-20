@@ -31,42 +31,42 @@ Database file #1: bibliography.bib
 Done.
 You've used 65 entries,
             4087 wiz_defined-function locations,
-            1154 strings with 17453 characters,
-and the built_in function-call counts, 27896 in all, are:
-= -- 2417
-> -- 400
+            1155 strings with 17463 characters,
+and the built_in function-call counts, 27139 in all, are:
+= -- 2478
+> -- 235
 < -- 39
-+ -- 195
-- -- 91
-* -- 979
-:= -- 5276
-add.period$ -- 162
++ -- 139
+- -- 38
+* -- 1001
+:= -- 5067
+add.period$ -- 179
 call.type$ -- 65
-change.case$ -- 97
+change.case$ -- 114
 chr.to.int$ -- 69
 cite$ -- 65
-duplicate$ -- 2130
-empty$ -- 2408
-format.name$ -- 104
-if$ -- 6155
+duplicate$ -- 2122
+empty$ -- 2369
+format.name$ -- 48
+if$ -- 6063
 int.to.chr$ -- 0
 int.to.str$ -- 65
-missing$ -- 499
+missing$ -- 463
 newline$ -- 348
-num.names$ -- 65
-pop$ -- 1373
+num.names$ -- 15
+pop$ -- 1261
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 2222
+skip$ -- 2231
 stack$ -- 0
-substring$ -- 259
-swap$ -- 1434
+substring$ -- 293
+swap$ -- 1426
 text.length$ -- 16
 text.prefix$ -- 0
 top$ -- 5
 type$ -- 65
 warning$ -- 0
-while$ -- 88
+while$ -- 38
 width$ -- 67
-write$ -- 735
+write$ -- 752

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.3)  20 MAR 2024 13:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.3)  20 MAR 2024 13:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1355,7 +1355,7 @@ Chapter 6.
 
 
 ] (thesis.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 40--45
+Underfull \hbox (badness 10000) in paragraph at lines 41--46
 \OT1/cmr/m/n/12 com / Gartner-[]Magic-[]Quadrant-[]for-[]Cloud-[]AI-[]Developer-[]Services . html ? trk =
  []
 
@@ -1364,21 +1364,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--45
 
 
 ] [73]
-Underfull \hbox (badness 1412) in paragraph at lines 248--252
-[]\OT1/cmr/m/n/12 ------. (2024) Se-lect-ing the right cloud for work-loads
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 248--252
+Underfull \hbox (badness 10000) in paragraph at lines 252--256
 \OT1/cmr/m/n/12 aws . amazon . com / whitepapers / latest / public-[]sector-[]cloud-[]transformation /
  []
 
 
-Overfull \hbox (44.37622pt too wide) in paragraph at lines 248--252
+Overfull \hbox (44.37622pt too wide) in paragraph at lines 252--256
 \OT1/cmr/m/n/12 selecting-[]the-[]right-[]cloud-[]for-[]workloads-[]dierences-[]between-[]public-[]private-[]and-[]hybrid .
  []
 
-[74]) [75] (thesis.aux (chapters/00/abstract.aux) (chapters/01/introduction.aux) (chapters/02/state_of_the_art.aux) (chapters/03/cloud_computing_and_amazon_web_services.aux) (chapters/04/AWS_used_services.aux) (chapters/05/proof_of_concept.aux) (chapters/06/concluding_remarks.aux))
+[74] [75]) [76] (thesis.aux (chapters/00/abstract.aux) (chapters/01/introduction.aux) (chapters/02/state_of_the_art.aux) (chapters/03/cloud_computing_and_amazon_web_services.aux) (chapters/04/AWS_used_services.aux) (chapters/05/proof_of_concept.aux) (chapters/06/concluding_remarks.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -1387,17 +1382,17 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 3A1B5F94553B7D5D7D199F410D780298;2422.
  ) 
 Here is how much of TeX's memory you used:
- 46291 strings out of 474542
- 1050808 string characters out of 5743503
+ 46292 strings out of 474542
+ 1050815 string characters out of 5743503
  2023978 words of memory out of 5000000
  67012 multiletter control sequences out of 15000+600000
  570312 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  138i,20n,135p,1550b,4272s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Lorenzo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt1200.pk> <C:\Users\Lorenzo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmitt10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (75 pages, 9463593 bytes).
+Output written on thesis.pdf (76 pages, 9462976 bytes).
 PDF statistics:
- 1689 PDF objects out of 1728 (max. 8388607)
- 722 named destinations out of 1000 (max. 500000)
+ 1688 PDF objects out of 1728 (max. 8388607)
+ 723 named destinations out of 1000 (max. 500000)
  450 words of extra memory for PDF output out of 10000 (max. 10000000)
 
