@@ -116,18 +116,6 @@ B.~QNX, ``What is a software-defined vehicle?'' \emph{Software-Defined
   \url{https://blackberry.qnx.com/en/ultimate-guides/software-defined-vehicle}
 \BIBentrySTDinterwordspacing
 
-\bibitem{StormReplySite}
-\BIBentryALTinterwordspacing
-(2024) Who we are. Storm Reply. Accessed: 01 03, 2024. [Online]. Available:
-  \url{https://www.reply.com/storm-reply/en/}
-\BIBentrySTDinterwordspacing
-
-\bibitem{AWSGlobalInfrastructure}
-\BIBentryALTinterwordspacing
-AWS, ``Aws global infrastructure,'' \emph{About-aws}, 2024. [Online].
-  Available: \url{https://aws.amazon.com/about-aws/global-infrastructure/}
-\BIBentrySTDinterwordspacing
-
 \bibitem{ISO26262}
 \BIBentryALTinterwordspacing
 I.~Society, ``Functional safety,'' \emph{ISO 26262-1:2018 Road vehicles},
@@ -140,6 +128,18 @@ I.~Society, ``Functional safety,'' \emph{ISO 26262-1:2018 Road vehicles},
 C.~D. D. O. E.~N. Fong and P.~E. Black, ``Impact of code complexity on software
   analysis,'' \emph{NIST IR}, vol. 8165, no. upd1, pp. 1--12, 2017. [Online].
   Available: \url{https://nvlpubs.nist.gov/nistpubs/ir/2017/NIST.IR.8165.pdf}
+\BIBentrySTDinterwordspacing
+
+\bibitem{StormReplySite}
+\BIBentryALTinterwordspacing
+(2024) Who we are. Storm Reply. Accessed: 01 03, 2024. [Online]. Available:
+  \url{https://www.reply.com/storm-reply/en/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{AWSGlobalInfrastructure}
+\BIBentryALTinterwordspacing
+AWS, ``Aws global infrastructure,'' \emph{About-aws}, 2024. [Online].
+  Available: \url{https://aws.amazon.com/about-aws/global-infrastructure/}
 \BIBentrySTDinterwordspacing
 
 \bibitem{SDVBoschMobility}

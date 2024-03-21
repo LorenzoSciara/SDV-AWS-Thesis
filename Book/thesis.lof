@@ -4,34 +4,34 @@
 \babel@toc {english}{}\relax 
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces An incomplete overview of computers in a modern car \cite {ieeeSoftwareDefinedVehicle}}}{14}{figure.1.1}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Logo of the partenr company of the project}}{15}{figure.1.2}%
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Here are a series of market research reports published by IT consulting firm Gartner that rely on proprietary qualitative data analysis methods to demonstrate market trends, such as direction, maturity and participants. \cite {GartnerMagicQuadrant}}}{16}{figure.1.3}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Logo of the partenr company of the project}}{16}{figure.1.2}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces The Gartner Magic Quadrant for Cloud Infrastructure and Platform Services \cite {GartnerMagicQuadrant}}}{17}{figure.1.3}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Cost of fixing errors increases in later phases of the life cycle \cite {CostsOfSoftwareDeveloping}}}{19}{figure.2.1}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces A simple representation of communication using the MQTT protocol}}{23}{figure.2.2}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Risks and time relationship in the various phases of a vulnerability lifecycle}}{24}{figure.2.3}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces today development, integration, and validation workflows for embedded systems}}{26}{figure.2.4}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces future development, integration, and validation workflows for embedded systems}}{26}{figure.2.5}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces SOAFEE Architecture v1.0 \cite {SoafeeArchitecture}}}{27}{figure.2.6}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Cost of fixing errors increases in later phases of the life cycle \cite {CostsOfSoftwareDeveloping}}}{20}{figure.2.1}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces A simple representation of communication using the MQTT protocol}}{24}{figure.2.2}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Risks and time relationship in the various phases of a vulnerability lifecycle}}{25}{figure.2.3}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces today development, integration, and validation workflows for embedded systems}}{27}{figure.2.4}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces future development, integration, and validation workflows for embedded systems}}{27}{figure.2.5}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces SOAFEE Architecture v1.0 \cite {SoafeeArchitecture}}}{28}{figure.2.6}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces AWS System and Organization Controls Logo}}{34}{figure.3.1}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces AWS System and Organization Controls Logo}}{35}{figure.3.1}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces The high level rappresentation of the AWS SDK for JavaScript v3 \cite {AWSSDK}}}{37}{figure.4.1}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces AWS IoT Core connection system beetween IoT device and AWS service \cite {AWSIoTCore}}}{37}{figure.4.2}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces An example of a CodePipeline in which some stages are reported \cite {AWSCodepipeline}}}{39}{figure.4.3}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Amazon S3 high level storing rappresentation}}{40}{figure.4.4}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Example of how Amazon ECR works in production and for pulling images \cite {AWSECR}}}{41}{figure.4.5}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Illustration of the high-level architecture of Kinesis Data Streams with some examples of services that use the output of the stream. \cite {AmazonKinesis}}}{42}{figure.4.6}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces The high level rappresentation of the ASW services for the data managing}}{43}{figure.4.7}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces The high level rappresentation of the ASW services for the update managing}}{43}{figure.4.8}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces The high level rappresentation of the AWS SDK for JavaScript v3 \cite {AWSSDK}}}{38}{figure.4.1}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces AWS IoT Core connection system beetween IoT device and AWS service \cite {AWSIoTCore}}}{38}{figure.4.2}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces An example of a CodePipeline in which some stages are reported \cite {AWSCodepipeline}}}{40}{figure.4.3}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Amazon S3 high level storing rappresentation}}{41}{figure.4.4}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Example of how Amazon ECR works in production and for pulling images \cite {AWSECR}}}{42}{figure.4.5}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Illustration of the high-level architecture of Kinesis Data Streams with some examples of services that use the output of the stream. \cite {AmazonKinesis}}}{43}{figure.4.6}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces The high level rappresentation of the ASW services for the data managing}}{44}{figure.4.7}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces The high level rappresentation of the ASW services for the update managing}}{44}{figure.4.8}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Illustration of a RaspberryPi board with its periferics \cite {raspberrypi}}}{47}{figure.5.1}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Update log file of the Device Simulator}}{50}{figure.5.2}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces A snapshot of the first version of the TCU interface}}{50}{figure.5.3}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces A snapshot of the TCU simulator on the virtual machine}}{52}{figure.5.4}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces A snapshot of the TCU compiled simulator on the Raspberry Pi interface}}{53}{figure.5.5}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces A snapshot of the TCU recognition module logs}}{55}{figure.5.6}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces A snapshot of the Codepipeline Source stage}}{64}{figure.5.7}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces A snapshot of the Hawkbit server during the deployment of the update on the device}}{67}{figure.5.8}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces A snapshot of the ABS graph on the Grafana server}}{70}{figure.5.9}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Illustration of a RaspberryPi board with its periferics \cite {raspberrypi}}}{48}{figure.5.1}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Update log file of the Device Simulator}}{51}{figure.5.2}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces A snapshot of the first version of the TCU interface}}{51}{figure.5.3}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces A snapshot of the TCU simulator on the virtual machine}}{53}{figure.5.4}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces A snapshot of the TCU compiled simulator on the Raspberry Pi interface}}{54}{figure.5.5}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces A snapshot of the TCU recognition module logs}}{56}{figure.5.6}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces A snapshot of the Codepipeline Source stage}}{65}{figure.5.7}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces A snapshot of the Hawkbit server during the deployment of the update on the device}}{68}{figure.5.8}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces A snapshot of the ABS graph on the Grafana server}}{71}{figure.5.9}%
 \addvspace {10\p@ }

@@ -14,7 +14,7 @@ This shift in paradigm, which is now a reality in the automotive industry, requi
 
 In order to address and understand the Software Defined Vehicle, which is the most recent expression of software integration in the automobile, it is necessary to delve into the automotive industry and the dynamics that exist with respect to software production. For this reason, in this introduction an overview of the automotive context in which the project is located will be discussed and then the role of the project partner company, which is also a leader in software consulting and development and a partner of major automotive companies, will be detailed. Finally, in conclusion of this chapter, the thesis's key objectives and the practical project that will support this work during the description are shown also giving an introductory overview of the entire work proposed in this thesis project.
 
-\section{Automotive Context}
+\section{Automotive Context and Software Development}
 The automotive industry has stood out for decades as a continuously growing sector, playing a significant role both as an employer for millions of people and as an investor in the research and development of cutting-edge technologies in many fields, including mechanics, materials, and software. Thanks to the presence of the largest automotive companies across Europe, there is a great deal of knowledge in this sector, which represents one of the most crucial areas for the European Union's economy. As can be seen from the table below \ref{tab:VehicleProduction}, the production of total vehicles worldwide has been continuously growing, with the exception of two periods: following the financial crisis of 2007-2008 and following the pandemic of 2020, both events having a very strong impact on the entire global economy and which have had effects on many sectors. In any case, it can be noted that automotive production has resumed strong growth in the last two years.
 
 \begin{table}[htbp]
@@ -64,14 +64,23 @@ In addressing this intricate scenario, the transformative concept of a Software 
 
 One of the main benefits of this innovation in the automotive industry is the ability to have easily manageable systems. In the past, due to their high level of specialization for performance and low power consumption, automotive computer systems were developed and tested directly on the devices themselves, often in a manual way. This resulted in a large consumption of resources and a waste of time. Today, the goal is to have cloud infrastructures that ensure a more agile development and testing process due to the presence of general-purpose systems in the vehicle.
 
-Effectively navigating the development of SDV technology necessitates a collaborative approach across diverse companies, particularly in the realms of hardware and cloud computing. This collaborative synergy is exemplified in the realization of our project, made possible through the partnership with Storm Reply.
+Consequently, the use of Software Defined Vehicle aims to completely separate software and hardware, allowing the production of high-level software on entirely generalized hardware systems. This results in significant savings in terms of time and money for hardware production, along with providing an advantage in terms of security due to the simplification of software.
 
+Another very important aspect of SDV, which will be analyzed in the following chapters, is that since a Software Defined Vehicle is by definition characterized by the ability to dynamically and flexibly update software, this solution offers significant security advantages in several aspects:
+\begin{enumerate}
+  \item \textbf{Human Safety Critical Security:} From the moment that a vehicle can be classified as safety critical (as it is reported in the standard ISO 26262-1:2018 of the ISO society where is said that "safety is one of the key issues in the development of road vehicles" \cite{ISO26262}), the elimination of software vulnerabilities related to the vehicle's systems is crucial for the overall safety of the vehicle itself.  
+  \item \textbf{Intrinsic Software Security:} This approach allows for the prevention and resolution of vulnerabilities unknown at the time of software design, contributing to ensuring a high standard of security. For example, as demonstrated by NIST in the research on the Analysis Of The Impact Of Software Complexity \cite{NISTCodeComplexity}, the increase in software complexity in different cases results in less analyzable programs. In some instances, the same vulnerability analysis tool may detect vulnerabilities, while in others, analyzing the same code, it may not. 
+\end{enumerate}
 
-\section{Company}
+Effectively navigating the development of SDV technology necessitates a collaborative approach across diverse companies, particularly in the realms of hardware and cloud computing. For this reason, many software, hardware, and automotive companies are involved in the development of this innovation, which aims to become a standard in vehicle production for the entire automotive industry.
+
+In order to carry out the research and analysis of the new technologies described above, as well as to get involved in the practical side of things, it was essential to find a company that had both the IT skills needed to interface with cloud technologies and experience in the world of automotive manufacturing and software production.
+
+\section{Partner company}
 
 Leveraging extensive experience in the cloud industry and fostering deep-rooted relationships within the automotive sector, Storm Reply stands out as the ideal choice to lead the project discussed in this thesis. A key player in the Reply group, Storm Reply specializes in designing and implementing innovative Cloud-based solutions and services \cite{StormReplySite}. 
 
-With a diverse clientele spanning various sectors, notably the automotive industry, the company's expertise played a pivotal role in comprehensively understanding the project's context and internal dynamics. This profound knowledge served as the cornerstone for developing a tangible exemplification of the infrastructure.
+With a broad client base spanning multiple sectors, particularly the automotive industry, the company's expertise played a pivotal role in fully understanding the project's context and internal dynamics. This extensive knowledge provided the cornerstone for the development of a tangible example of the infrastructure.
 
 \begin{figure}[h]  % 'h' significa che la figura viene posizionata qui
   \centering
@@ -80,14 +89,18 @@ With a diverse clientele spanning various sectors, notably the automotive indust
   \label{fig:StormReplyLogo}
 \end{figure}
 
+Among the main customers in the automotive world of the consulting company, we can mention Ferrari, one of the most important companies in motor sports competitions and in the production of luxury cars, and Stellantis, one of the biggest giants in the automotive industry as well as in the global market. Although different, these two companies interact with Storm Reply to take advantage of its great knowledge in the cloud world and in the management of AWS services. Thanks to the connection with these important companies it was possible to receive essential information for the thesis work.
+
+One great advantage of collaborating with this company is the wide availability of resources, both material and, above all, in terms of experience. As a large IT consultancy company, Reply is divided into many sub-business units, that makes possible the nteraction with various realities, ranging from embedded to low-level development, network and security infrastructure management, and web services management. Furthermore, there is a research and development section called Area 42 where entities can interact and influence each other to create innovative projects.
+
 A point of pride for Storm Reply is its recognition as an Amazon Web Services (AWS) Premier Consulting Partner since 2014, ranking among the top Amazon Partners globally. This distinctive characteristic underscores the decision to develop the infrastructure using Amazon Web Services.
 
-According to the official AWS description page \cite{AWSGlobalInfrastructure} the AWS Cloud spans 102 Availability Zones within 32 geographic Regions around the world and servs 245 countries and territories. With millions of active customers and tens of thousands of partners globally, AWS has the largest and most dynamic ecosystem. AWS is evaluated as a Leader in the 2022 Gartner Magic Quadrant for Cloud Infrastructure and Platform Services, placed highest in Ability to Execute axis of measurement among the top 8 vendors named in the report.
+According to the official AWS description page \cite{AWSGlobalInfrastructure} the AWS Cloud spans 102 Availability Zones within 32 geographic Regions around the world and servs 245 countries and territories. With millions of active customers and tens of thousands of partners globally, AWS has the largest and most dynamic ecosystem. AWS is evaluated as a Leader in the 2022 Gartner Magic Quadrant for Cloud Infrastructure and Platform Services (a series of market research reports published by IT consulting firm Gartner that rely on proprietary qualitative data analysis methods to demonstrate market trends, such as direction, maturity and participants), placed highest in Ability to Execute axis of measurement among the top 8 vendors named in the report.
 
 \begin{figure}[h]  % 'h' significa che la figura viene posizionata qui
   \centering
-  \includegraphics[width=0.3\textwidth]{images/AWSMagicQuadrantForCloud.png}  % Sostituisci 'nome_immagine' con il nome del tuo file immagine e l'estensione
-  \caption{Here are a series of market research reports published by IT consulting firm Gartner that rely on proprietary qualitative data analysis methods to demonstrate market trends, such as direction, maturity and participants. \cite{GartnerMagicQuadrant}}
+  \includegraphics[width=0.6\textwidth]{images/AWSMagicQuadrantForCloud.png}  % Sostituisci 'nome_immagine' con il nome del tuo file immagine e l'estensione
+  \caption{The Gartner Magic Quadrant for Cloud Infrastructure and Platform Services \cite{GartnerMagicQuadrant}}
   \label{fig:AWSMagicQuadrantForCloud}
 \end{figure}
 
@@ -100,18 +113,11 @@ The infrastructure exhibits several key attributes contributing to its robustnes
   \item \textbf{Flexibility:} The AWS Global Infrastructure provides flexibility in choosing where and how workloads are run, whether globally, with single-digit millisecond latencies, or on-premises.
   \item \textbf{Global Footprint:} AWS boasts the largest global infrastructure footprint, continually expanding at a significant rate.
 \end{itemize}
+Thanks to its expertise and qualifications, Storm Reply is able to provide the above features to its customers, offering a comprehensive consultancy service for managing cloud infrastructures.
 
 \section{Thesis Goal}
 In the automotive context, the use of Software Defined Vehicle (SDV) plays a crucial role in terms of costs, innovation, and safety. The goal of the thesis intertwine with the opportunities provided by Software Defined Vehicle technology, addressing the primary challenge of managing the current difficulties associated with the presence of various specialized hardware platforms on the same vehicle.
 
-The central objective of this thesis is to propose a Software Defined Vehicle solution capable of eliminating various phases of the software production pipeline. This would result in significant time and cost savings, enabling the investment of these resources in other sectors. Since, by definition, a Software Defined Vehicle is characterized by the ability to undergo software updates dynamically and flexibly, this solution offers significant security advantages in various aspects:
-\begin{enumerate}
-  \item Human Safety Critical Security: From the moment that a vehicle can be classified as safety critical (as it is reported in the standard ISO 26262-1:2018 of the ISO society where is said that "safety is one of the key issues in the development of road vehicles" \cite{ISO26262}), the elimination of software vulnerabilities related to the vehicle's systems is crucial for the overall safety of the vehicle itself.  
-  \item Intrinsic Software Security: This approach allows for the prevention and resolution of vulnerabilities unknown at the time of software design, contributing to ensuring a high standard of security.
-\end{enumerate}
-
-Consequently, the use of Software Defined Vehicle aims to completely separate software and hardware, allowing the production of high-level software on entirely generalized hardware systems. This results in significant savings in terms of time and money for hardware production, along with providing an advantage in terms of security due to the simplification of software.
-
-For example, as demonstrated by NIST in the research on the Analysis Of The Impact Of Software Complexity \cite{NISTCodeComplexity}, the increase in software complexity in different cases results in less analyzable programs. In some instances, the same vulnerability analysis tool may detect vulnerabilities, while in others, analyzing the same code, it may not. 
+The central objective of this thesis is to propose a Software Defined Vehicle solution capable of eliminating various phases of the software production pipeline. This would result in significant time and cost savings, enabling the investment of these resources in other sectors.
 
 From a practical standpoint, the project's goal is to provide, through the use of AWS services, a cloud infrastructure capable of managing the Software Defined Vehicle both in terms of software production and data analysis.
