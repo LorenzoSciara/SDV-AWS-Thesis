@@ -13,24 +13,50 @@ With these words, Elon Musk, the visionary entrepreneur behind many of the most 
 This shift in paradigm, which is now a reality in the automotive industry, requires significant effort, especially from a security perspective. While a cyber vulnerability in a traditional device like a laptop or smartphone may result in data loss, vulnerabilities in a vehicle's computer system, where software is a fundamental element, can have tragic and even life-threatening consequences. For this reason, addressing security from the design stage is one of the primary objective of this paper.
 
 In order to address and understand the Software Defined Vehicle, which is the most recent expression of software integration in the automobile, it is necessary to delve into the automotive industry and the dynamics that exist with respect to software production. For this reason, in this introduction an overview of the automotive context in which the project is located will be discussed and then the role of the project partner company, which is also a leader in software consulting and development and a partner of major automotive companies, will be detailed. Finally, in conclusion of this chapter, the thesis's key objectives and the practical project that will support this work during the description are shown.
-\section{Context}
-The automotive industry stands out as one of the fastest-growing sectors, playing a significant role as both an employer and an investor in research and development; at the same time, it represents one of the most crucial domains for the European Union's economy. As reported in the article \cite{automotiveInCentralEurope}, in 2015, 21 million motor vehicles of all types were produced in Europe, representing a 23\% share in the global production of more than 90 million units.
 
-\begin{figure}[h]  % 'h' significa che la figura viene posizionata qui
+\section{Automotive Context}
+The automotive industry has stood out for decades as a continuously growing sector, playing a significant role both as an employer for millions of people and as an investor in the research and development of cutting-edge technologies in many fields, including mechanics, materials, and software. Thanks to the presence of the largest automotive companies across Europe, there is a great deal of knowledge in this sector, which represents one of the most crucial areas for the European Union's economy. As can be seen from the table below \ref{tab:VehicleProduction}, the production of total vehicles worldwide has been continuously growing, with the exception of two periods: following the financial crisis of 2007-2008 and following the pandemic of 2020, both events having a very strong impact on the entire global economy and which have had effects on many sectors. In any case, it can be noted that automotive production has resumed strong growth in the last two years.
+
+\begin{table}[htbp]
   \centering
-  \includegraphics[width=0.9\textwidth]{images/automotive_world production.png}  % Sostituisci 'nome_immagine' con il nome del tuo file immagine e l'estensione
   \caption{World automobile production in million vehicles \cite{automotiveInCentralEurope}}
-  \label{fig:WorldAutomobileProduction}
-\end{figure}
+  \label{tab:VehicleProduction}
+  \begin{tabular}{cccc}
+    \toprule
+    Year & Production (millions) & Change \\
+    \midrule
+    2007 & 73 266 061 & + 05.80 \% \\
+    2008 & 70 520 493 & - 03.70 \% \\
+    2009 & 61 791 868 & - 12.40 \% \\
+    2010 & 77 857 705 & + 26.00 \% \\
+    2011 & 79 989 155 & + 03.10 \% \\
+    2012 & 84 141 209 & + 05.30 \% \\
+    2013 & 87 300 115 & + 03.70 \% \\
+    2014 & 89 747 430 & + 02.60 \% \\
+    2015 & 90 086 346 & + 00.40 \% \\
+    2016 & 94 976 569 & + 04.50 \% \\
+    2017 & 97 302 534 & + 02.36 \% \\
+    2018 & 95 634 593 & - 01.71 \% \\
+    2019 & 91 786 861 & - 05.20 \% \\
+    2020 & 77 621 582 & - 16.00 \% \\
+    2021 & 80 145 988 & + 03.25 \% \\
+    2022 & 85 016 728 & + 06.08 \% \\
+    2023 & 93 546 599 & + 10,03 \% \\
+  \bottomrule
+  \end{tabular}
+\end{table}
 
-In the evolving landscape of automotive technology, the imperative for automotive companies extends beyond the traditional realms of mechanical engineering to encompass a crucial reliance on both software and hardware components for vehicle construction. A glimpse into the intricate web of modern cars, as illustrated in Figure \ref{fig:VheicleProcessors}, reveals a mosaic of hundreds of distinct processors interfacing at various levels, earning contemporary vehicles the moniker of "Computers on wheels."
+In the ever-expanding landscape of the automotive industry, a new frontier has been added in recent years, that of software development, which first arrived in the luxury car markets as optional and marginally relevant systems in the vehicle, and then spread to all types of vehicles, so that today the current challenges for automotive companies extend far beyond the traditional areas of mechanical or material engineering to reach a total and fundamental involvement in the study and innovation of software and hardware components for vehicle construction. 
 
+A look at the intricate intricate network of different components in today's cars, as shown in Figure \ref{fig:VheicleProcessors}, reveals that a vehicle is actually composed of a mosaic of dozens of different systems, which in turn are composed of dozens of processors that interact with each other at different levels, earning today's vehicles the nickname \textit{'Computers on Wheels'}.
 \begin{figure}[h]  % 'h' significa che la figura viene posizionata qui
   \centering
   \includegraphics[width=0.9\textwidth]{images/vehicle_processors.png}  % Sostituisci 'nome_immagine' con il nome del tuo file immagine e l'estensione
   \caption{An incomplete overview of computers in a modern car \cite{ieeeSoftwareDefinedVehicle}}
   \label{fig:VheicleProcessors}
 \end{figure}
+
+PARLARE DEI SISTEMI EMBEDDED FACENDO RIFERIMENTO ALL'ARTICOLO https://www.sciencedirect.com/science/article/abs/pii/S2214209620300565#preview-section-introduction PER POI PARLARE DI DIGITAL TWIN E POI DI SDV 
 
 However, the proliferation of processors within vehicles, orchestrating communication to manage diverse components, presents a formidable challenge; each component often integrates a processor with unique logics, diverging from the logics embedded in processors of other components. Complicating matters further, these components are frequently supplied by companies with proprietary management logics, not readily accessible to the automotive companies themselves.
 
