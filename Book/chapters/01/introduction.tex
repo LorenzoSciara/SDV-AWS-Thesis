@@ -48,7 +48,7 @@ The automotive industry has stood out for decades as a continuously growing sect
 
 In the ever-expanding landscape of the automotive industry, a new frontier has been added in recent years, that of software development, which first arrived in the luxury car markets as optional and marginally relevant systems in the vehicle, and then spread to all types of vehicles, so that today the current challenges for automotive companies extend far beyond the traditional areas of mechanical or material engineering to reach a total and fundamental involvement in the study and innovation of software and hardware components for vehicle construction. 
 
-A look at the intricate intricate network of different components in today's cars, as shown in Figure \ref{fig:VheicleProcessors}, reveals that a vehicle is actually composed of a mosaic of dozens of different systems, which in turn are composed of dozens of processors that interact with each other at different levels, earning today's vehicles the nickname \textit{'Computers on Wheels'}.
+A look at the intricate network of different components in today's cars, as shown in Figure \ref{fig:VheicleProcessors}, reveals that a vehicle is actually composed of a mosaic of dozens of different systems, which in turn are composed of dozens of processors that interact with each other at different levels, earning today's vehicles the moniker \textit{'Computers on Wheels'}.
 \begin{figure}[h]  % 'h' significa che la figura viene posizionata qui
   \centering
   \includegraphics[width=0.9\textwidth]{images/vehicle_processors.png}  % Sostituisci 'nome_immagine' con il nome del tuo file immagine e l'estensione
@@ -56,11 +56,13 @@ A look at the intricate intricate network of different components in today's car
   \label{fig:VheicleProcessors}
 \end{figure}
 
-PARLARE DEI SISTEMI EMBEDDED FACENDO RIFERIMENTO ALL'ARTICOLO https://www.sciencedirect.com/science/article/abs/pii/S2214209620300565#preview-section-introduction PER POI PARLARE DI DIGITAL TWIN E POI DI SDV 
+This paradigm shift has been driven in part by the introduction of autonomous driving. To ensure maximum safety, a car must be equipped with dozens of sensors that can constantly collect data about what is happening to the vehicle and its surroundings. The number of these telemetry devices, which are nothing more than specialized IoT devices for the automotive world, also known as Telematic Control Unit (TCU), is expected to grow as autonomous driving technologies advance. In addition to data collection, another key issue is data analysis. Modern vehicles are caught between low-power systems for maximum vehicle efficiency and high-performance systems for analyzing the collected data and making excellent decisions in a short time.
 
 However, the proliferation of processors within vehicles, orchestrating communication to manage diverse components, presents a formidable challenge; each component often integrates a processor with unique logics, diverging from the logics embedded in processors of other components. Complicating matters further, these components are frequently supplied by companies with proprietary management logics, not readily accessible to the automotive companies themselves.
 
 In addressing this intricate scenario, the transformative concept of a Software Defined Vehicle (SDV) comes to the forefront. Defined as "any vehicle that manages its operations, adds functionality, and enables new features primarily or entirely through software"  \cite{blackberrySDV}, the notion of SDV offers a comprehensive solution to the challenges posed by the intricate interplay of software and hardware in modern vehicles.
+
+One of the main benefits of this innovation in the automotive industry is the ability to have easily manageable systems. In the past, due to their high level of specialization for performance and low power consumption, automotive computer systems were developed and tested directly on the devices themselves, often in a manual way. This resulted in a large consumption of resources and a waste of time. Today, the goal is to have cloud infrastructures that ensure a more agile development and testing process due to the presence of general-purpose systems in the vehicle.
 
 Effectively navigating the development of SDV technology necessitates a collaborative approach across diverse companies, particularly in the realms of hardware and cloud computing. This collaborative synergy is exemplified in the realization of our project, made possible through the partnership with Storm Reply.
 
