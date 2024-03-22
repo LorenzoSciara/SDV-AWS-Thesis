@@ -35,3 +35,5 @@
 \contentsline {figure}{\numberline {5.8}{\ignorespaces A snapshot of the Hawkbit server during the deployment of the update on the device}}{69}{figure.5.8}%
 \contentsline {figure}{\numberline {5.9}{\ignorespaces A snapshot of the ABS graph on the Grafana server}}{72}{figure.5.9}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Comunication between the RaspberryPi board and the Grafana server via the AWS cloud services}}{75}{figure.6.1}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Update to the RaspberryPi board and Grafana data after the update}}{75}{figure.6.2}%
