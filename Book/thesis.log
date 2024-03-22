@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.3)  22 MAR 2024 13:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.3)  22 MAR 2024 21:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -866,7 +866,7 @@ File: translations-basic-dictionary-english.trsl (english translation file `tran
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 78.
 \c@lstlisting=\count372
-<PolitoLogos/PolitoLogo3.jpg, id=143, 3522.15875pt x 2491.3075pt>
+<PolitoLogos/PolitoLogo3.jpg, id=136, 3522.15875pt x 2491.3075pt>
 File: PolitoLogos/PolitoLogo3.jpg Graphic file (type jpg)
 <use PolitoLogos/PolitoLogo3.jpg>
 Package pdftex.def Info: PolitoLogos/PolitoLogo3.jpg  used on input line 100.
@@ -961,7 +961,7 @@ Underfull \vbox (badness 3312) has occurred while \output is active []
 
 
 ]
-<images/vehicle_processors.png, id=401, 682.55pt x 431.6125pt>
+<images/vehicle_processors.png, id=391, 682.55pt x 431.6125pt>
 File: images/vehicle_processors.png Graphic file (type png)
 <use images/vehicle_processors.png>
 Package pdftex.def Info: images/vehicle_processors.png  used on input line 54.
@@ -980,12 +980,12 @@ l.66
 Underfull \vbox (badness 1546) has occurred while \output is active []
 
  [15]
-<images/Storm_Reply_logo.png, id=430, 169.57843pt x 52.92212pt>
+<images/Storm_Reply_logo.png, id=420, 169.57843pt x 52.92212pt>
 File: images/Storm_Reply_logo.png Graphic file (type png)
 <use images/Storm_Reply_logo.png>
 Package pdftex.def Info: images/Storm_Reply_logo.png  used on input line 86.
 (pdftex.def)             Requested size: 126.75198pt x 39.55824pt.
-<images/AWSMagicQuadrantForCloud.png, id=432, 362.9811pt x 401.5pt>
+<images/AWSMagicQuadrantForCloud.png, id=422, 362.9811pt x 401.5pt>
 File: images/AWSMagicQuadrantForCloud.png Graphic file (type png)
 <use images/AWSMagicQuadrantForCloud.png>
 Package pdftex.def Info: images/AWSMagicQuadrantForCloud.png  used on input line 101.
@@ -1015,7 +1015,7 @@ Chapter 2.
 
 
 ]
-<images/costs_of_errors_correction_in_software_development.png, id=462, 369.38pt x 337.76187pt>
+<images/costs_of_errors_correction_in_software_development.png, id=452, 369.38pt x 337.76187pt>
 File: images/costs_of_errors_correction_in_software_development.png Graphic file (type png)
 <use images/costs_of_errors_correction_in_software_development.png>
 Package pdftex.def Info: images/costs_of_errors_correction_in_software_development.png  used on input line 36.
@@ -1026,7 +1026,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1}) h
                                                   \__shipout_drop_firstpage_...
 l.42 \end{itemize}
                    <./images/costs_of_errors_correction_in_software_development.png>] [22] [23] [24]
-<images/MQTTProtocol.png, id=497, 559.08875pt x 289.58188pt>
+<images/MQTTProtocol.png, id=487, 559.08875pt x 289.58188pt>
 File: images/MQTTProtocol.png Graphic file (type png)
 <use images/MQTTProtocol.png>
 Package pdftex.def Info: images/MQTTProtocol.png  used on input line 100.
@@ -1037,7 +1037,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2}) h
                                                   \__shipout_drop_firstpage_...
 l.115     \item \textbf
                        {Human Safety Critical Security:} The ability of SDV ... <./images/MQTTProtocol.png>]
-<images/window_of_exposure.png, id=509, 801.74532pt x 365.86688pt>
+<images/window_of_exposure.png, id=499, 801.74532pt x 365.86688pt>
 File: images/window_of_exposure.png Graphic file (type png)
 <use images/window_of_exposure.png>
 Package pdftex.def Info: images/window_of_exposure.png  used on input line 119.
@@ -1048,7 +1048,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2.3}) h
                                                   \__shipout_drop_firstpage_...
 l.128 
        <./images/window_of_exposure.png>]
-<images/today_developer_workflow.png, id=518, 804.75656pt x 429.10312pt>
+<images/today_developer_workflow.png, id=508, 804.75656pt x 429.10312pt>
 File: images/today_developer_workflow.png Graphic file (type png)
 <use images/today_developer_workflow.png>
 Package pdftex.def Info: images/today_developer_workflow.png  used on input line 140.
@@ -1057,7 +1057,7 @@ Package pdftex.def Info: images/today_developer_workflow.png  used on input line
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/future_developers_workflow.png, id=520, 832.61063pt x 420.82219pt>
+<images/future_developers_workflow.png, id=510, 832.61063pt x 420.82219pt>
 File: images/future_developers_workflow.png Graphic file (type png)
 <use images/future_developers_workflow.png>
 Package pdftex.def Info: images/future_developers_workflow.png  used on input line 148.
@@ -1076,7 +1076,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2.5}) h
                                                   \__shipout_drop_firstpage_...
 l.162 \end{enumerate}
                       <./images/today_developer_workflow.png> <./images/future_developers_workflow.png>]
-<images/SOAFEE_architecture.png, id=539, 440.14438pt x 313.17pt>
+<images/SOAFEE_architecture.png, id=529, 440.14438pt x 313.17pt>
 File: images/SOAFEE_architecture.png Graphic file (type png)
 <use images/SOAFEE_architecture.png>
 Package pdftex.def Info: images/SOAFEE_architecture.png  used on input line 170.
@@ -1111,7 +1111,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.3.2}) ha
                                                   \__shipout_drop_firstpage_...
 l.79 
      ] [34]
-<images/AWSSOC.png, id=589, 193.72375pt x 179.67125pt>
+<images/AWSSOC.png, id=579, 193.72375pt x 179.67125pt>
 File: images/AWSSOC.png Graphic file (type png)
 <use images/AWSSOC.png>
 Package pdftex.def Info: images/AWSSOC.png  used on input line 102.
@@ -1135,7 +1135,7 @@ Overfull \hbox (2.08981pt too wide) in paragraph at lines 111--112
 
  (chapters/04/AWS_used_services.tex
 Chapter 4.
-<images/AWSSDK.png, id=626, 420.57124pt x 227.34938pt>
+<images/AWSSDK.png, id=616, 420.57124pt x 227.34938pt>
 File: images/AWSSDK.png Graphic file (type png)
 <use images/AWSSDK.png>
 Package pdftex.def Info: images/AWSSDK.png  used on input line 26.
@@ -1149,7 +1149,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 ]
-<images/AWSIoTCore.png, id=634, 484.81125pt x 230.36063pt>
+<images/AWSIoTCore.png, id=624, 484.81125pt x 230.36063pt>
 File: images/AWSIoTCore.png Graphic file (type png)
 <use images/AWSIoTCore.png>
 Package pdftex.def Info: images/AWSIoTCore.png  used on input line 40.
@@ -1165,13 +1165,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2}) h
                                                   \__shipout_drop_firstpage_...
 l.48 
       <./images/AWSSDK.png> <./images/AWSIoTCore.png>]
-<images/AWSCodepipeline.png, id=647, 483.8075pt x 160.6pt>
+<images/AWSCodepipeline.png, id=637, 483.8075pt x 160.6pt>
 File: images/AWSCodepipeline.png Graphic file (type png)
 <use images/AWSCodepipeline.png>
 Package pdftex.def Info: images/AWSCodepipeline.png  used on input line 60.
 (pdftex.def)             Requested size: 338.00314pt x 112.20357pt.
  [40]
-<images/AWSS3.png, id=659, 560.0925pt x 280.04625pt>
+<images/AWSS3.png, id=649, 560.0925pt x 280.04625pt>
 File: images/AWSS3.png Graphic file (type png)
 <use images/AWSS3.png>
 Package pdftex.def Info: images/AWSS3.png  used on input line 77.
@@ -1182,7 +1182,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3}) h
                                                   \__shipout_drop_firstpage_...
 l.81 
       <./images/AWSCodepipeline.png>]
-<images/AWSECR.png, id=670, 552.56438pt x 153.57375pt>
+<images/AWSECR.png, id=660, 552.56438pt x 153.57375pt>
 File: images/AWSECR.png Graphic file (type png)
 <use images/AWSECR.png>
 Package pdftex.def Info: images/AWSECR.png  used on input line 87.
@@ -1197,7 +1197,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4.4}) h
                                                   \__shipout_drop_firstpage_...
 l.95 
       <./images/AWSS3.png>]
-<images/AmazonKinesis.png, id=684, 829.59938pt x 356.83313pt>
+<images/AmazonKinesis.png, id=674, 829.59938pt x 356.83313pt>
 File: images/AmazonKinesis.png Graphic file (type png)
 <use images/AmazonKinesis.png>
 Package pdftex.def Info: images/AmazonKinesis.png  used on input line 105.
@@ -1213,12 +1213,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4.6}) h
                                                   \__shipout_drop_firstpage_...
 l.120     A
            mazon CloudWatch is a system to monitor the Amazon Web Services (... <./images/AmazonKinesis.png>]
-<images/AWS_data_services.png, id=704, 476.27937pt x 61.73062pt>
+<images/AWS_data_services.png, id=694, 476.27937pt x 61.73062pt>
 File: images/AWS_data_services.png Graphic file (type png)
 <use images/AWS_data_services.png>
 Package pdftex.def Info: images/AWS_data_services.png  used on input line 129.
 (pdftex.def)             Requested size: 422.50232pt x 54.76297pt.
-<images/AWS_update_services.png, id=705, 476.27937pt x 205.26688pt>
+<images/AWS_update_services.png, id=695, 476.27937pt x 205.26688pt>
 File: images/AWS_update_services.png Graphic file (type png)
 <use images/AWS_update_services.png>
 Package pdftex.def Info: images/AWS_update_services.png  used on input line 136.
@@ -1244,7 +1244,7 @@ Chapter 5.
 
 
 ]
-<images/raspberrypi.png, id=722, 468.75125pt x 294.09875pt>
+<images/raspberrypi.png, id=712, 468.75125pt x 294.09875pt>
 File: images/raspberrypi.png Graphic file (type png)
 <use images/raspberrypi.png>
 Package pdftex.def Info: images/raspberrypi.png  used on input line 41.
@@ -1269,12 +1269,12 @@ l.70     CERT_FILEPATH
                        = f"{certificate_path}{VIN}.cert.pem" <./images/raspberrypi.png>] (C:\Users\Lorenzo\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 ) [50] [51]
-<images/update_log_HDS.png, id=812, 338.76563pt x 120.45pt>
+<images/update_log_HDS.png, id=802, 338.76563pt x 120.45pt>
 File: images/update_log_HDS.png Graphic file (type png)
 <use images/update_log_HDS.png>
 Package pdftex.def Info: images/update_log_HDS.png  used on input line 147.
 (pdftex.def)             Requested size: 338.00314pt x 120.18318pt.
-<images/telemetryV1.png, id=814, 553.06625pt x 197.23688pt>
+<images/telemetryV1.png, id=804, 553.06625pt x 197.23688pt>
 File: images/telemetryV1.png Graphic file (type png)
 <use images/telemetryV1.png>
 Package pdftex.def Info: images/telemetryV1.png  used on input line 158.
@@ -1290,12 +1290,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.5.3}) h
                                                   \__shipout_drop_firstpage_...
 l.166 ...r subsystems}, label=lst:TCUOrchestrator]
                                                    <./images/update_log_HDS.png> <./images/telemetryV1.png>] [53]
-<images/TCUsimulatorP.png, id=846, 406.026pt x 259.077pt>
+<images/TCUsimulatorP.png, id=836, 406.026pt x 259.077pt>
 File: images/TCUsimulatorP.png Graphic file (type png)
 <use images/TCUsimulatorP.png>
 Package pdftex.def Info: images/TCUsimulatorP.png  used on input line 203.
 (pdftex.def)             Requested size: 338.00314pt x 215.68611pt.
-<images/TCUsimulatorC.png, id=847, 531.9875pt x 196.735pt>
+<images/TCUsimulatorC.png, id=837, 531.9875pt x 196.735pt>
 File: images/TCUsimulatorC.png Graphic file (type png)
 <use images/TCUsimulatorC.png>
 Package pdftex.def Info: images/TCUsimulatorC.png  used on input line 211.
@@ -1319,7 +1319,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.5.5}) h
                                                   \__shipout_drop_firstpage_...
 l.243 class 
             DownloadHandler(FileSystemEventHandler): <./images/TCUsimulatorC.png>] [56]
-<images/watchdog_log.png, id=923, 547.04375pt x 203.76125pt>
+<images/watchdog_log.png, id=913, 547.04375pt x 203.76125pt>
 File: images/watchdog_log.png Graphic file (type png)
 <use images/watchdog_log.png>
 Package pdftex.def Info: images/watchdog_log.png  used on input line 282.
@@ -1334,7 +1334,7 @@ LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 4
  (C:\Users\Lorenzo\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmtt.fd
 File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 ) [61] [62] [63] [64] [65]
-<images/hawkbitCodepipeline.png, id=1203, 721.69624pt x 306.64563pt>
+<images/hawkbitCodepipeline.png, id=1193, 721.69624pt x 306.64563pt>
 File: images/hawkbitCodepipeline.png Graphic file (type png)
 <use images/hawkbitCodepipeline.png>
 Package pdftex.def Info: images/hawkbitCodepipeline.png  used on input line 587.
@@ -1345,7 +1345,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.5.7}) h
                                                   \__shipout_drop_firstpage_...
 l.596 ...eation}, label=lst:AWSCodepipelineLambda]
                                                    <./images/hawkbitCodepipeline.png>] [67] [68]
-<images/hawkbit_server.png, id=1294, 718.18312pt x 327.2225pt>
+<images/hawkbit_server.png, id=1284, 718.18312pt x 327.2225pt>
 File: images/hawkbit_server.png Graphic file (type png)
 <use images/hawkbit_server.png>
 Package pdftex.def Info: images/hawkbit_server.png  used on input line 671.
@@ -1356,7 +1356,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.5.8}) h
                                                   \__shipout_drop_firstpage_...
 l.683 device_to_kinesis_role.
                              add_to_policy(iam.PolicyStatement( <./images/hawkbit_server.png>] [70] [71]
-<images/grafana_Battery.png, id=1364, 578.16pt x 257.96375pt>
+<images/grafana_Battery.png, id=1354, 578.16pt x 257.96375pt>
 File: images/grafana_Battery.png Graphic file (type png)
 <use images/grafana_Battery.png>
 Package pdftex.def Info: images/grafana_Battery.png  used on input line 742.
@@ -1371,7 +1371,7 @@ l.198 \include{chapters/05/proof_of_concept}
 
  (chapters/06/concluding_remarks.tex
 Chapter 6.
-<images/RaspberryPiDemo.png, id=1376, 487.8225pt x 128.48pt>
+<images/RaspberryPiDemo.png, id=1366, 487.8225pt x 128.48pt>
 File: images/RaspberryPiDemo.png Graphic file (type png)
 <use images/RaspberryPiDemo.png>
 Package pdftex.def Info: images/RaspberryPiDemo.png  used on input line 16.
@@ -1389,7 +1389,7 @@ Overfull \hbox (4.80157pt too wide) in paragraph at lines 29--30
 []\OT1/cmr/m/n/12 The flex-i-bil-ity to adapt the cloud in-fras-truc-ture to dif-fer-ent con-di-tions, whether
  []
 
-<images/RaspberryPiDemoUpdate.png, id=1382, 574.145pt x 152.06813pt>
+<images/RaspberryPiDemoUpdate.png, id=1372, 574.145pt x 152.06813pt>
 File: images/RaspberryPiDemoUpdate.png Graphic file (type png)
 <use images/RaspberryPiDemoUpdate.png>
 Package pdftex.def Info: images/RaspberryPiDemoUpdate.png  used on input line 34.
@@ -1419,20 +1419,20 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: FDBD0A3000AFECE1DA052B12297F7D8F;2402.
+(rerunfilecheck)             Checksum: C19E09F5E4DDA0E157E6066A3A3D084D;2171.
  ) 
 Here is how much of TeX's memory you used:
  46377 strings out of 474542
- 1052270 string characters out of 5743503
+ 1052228 string characters out of 5743503
  2022978 words of memory out of 5000000
- 67085 multiletter control sequences out of 15000+600000
+ 67084 multiletter control sequences out of 15000+600000
  570312 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  138i,20n,135p,1550b,4272s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Lorenzo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt1200.pk> <C:\Users\Lorenzo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmitt10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (82 pages, 10089528 bytes).
+Output written on thesis.pdf (82 pages, 10090227 bytes).
 PDF statistics:
- 1718 PDF objects out of 1728 (max. 8388607)
- 731 named destinations out of 1000 (max. 500000)
- 447 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1710 PDF objects out of 1728 (max. 8388607)
+ 732 named destinations out of 1000 (max. 500000)
+ 431 words of extra memory for PDF output out of 10000 (max. 10000000)
 
