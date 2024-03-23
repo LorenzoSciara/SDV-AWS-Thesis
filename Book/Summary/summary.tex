@@ -30,10 +30,10 @@
 	urlcolor={blue}
 }
 
-\title{\LARGE\textbf{Automatic Optimized Firewalls Orchestration \\and Configuration in NFV environment }}
+\title{\LARGE\textbf{Rethinking Automotive Software Development: Exploring Software Defined Vehicle and its potential}}
 \author{
-	\textbf{Candidate:} Daniele Bringhenti\\
-	\textbf{Supervisors:} prof.~Riccardo Sisto, prof.~Guido Marchetto, \\ dott.~Fulvio Valenza, dott.~Jalolliddin Yusupov
+	\textbf{Candidate:} Lorenzo Sciara\\
+	\textbf{Supervisors:} prof.~Danilo Bazzanella \\ dott.sa~Piera Limonet
 }
 \date{}
 
@@ -48,9 +48,11 @@
 \maketitle
 		
 \section{Introduction and Motivation}
+The \textit{Software Defined Vehicle} (SDV) paradigm is an innovative technology in the automotive industry that, by connecting the vehicle to cloud services and separating software development from supporting hardware systems, allows software to become a fundamental element of vehicle design. The resulting benefits are increased safety and efficiency of automobiles that can be remotely updated over their entire lifecycle using this innovation, and increased efficiency in the production of automotive software, reducing the waste of economic resources and development time.
 
-The \textit{Network Functions Virtualization} (NFV) paradigm is a novel networking technology which, by means of a decoupling between the network functions and the hardware appliances, allows software processes to be installed as service functions on general-purpose servers. Among the consequent benefits, this principle entails further agility and flexibility in the creation of a \textit{Service Graph}, which is a generalization of the \textit{Service Function Chain} (SFC) concept, describing how the single network functions, needed to create a complete end-to-end service, must be organized and connected.
+Nel contesto dell'industria automobilistica, fino agli ultimi anni, il software prodotto per i veicoli è sempre stato considerato secondario nella produzione del veicolo stesso. In particolare, essendo il focus indirizzato principalmente alla parte maccanica, il software diventava fortemente dipendente dai sistemi per cui viene implementato. Il ciclo di vita del software di un veicolo era rappresentato da una fase di sviluppo e test direttamente sul sitema finale, se il sistema rispondeva correttamente, il software veniva mantenuto lo stesso per tutta la vita del veicolo, potendo apportare modifiche solo ed esclusivamente fisicamente, se il software nno rispondeva correttamente si ricominciava il processo, sprecando risorse in quanto una volta testati i sistemi non erano facilmente riscrivibili.
 
+Con l'introduzione del SDV il paradigma cambia completamente. I sistemi che compongono il veicolo passano da essere molto specifici per il sistema stesso ad essere coordinati da processori general parpous facilmente riprogrammabili e il veicolo viene connesso direttamente al cloud, sia per l'analisi dei dati prodotti dai sistemi, sia per la possibilità di ricevere aggiornamenti  \textit{Over The Air} (OTA) su qualsiasi sistema. A questo punto il veicolo diventa un dispositivo controllabile e facilmente aggiornabile in base ai dati e alle informazioni che genera. Questo aumenta sia l'efficienza di produzione del software sia la sicurezza del veicolo dato che qualsiasi vulnerabilità del sistema può essere tempestivamente individuata, corretta e risolta tramite aggiornamenti. In particolare la sicurezza è un elemento fondamentale nella produzione di software per veicoli, tanto da essere considerato e classicato dal ISO come dispositivo safety cvritical per la vita umana.
 A problem which, however, arises in the creation of a Service Graph in this scenario is that this task is typically performed by a service designer; instead, the security manager is separately in charge of the allocation and configuration of the \textit{Network Security Functions} (NSFs) -- such as firewalls and anti-spam filters -- needed to protect the network from cybersecurity attacks. Moreover, these operations are usually performed manually, so they are prone to human errors and the reaction latency is not negligible whenever the security defences should be updated according to different or additional security requirements.
 
 In view of these considerations, this thesis contributed to the development of \textit{VEREFOO} (VErified REFinement and Optimized Orchestration), a framework which aims to provide a \textit{Security Automation} approach as a solution to these open problems. The main purpose is to perform, on a provided Service Graph, an automatic optimized allocation and configuration of the NSFs that are necessary to fulfil an input set of \textit{Network Security Requirements} (NSRs), which can be expressed by the service designer by exploiting a high-level language.

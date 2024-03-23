@@ -1,6 +1,6 @@
-PWD c:\Users\Lorenzo\Documents\TESI\Template\Template
+PWD c:\Users\Lorenzo\Documents\TESI\SDV-AWS-Thesis\Book\Summary
 INPUT C:\Users\Lorenzo\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\Lorenzo\Documents\TESI\Template\Template\summary.tex
+INPUT c:\Users\Lorenzo\Documents\TESI\SDV-AWS-Thesis\Book\Summary\summary.tex
 OUTPUT summary.log
 INPUT C:\Users\Lorenzo\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\Lorenzo\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
