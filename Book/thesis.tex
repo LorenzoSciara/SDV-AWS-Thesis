@@ -21,6 +21,7 @@
 \usepackage{accsupp}
 \usepackage{pgfplots}
 \usepackage{booktabs}
+\usepackage[acronym, automake]{glossaries-extra}
 %
 % Commentare le righe seguenti se NON si è specificata l'opzione "pdfa"
 \hypersetup{%
@@ -72,6 +73,21 @@
 	stringstyle=\color{blue},
 	identifierstyle=\color{red}
 }
+
+\makeglossaries
+\setabbreviationstyle[acronym]{long-short}
+\newacronym{ac:sdv}{SDV}{Software Defined Vehicle}
+\newacronym{ac:tcu}{TCU}{Telematic Control Unit}
+\newacronym{ac:mqtt}{MQTT}{Message Queuing Telemetry Transport}
+\newacronym{ac:ota}{OTA}{Over-The-Air}
+\newacronym{ac:fota}{FOTA}{Firmware-Over-The-Air}
+\newacronym{ac:adas}{ADAS}{Advanced Driver Assistance Systems}
+\newacronym{ac:ad}{AD}{Automated Driving}
+\newacronym{ac:ivi}{IVI}{In-Vehicle Infotainment}
+\newacronym{ac:aws}{AWS}{Amazon Web Services}
+\newacronym{ac:qos}{QoS}{Quality of Service}
+\newacronym{ac:soafee}{SOAFEE}{Scalable Open Architecture for Embedded Edge}
+
 
 
 
@@ -185,6 +201,8 @@ Acknowledgement (optional)
 \addcontentsline{toc}{chapter}{Listings}
 
 \lstlistoflistings
+
+\printglossary[style=super, type=\acronymtype] 
 
 \clearpage\pagestyle{empty}\mbox{}\clearpage
 

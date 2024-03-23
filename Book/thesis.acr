@@ -1,0 +1,39 @@
+\glossarysection[\glossarytoctitle]{\glossarytitle}\glossarypreamble
+\begin{theglossary}\glossaryheader
+\glsgroupheading{A}\relax \glsresetentrylist %
+\glossentry{ac:ad}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{24}}}%
+\glossentry{ac:adas}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{24}}}%
+\glossentry{ac:aws}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{25}}}\glsgroupskip
+\glsgroupheading{F}\relax \glsresetentrylist %
+\glossentry{ac:fota}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{23}}}\glsgroupskip
+\glsgroupheading{I}\relax \glsresetentrylist %
+\glossentry{ac:ivi}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{24}}}\glsgroupskip
+\glsgroupheading{M}\relax \glsresetentrylist %
+\glossentry{ac:mqtt}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{7}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{25\delimN 26}}}\glsgroupskip
+\glsgroupheading{O}\relax \glsresetentrylist %
+\glossentry{ac:ota}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{24\delimN 25}}}\glsgroupskip
+\glsgroupheading{Q}\relax \glsresetentrylist %
+\glossentry{ac:qos}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{25}}}\glsgroupskip
+\glsgroupheading{S}\relax \glsresetentrylist %
+\glossentry{ac:sdv}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{13}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{15\delimN 16}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{19}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{21}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{23\delimN 24}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{26\delimR 30}}}%
+\glossentry{ac:soafee}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{28}}}\glsgroupskip
+\glsgroupheading{T}\relax \glsresetentrylist %
+\glossentry{ac:tcu}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{15}}}%
+\end{theglossary}\glossarypostamble

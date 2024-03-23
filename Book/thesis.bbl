@@ -36,14 +36,6 @@ J.~Scheibmeir, S.~Sicular, A.~Batchu, M.~Fang, V.~Baker, and F.~O'Connor,
   \url{https://pages.awscloud.com/Gartner-Magic-Quadrant-for-Cloud-AI-Developer-Services.html?trk=d59e704f-4f30-4d43-8902-eb63c3692af4&sc_channel=el}
 \BIBentrySTDinterwordspacing
 
-\bibitem{CostsOfSoftwareDeveloping}
-\BIBentryALTinterwordspacing
-M.~KARLSSON and L.~SCHÖNBECK, ``Department of technology management and
-  economics,'' \emph{CHALMERS UNIVERSITY OF TECHNOLOGY}, p.~11, 2018. [Online].
-  Available:
-  \url{https://odr.chalmers.se/server/api/core/bitstreams/077c3440-c033-418e-92ed-eda5dd638c5f/content}
-\BIBentrySTDinterwordspacing
-
 \bibitem{SoafeeArchitecture}
 \BIBentryALTinterwordspacing
 (2023) Architecture. SOAFEE project and Matt Spencer. Accessed: 01 03, 2024.
@@ -93,6 +85,14 @@ M.~KARLSSON and L.~SCHÖNBECK, ``Department of technology management and
 \BIBentryALTinterwordspacing
 (2022) Production statistics. OICA. Accessed: 01 03, 2024. [Online]. Available:
   \url{https://www.oica.net/category/production-statistics/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{CostsOfSoftwareDeveloping}
+\BIBentryALTinterwordspacing
+M.~KARLSSON and L.~SCHÖNBECK, ``Department of technology management and
+  economics,'' \emph{CHALMERS UNIVERSITY OF TECHNOLOGY}, p.~11, 2018. [Online].
+  Available:
+  \url{https://odr.chalmers.se/server/api/core/bitstreams/077c3440-c033-418e-92ed-eda5dd638c5f/content}
 \BIBentrySTDinterwordspacing
 
 \bibitem{CloudComputing}
