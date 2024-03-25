@@ -75,18 +75,16 @@ Regarding the data analysis flow illustrated in the figure \ref{fig:AWSDataServi
 	\label{fig:AWSDataServices}
 \end{figure}
 
-Per il flusso di gestione e deployment degli aggiornamenti, come mostrato in figura, vengono utilizzati altri servizi. Come prima cosa in ordine cronologico viene istanziata una macchina EC2 su cui viene posizionato il server Hawkbit, e vengono salvati i parametri del server (come indirizzo IP e user informations) nel Parameter Store del System Manager. Successivamente viene creata una pipeline caratterizzata da uno stage di Source, uno di build e uno di deploy articolato su tre Lambda function, tramite il servizio Codepipeline. Per lo stage source viene inserito un repository Codecommit che tramite gli eventi di commit è in grado di triggerare 
+In terms of update management and deployment flow, the figure \ref{fig:AWSUpdateServices} shows the use of other services. First, an \textit{Elastic Compute Cloud} (EC2) instance is created in chronological order, on which the \textit{Hawkbit} server is installed. The server parameters, such as IP address and user information, are then saved in the \textit{System Manager}'s \textit{Parameter Store}. Subsequently, a pipeline is created, which consists of a \textit{Source} stage, a \textit{Build} stage, and a \textit{Deployment} stage, divided into three \textit{Lambda} functions, via the \textit{Codepipeline} service. The source stage uses a \textit{Codecommit} repository, which takes commit events to trigger subsequent actions in the pipeline. When an update of a compiled script written in C code, as in the project, is required, the repository containing the update source code is used as input by the build stage. This stage generates the executable file, which is ready for deployment from a specially created image placed in an \textit{Elastic Container Registry} (ECR) registry. At this point, the executable goes through the three Lambda functions that, by contacting the Hawkbit server with the information stored in the Parameter Store, respectively create the \textit{Distribution Set} and the \textit{Software Module} containing the update files on the server, create the \textit{Roll Out}, and assign the \textit{Distribution Set} to the device or fleet of devices to be updated, again using the API exposed by the \textit{Hawkbit} server.
 \begin{figure} [tbh]
 	\centerline{\includegraphics[width=0.4\textwidth]{images/AWS_update_services.png}}
 	\caption{High-level representation of AWS services for the update management and deployment}
 	\label{fig:AWSUpdateServices}
 \end{figure}
 
-In this context, a consistent part of the thesis work has been dedicated to the definition of the hard constraints for the forwarding rules of the middle-boxes of the Allocation Graph. The exploited MaxSMT solver -- z3 -- would offer a tool, called \textit{quantifiers}, to express a set of nodes with a single variable and easily create forwarding rules, but it does not put any constraint which would allow to establish the minimum size of this set, with a consequent worsening of the performance the framework could reach. 
+These two execution flows in the cloud infrastructure appear to be separate, but they are linked by the device. The device receives updates and modifies performance and data produced, providing the necessary information to create new updates and continue this cycle throughout the device's life (and the potential vehicle's life). This passage demonstrates how the cloud services offered by AWS are a valid solution for the functions required for the development of the SDV.
 
-The problem which has been challenged, therefore, has been to identify the minimum set of nodes to which a packet can be sent, given a specific port from which it has been previously received, in order to reach the destination. This step has been fundamental to achieve good scalability for the methodology.
-
-\subsection{Network Security Requirements}
+\subsection{TCU Device Simulator}
 
 The second input is represented by the \textit{Network Security Requirements}, hard constraints which must be enforced in the network to guarantee the required security level. The focus of the thesis was on \textit{connectivity} requirements between a pair of end points. In more details, they can be classified in two different types: 
 \begin{enumerate}
