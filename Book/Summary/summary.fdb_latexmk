@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1711365972.31284 "c:/Users/Lorenzo/Documents/TESI/SDV-AWS-Thesis/Book/Summary/summary.tex" "summary.pdf" "summary" 1711365975.97879 0
+["pdflatex"] 1711369445.36075 "c:/Users/Lorenzo/Documents/TESI/SDV-AWS-Thesis/Book/Summary/summary.tex" "summary.pdf" "summary" 1711369446.80658 0
   "C:/Users/Lorenzo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1711159487 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Lorenzo/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1706976003 24211730 977ecd5e62267dc7fdf74aecd6463422 ""
   "C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -30,7 +30,6 @@
   "C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247596667 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
   "C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1247596667 32722 d7379af29a190c3f453aba36302ff5a9 ""
-  "C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1247596667 32762 7fee39e011c23b3589931effd97b9702 ""
   "C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb" 1247596666 33993 9b89b85fd2d9df0482bd47194d1d3bf3 ""
   "C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1247596667 37944 359e864bd06cde3b1cf57bb20757fb06 ""
@@ -116,15 +115,16 @@
   "C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/tex/latex/xmpincl/xmpincl.sty" 1633254124 2832 d498c59e94b7dfa3b4bcf74380ad6348 ""
-  "c:/Users/Lorenzo/Documents/TESI/SDV-AWS-Thesis/Book/Summary/summary.tex" 1711365972 17125 4db073ea077d5fb6f8b4a0d483955e16 ""
+  "c:/Users/Lorenzo/Documents/TESI/SDV-AWS-Thesis/Book/Summary/summary.tex" 1711369427 17322 297c25ca7892e2a973fa17bf7bbf83c2 ""
+  "images/AWS_data_services.png" 1710935107 44297 29284c55b0a12871c5dd700789daebdc ""
+  "images/AWS_update_services.png" 1711369444 98296 bffcd37662a3f9010e31677ece167474 ""
   "images/multiple.png" 1711192383 213151 f9d9cdbb1e60673c9e5a6fadf3882c31 ""
   "images/scalability01.pdf" 1711192383 1209196 d22838979b220a77e6a53ca0eb42a1a8 ""
   "images/scalability02.pdf" 1711192383 1118540 81ba47d5eeb6a11f9932b6a737e0ae21 ""
-  "images/stoa.png" 1711192383 293142 f1b2c74a8c71e733259ce94b543215ee ""
-  "pdfa.xmpi" 1711365973 5042 b3fd15f4118e1f9bd0ce09d27a0758eb "pdflatex"
-  "summary.aux" 1711365975 2097 543829dd13f5524484d9e2e25dd0d9bd "pdflatex"
-  "summary.out" 1711365975 524 684eb475b240e0020fafdc0ff62ca91c "pdflatex"
-  "summary.tex" 1711365972 17125 4db073ea077d5fb6f8b4a0d483955e16 ""
+  "pdfa.xmpi" 1711369446 5042 a8b281332f43dbea0a10e7d974da90e0 "pdflatex"
+  "summary.aux" 1711369446 2480 8d1a7066d72c57594e9282698e4bb22e "pdflatex"
+  "summary.out" 1711369446 510 7010d07ad20139ce4c1ce19636a5281a "pdflatex"
+  "summary.tex" 1711369427 17322 297c25ca7892e2a973fa17bf7bbf83c2 ""
   (generated)
   "pdfa.xmpi"
   "summary.aux"

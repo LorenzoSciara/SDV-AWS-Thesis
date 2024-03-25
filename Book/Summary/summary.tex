@@ -64,17 +64,22 @@ To make this solution effective, simplifications were made to the overall SDV co
 
 The remainder of this section will present the contributions related to the construction phase of the cloud infrastructure -- Cloud Infrastructure -- as the simulator for collecting subsystem telemetry -- TCU Device Simulator -- as the data analysis server -- Grafana Server --. 
 
-\subsection{Service and Allocation Graph}
+\subsection{Cloud Infrastructure}
 
-The first input of the proposed approach is a Service Graph, characterized by a set of network functions such as traffic monitors and load balancers whose behaviour can have an impact on the satisfiability of the Network Security Requirements.
+The fundamental element of the proposed approach is the cloud infrastructure built through the use of the services offered by AWS. The architecture can be represented as two distinct workflows: one dedicated to the collection of telemetry data coming from the device, and the other to the management of the development and deployment of device update updates.
 
-An automatic parser of the input Service Graph has been developed during the thesis, in order to create an internal representation called \textit{Allocation Graph}. Without further specifications, for each link between any pair of network nodes or functions a placeholder -- an \textit{Allocation Place} in the framework -- is generated, so that in this position the optimizer engine can evaluate if a firewall should be placed to reach the optimal allocation schema. 
-
-However, if the service designer has technical knowledge about the security field, he can either force the allocation of a firewall on a specific position without allowing a further removal by the optimizer engine or prohibit the framework to consider a connection between nodes as a potential placeholder for a firewall virtual instance. This capability enriches the potentiality of the proposed methodology, because it offers an extended interactivity with the user and at the same time it decreases the computation time by reducing the solution space the optimizer must investigate to solve the MaxSMT problem, given the addition of some hard clauses. For instance, Figure \ref{fig:stoa} shows how a Service Graph is internally represented in this methodology, supposing that the service designer does not want any firewall between $e_{1}$ and $f_{3}$, while he forces the allocation of a firewall between $f_{4}$ and $e_{5}$.
+Regarding the data analysis flow illustrated in the figure \ref{fig:AWSDataServices}, a specific service for managing IoT devices is used, which is the IoT Core to collect data via a channel using the \textit{Message Queuing Telemetry Transport} (MQTT) protocol. The IoT Core service is also responsible for generating certificates to authenticate device connections. The data is then sent to a Kinesis stream, filtered by attributes and sent via a Lambda function to a Timestream database, which is in charge of temporarily storing the data.
 \begin{figure} [tbh]
-	\centerline{\includegraphics[width=0.4\textwidth]{images/stoa.png}}
-	\caption{Automatic generation of an Allocation Graph}
-	\label{fig:stoa}
+	\centerline{\includegraphics[width=0.4\textwidth]{images/AWS_data_services.png}}
+	\caption{High-level representation of AWS services for data management}
+	\label{fig:AWSDataServices}
+\end{figure}
+
+Per il flusso di gestione e deployment degli aggiornamenti, come mostrato in figura, vengono utilizzati altri servizi. Come prima cosa in ordine cronologico viene istanziata una macchina EC2 su cui viene posizionato il server Hawkbit, e vengono salvati i parametri del server (come indirizzo IP e user informations) nel Parameter Store del System Manager. Successivamente viene creata una pipeline caratterizzata da uno stage di Source, uno di build e uno di deploy articolato su tre Lambda function, tramite il servizio Codepipeline. Per lo stage source viene inserito un repository Codecommit che tramite gli eventi di commit è in grado di triggerare 
+\begin{figure} [tbh]
+	\centerline{\includegraphics[width=0.4\textwidth]{images/AWS_update_services.png}}
+	\caption{High-level representation of AWS services for the update management and deployment}
+	\label{fig:AWSUpdateServices}
 \end{figure}
 
 In this context, a consistent part of the thesis work has been dedicated to the definition of the hard constraints for the forwarding rules of the middle-boxes of the Allocation Graph. The exploited MaxSMT solver -- z3 -- would offer a tool, called \textit{quantifiers}, to express a set of nodes with a single variable and easily create forwarding rules, but it does not put any constraint which would allow to establish the minimum size of this set, with a consequent worsening of the performance the framework could reach. 
