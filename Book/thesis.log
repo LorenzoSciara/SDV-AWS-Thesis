@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.3)  24 MAR 2024 17:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.3)  25 MAR 2024 12:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1551,18 +1551,18 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 98DD178DA6DFA9085FAA04D2E0A68455;2215.
+(rerunfilecheck)             Checksum: 6C71C4CECB4F4C7E9C5BF4CF3C4E084C;2216.
  ) 
 Here is how much of TeX's memory you used:
  55207 strings out of 474542
  1233162 string characters out of 5743503
- 2024978 words of memory out of 5000000
+ 2023978 words of memory out of 5000000
  75793 multiletter control sequences out of 15000+600000
  570312 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  138i,20n,135p,2420b,4272s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Lorenzo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt1200.pk> <C:\Users\Lorenzo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmitt10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (83 pages, 10076526 bytes).
+Output written on thesis.pdf (83 pages, 10076181 bytes).
 PDF statistics:
  1820 PDF objects out of 2073 (max. 8388607)
  745 named destinations out of 1000 (max. 500000)
