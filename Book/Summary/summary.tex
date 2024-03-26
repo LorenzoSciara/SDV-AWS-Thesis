@@ -48,16 +48,18 @@
 \maketitle
 		
 \section{Introduction and Motivation}
-The \textit{Software Defined Vehicle} (SDV) paradigm is an innovative technology in the automotive industry that, by connecting the vehicle to cloud services and separating software development from supporting hardware systems, allows software to become a fundamental element of vehicle design. The resulting benefits are increased safety and efficiency of automobiles that can be remotely updated over their entire lifecycle using this innovation, and increased efficiency in the production of automotive software, reducing the waste of economic resources and development time.
+The \textit{Software Defined Vehicle} (SDV) paradigm is an innovative technology in the automotive industry that, by connecting the vehicle to cloud services and separating software development from supporting hardware systems, allows software to become a fundamental element of vehicle design. The resulting benefits are increased safety and efficiency of automobiles that can be remotely updated over their entire lifecycle using this innovation, and increased efficiency in the production of automotive software, reducing the waste of economic resources and development time. Additionally, this technology enables the activation or deactivation of vehicle features after the initial purchase, increasing the value of the vehicles and the company's revenue.
 
+\subsection{Context}
 In the context of the automotive industry, the software produced for vehicles was, until recently, always considered secondary to the production of the vehicles themselves. With the focus on the mechanical parts of the vehicle, software has been very dependent on the hardware for which it was implemented. The software production cycle for a new vehicle consisted of three phases. The development and testing phases were directly performed on the final hardware system. If the system responded correctly, the software was moved to the distribution phase for remaining more or less unchanged for the entire life of the car. Any modifications had to be made physically, resulting in significant resource waste. If the software did not respond correctly, the development and testing process had to be restarted on new hardware, resulting in additional costs and production delays.
 
 The introduction of the SDV completely changes the paradigm. The vehicle's systems are no longer coordinated by special purpose devices related to the system itself, but rather by easily reprogrammable general purpose processors. Additionally, the vehicle is connected directly to the cloud for data analysis and the possibility of receiving \textit{Over The Air} (OTA) updates on any of its systems. At this point, the vehicle becomes a controllable device that can be easily updated based on the data and information it generates, similar to more common devices like smartphones or laptops. This increases both the production efficiency of the software and the safety of the vehicle, since any system vulnerability can be promptly identified, corrected and resolved through updates. Safety is a crucial aspect in the production of vehicle software, so much so that it is considered and classified by the \textit{International Organization for Standardization} (ISO) as a safety-critical device for human life.
 
-In view of these considerations, this thesis aims to provide an overview of the essential elements for creating the SDV and presents a practical project that illustrates its operation with the support of a Raspberry Pi board. The text begins with an overview of the state of the art technologies and approaches currently available, then moves to cloud computing and the advantages offered by \textit{Amazon Web Services} (AWS), and follows with an exploration of the use of AWS services in the context of the project. Finally, this document analyzes the implementation of the project in detail, describing all the development phases and illustrating the support tools used, such as \textit{Hawkbit} for deploying updates to the device and \textit{Grafana} for data analysis.
+In the last few years, several companies have come together to collaborate on the development of this technology. The Scalable Open Architecture for the Embedded Edge (SOAFEE) project was born from the cooperation of leading companies in the sector, including Amazon and Arm. Its goal is to create a software architectural standard based on Arm devices that can provide a cloud-native open-source environment for mixed-criticality automotive applications. The project is currently under development.
+
+In view of the previous considerations, this thesis aims to provide an overview of the essential elements for creating the SDV and presents a practical project that illustrates its operation with the support of a Raspberry Pi board. The text begins with an overview of the state of the art technologies and approaches currently available, then moves to cloud computing and the advantages offered by \textit{Amazon Web Services} (AWS), and follows with an exploration of the use of AWS services in the context of the project. Finally, this document analyzes the implementation of the project in detail, describing all the development phases and illustrating the support tools used, such as \textit{Hawkbit} for deploying updates to the device and \textit{Grafana} for data analysis.
 
 \section{Contributions of the thesis}
-
 The thesis work's main contributions include defining a \textit{Telematics Control Unit} (TCU) simulator that can emulate the collection of data from vehicle subsystems. Additionally, a basic cloud infrastructure was built using AWS services to receive the telemetry data generated by the simulator and manage the development and deployment of updates on the device. The deployment server was implemented using \textit{Hawkbit}, a tool provided by \textit{Eclipse} that is specifically designed for deploying software to IoT devices. Additionally, a \textit{Grafana} server was implemented for data analysis. The proposed solution integrates elements from the state of the art further advance the field.
 
 To make this solution effective, simplifications were made to the overall SDV concept to reduce complexity. All design and implementation decisions were made while considering the optimal trade-off between available resources and fidelity to the real use case.
@@ -65,7 +67,6 @@ To make this solution effective, simplifications were made to the overall SDV co
 The remainder of this section will present the contributions related to the construction phase of the cloud infrastructure -- Cloud Infrastructure -- as the simulator for collecting subsystem telemetry -- TCU Device Simulator -- as the data analysis server -- Grafana Server --. 
 
 \subsection{Cloud Infrastructure}
-
 The fundamental element of the proposed approach is the cloud infrastructure built through the use of the services offered by AWS. The architecture can be represented as two distinct workflows: one dedicated to the collection of telemetry data coming from the device, and the other to the management of the development and deployment of device update updates.
 
 Regarding the data analysis flow illustrated in the figure \ref{fig:AWSDataServices}, a specific service for managing IoT devices is used, which is the IoT Core to collect data via a channel using the \textit{Message Queuing Telemetry Transport} (MQTT) protocol. The IoT Core service is also responsible for generating certificates to authenticate device connections. The data is then sent to a Kinesis stream, filtered by attributes and sent via a Lambda function to a Timestream database, which is in charge of temporarily storing the data.
@@ -85,45 +86,37 @@ In terms of update management and deployment flow, the figure \ref{fig:AWSUpdate
 These two execution flows in the cloud infrastructure appear to be separate, but they are linked by the device. The device receives updates and modifies performance and data produced, providing the necessary information to create new updates and continue this cycle throughout the device's life (and the potential vehicle's life). This passage demonstrates how the cloud services offered by AWS are a valid solution for the functions required for the development of the SDV.
 
 \subsection{TCU Device Simulator}
-
-The second input is represented by the \textit{Network Security Requirements}, hard constraints which must be enforced in the network to guarantee the required security level. The focus of the thesis was on \textit{connectivity} requirements between a pair of end points. In more details, they can be classified in two different types: 
-\begin{enumerate}
-\setlength\itemsep{-0.3em}
-\item \textit{reachability property}, if a specific traffic flow must be allowed between a pair of end points;
-\item \textit{isolation property}, if a specific traffic flow must be denied between a pair of end points.
-\end{enumerate}
-In this context, each traffic flow is identified by the source and destination IP addresses, the source and destination ports and the transport-level protocol.
-
-In the definitions of the hard constraints representing the NSRs, which are not relaxable clauses because they are necessary conditions to fulfil, some of the aspects which have been considered are the possibility to define bidirectional requirements (e.g. a communication from an end point to another is allowed, while the opposite traffic flow is denied) and to define multiple requirements between the same pair of nodes (e.g. an endpoint can reach another at the destination port 80, while if it tries to contact the port 90 the packets must be blocked). This second example is represented in Figure \ref{fig:multiple03}, where a firewall allows only a specific traffic flow while blocking the others since it is in whitelisting mode.
-
-\begin{figure}[tbh]
-	\centerline{\includegraphics[width=0.5\textwidth]{images/multiple.png}}
-	\caption{Example of NSRs between the same end points}
-	\label{fig:multiple03}
-\end{figure}
-
-\subsection{Packet Filtering Firewalls}
-
-A consistent part of the thesis work focused on defining the soft clauses to reach the optimal allocation of the firewalls in the Allocation Graph and the optimal auto-configuration of their Filtering Policies, that are made by a default action and a set of rules in order to decide if any packet must be forwarded or dropped. The actual objectives which have been modelled are:
+The second essential element for the development of the thesis project is the TCU Device Simulator. It is a system that can collect and transmit data from simulated subsystems and integrate updates from external sources. The system is composed of four main elements:
 \begin{enumerate}
 	\setlength\itemsep{-0.3em}
-	\item the minimization of the number of allocated firewalls, in order to reduce the resource consumption due to the deployment of the corresponding VNFs;
-	\item the minimization of the number of rules for each Filtering Policy, in order to improve the efficiency of the filtering operations. 
+	\item \textit{Data sender}, the component responsible for connecting to the cloud and sending the collected data;
+	\item \textit{Update server connector}, the component responsible for connecting with the server that manages the deployment of updates;
+	\item \textit{Data generator}, the component that collects data from the subsystems;
+	\item \textit{Update agent}, the component that manages the activation of the update on the device.
 \end{enumerate}
 
-About the allocation objective, since the optimal solution would be that there is no need to instantiate VNFs for the packet filtering operation to reduce the resource consumption, then a set of clauses state that it is preferable that in each Allocation Place no firewall is allocated.%, as showed in Formula \ref{fm:soft_place}, where $c_{k}$ is the weight assigned to the corresponding soft clause.
+The four components working together enable the device simulator to generate, collect, and send data to the cloud infrastructure, as depicted in the image \ref{fig:TCUSimulatorP}. Additionally, the device remains in a constant state of readiness for any updates.
+\begin{figure} [tbh]
+	\centerline{\includegraphics[width=0.3\textwidth]{images/TCUSimulatorP.png}}
+	\caption{Snapshot of the TCU device simulator in action}
+	\label{fig:TCUSimulatorP}
+\end{figure}
 
-%\begin{equation}  \label{fm:soft_place}
-%\forall p_{k}, \; Soft(allocated(p_{k}) = false, \: c_{k1})
-%\end{equation}
+This system enables the creation of a device simulator that can interact with the AWS services for data collection and storage, as well as with the Hawkibt server for deploying updates. The purpose of this simulator is to represent, in a simplified manner, the actions that would occur on a real vehicle in the context of SDV.
 
-The critical component of the work has, instead, been related to the auto-configuration of the Filtering Policy rules. Starting from a simple approach where for each NSR the constraints for a corresponding placeholder rule are defined for each allocated firewall, to increase the efficiency of the methodology the thesis contributed to the developing of a number of pruning strategies to reduce the number of placeholder rules: for example, for a specific NSR, a rule is not needed when the default action already satisfies that requirements or when the corresponding traffic flow does not cross the firewall in exam.
+\subsection{Grafana Server}
+The final component being analyzed is the data visualization feature using the Grafana server. Specifically, a docker image is utilized on a virtual machine to connect to the AWS Timestream database, retrieve real-time data, and display it to the user in easy to understand and intuitive dashboards.
 
-A fundamental work has been made on the \textit{wildcards} feature, which allows to represent both an IP address and the netmask in a joint expression: for instance, the $10.0.0.\ast$ statement refers to the network 10.0.0.0/24. The same feature can be applied to transport-level ports and protocols. The idea has been to define the usage of wildcards for each component of the firewall rule as soft constraints, so that a single rule can satisfy contemporary more NSRs by defining larger IP addresses or port  ranges; this way, the solution space can be pruned before the execution of z3 optimizer engine, conspicuously improving the performance. 
+This is done to provide a concrete representation of the generated data, making it easier to view and highlighting the update performed on the device simulator. In practice, the update in this example creates a variation in the data generated, similar to what would happen in a real case where an update on the vehicle's performance modifies its characteristics and the resulting data.
+\begin{figure} [tbh]
+	\centerline{\includegraphics[width=0.4\textwidth]{images/grafana_Battery.png}}
+	\caption{Snapshot of the Grafana battery dashboard of the device simulator in action}
+	\label{fig:GrafanaBattery}
+\end{figure}
 
-Nevertheless, the usage of wildcards for each rule component is less primary than the absence itself of rule inside the firewall Filtering Policy. Consequently, after the definition of all the soft constraints, some time has been spent on the optimal tuning of their weights, so that the optimal solution could be achieved according to the proposed objectives in an efficient way.
+Image \ref{fig:GrafanaBattery} displays a dashboard produced, highlighting the update on regenerative braking performance. The energy accumulated in the battery after the update is greater than before. However, the update also causes an increase in battery temperature peaks due to the increased performance and involvement of the subsystem in relation to the overall activities of the vehicle.
 
-\section{Implementation and Validation}
+\section{PoC: Implementation and Validation}
 
 The implementation of the framework has been made by exploiting the Java language, since the z3 theorem prover offers Java APIs to formulate and solve the MaxSMT problem. The interaction with the framework can be made through REST APIs, so that it can be exploited by external tools as a component of a more complex architecture.
 
@@ -133,19 +126,6 @@ This implementation has been, finally, tested extensively in common network scen
 The first information that can be extracted from the two charts is that the computation time does not increase exponentially either with the number of Allocation Places or with the number of NSRs; this is a very important result, given the computational complexity of the MaxSMT problem. Moreover, the framework scales to Service Graphs of medium-big dimensions, with a high number of links and end points, providing the optimal solution to the presented problem.
 
 It is then possible to notice that an increment of the NSRs number produces a computation time higher than the one produced by the same increment of the Allocation Places number. This result is motivated by the fact that the verification of each requirement must be performed in all the network, considering packets that flow across all the possible paths, whereas the constraints introduced by an additional Allocation Place only impact the traffic flow which crosses that node.
-
-\begin{figure} [tbh]
-	\centerline{\includegraphics[width=0.5\textwidth]{images/scalability01.pdf}}
-	\caption{Scalability tests on Allocation Places}
-	\label{fig:perf01}
-\end{figure}
-
-
-\begin{figure} [tbh]
-	\centerline{\includegraphics[width=0.5\textwidth]{images/scalability02.pdf}}
-	\caption{Scalability tests on NSRs}
-	\label{fig:perf02}
-\end{figure}
 
 \section{Conclusions and Future Work}
 	 
