@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1711455475.49457 "c:/Users/Lorenzo/Documents/TESI/SDV-AWS-Thesis/Book/Summary/summary.tex" "summary.pdf" "summary" 1711455478.80731 0
+["pdflatex"] 1711472438.04382 "c:/Users/Lorenzo/Documents/TESI/SDV-AWS-Thesis/Book/Summary/summary.tex" "summary.pdf" "summary" 1711472439.66745 0
   "C:/Users/Lorenzo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1711159487 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Lorenzo/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1706976003 24211730 977ecd5e62267dc7fdf74aecd6463422 ""
   "C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -8,7 +8,6 @@
   "C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1233951854 928 2dc8d444221b7a635bb58038579b861a ""
   "C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1233951854 908 2921f8a10601f252058503cc6570e581 ""
   "C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1233951854 940 228d6584342e91276bf566bcf9716b83 ""
-  "C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx10.tfm" 1136765053 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx12.tfm" 1136765053 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx9.tfm" 1136765053 1328 5442e22a7072966dbaf88ca900acf3f0 ""
   "C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmex10.tfm" 1136765053 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
@@ -24,7 +23,6 @@
   "C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy6.tfm" 1136765053 1116 933a60c408fc0a863a92debe84b2d294 ""
   "C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy8.tfm" 1136765053 1120 8b7d695260f3cff42e636090a8002094 ""
   "C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmti10.tfm" 1136765053 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
-  "C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1247596666 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1247596666 32080 340ef9bf63678554ee606688e7b5339d ""
   "C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb" 1247596667 32298 c6d25bb16d1eac01ebdc6d7084126a1e ""
   "C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
@@ -113,15 +111,15 @@
   "C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/tex/latex/xmpincl/xmpincl.sty" 1633254124 2832 d498c59e94b7dfa3b4bcf74380ad6348 ""
-  "c:/Users/Lorenzo/Documents/TESI/SDV-AWS-Thesis/Book/Summary/summary.tex" 1711455474 16442 bd18775beb497b1d2130598dcc59a7e6 ""
+  "c:/Users/Lorenzo/Documents/TESI/SDV-AWS-Thesis/Book/Summary/summary.tex" 1711472435 17027 88ea01253fb5602ffcabc6cff20dad8e ""
   "images/AWS_data_services.png" 1710935107 44297 29284c55b0a12871c5dd700789daebdc ""
   "images/AWS_update_services.png" 1711369444 98296 bffcd37662a3f9010e31677ece167474 ""
   "images/TCUSimulatorP.png" 1710507910 2650031 3fa00c1e0eb83e65c47370642ff5217b ""
   "images/grafana_Battery.png" 1710868910 139035 484e075c316111cfe8cd7594a8fe239c ""
-  "pdfa.xmpi" 1711455476 5042 d65dc61edc62331d05d13d4a332db02f "pdflatex"
-  "summary.aux" 1711455478 2449 a05a6512c77a51e497a390d6172bf983 "pdflatex"
-  "summary.out" 1711455478 549 c7ab55e80cfcda40488f4a7b22f9405c "pdflatex"
-  "summary.tex" 1711455474 16442 bd18775beb497b1d2130598dcc59a7e6 ""
+  "pdfa.xmpi" 1711472438 5042 b44131229cb115c868b21a36cc767347 "pdflatex"
+  "summary.aux" 1711472439 2449 a05a6512c77a51e497a390d6172bf983 "pdflatex"
+  "summary.out" 1711472439 549 c7ab55e80cfcda40488f4a7b22f9405c "pdflatex"
+  "summary.tex" 1711472435 17027 88ea01253fb5602ffcabc6cff20dad8e ""
   (generated)
   "pdfa.xmpi"
   "summary.aux"

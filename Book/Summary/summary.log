@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.3)  26 MAR 2024 13:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.3)  26 MAR 2024 18:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -443,65 +443,56 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <images/AWS_data_services.png, id=48, 476.27937pt x 61.73062pt>
 File: images/AWS_data_services.png Graphic file (type png)
 <use images/AWS_data_services.png>
-Package pdftex.def Info: images/AWS_data_services.png  used on input line 74.
+Package pdftex.def Info: images/AWS_data_services.png  used on input line 73.
 (pdftex.def)             Requested size: 203.15103pt x 26.33076pt.
 <images/AWS_update_services.png, id=51, 596.72937pt x 298.61563pt>
 File: images/AWS_update_services.png Graphic file (type png)
 <use images/AWS_update_services.png>
-Package pdftex.def Info: images/AWS_update_services.png  used on input line 81.
+Package pdftex.def Info: images/AWS_update_services.png  used on input line 80.
 (pdftex.def)             Requested size: 203.15103pt x 101.66011pt.
 <images/TCUSimulatorP.png, id=53, 406.026pt x 259.077pt>
 File: images/TCUSimulatorP.png Graphic file (type png)
 <use images/TCUSimulatorP.png>
-Package pdftex.def Info: images/TCUSimulatorP.png  used on input line 100.
+Package pdftex.def Info: images/TCUSimulatorP.png  used on input line 99.
 (pdftex.def)             Requested size: 152.36714pt x 97.22083pt.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.106 
-       [2 <./images/AWS_data_services.png> <./images/AWS_update_services.png> <./images/TCUSimulatorP.png>]
-<images/grafana_Battery.png, id=69, 578.16pt x 257.96375pt>
+<images/grafana_Battery.png, id=54, 578.16pt x 257.96375pt>
 File: images/grafana_Battery.png Graphic file (type png)
 <use images/grafana_Battery.png>
-Package pdftex.def Info: images/grafana_Battery.png  used on input line 112.
-(pdftex.def)             Requested size: 203.15103pt x 90.63898pt.
+Package pdftex.def Info: images/grafana_Battery.png  used on input line 110.
+(pdftex.def)             Requested size: 152.36714pt x 67.98218pt.
 
-
-LaTeX Warning: Reference `fig:perf01' on page  undefined on input line 123.
-
-
-LaTeX Warning: Reference `fig:perf02' on page  undefined on input line 123.
+Underfull \vbox (badness 1997) has occurred while \output is active []
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.141 \end{document}
-                     [3 <./images/grafana_Battery.png>] (summary.aux)
+l.114 
+       [2 <./images/AWS_data_services.png> <./images/AWS_update_services.png>]
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.130 \end{document}
+                     [3 <./images/TCUSimulatorP.png> <./images/grafana_Battery.png>] (summary.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `summary.out' has not changed.
 (rerunfilecheck)             Checksum: C7AB55E80CFCDA40488F4A7B22F9405C;549.
  ) 
 Here is how much of TeX's memory you used:
- 15650 strings out of 474542
- 244147 string characters out of 5743503
+ 15646 strings out of 474542
+ 244102 string characters out of 5743503
  1947978 words of memory out of 5000000
- 37662 multiletter control sequences out of 15000+600000
- 565493 words of font info for 63 fonts, out of 8000000 for 9000
+ 37659 multiletter control sequences out of 15000+600000
+ 565185 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  92i,8n,95p,1659b,2380s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on summary.pdf (3 pages, 3636401 bytes).
+<C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on summary.pdf (3 pages, 3626591 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
+ 107 PDF objects out of 1000 (max. 8388607)
  18 named destinations out of 1000 (max. 500000)
  97 words of extra memory for PDF output out of 10000 (max. 10000000)
 
