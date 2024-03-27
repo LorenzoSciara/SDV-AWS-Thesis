@@ -9,22 +9,22 @@
 \chapter{State-of-the-Art Analysis} \label{ch:state-of-the-ArtAnalysis}
 The following chapter constitutes an in-depth exploration of current technologies and methodologies within the automotive industry, with a specific focus on the complexity of vehicular software development. Firstly, the current automotive landscape will be examined, providing a detailed insight into challenges associated with software development in vehicles.
 
-Subsequently, through meticulous analysis of scientific publications, technical reports, and practical implementations, the chapter delves into the radical transformation of the automotive sector facilitated by the concept of \gls{ac:sdv}. This technology, crucial for technological progress and vehicular safety, will be explored from various perspectives. Particularly, the synergy between Cloud, software, and hardware will be investigated, highlighting solutions proposed by major industry players and analyzing their applications, benefits, and limitations.
+Subsequently, through meticulous analysis of scientific publications, technical reports, and practical implementations, the chapter delves into the radical transformation of the automotive sector facilitated by the concept of \gls{ac:sdv}. This technology, crucial for technological progress and vehicular safety, will be explored from various perspectives. Particularly, the synergy between cloud computing, software, and hardware will be investigated, highlighting solutions proposed by major industry players and analyzing their applications, benefits, and limitations.
 
 The objective is to offer a comprehensive overview of current dynamics, emphasizing the pivotal role of \gls{ac:sdv} in the evolution of the automotive industry.
 
-\section{Current Automotive Software Development}
+\section{Context}
 
 In the past, the automotive industry advanced primarily through the development of technologies in mechanical engineering, focusing on perfecting combustion engines. Nowadays, the paradigm has radically changed due to multiple factors, including electrification, automation, shared mobility, and connected mobility.
 
-Software technology development in the automotive field can be metaphorically compared to what has happened in smartphone development, as highlighted in the manifesto document regarding Bosch's \gls{ac:sdv} \cite{SDVBoschMobility}.
+Software technology development in the automotive field can be metaphorically compared to what has happened in smartphone development, as highlighted in the manifesto document regarding \textit{Bosch}'s \gls{ac:sdv} \cite{SDVBoschMobility}.
 
-The ultimate goal is to achieve simple and user-friendly devices that fully meet the user's needs. Currently, many customers express dissatisfaction because their cars do not offer the same functionality and ease of use common in smartphones. Many ask: Why can't my \$50,000 car perform the same tasks as my \$300 smartphone?
+The ultimate goal is to achieve simple and user-friendly devices that fully meet the user's needs. Currently, many customers express dissatisfaction because their cars do not offer the same functionality and ease of use common in smartphones. Many ask the question about how is possible that their \$50,000 car can't perform the same tasks as their \$300 smartphone.
 
 A key difference between the automotive and smartphone industries is the level of complexity, which brings with it a number of issues.
 
 \subsection{difficulties}
-We can analyse in depth the problems of the current automotive software that is being developed via 4 main difficulties:
+It is possible to analyse in depth the problems of the current automotive software that is being developed via four main difficulties:
 
 \begin{itemize}
     \item \textbf{Specialized Hardware:} Today's vehicles are still complex systems of systems. Each subsystem in a car, from brakes to transmission, is a complex entity, supplied by a different manufacturer and integrated with a unique software architecture. The level of complexity and the need for seamless interoperability between systems far exceeds that of today's smartphones.
@@ -55,7 +55,7 @@ We can analyse in depth the problems of the current automotive software that is 
     \item \textbf{Human Safety Security:} Automotive embedded software must meet stringent reliability and security requirements, while delivering performance and a reasonable memory footprint. To develop automotive embedded software, you need the right tools that meet safety and security standards to evaluate, prototype and test your software.
 \end{itemize}
 
-What lessons can be drawn from the study of barriers that can be applied to the vehicle lifecycle? Historically, the vehicle lifecycle has been characterised by the simultaneous production and deployment of tightly integrated hardware and software. Once the vehicle was in the hands of the consumer, its characteristics remained largely unchanged until the end of its life. However, the \gls{ac:sdv} paradigm introduces the possibility of decoupling hardware and software release dates, a prerequisite for adopting a digital-first approach. This approach brings the design and virtual validation of the digital vehicle experience to the forefront of the lifecycle.
+At this point, Several valuable lessons can be learned from studying the barriers that apply to the vehicle life cycle. Historically, the vehicle lifecycle has been characterised by the simultaneous production and deployment of tightly integrated hardware and software. Once the vehicle was in the hands of the consumer, its characteristics remained largely unchanged until the end of its life. However, the \gls{ac:sdv} paradigm introduces the possibility of decoupling hardware and software release dates, a prerequisite for adopting a digital-first approach. This approach brings the design and virtual validation of the digital vehicle experience to the forefront of the lifecycle.
 It also requires the application of the digital-first concept, which means that new ideas for the vehicle experience are first explored in virtual environments to ensure early user feedback, long before any custom hardware needs to be developed or a physical test vehicle is available. Digital first is the application of design thinking and lean startup principles, originally rooted in internet culture, to the tangible realm of automotive development.
 
 %“Automakers and their suppliers need to continuously review and improve the testing approach in design and development, as well as look for new tools that automate and increase test coverage of their products,” Giallorenzo explained. “Cloud emulation is a major innovation that is coming to the industry to facilitate development and testing. Historically, testing of embedded software solutions has been hindered by the lack of chipsets and hardware, which is required to properly test complete hardware-plus-software solutions. This was particularly painful during the recent COVID-induced supply chain crunch."
@@ -63,36 +63,36 @@ It also requires the application of the digital-first concept, which means that 
 \section{Introduction to Software Defined Vehicle}
 The \gls{ac:sdv} represents the new frontier of automotive manufacturing and is poised to completely change the paradigm of automotive production. 
 
-If we imagine bringing a feature update to one of today's vehicles, it will most likely take anywhere from one to seven years from the idea to when that feature is actually perceptible in the production vehicle; this takes so long because the vehicles produced up to this point have not been designed with frequent updates in mind \cite{SDVBosch}.
+Let's try to imagine to bringing a feature update to one of today's vehicles. It will most likely take anywhere from one to seven years from the idea to when that feature is actually perceptible in the production vehicle; this takes so long because the vehicles produced up to this point have not been designed with frequent updates in mind \cite{SDVBosch}.
 Traditionally focused on physical functionality, the automotive industry has evolved from early electronic features such as airbags, vehicle stabilisation and braking systems to modern driver assistance and even automated driving. 
 The current shift towards a digital experience is possible thanks to vehicle design that includes software integration as a fundamental part. Software should no longer be seen as an accessory to the vehicle, but as an integral part of the vehicle itself.
 
-The simultaneous efforts of major automotive companies such as Bosch, Renault and Stellantis, in collaboration with leading computer developers such as Arm, BlackBerry and AWS, have given rise to the \gls{ac:sdv} concept, which they define as "any vehicle that manages its own operations, adds functionality and enables new features primarily or entirely through software" \cite{blackberrySDV}.
+The simultaneous efforts of major automotive companies such as \textit{Bosch}, \textit{Renault} and \textit{Stellantis}, in collaboration with leading computer developers such as \textit{Arm}, \textit{BlackBerry} and \textit{\gls{ac:aws}}, have given rise to the \gls{ac:sdv} concept, which they define as "any vehicle that manages its own operations, adds functionality and enables new features primarily or entirely through software" \cite{blackberrySDV}.
 
-The \gls{ac:sdv} solution is nowadays being considered by several companies as the manifesto of a new era of vehicle development. An example is given by the Renault Group, which in an overview of its products describes: "Today, it is already possible to make remote updates of some vehicles via the \gls{ac:fota} system. This keeps the vehicle safe by making it easier and faster to improve the on-board system and apply patches. Tomorrow, the \gls{ac:sdv}'s flexible and scalable architecture will enable the faster development and integration of new features throughout the vehicle lifecycle, directly into the cloud, that is, in secure online servers accessible from anywhere and anytime" \cite{SDVRenault}. 
+The \gls{ac:sdv} solution is nowadays being considered by several companies as the manifesto of a new era of vehicle development. An example is given by the \textit{Renault Group}, which in an overview of its products describes: "Today, it is already possible to make remote updates of some vehicles via the \gls{ac:fota} system. This keeps the vehicle safe by making it easier and faster to improve the on-board system and apply patches. Tomorrow, the \gls{ac:sdv}'s flexible and scalable architecture will enable the faster development and integration of new features throughout the vehicle lifecycle, directly into the cloud, that is, in secure online servers accessible from anywhere and anytime" \cite{SDVRenault}. 
 
 It is evident that \gls{ac:sdv}s represent the future of the automotive industry, promising an enriched and sustainable user experience as vehicle technologies evolve. This section further clarifies the current state of the industry, highlighting the key enablers that are allowing the development of the \gls{ac:sdv} paradigm and the benefits of this innovation.
 
 \subsection{Enablers}
 
-There are mainly three fundamental technologies that contribute to the realisation of the \gls{ac:sdv}: standardized hardware, cloud and \gls{ac:ota} updates via \gls{ac:ota} servers, all developed by leading companies in the computing industry. In this section, each technology will be analysed with reference to concrete examples from the current market.
+There are mainly four fundamental technologies that contribute to the realisation of the \gls{ac:sdv}: standardized hardware, cloud, \gls{ac:ota} updates via \gls{ac:ota} servers, and \gls{ac:mqtt} communication. All these enablers are developed by leading companies in the computing industry. In this section, each technology will be analysed with reference to concrete examples from the current market.
 
 \begin{itemize}
-    \item \textbf{Standardized hardware} 
+    \item[] \textbf{Standardized hardware} 
     
     One of the most important aspects of \gls{ac:sdv} is the separation of software from hardware. To achieve this, it is essential to move away from the approach of using dedicated hardware for each vehicle component system, and instead favour an approach based on general purpose processors that are as centralised as possible. This transition not only promotes ease of software development and scalability, but also offers the opportunity to create parity between the virtual development and test environment and the real execution environment.
     
-    Several players in the semiconductor industry have stepped up to the challenge of realising this vision, including Arm. Through the development of energy-efficient processors, Arm is present in every part of the vehicle, from high-performance systems in \gls{ac:adas}, \gls{ac:ad}, \gls{ac:ivi} and digital cockpits, to gateway, body and microcontroller endpoints \cite{ArmAutomotive}. The aim is to create Arm-based MCUs that enable implementation of a common architecture, scalability between applications to meet processing requirements, software reuse and reduced development costs.
+    Several players in the semiconductor industry have stepped up to the challenge of realising this vision, including \textit{Arm}. Through the development of energy-efficient processors, \textit{Arm} is present in every part of the vehicle, from high-performance systems in \gls{ac:adas}, \gls{ac:ad}, \gls{ac:ivi} and digital cockpits, to gateway, body and microcontroller endpoints \cite{ArmAutomotive}. The aim is to create Arm-based \gls{ac:mcu}s that enable implementation of a common architecture, scalability between applications to meet processing requirements, software reuse and reduced development costs.
     
-    Another major player is Qualcomm, which is being adopted by the Renault Group through its Snapdragon Digital Chassis vehicle architecture, a set of cloud-connected platforms for telematics and connectivity, digital cockpits, assistance and driver autonomy.
+    Another major player is \textit{Qualcomm}, which is being adopted by the \textit{Renault Group} through its \textit{Snapdragon Digital Chassis} vehicle architecture, a set of cloud-connected platforms for telematics and connectivity, digital cockpits, assistance and driver autonomy.
 
-    \item \textbf{Cloud} 
+    \item[] \textbf{Cloud} 
     
     Using a cloud platform that offers scalable and secure solutions for real-time application updates, increased connectivity and efficient data management is essential for \gls{ac:sdv}. 
 
-    Well-known companies such as \gls{ac:aws} and Google Cloud are already present in the automotive industry as partners of partner of many automotive companies. The AWS services and technologies will be in depth described in the futher chapters.
+    Well-known companies such as \textit{\gls{ac:aws}} and \textit{Google Cloud} are already present in the automotive industry as partners of partner of many automotive companies. The \gls{ac:aws} services and technologies will be in depth described in the futher chapters.
  
-    \item \textbf{Over-The-Air updates}
+    \item[] \textbf{Over-The-Air updates}
     
     An \gls{ac:ota} update is the remote and wireless transfer of applications, services, firmware and configurations from a server to a target device. This process takes place over an available network, preferably the Internet. The main purposes of \gls{ac:ota} are to remotely update software or firmware, provide power-safe procedures to ensure that the device will boot even if power is lost during the update process, maintain a robust implementation, ensure data protection and reduce overall maintenance costs \cite{Open-sourceSWUpdate}.
 
@@ -100,13 +100,13 @@ There are mainly three fundamental technologies that contribute to the realisati
     
     To perform an \gls{ac:ota} update, both a client on the vehicle, responsible for waiting and checking for incoming updates, and a server, facilitating the availability of the update broadcast to all connected devices, are essential. In this context, Autosar can be considered, as it represents a standard and open source architecture for intelligent mobility \cite{AutosarAbout}, which includes a dedicated platform for client and server management of \gls{ac:ota} updates. Another notable example is Hawkbit, which serves as a backend framework for deploying software updates to edge devices and is being developed by the Eclipse Foundation; this tool will be discussed in more detail in later chapters as it will be used to create a proof of concept. The final tool of note is AWS Greengrass, an edge agent manager for managing software updates in edge IoT devices, provided by AWS; this tool will also be discussed in later chapters as an alternative solution to the client manager.
     
-    \item \textbf{MQTT communication}
+    \item[] \textbf{MQTT communication}
     
-    The \gls{ac:mqtt} is a standardized protocol, specified by ISO/IEC 20922:2016 and developed by the Oaesis organization. It enables the exchange of Application Messages over a network connection, providing an ordered, lossless stream of bytes from the Client to Server and Server to Client without the need to support of a specific transport protocol.
+    The \gls{ac:mqtt} is a standardized protocol, specified by \textit{ISO/IEC 20922:2016} and developed by the \textit{Oaesis} organization. It enables the exchange of \textit{\gls{ac:am}} over a network connection, providing an ordered, lossless stream of bytes from the \textit{Client} to \textit{Server} and \textit{Server} to \textit{Client} without the need to support of a specific transport protocol.
 
-    In an \gls{ac:mqtt} transport, an Application Message carries payload data, a \gls{ac:qos}, a collection of Properties, and a Topic Name. Clients, which can be programs or devices, perform various actions such as opening and closing network connections, publishing Application Messages, subscribing to requested Application Messages, and managing subscriptions \cite{MQTTVersion5.0}.
+    In an \gls{ac:mqtt} transport, an \gls{ac:am} carries payload data, a \gls{ac:qos}, a collection of \textit{Properties}, and a \textit{\gls{ac:tn}}. \textit{Clients}, which can be programs or devices, perform various actions such as opening and closing network connections, publishing \textit{\gls{ac:am}}, subscribing to requested \textit{\gls{ac:am}}, and managing subscriptions \cite{MQTTVersion5.0}.
 
-    On the Server side, it acts as an intermediary between publishing and subscribing Clients. The Server accepts network connections, processes Subscribe and Unsubscribe requests, and forwards Application Messages matching Client Subscriptions. The Server, also known as the Broker, essentially coordinates messages among various Clients. Its responsibilities extend to authorizing and authenticating \gls{ac:mqtt} Clients, transmitting messages to other systems for further analysis, and managing tasks such as handling missed messages and Client sessions \cite{MQTTAWS}.
+    On the \textit{Server} side, it acts as an intermediary between publishing and subscribing \textit{Clients}. The \textit{Server} accepts network connections, processes \textit{Subscribe} and \textit{Unsubscribe} requests, and forwards \textit{\gls{ac:am}} matching \textit{Client Subscriptions}. The \textit{Server}, also known as the \textit{Broker}, essentially coordinates messages among various \textit{Clients}. Its responsibilities extend to authorizing and authenticating \textit{\gls{ac:mqtt} Clients}, transmitting messages to other systems for further analysis, and managing tasks such as handling missed messages and \textit{Client} sessions \cite{MQTTAWS}.
 
     Sessions, representing stateful interactions between Clients and Servers, can last for the duration of a Network Connection or span multiple consecutive connections.
      \begin{figure}[h]  % 'h' significa che la figura viene posizionata qui
@@ -165,7 +165,7 @@ As explained in the following chapters, by using the \gls{ac:sdv}, i.e. operatin
 \end{figure}
 
 \subsection{initiatives: SOAFEE}
-In 2021 Arm, AWS, and other founding members announced the \gls{ac:soafee} Special Interest Group, which brings together automakers, semiconductor, and cloud technology leaders to define a new open-standards based architecture to implement the lowest levels of a software-defined vehicle stack. \cite{DevelopersWorkflow}
+In 2021 \textit{Arm}, \textit{\gls{ac:aws}}, and other founding members announced the \gls{ac:soafee} Special Interest Group, which brings together automakers, semiconductor, and cloud technology leaders to define a new open-standards based architecture to implement the lowest levels of a software-defined vehicle stack. \cite{DevelopersWorkflow}
 
 SOAFE is created to achive \gls{ac:sdv}, and for doing that four-pillar principle are used \cite{SoafeeProject}:
 \begin{enumerate}

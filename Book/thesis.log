@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.3)  25 MAR 2024 12:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.3)  27 MAR 2024 14:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -913,26 +913,26 @@ Package glossaries Info: Writing glossary file thesis.acn on input line 78.
  (thesis.aux (chapters/00/abstract.aux) (chapters/01/introduction.aux) (chapters/02/state_of_the_art.aux) (chapters/03/cloud_computing_and_amazon_web_services.aux) (chapters/04/AWS_used_services.aux) (chapters/05/proof_of_concept.aux) (chapters/06/concluding_remarks.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Info: Redefining \it@ocap on input line 94.
-LaTeX Info: Redefining \it@ccap on input line 94.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Info: Redefining \it@ocap on input line 96.
+LaTeX Info: Redefining \it@ccap on input line 96.
 
 
 File italian.ldf warning: 
@@ -940,7 +940,7 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting
-italian.ldf    on input line 94.
+italian.ldf    on input line 96.
 
 (C:\Users\Lorenzo\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -961,13 +961,13 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\Lorenzo\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package TOPtesi Info: Margin width recalculation on input line 94.
+Package TOPtesi Info: Margin width recalculation on input line 96.
 Package TOPtesi Info: Before:
 (TOPtesi)             oddsidemargin  15.23279pt
-(TOPtesi)             evensidemargin 15.23279pt on input line 94.
+(TOPtesi)             evensidemargin 15.23279pt on input line 96.
 Package TOPtesi Info: After:
 (TOPtesi)             oddsidemargin  35.1497pt
-(TOPtesi)             evensidemargin -4.68413pt on input line 94.
+(TOPtesi)             evensidemargin -4.68413pt on input line 96.
 \captionwidth=\dimen332
 \fullwidth=\dimen333
  (C:\Users\Lorenzo\AppData\Local\Programs\MiKTeX\tex/latex/toptesi\topfront.sty
@@ -981,7 +981,7 @@ Package: topcoman 2020-09-06 v.6.4.06 Additional commands for the TOPtesi bundle
  (C:\Users\Lorenzo\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 ))
-Package hyperref Info: Link coloring ON on input line 94.
+Package hyperref Info: Link coloring ON on input line 96.
  (thesis.out) (thesis.out)
 \@outlinefile=\write9
 \openout9 = `thesis.out'.
@@ -989,38 +989,38 @@ Package hyperref Info: Link coloring ON on input line 94.
 
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into your preamble.
- on input line 94.
+ on input line 96.
 
-Package translations Info: no dictionary file `translations-basic-dictionary-italian.trsl' found. on input line 94.
+Package translations Info: no dictionary file `translations-basic-dictionary-italian.trsl' found. on input line 96.
 (C:\Users\Lorenzo\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 94.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 96.
 \c@lstlisting=\count397
 <PolitoLogos/PolitoLogo3.jpg, id=140, 3522.15875pt x 2491.3075pt>
 File: PolitoLogos/PolitoLogo3.jpg Graphic file (type jpg)
 <use PolitoLogos/PolitoLogo3.jpg>
-Package pdftex.def Info: PolitoLogos/PolitoLogo3.jpg  used on input line 116.
-(pdftex.def)             Requested size: 321.76381pt x 227.62204pt.
+Package pdftex.def Info: PolitoLogos/PolitoLogo3.jpg  used on input line 118.
+(pdftex.def)             Requested size: 261.46332pt x 184.9429pt.
 
 
 Package hyperref Warning: Option `pdfpagemode' has already been used,
-(hyperref)                setting the option has no effect on input line 159.
+(hyperref)                setting the option has no effect on input line 161.
 
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 159.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 161.
 
 Package hyperref Warning: Option `pdfstartview' has already been used,
-(hyperref)                setting the option has no effect on input line 159.
+(hyperref)                setting the option has no effect on input line 161.
 
 
 Package hyperref Warning: Option `colorlinks' has already been used,
-(hyperref)                setting the option has no effect on input line 159.
+(hyperref)                setting the option has no effect on input line 161.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 172.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 174.
 (C:\Users\Lorenzo\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 172.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 174.
  (C:\Users\Lorenzo\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -1038,17 +1038,15 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 
-] [4
+] (thesis.toc [4
 
 
-
-] (thesis.toc [5
 
 ])
 \tf@toc=\write10
 \openout10 = `thesis.toc'.
 
- [6] (thesis.lof [7
+ [5] (thesis.lof [6
 
 
 ]
@@ -1060,24 +1058,24 @@ Overfull \hbox (3.18085pt too wide) in paragraph at lines 36--36
 \tf@lof=\write11
 \openout11 = `thesis.lof'.
 
- [8] (thesis.lot)
+ [7] (thesis.lot)
 \tf@lot=\write12
 \openout12 = `thesis.lot'.
 
- [9
+ [8
 
 
 ] (thesis.lol)
 \tf@lol=\write13
 \openout13 = `thesis.lol'.
 
- (thesis.acr [10
+ (thesis.acr [9
 
 
-]) [11
+]) [10
 
 
-] [12
+] [11
 
 ]
 \openout2 = `chapters/01/introduction.aux'.
@@ -1091,37 +1089,34 @@ Chapter 1.
 
 Underfull \vbox (badness 3312) has occurred while \output is active []
 
- [13
+ [12
 
 
 
 
 ]
-<images/vehicle_processors.png, id=448, 682.55pt x 431.6125pt>
+<images/vehicle_processors.png, id=462, 682.55pt x 431.6125pt>
 File: images/vehicle_processors.png Graphic file (type png)
 <use images/vehicle_processors.png>
 Package pdftex.def Info: images/vehicle_processors.png  used on input line 54.
 (pdftex.def)             Requested size: 380.2495pt x 240.45662pt.
- [14
+ [13
 pdfTeX warning (ext4): destination with the same identifier (name{table.1.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.58 
-     ] [15
+     ] [14
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.66 
-      <./images/vehicle_processors.png>]
-Underfull \vbox (badness 1546) has occurred while \output is active []
-
- [16]
-<images/Storm_Reply_logo.png, id=482, 169.57843pt x 52.92212pt>
+      <./images/vehicle_processors.png>] [15]
+<images/Storm_Reply_logo.png, id=498, 169.57843pt x 52.92212pt>
 File: images/Storm_Reply_logo.png Graphic file (type png)
 <use images/Storm_Reply_logo.png>
 Package pdftex.def Info: images/Storm_Reply_logo.png  used on input line 86.
 (pdftex.def)             Requested size: 126.75198pt x 39.55824pt.
-<images/AWSMagicQuadrantForCloud.png, id=484, 362.9811pt x 401.5pt>
+<images/AWSMagicQuadrantForCloud.png, id=508, 362.9811pt x 401.5pt>
 File: images/AWSMagicQuadrantForCloud.png Graphic file (type png)
 <use images/AWSMagicQuadrantForCloud.png>
 Package pdftex.def Info: images/AWSMagicQuadrantForCloud.png  used on input line 101.
@@ -1130,57 +1125,57 @@ Package pdftex.def Info: images/AWSMagicQuadrantForCloud.png  used on input line
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[17
+[16
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.107 \begin{itemize}
-                      <./images/Storm_Reply_logo.png>] [18
+                      <./images/Storm_Reply_logo.png>] [17
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.116 
-       <./images/AWSMagicQuadrantForCloud.png (PNG copy)>] [19]) [20]
+       <./images/AWSMagicQuadrantForCloud.png (PNG copy)>] [18]) [19]
 \openout2 = `chapters/02/state_of_the_art.aux'.
 
  (chapters/02/state_of_the_art.tex
 Chapter 2.
-[21
+[20
 
 
 
 
 ]
 Package pgfplots info on input line 46: Overriding colorspace to rgb due to xcolor configuration.
- [22
+ [21
 pdfTeX warning (ext4): destination with the same identifier (name{table.2.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.56 \end{itemize}
-                  ] [23] [24] [25]
-<images/MQTTProtocol.png, id=581, 559.08875pt x 289.58188pt>
+                  ] [22] [23] [24]
+<images/MQTTProtocol.png, id=623, 559.08875pt x 289.58188pt>
 File: images/MQTTProtocol.png Graphic file (type png)
 <use images/MQTTProtocol.png>
 Package pdftex.def Info: images/MQTTProtocol.png  used on input line 114.
 (pdftex.def)             Requested size: 338.00314pt x 175.07605pt.
- [26
+ [25
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.129     \item \textbf
                        {Human Safety Critical Security:} The ability of \gls... <./images/MQTTProtocol.png>]
-<images/window_of_exposure.png, id=599, 801.74532pt x 365.86688pt>
+<images/window_of_exposure.png, id=642, 801.74532pt x 365.86688pt>
 File: images/window_of_exposure.png Graphic file (type png)
 <use images/window_of_exposure.png>
 Package pdftex.def Info: images/window_of_exposure.png  used on input line 133.
 (pdftex.def)             Requested size: 338.00314pt x 154.24364pt.
- [27
+ [26
 pdfTeX warning (ext4): destination with the same identifier (name{table.2.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.142 
        <./images/window_of_exposure.png>]
-<images/today_developer_workflow.png, id=611, 804.75656pt x 429.10312pt>
+<images/today_developer_workflow.png, id=654, 804.75656pt x 429.10312pt>
 File: images/today_developer_workflow.png Graphic file (type png)
 <use images/today_developer_workflow.png>
 Package pdftex.def Info: images/today_developer_workflow.png  used on input line 154.
@@ -1189,7 +1184,7 @@ Package pdftex.def Info: images/today_developer_workflow.png  used on input line
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/future_developers_workflow.png, id=614, 832.61063pt x 420.82219pt>
+<images/future_developers_workflow.png, id=657, 832.61063pt x 420.82219pt>
 File: images/future_developers_workflow.png Graphic file (type png)
 <use images/future_developers_workflow.png>
 Package pdftex.def Info: images/future_developers_workflow.png  used on input line 162.
@@ -1197,7 +1192,7 @@ Package pdftex.def Info: images/future_developers_workflow.png  used on input li
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[28] [29
+[27] [28
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
@@ -1208,31 +1203,31 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.2.3}) h
                                                   \__shipout_drop_firstpage_...
 l.178 
        <./images/today_developer_workflow.png> <./images/future_developers_workflow.png>]
-<images/SOAFEE_architecture.png, id=638, 440.14438pt x 313.17pt>
+<images/SOAFEE_architecture.png, id=681, 440.14438pt x 313.17pt>
 File: images/SOAFEE_architecture.png Graphic file (type png)
 <use images/SOAFEE_architecture.png>
 Package pdftex.def Info: images/SOAFEE_architecture.png  used on input line 184.
 (pdftex.def)             Requested size: 295.75032pt x 210.43924pt.
-) [30
+) [29
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.213 \include{chapters/02/state_of_the_art}
+l.214 \include{chapters/02/state_of_the_art}
                                              <./images/SOAFEE_architecture.png>]
 \openout2 = `chapters/03/cloud_computing_and_amazon_web_services.aux'.
 
  (chapters/03/cloud_computing_and_amazon_web_services.tex
 Chapter 3.
-[31
+[30
 
 
 
 
-] [32]
+] [31]
 Package pgfplots info on input line 43: Overriding colorspace to rgb due to xcolor configuration.
- [33]
+ [32]
 Package pgfplots info on input line 64: Overriding colorspace to rgb due to xcolor configuration.
- [34
+ [33
 pdfTeX warning (ext4): destination with the same identifier (name{table.3.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
@@ -1242,8 +1237,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.3.2}) ha
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.79 
-     ] [35]
-<images/AWSSOC.png, id=686, 193.72375pt x 179.67125pt>
+     ] [34]
+<images/AWSSOC.png, id=729, 193.72375pt x 179.67125pt>
 File: images/AWSSOC.png Graphic file (type png)
 <use images/AWSSOC.png>
 Package pdftex.def Info: images/AWSSOC.png  used on input line 102.
@@ -1252,7 +1247,7 @@ Package pdftex.def Info: images/AWSSOC.png  used on input line 102.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[36] [37
+[35] [36
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
@@ -1262,12 +1257,12 @@ Overfull \hbox (2.08981pt too wide) in paragraph at lines 111--112
 []\OT1/cmr/bx/n/12 HITRUST: \OT1/cmr/m/n/12 The Health In-for-ma-tion Trust Al-liance Com-mon Se-cu-rity Frame-
  []
 
-) [38]
+) [37]
 \openout2 = `chapters/04/AWS_used_services.aux'.
 
  (chapters/04/AWS_used_services.tex
 Chapter 4.
-<images/AWSSDK.png, id=723, 420.57124pt x 227.34938pt>
+<images/AWSSDK.png, id=766, 420.57124pt x 227.34938pt>
 File: images/AWSSDK.png Graphic file (type png)
 <use images/AWSSDK.png>
 Package pdftex.def Info: images/AWSSDK.png  used on input line 26.
@@ -1275,18 +1270,18 @@ Package pdftex.def Info: images/AWSSDK.png  used on input line 26.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[39
+[38
 
 
 
 
 ]
-<images/AWSIoTCore.png, id=731, 484.81125pt x 230.36063pt>
+<images/AWSIoTCore.png, id=774, 484.81125pt x 230.36063pt>
 File: images/AWSIoTCore.png Graphic file (type png)
 <use images/AWSIoTCore.png>
 Package pdftex.def Info: images/AWSIoTCore.png  used on input line 40.
 (pdftex.def)             Requested size: 338.00314pt x 160.61159pt.
- [40
+ [39
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
@@ -1297,24 +1292,24 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2}) h
                                                   \__shipout_drop_firstpage_...
 l.48 
       <./images/AWSSDK.png> <./images/AWSIoTCore.png>]
-<images/AWSCodepipeline.png, id=744, 483.8075pt x 160.6pt>
+<images/AWSCodepipeline.png, id=787, 483.8075pt x 160.6pt>
 File: images/AWSCodepipeline.png Graphic file (type png)
 <use images/AWSCodepipeline.png>
 Package pdftex.def Info: images/AWSCodepipeline.png  used on input line 60.
 (pdftex.def)             Requested size: 338.00314pt x 112.20357pt.
- [41]
-<images/AWSS3.png, id=756, 560.0925pt x 280.04625pt>
+ [40]
+<images/AWSS3.png, id=799, 560.0925pt x 280.04625pt>
 File: images/AWSS3.png Graphic file (type png)
 <use images/AWSS3.png>
 Package pdftex.def Info: images/AWSS3.png  used on input line 77.
 (pdftex.def)             Requested size: 338.00314pt x 169.00758pt.
- [42
+ [41
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.81 
       <./images/AWSCodepipeline.png>]
-<images/AWSECR.png, id=767, 552.56438pt x 153.57375pt>
+<images/AWSECR.png, id=810, 552.56438pt x 153.57375pt>
 File: images/AWSECR.png Graphic file (type png)
 <use images/AWSECR.png>
 Package pdftex.def Info: images/AWSECR.png  used on input line 87.
@@ -1323,39 +1318,39 @@ Package pdftex.def Info: images/AWSECR.png  used on input line 87.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[43
+[42
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.95 
       <./images/AWSS3.png>]
-<images/AmazonKinesis.png, id=782, 829.59938pt x 356.83313pt>
+<images/AmazonKinesis.png, id=824, 829.59938pt x 356.83313pt>
 File: images/AmazonKinesis.png Graphic file (type png)
 <use images/AmazonKinesis.png>
 Package pdftex.def Info: images/AmazonKinesis.png  used on input line 105.
 (pdftex.def)             Requested size: 338.00314pt x 145.38234pt.
- [44
+ [43
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.109 
-       <./images/AWSECR.png>] [45
+       <./images/AWSECR.png>] [44
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.120     A
            mazon CloudWatch is a system to monitor the Amazon Web Services (... <./images/AmazonKinesis.png>]
-<images/AWS_data_services.png, id=801, 476.27937pt x 61.73062pt>
+<images/AWS_data_services.png, id=844, 476.27937pt x 61.73062pt>
 File: images/AWS_data_services.png Graphic file (type png)
 <use images/AWS_data_services.png>
 Package pdftex.def Info: images/AWS_data_services.png  used on input line 129.
 (pdftex.def)             Requested size: 422.50232pt x 54.76297pt.
-<images/AWS_update_services.png, id=802, 476.27937pt x 205.26688pt>
+<images/AWS_update_services.png, id=845, 596.72937pt x 298.61563pt>
 File: images/AWS_update_services.png Graphic file (type png)
 <use images/AWS_update_services.png>
 Package pdftex.def Info: images/AWS_update_services.png  used on input line 136.
-(pdftex.def)             Requested size: 422.50232pt x 182.09808pt.
- [46
+(pdftex.def)             Requested size: 422.50232pt x 211.43079pt.
+ [45
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.7}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
@@ -1365,18 +1360,18 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4.8}) h
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.141 
-       <./images/AWS_data_services.png> <./images/AWS_update_services.png>]) [47]
+       <./images/AWS_data_services.png> <./images/AWS_update_services.png>]) [46]
 \openout2 = `chapters/05/proof_of_concept.aux'.
 
  (chapters/05/proof_of_concept.tex
 Chapter 5.
-[48
+[47
 
 
 
 
 ]
-<images/raspberrypi.png, id=819, 468.75125pt x 294.09875pt>
+<images/raspberrypi.png, id=862, 468.75125pt x 294.09875pt>
 File: images/raspberrypi.png Graphic file (type png)
 <use images/raspberrypi.png>
 Package pdftex.def Info: images/raspberrypi.png  used on input line 41.
@@ -1385,7 +1380,7 @@ Package pdftex.def Info: images/raspberrypi.png  used on input line 41.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[49] (C:\Users\Lorenzo\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+[48] (C:\Users\Lorenzo\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 ) (C:\Users\Lorenzo\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
@@ -1393,25 +1388,25 @@ File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 62.
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 63.
- [50
+ [49
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.70     CERT_FILEPATH 
                        = f"{certificate_path}{VIN}.cert.pem" <./images/raspberrypi.png>] (C:\Users\Lorenzo\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
-) [51] [52]
-<images/update_log_HDS.png, id=909, 338.76563pt x 120.45pt>
+) [50] [51]
+<images/update_log_HDS.png, id=952, 338.76563pt x 120.45pt>
 File: images/update_log_HDS.png Graphic file (type png)
 <use images/update_log_HDS.png>
 Package pdftex.def Info: images/update_log_HDS.png  used on input line 147.
 (pdftex.def)             Requested size: 338.00314pt x 120.18318pt.
-<images/telemetryV1.png, id=911, 553.06625pt x 197.23688pt>
+<images/telemetryV1.png, id=954, 553.06625pt x 197.23688pt>
 File: images/telemetryV1.png Graphic file (type png)
 <use images/telemetryV1.png>
 Package pdftex.def Info: images/telemetryV1.png  used on input line 158.
 (pdftex.def)             Requested size: 338.00314pt x 120.54002pt.
- [53
+ [52
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
@@ -1421,13 +1416,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.5.3}) h
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.166 ...r subsystems}, label=lst:TCUOrchestrator]
-                                                   <./images/update_log_HDS.png> <./images/telemetryV1.png>] [54]
-<images/TCUsimulatorP.png, id=943, 406.026pt x 259.077pt>
+                                                   <./images/update_log_HDS.png> <./images/telemetryV1.png>] [53]
+<images/TCUsimulatorP.png, id=986, 406.026pt x 259.077pt>
 File: images/TCUsimulatorP.png Graphic file (type png)
 <use images/TCUsimulatorP.png>
 Package pdftex.def Info: images/TCUsimulatorP.png  used on input line 203.
 (pdftex.def)             Requested size: 338.00314pt x 215.68611pt.
-<images/TCUsimulatorC.png, id=944, 531.9875pt x 196.735pt>
+<images/TCUsimulatorC.png, id=987, 531.9875pt x 196.735pt>
 File: images/TCUsimulatorC.png Graphic file (type png)
 <use images/TCUsimulatorC.png>
 Package pdftex.def Info: images/TCUsimulatorC.png  used on input line 211.
@@ -1440,70 +1435,70 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 ) (C:\Users\Lorenzo\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
-) [55
+) [54
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.217 ...ed TCU simulator}, label=lst:TCUManifest]
-                                                   <./images/TCUsimulatorP.png>] [56
+                                                   <./images/TCUsimulatorP.png>] [55
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.243 class 
-            DownloadHandler(FileSystemEventHandler): <./images/TCUsimulatorC.png>] [57]
-<images/watchdog_log.png, id=1020, 547.04375pt x 203.76125pt>
+            DownloadHandler(FileSystemEventHandler): <./images/TCUsimulatorC.png>] [56]
+<images/watchdog_log.png, id=1063, 547.04375pt x 203.76125pt>
 File: images/watchdog_log.png Graphic file (type png)
 <use images/watchdog_log.png>
 Package pdftex.def Info: images/watchdog_log.png  used on input line 282.
 (pdftex.def)             Requested size: 338.00314pt x 125.89848pt.
- [58
+ [57
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.293 ...related policies}, label=lst:AWSIoTThing]
-                                                   <./images/watchdog_log.png>] [59] [60] [61]
+                                                   <./images/watchdog_log.png>] [58] [59] [60]
 LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 411.
  (C:\Users\Lorenzo\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmtt.fd
 File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-) [62] [63] [64] [65] [66]
-<images/hawkbitCodepipeline.png, id=1300, 721.69624pt x 306.64563pt>
+) [61] [62] [63] [64] [65]
+<images/hawkbitCodepipeline.png, id=1343, 721.69624pt x 306.64563pt>
 File: images/hawkbitCodepipeline.png Graphic file (type png)
 <use images/hawkbitCodepipeline.png>
 Package pdftex.def Info: images/hawkbitCodepipeline.png  used on input line 587.
 (pdftex.def)             Requested size: 338.00314pt x 143.61343pt.
- [67
+ [66
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.7}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.596 ...eation}, label=lst:AWSCodepipelineLambda]
-                                                   <./images/hawkbitCodepipeline.png>] [68] [69]
-<images/hawkbit_server.png, id=1391, 718.18312pt x 327.2225pt>
+                                                   <./images/hawkbitCodepipeline.png>] [67] [68]
+<images/hawkbit_server.png, id=1434, 718.18312pt x 327.2225pt>
 File: images/hawkbit_server.png Graphic file (type png)
 <use images/hawkbit_server.png>
 Package pdftex.def Info: images/hawkbit_server.png  used on input line 671.
 (pdftex.def)             Requested size: 338.00314pt x 154.00429pt.
- [70
+ [69
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.683 device_to_kinesis_role.
-                             add_to_policy(iam.PolicyStatement( <./images/hawkbit_server.png>] [71] [72]
-<images/grafana_Battery.png, id=1461, 578.16pt x 257.96375pt>
+                             add_to_policy(iam.PolicyStatement( <./images/hawkbit_server.png>] [70] [71]
+<images/grafana_Battery.png, id=1504, 578.16pt x 257.96375pt>
 File: images/grafana_Battery.png Graphic file (type png)
 <use images/grafana_Battery.png>
 Package pdftex.def Info: images/grafana_Battery.png  used on input line 742.
 (pdftex.def)             Requested size: 338.00314pt x 150.8078pt.
-) [73
+) [72
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.9}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.216 \include{chapters/05/proof_of_concept}
-                                             <./images/grafana_Battery.png>] [74]
+l.217 \include{chapters/05/proof_of_concept}
+                                             <./images/grafana_Battery.png>] [73]
 \openout2 = `chapters/06/concluding_remarks.aux'.
 
  (chapters/06/concluding_remarks.tex
 Chapter 6.
-<images/RaspberryPiDemo.png, id=1473, 487.8225pt x 128.48pt>
+<images/RaspberryPiDemo.png, id=1516, 487.8225pt x 128.48pt>
 File: images/RaspberryPiDemo.png Graphic file (type png)
 <use images/RaspberryPiDemo.png>
 Package pdftex.def Info: images/RaspberryPiDemo.png  used on input line 16.
@@ -1511,7 +1506,7 @@ Package pdftex.def Info: images/RaspberryPiDemo.png  used on input line 16.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[75
+[74
 
 
 
@@ -1521,12 +1516,12 @@ Overfull \hbox (4.80157pt too wide) in paragraph at lines 29--30
 []\OT1/cmr/m/n/12 The flex-i-bil-ity to adapt the cloud in-fras-truc-ture to dif-fer-ent con-di-tions, whether
  []
 
-<images/RaspberryPiDemoUpdate.png, id=1479, 574.145pt x 152.06813pt>
+<images/RaspberryPiDemoUpdate.png, id=1522, 574.145pt x 152.06813pt>
 File: images/RaspberryPiDemoUpdate.png Graphic file (type png)
 <use images/RaspberryPiDemoUpdate.png>
 Package pdftex.def Info: images/RaspberryPiDemoUpdate.png  used on input line 34.
 (pdftex.def)             Requested size: 380.2495pt x 100.71564pt.
-[76
+[75
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
@@ -1536,35 +1531,35 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.6.2}) h
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.41 
-      <./images/RaspberryPiDemo.png> <./images/RaspberryPiDemoUpdate.png>] [77]) [78] (thesis.bbl
+      <./images/RaspberryPiDemo.png> <./images/RaspberryPiDemoUpdate.png>] [76]) [77] (thesis.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 33--38
 \OT1/cmr/m/n/12 com / Gartner-[]Magic-[]Quadrant-[]for-[]Cloud-[]AI-[]Developer-[]Services . html ? trk =
  []
 
-[79
+[78
 
 
 
-] [80] [81] [82]) [83] (thesis.aux (chapters/00/abstract.aux) (chapters/01/introduction.aux) (chapters/02/state_of_the_art.aux) (chapters/03/cloud_computing_and_amazon_web_services.aux) (chapters/04/AWS_used_services.aux) (chapters/05/proof_of_concept.aux) (chapters/06/concluding_remarks.aux))
+] [79] [80] [81]) [82] (thesis.aux (chapters/00/abstract.aux) (chapters/01/introduction.aux) (chapters/02/state_of_the_art.aux) (chapters/03/cloud_computing_and_amazon_web_services.aux) (chapters/04/AWS_used_services.aux) (chapters/05/proof_of_concept.aux) (chapters/06/concluding_remarks.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 6C71C4CECB4F4C7E9C5BF4CF3C4E084C;2216.
+(rerunfilecheck)             Checksum: C975935326B2EC69156EF31FB985F3D7;2175.
  ) 
 Here is how much of TeX's memory you used:
- 55207 strings out of 474542
- 1233162 string characters out of 5743503
+ 55396 strings out of 474542
+ 1236358 string characters out of 5743503
  2023978 words of memory out of 5000000
- 75793 multiletter control sequences out of 15000+600000
+ 75978 multiletter control sequences out of 15000+600000
  570312 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  138i,20n,135p,2420b,4272s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Lorenzo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt1200.pk> <C:\Users\Lorenzo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmitt10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (83 pages, 10076181 bytes).
+Output written on thesis.pdf (82 pages, 10107819 bytes).
 PDF statistics:
- 1820 PDF objects out of 2073 (max. 8388607)
- 745 named destinations out of 1000 (max. 500000)
+ 1863 PDF objects out of 2073 (max. 8388607)
+ 749 named destinations out of 1000 (max. 500000)
  434 words of extra memory for PDF output out of 10000 (max. 10000000)
 
