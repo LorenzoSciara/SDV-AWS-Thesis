@@ -16,7 +16,7 @@
 \contentsline {section}{\numberline {2.2}Introduction to Software Defined Vehicle}{22}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Enablers}{23}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Benefits}{25}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}initiatives: SOAFEE}{27}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.3}initiatives: SOAFEE}{28}{subsection.2.2.3}%
 \contentsline {chapter}{\numberline {3}Cloud Computing and Amazon Web Services}{30}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Cloud Computing}{30}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Amazon Web Services}{34}{section.3.2}%

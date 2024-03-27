@@ -36,6 +36,14 @@ J.~Scheibmeir, S.~Sicular, A.~Batchu, M.~Fang, V.~Baker, and F.~O'Connor,
   \url{https://pages.awscloud.com/Gartner-Magic-Quadrant-for-Cloud-AI-Developer-Services.html?trk=d59e704f-4f30-4d43-8902-eb63c3692af4&sc_channel=el}
 \BIBentrySTDinterwordspacing
 
+\bibitem{DevelopersWorkflow}
+\BIBentryALTinterwordspacing
+(2022) Building an automotive embedded linux image for edge and cloud using
+  arm-based graviton instances, yocto project, and soafee. Luke Harvey Marcio
+  da Ros Gomes and Sebastian Goscik. Accessed: 01 03, 2024. [Online].
+  Available: \url{https://aws.amazon.com/blogs/industries/}
+\BIBentrySTDinterwordspacing
+
 \bibitem{SoafeeArchitecture}
 \BIBentryALTinterwordspacing
 (2023) Architecture. SOAFEE project and Matt Spencer. Accessed: 01 03, 2024.
@@ -224,18 +232,24 @@ K.~T. Selvi, N.~Praveena, K.~Pratheksha, S.~Ragunanthan, and R.~Thamilselvan,
   \url{https://ieeexplore.ieee.org/document/9742716}
 \BIBentrySTDinterwordspacing
 
-\bibitem{DevelopersWorkflow}
+\bibitem{StellantisSDV}
 \BIBentryALTinterwordspacing
-(2022) Building an automotive embedded linux image for edge and cloud using
-  arm-based graviton instances, yocto project, and soafee. Luke Harvey Marcio
-  da Ros Gomes and Sebastian Goscik. Accessed: 01 03, 2024. [Online].
-  Available: \url{https://aws.amazon.com/blogs/industries/}
+(2023) Stellantis grows software development network with new hub in poland.
+  Stellantis. Accessed: 05 03, 2024. [Online]. Available:
+  \url{https://www.stellantis.com/en/news/press-releases/2023/february/stellantis-grows-software-development-network-with-new-hub-in-poland}
 \BIBentrySTDinterwordspacing
 
 \bibitem{SoafeeProject}
 \BIBentryALTinterwordspacing
 (2023) Achieving software-defined vehicles. SOAFEE project. Accessed: 01 03,
   2024. [Online]. Available: \url{https://www.soafee.io/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{SoafeeArchitectureOverview}
+\BIBentryALTinterwordspacing
+(2023) Architecture overview. SOAFEE project and Matt Spencer. Accessed: 01 03,
+  2024. [Online]. Available:
+  \url{https://architecture.docs.soafee.io/en/latest/contents/overview.html}
 \BIBentrySTDinterwordspacing
 
 \bibitem{NISTCloudComputing}
@@ -304,8 +318,10 @@ A.~S. Rebecca M.~Blank, ``The nist definition of cloud computing,''
 
 \bibitem{AWSSOC3}
 \BIBentryALTinterwordspacing
-(2023) System and organization controls 3 (soc 3) report. Amazon.com, Inc. or
-  its affiliates. [Online]. Available:
+I.~o. i.~a. Amazon.com, ``System and organization controls 3 (soc 3) report,''
+  \emph{Report on the Amazon Web Services System Relevant to Security,
+  Availability, Confidentiality, and Privacy For the Period October 1, 2022 -
+  September 30, 2023}, pp. 1--53, 2023. [Online]. Available:
   \url{https://d1.awsstatic.com/whitepapers/compliance/AWS_SOC3.pdf}
 \BIBentrySTDinterwordspacing
 

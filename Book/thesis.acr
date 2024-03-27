@@ -11,7 +11,7 @@
 		\setentrycounter[]{page}\glsnumberformat{16\delimR 18}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{22}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{24}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{27}}}%
+		\setentrycounter[]{page}\glsnumberformat{28}}}%
 \glossentry{ac:az}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{17}}}\glsgroupskip
 \glsgroupheading{F}\relax \glsresetentrylist %
@@ -43,8 +43,9 @@
 		\setentrycounter[]{page}\glsnumberformat{22\delimN 23}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{25\delimR 29}}}%
 \glossentry{ac:soafee}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{6}\delimN 
 		\setentrycounter[]{page}\glsnumberformat{18}\delimN 
-		\setentrycounter[]{page}\glsnumberformat{27}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{28\delimN 29}}}\glsgroupskip
 \glsgroupheading{T}\relax \glsresetentrylist %
 \glossentry{ac:tcu}{\glossaryentrynumbers{\relax 
 		\setentrycounter[]{page}\glsnumberformat{14}}}%
