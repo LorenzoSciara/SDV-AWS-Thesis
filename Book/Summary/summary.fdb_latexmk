@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1711472438.04382 "c:/Users/Lorenzo/Documents/TESI/SDV-AWS-Thesis/Book/Summary/summary.tex" "summary.pdf" "summary" 1711472439.66745 0
+["pdflatex"] 1711502713.37898 "c:/Users/Lorenzo/Documents/TESI/SDV-AWS-Thesis/Book/Summary/summary.tex" "summary.pdf" "summary" 1711502715.99788 0
   "C:/Users/Lorenzo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1711159487 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Lorenzo/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1706976003 24211730 977ecd5e62267dc7fdf74aecd6463422 ""
   "C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -111,15 +111,15 @@
   "C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "C:/Users/Lorenzo/AppData/Local/Programs/MiKTeX/tex/latex/xmpincl/xmpincl.sty" 1633254124 2832 d498c59e94b7dfa3b4bcf74380ad6348 ""
-  "c:/Users/Lorenzo/Documents/TESI/SDV-AWS-Thesis/Book/Summary/summary.tex" 1711472435 17027 88ea01253fb5602ffcabc6cff20dad8e ""
+  "c:/Users/Lorenzo/Documents/TESI/SDV-AWS-Thesis/Book/Summary/summary.tex" 1711502709 17030 b032f28555677687441cc4c22e261ec6 ""
   "images/AWS_data_services.png" 1710935107 44297 29284c55b0a12871c5dd700789daebdc ""
   "images/AWS_update_services.png" 1711369444 98296 bffcd37662a3f9010e31677ece167474 ""
   "images/TCUSimulatorP.png" 1710507910 2650031 3fa00c1e0eb83e65c47370642ff5217b ""
   "images/grafana_Battery.png" 1710868910 139035 484e075c316111cfe8cd7594a8fe239c ""
-  "pdfa.xmpi" 1711472438 5042 b44131229cb115c868b21a36cc767347 "pdflatex"
-  "summary.aux" 1711472439 2449 a05a6512c77a51e497a390d6172bf983 "pdflatex"
-  "summary.out" 1711472439 549 c7ab55e80cfcda40488f4a7b22f9405c "pdflatex"
-  "summary.tex" 1711472435 17027 88ea01253fb5602ffcabc6cff20dad8e ""
+  "pdfa.xmpi" 1711502714 5042 c6c5486d77bd69f87d26d5bfd6690e3f "pdflatex"
+  "summary.aux" 1711502715 2449 a05a6512c77a51e497a390d6172bf983 "pdflatex"
+  "summary.out" 1711502715 549 c7ab55e80cfcda40488f4a7b22f9405c "pdflatex"
+  "summary.tex" 1711502709 17030 b032f28555677687441cc4c22e261ec6 ""
   (generated)
   "pdfa.xmpi"
   "summary.aux"
