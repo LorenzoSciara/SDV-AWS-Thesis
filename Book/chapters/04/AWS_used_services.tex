@@ -25,7 +25,7 @@ Among the hundreds of services offered by \gls{ac:aws}, here are the ones that a
     \begin{figure}[h]  % 'h' significa che la figura viene posizionata qui
         \centering
         \includegraphics[width=0.8\textwidth]{images/AWSSDK.png}  % Sostituisci 'nome_immagine' con il nome del tuo file immagine e l'estensione
-        \caption{The high level rappresentation of the \gls{ac:aws} \gls{ac:sdk} for \textit{JavaScript v3} \cite{AWSSDK}}
+        \caption{The high level rappresentation of the \textit{AWS SDK} for \textit{JavaScript v3} \cite{AWSSDK}}
         \label{fig:AWSSDK}
     \end{figure}
     
@@ -39,7 +39,7 @@ Among the hundreds of services offered by \gls{ac:aws}, here are the ones that a
     \begin{figure}[h]  % 'h' significa che la figura viene posizionata qui
         \centering
         \includegraphics[width=0.8\textwidth]{images/AWSIoTCore.png}  % Sostituisci 'nome_immagine' con il nome del tuo file immagine e l'estensione
-        \caption{\textit{AWS IoT Core} connection system between \gls{ac:iot} device and \gls{ac:aws} service \cite{AWSIoTCore}}
+        \caption{\textit{AWS IoT Core} connection system between \textit{IoT} device and \textit{AWS} service \cite{AWSIoTCore}}
         \label{fig:AWSIoTCore}
     \end{figure}
 
@@ -83,7 +83,7 @@ Among the hundreds of services offered by \gls{ac:aws}, here are the ones that a
     \begin{figure}[h]  % 'h' significa che la figura viene posizionata qui
         \centering
         \includegraphics[width=0.8\textwidth]{images/AWSS3.png}  % Sostituisci 'nome_immagine' con il nome del tuo file immagine e l'estensione
-        \caption{Amazon S3 high level storing rappresentation}
+        \caption{\textit{Amazon S3} high level storing rappresentation}
         \label{fig:AWSS3}
     \end{figure}
 
@@ -115,7 +115,7 @@ Among the hundreds of services offered by \gls{ac:aws}, here are the ones that a
     \begin{figure}[h]  % 'h' significa che la figura viene posizionata qui
         \centering
         \includegraphics[width=0.8\textwidth]{images/AWSECR.png}  % Sostituisci 'nome_immagine' con il nome del tuo file immagine e l'estensione
-        \caption{Example of how Amazon ECR works in production and for pulling images \cite{AWSECR}}
+        \caption{Example of how \textit{Amazon ECR} works in production and for pulling images \cite{AWSECR}}
         \label{fig:AWSECR}
     \end{figure}
     
@@ -133,14 +133,14 @@ The interaction system is intricate and consists of two main circuits. The image
 \begin{figure}[h]  % 'h' significa che la figura viene posizionata qui
     \centering
     \includegraphics[width=1\textwidth]{images/AWS_data_services.png}  % Sostituisci 'nome_immagine' con il nome del tuo file immagine e l'estensione
-    \caption{The high level rappresentation of the \gls{ac:aws} services for the data managing}
+    \caption{The high level rappresentation of the \textit{AWS} services for the data managing}
     \label{fig:AWSDataServices}
 \end{figure}
 
 \begin{figure}[h]  % 'h' significa che la figura viene posizionata qui
     \centering
     \includegraphics[width=1\textwidth]{images/AWS_update_services.png}  % Sostituisci 'nome_immagine' con il nome del tuo file immagine e l'estensione
-    \caption{The high level rappresentation of the \gls{ac:aws} services for the update managing}
+    \caption{The high level rappresentation of the \textit{AWS} services for the update managing}
     \label{fig:AWSUpdateServices}
 \end{figure}
 During the second part of the service interaction shown in the image \ref{fig:AWSUpdateServices}, the system consists of a \textit{CodePipeline} that can be triggered by a \textit{CodeCommit} event acting as a source. The pipeline includes a build phase via \textit{CodeBuild}, which can utilize images from \gls{ac:aecr} registries, followed by three phases consisting of \textit{Lambda} functions. The pipeline interacts with a server located on an \gls{ac:aec2} instance, which stores its key information in the \textit{Parameter Stor} of the \textit{System Manager} service.

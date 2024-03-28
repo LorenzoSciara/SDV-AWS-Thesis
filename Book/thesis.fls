@@ -671,6 +671,7 @@ INPUT .\images\MQTTProtocol.png
 INPUT .\images\MQTTProtocol.png
 INPUT .\images\MQTTProtocol.png
 INPUT .\images\MQTTProtocol.png
+INPUT C:\Users\Lorenzo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
 INPUT .\images\window_of_exposure.png
 INPUT .\images\window_of_exposure.png
 INPUT .\images\window_of_exposure.png
@@ -725,7 +726,6 @@ INPUT .\images\AWSSDK.png
 INPUT .\images\AWSSDK.png
 INPUT .\images\AWSSDK.png
 INPUT .\images\AWSSDK.png
-INPUT C:\Users\Lorenzo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
 INPUT .\images\AWSIoTCore.png
 INPUT .\images\AWSIoTCore.png
 INPUT .\images\AWSIoTCore.png

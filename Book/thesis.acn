@@ -1,22 +1,3 @@
-\glossaryentry{MQTT?\glossentry{ac:mqtt}|setentrycounter[]{page}"\glsnumberformat}{6}
-\glossaryentry{SOAFEE?\glossentry{ac:soafee}|setentrycounter[]{page}"\glsnumberformat}{6}
-\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{6}
-\glossaryentry{SOC?\glossentry{ac:soc}|setentrycounter[]{page}"\glsnumberformat}{6}
-\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{6}
-\glossaryentry{SDK?\glossentry{ac:sdk}|setentrycounter[]{page}"\glsnumberformat}{6}
-\glossaryentry{IoT?\glossentry{ac:iot}|setentrycounter[]{page}"\glsnumberformat}{6}
-\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{6}
-\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{6}
-\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{6}
-\glossaryentry{TCU?\glossentry{ac:tcu}|setentrycounter[]{page}"\glsnumberformat}{7}
-\glossaryentry{TCU?\glossentry{ac:tcu}|setentrycounter[]{page}"\glsnumberformat}{7}
-\glossaryentry{MQTT?\glossentry{ac:mqtt}|setentrycounter[]{page}"\glsnumberformat}{9}
-\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{9}
-\glossaryentry{OTA?\glossentry{ac:ota}|setentrycounter[]{page}"\glsnumberformat}{9}
-\glossaryentry{OTA?\glossentry{ac:ota}|setentrycounter[]{page}"\glsnumberformat}{9}
-\glossaryentry{TCU?\glossentry{ac:tcu}|setentrycounter[]{page}"\glsnumberformat}{9}
-\glossaryentry{TCU?\glossentry{ac:tcu}|setentrycounter[]{page}"\glsnumberformat}{9}
-\glossaryentry{CDK?\glossentry{ac:cdk}|setentrycounter[]{page}"\glsnumberformat}{9}
 \glossaryentry{SDV?\glossentry{ac:sdv}|setentrycounter[]{page}"\glsnumberformat}{14}
 \glossaryentry{IoT?\glossentry{ac:iot}|setentrycounter[]{page}"\glsnumberformat}{16}
 \glossaryentry{TCU?\glossentry{ac:tcu}|setentrycounter[]{page}"\glsnumberformat}{16}
@@ -95,7 +76,6 @@
 \glossaryentry{AM?\glossentry{ac:am}|setentrycounter[]{page}"\glsnumberformat}{27}
 \glossaryentry{MQTT?\glossentry{ac:mqtt}|setentrycounter[]{page}"\glsnumberformat}{27}
 \glossaryentry{MQTT?\glossentry{ac:mqtt}|setentrycounter[]{page}"\glsnumberformat}{27}
-\glossaryentry{MQTT?\glossentry{ac:mqtt}|setentrycounter[]{page}"\glsnumberformat}{27}
 \glossaryentry{SDV?\glossentry{ac:sdv}|setentrycounter[]{page}"\glsnumberformat}{27}
 \glossaryentry{MQTT?\glossentry{ac:mqtt}|setentrycounter[]{page}"\glsnumberformat}{27}
 \glossaryentry{SDV?\glossentry{ac:sdv}|setentrycounter[]{page}"\glsnumberformat}{27}
@@ -116,7 +96,6 @@
 \glossaryentry{SOAFEE?\glossentry{ac:soafee}|setentrycounter[]{page}"\glsnumberformat}{31}
 \glossaryentry{SOAFEE?\glossentry{ac:soafee}|setentrycounter[]{page}"\glsnumberformat}{31}
 \glossaryentry{ISO?\glossentry{ac:iso}|setentrycounter[]{page}"\glsnumberformat}{31}
-\glossaryentry{SOAFEE?\glossentry{ac:soafee}|setentrycounter[]{page}"\glsnumberformat}{31}
 \glossaryentry{SOAFEE?\glossentry{ac:soafee}|setentrycounter[]{page}"\glsnumberformat}{31}
 \glossaryentry{SDV?\glossentry{ac:sdv}|setentrycounter[]{page}"\glsnumberformat}{32}
 \glossaryentry{SDV?\glossentry{ac:sdv}|setentrycounter[]{page}"\glsnumberformat}{32}
@@ -202,8 +181,6 @@
 \glossaryentry{NIST?\glossentry{ac:nist}|setentrycounter[]{page}"\glsnumberformat}{37}
 \glossaryentry{3PAO?\glossentry{ac:3pao}|setentrycounter[]{page}"\glsnumberformat}{37}
 \glossaryentry{FISMA?\glossentry{ac:fisma}|setentrycounter[]{page}"\glsnumberformat}{37}
-\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{38}
-\glossaryentry{SOC?\glossentry{ac:soc}|setentrycounter[]{page}"\glsnumberformat}{38}
 \glossaryentry{ISO?\glossentry{ac:iso}|setentrycounter[]{page}"\glsnumberformat}{38}
 \glossaryentry{ISO?\glossentry{ac:iso}|setentrycounter[]{page}"\glsnumberformat}{38}
 \glossaryentry{QMS?\glossentry{ac:qms}|setentrycounter[]{page}"\glsnumberformat}{38}
@@ -277,8 +254,6 @@
 \glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{40}
 \glossaryentry{SDK?\glossentry{ac:sdk}|setentrycounter[]{page}"\glsnumberformat}{40}
 \glossaryentry{SDK?\glossentry{ac:sdk}|setentrycounter[]{page}"\glsnumberformat}{40}
-\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{41}
-\glossaryentry{SDK?\glossentry{ac:sdk}|setentrycounter[]{page}"\glsnumberformat}{41}
 \glossaryentry{AWS CDK?\glossentry{ac:awscdk}|setentrycounter[]{page}"\glsnumberformat}{41}
 \glossaryentry{AWS CDK?\glossentry{ac:awscdk}|setentrycounter[]{page}"\glsnumberformat}{41}
 \glossaryentry{PoC?\glossentry{ac:poc}|setentrycounter[]{page}"\glsnumberformat}{41}
@@ -301,8 +276,6 @@
 \glossaryentry{IoT?\glossentry{ac:iot}|setentrycounter[]{page}"\glsnumberformat}{41}
 \glossaryentry{IoT?\glossentry{ac:iot}|setentrycounter[]{page}"\glsnumberformat}{41}
 \glossaryentry{MQTT?\glossentry{ac:mqtt}|setentrycounter[]{page}"\glsnumberformat}{41}
-\glossaryentry{IoT?\glossentry{ac:iot}|setentrycounter[]{page}"\glsnumberformat}{42}
-\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{42}
 \glossaryentry{AWS IAM?\glossentry{ac:awsiam}|setentrycounter[]{page}"\glsnumberformat}{42}
 \glossaryentry{AWS IAM?\glossentry{ac:awsiam}|setentrycounter[]{page}"\glsnumberformat}{42}
 \glossaryentry{AWS IAM?\glossentry{ac:awsiam}|setentrycounter[]{page}"\glsnumberformat}{42}
@@ -358,8 +331,6 @@
 \glossaryentry{Amazon EC2?\glossentry{ac:aec2}|setentrycounter[]{page}"\glsnumberformat}{47}
 \glossaryentry{SSH?\glossentry{ac:ssh}|setentrycounter[]{page}"\glsnumberformat}{47}
 \glossaryentry{TCU?\glossentry{ac:tcu}|setentrycounter[]{page}"\glsnumberformat}{47}
-\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{47}
-\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{48}
 \glossaryentry{Amazon ECR?\glossentry{ac:aecr}|setentrycounter[]{page}"\glsnumberformat}{48}
 \glossaryentry{Amazon EC2?\glossentry{ac:aec2}|setentrycounter[]{page}"\glsnumberformat}{48}
 \glossaryentry{TCU?\glossentry{ac:tcu}|setentrycounter[]{page}"\glsnumberformat}{48}
@@ -397,24 +368,16 @@
 \glossaryentry{MQTT?\glossentry{ac:mqtt}|setentrycounter[]{page}"\glsnumberformat}{51}
 \glossaryentry{MQTT?\glossentry{ac:mqtt}|setentrycounter[]{page}"\glsnumberformat}{51}
 \glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{51}
-\glossaryentry{MQTT?\glossentry{ac:mqtt}|setentrycounter[]{page}"\glsnumberformat}{51}
-\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{51}
 \glossaryentry{OTA?\glossentry{ac:ota}|setentrycounter[]{page}"\glsnumberformat}{52}
 \glossaryentry{OTA?\glossentry{ac:ota}|setentrycounter[]{page}"\glsnumberformat}{52}
 \glossaryentry{IP?\glossentry{ac:ip}|setentrycounter[]{page}"\glsnumberformat}{52}
-\glossaryentry{OTA?\glossentry{ac:ota}|setentrycounter[]{page}"\glsnumberformat}{52}
 \glossaryentry{URL?\glossentry{ac:url}|setentrycounter[]{page}"\glsnumberformat}{53}
-\glossaryentry{OTA?\glossentry{ac:ota}|setentrycounter[]{page}"\glsnumberformat}{53}
 \glossaryentry{TCU?\glossentry{ac:tcu}|setentrycounter[]{page}"\glsnumberformat}{53}
 \glossaryentry{TCU?\glossentry{ac:tcu}|setentrycounter[]{page}"\glsnumberformat}{54}
 \glossaryentry{TCU?\glossentry{ac:tcu}|setentrycounter[]{page}"\glsnumberformat}{54}
 \glossaryentry{TCU?\glossentry{ac:tcu}|setentrycounter[]{page}"\glsnumberformat}{54}
-\glossaryentry{TCU?\glossentry{ac:tcu}|setentrycounter[]{page}"\glsnumberformat}{55}
 \glossaryentry{TCU?\glossentry{ac:tcu}|setentrycounter[]{page}"\glsnumberformat}{56}
 \glossaryentry{TCU?\glossentry{ac:tcu}|setentrycounter[]{page}"\glsnumberformat}{56}
-\glossaryentry{TCU?\glossentry{ac:tcu}|setentrycounter[]{page}"\glsnumberformat}{56}
-\glossaryentry{TCU?\glossentry{ac:tcu}|setentrycounter[]{page}"\glsnumberformat}{57}
-\glossaryentry{TCU?\glossentry{ac:tcu}|setentrycounter[]{page}"\glsnumberformat}{57}
 \glossaryentry{TCU?\glossentry{ac:tcu}|setentrycounter[]{page}"\glsnumberformat}{57}
 \glossaryentry{TCU?\glossentry{ac:tcu}|setentrycounter[]{page}"\glsnumberformat}{57}
 \glossaryentry{TCU?\glossentry{ac:tcu}|setentrycounter[]{page}"\glsnumberformat}{58}
@@ -430,7 +393,6 @@
 \glossaryentry{ID?\glossentry{ac:id}|setentrycounter[]{page}"\glsnumberformat}{60}
 \glossaryentry{CDK?\glossentry{ac:cdk}|setentrycounter[]{page}"\glsnumberformat}{60}
 \glossaryentry{CDK?\glossentry{ac:cdk}|setentrycounter[]{page}"\glsnumberformat}{60}
-\glossaryentry{CDK?\glossentry{ac:cdk}|setentrycounter[]{page}"\glsnumberformat}{61}
 \glossaryentry{CDK?\glossentry{ac:cdk}|setentrycounter[]{page}"\glsnumberformat}{61}
 \glossaryentry{CDK?\glossentry{ac:cdk}|setentrycounter[]{page}"\glsnumberformat}{61}
 \glossaryentry{CDK?\glossentry{ac:cdk}|setentrycounter[]{page}"\glsnumberformat}{61}
