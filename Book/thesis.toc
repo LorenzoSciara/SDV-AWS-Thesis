@@ -28,7 +28,7 @@
 \contentsline {section}{\numberline {5.1}Architectural design}{49}{section.5.1}%
 \contentsline {subsection}{\numberline {5.1.1}TCU Simulator}{50}{subsection.5.1.1}%
 \contentsline {subsection}{\numberline {5.1.2}Cloud Infrastructure}{59}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}Data Viewer}{73}{subsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.1.3}Data Viewer: Grafana}{73}{subsection.5.1.3}%
 \contentsline {chapter}{\numberline {6}Conclding Remarks}{76}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Test and Validation on RaspberryPi}{76}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Contribution Recaps}{78}{section.6.2}%

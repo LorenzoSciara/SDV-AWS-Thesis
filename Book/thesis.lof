@@ -23,11 +23,11 @@
 \contentsline {figure}{\numberline {4.7}{\ignorespaces The high level rappresentation of the \gls {ac:aws} services for the data managing}}{47}{figure.4.7}%
 \contentsline {figure}{\numberline {4.8}{\ignorespaces The high level rappresentation of the \gls {ac:aws} services for the update managing}}{48}{figure.4.8}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Illustration of a RaspberryPi board with its periferics \cite {raspberrypi}}}{51}{figure.5.1}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Update log file of the Device Simulator}}{54}{figure.5.2}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Illustration of a \textit {Raspberry Pi} board with its periferics \cite {raspberrypi}}}{50}{figure.5.1}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Update log file of the \textit {Device Simulator}}}{54}{figure.5.2}%
 \contentsline {figure}{\numberline {5.3}{\ignorespaces A snapshot of the first version of the TCU interface}}{54}{figure.5.3}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces A snapshot of the TCU simulator on the virtual machine}}{56}{figure.5.4}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces A snapshot of the TCU compiled simulator on the Raspberry Pi interface}}{57}{figure.5.5}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces A snapshot of the \gls {ac:tcu} simulator on the virtual machine}}{56}{figure.5.4}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces A snapshot of the \gls {ac:tcu} compiled simulator on the \textit {Raspberry Pi} interface}}{57}{figure.5.5}%
 \contentsline {figure}{\numberline {5.6}{\ignorespaces A snapshot of the TCU recognition module logs}}{59}{figure.5.6}%
 \contentsline {figure}{\numberline {5.7}{\ignorespaces A snapshot of the Codepipeline Source stage}}{68}{figure.5.7}%
 \contentsline {figure}{\numberline {5.8}{\ignorespaces A snapshot of the Hawkbit server during the deployment of the update on the device}}{71}{figure.5.8}%
