@@ -2,6 +2,12 @@
 \glossaryentry{SOAFEE?\glossentry{ac:soafee}|setentrycounter[]{page}"\glsnumberformat}{6}
 \glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{6}
 \glossaryentry{SOC?\glossentry{ac:soc}|setentrycounter[]{page}"\glsnumberformat}{6}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{6}
+\glossaryentry{SDK?\glossentry{ac:sdk}|setentrycounter[]{page}"\glsnumberformat}{6}
+\glossaryentry{IoT?\glossentry{ac:iot}|setentrycounter[]{page}"\glsnumberformat}{6}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{6}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{6}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{6}
 \glossaryentry{SDV?\glossentry{ac:sdv}|setentrycounter[]{page}"\glsnumberformat}{14}
 \glossaryentry{IoT?\glossentry{ac:iot}|setentrycounter[]{page}"\glsnumberformat}{16}
 \glossaryentry{TCU?\glossentry{ac:tcu}|setentrycounter[]{page}"\glsnumberformat}{16}
@@ -244,11 +250,108 @@
 \glossaryentry{CAIQ?\glossentry{ac:caiq}|setentrycounter[]{page}"\glsnumberformat}{39}
 \glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{39}
 \glossaryentry{SDV?\glossentry{ac:sdv}|setentrycounter[]{page}"\glsnumberformat}{40}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{40}
 \glossaryentry{SDV?\glossentry{ac:sdv}|setentrycounter[]{page}"\glsnumberformat}{40}
-\glossaryentry{IoT?\glossentry{ac:iot}|setentrycounter[]{page}"\glsnumberformat}{41}
-\glossaryentry{IoT?\glossentry{ac:iot}|setentrycounter[]{page}"\glsnumberformat}{41}
-\glossaryentry{IoT?\glossentry{ac:iot}|setentrycounter[]{page}"\glsnumberformat}{41}
+\glossaryentry{SDV?\glossentry{ac:sdv}|setentrycounter[]{page}"\glsnumberformat}{40}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{40}
+\glossaryentry{POC?\glossentry{ac:poc}|setentrycounter[]{page}"\glsnumberformat}{40}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{40}
+\glossaryentry{IoT?\glossentry{ac:iot}|setentrycounter[]{page}"\glsnumberformat}{40}
+\glossaryentry{AWS CLI?\glossentry{ac:awscli}|setentrycounter[]{page}"\glsnumberformat}{40}
+\glossaryentry{AWS CLI?\glossentry{ac:awscli}|setentrycounter[]{page}"\glsnumberformat}{40}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{40}
+\glossaryentry{PC?\glossentry{ac:pc}|setentrycounter[]{page}"\glsnumberformat}{40}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{40}
+\glossaryentry{SDK?\glossentry{ac:sdk}|setentrycounter[]{page}"\glsnumberformat}{40}
+\glossaryentry{SDK?\glossentry{ac:sdk}|setentrycounter[]{page}"\glsnumberformat}{40}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{40}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{40}
+\glossaryentry{SDK?\glossentry{ac:sdk}|setentrycounter[]{page}"\glsnumberformat}{40}
+\glossaryentry{SDK?\glossentry{ac:sdk}|setentrycounter[]{page}"\glsnumberformat}{40}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{41}
+\glossaryentry{SDK?\glossentry{ac:sdk}|setentrycounter[]{page}"\glsnumberformat}{41}
+\glossaryentry{AWS CDK?\glossentry{ac:awscdk}|setentrycounter[]{page}"\glsnumberformat}{41}
+\glossaryentry{AWS CDK?\glossentry{ac:awscdk}|setentrycounter[]{page}"\glsnumberformat}{41}
+\glossaryentry{POC?\glossentry{ac:poc}|setentrycounter[]{page}"\glsnumberformat}{41}
 \glossaryentry{IoT?\glossentry{ac:iot}|setentrycounter[]{page}"\glsnumberformat}{41}
 \glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{41}
 \glossaryentry{IoT?\glossentry{ac:iot}|setentrycounter[]{page}"\glsnumberformat}{41}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{41}
+\glossaryentry{IoT?\glossentry{ac:iot}|setentrycounter[]{page}"\glsnumberformat}{41}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{41}
+\glossaryentry{ECU?\glossentry{ac:ecu}|setentrycounter[]{page}"\glsnumberformat}{41}
+\glossaryentry{IoT?\glossentry{ac:iot}|setentrycounter[]{page}"\glsnumberformat}{41}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{41}
+\glossaryentry{MQTT?\glossentry{ac:mqtt}|setentrycounter[]{page}"\glsnumberformat}{41}
+\glossaryentry{SDK?\glossentry{ac:sdk}|setentrycounter[]{page}"\glsnumberformat}{41}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{41}
+\glossaryentry{IoT?\glossentry{ac:iot}|setentrycounter[]{page}"\glsnumberformat}{41}
+\glossaryentry{IoT?\glossentry{ac:iot}|setentrycounter[]{page}"\glsnumberformat}{41}
+\glossaryentry{MQTT?\glossentry{ac:mqtt}|setentrycounter[]{page}"\glsnumberformat}{41}
+\glossaryentry{POC?\glossentry{ac:poc}|setentrycounter[]{page}"\glsnumberformat}{41}
+\glossaryentry{IoT?\glossentry{ac:iot}|setentrycounter[]{page}"\glsnumberformat}{41}
+\glossaryentry{IoT?\glossentry{ac:iot}|setentrycounter[]{page}"\glsnumberformat}{41}
+\glossaryentry{MQTT?\glossentry{ac:mqtt}|setentrycounter[]{page}"\glsnumberformat}{41}
 \glossaryentry{IoT?\glossentry{ac:iot}|setentrycounter[]{page}"\glsnumberformat}{42}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{42}
+\glossaryentry{AWS IAM?\glossentry{ac:awsiam}|setentrycounter[]{page}"\glsnumberformat}{42}
+\glossaryentry{AWS IAM?\glossentry{ac:awsiam}|setentrycounter[]{page}"\glsnumberformat}{42}
+\glossaryentry{AWS IAM?\glossentry{ac:awsiam}|setentrycounter[]{page}"\glsnumberformat}{42}
+\glossaryentry{AWS IAM?\glossentry{ac:awsiam}|setentrycounter[]{page}"\glsnumberformat}{42}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{42}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{42}
+\glossaryentry{AWS IAM?\glossentry{ac:awsiam}|setentrycounter[]{page}"\glsnumberformat}{42}
+\glossaryentry{IoT?\glossentry{ac:iot}|setentrycounter[]{page}"\glsnumberformat}{42}
+\glossaryentry{MQTT?\glossentry{ac:mqtt}|setentrycounter[]{page}"\glsnumberformat}{42}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{42}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{43}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{43}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{43}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{43}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{44}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{44}
+\glossaryentry{Amazon S3?\glossentry{ac:as3}|setentrycounter[]{page}"\glsnumberformat}{44}
+\glossaryentry{Amazon S3?\glossentry{ac:as3}|setentrycounter[]{page}"\glsnumberformat}{44}
+\glossaryentry{Amazon S3?\glossentry{ac:as3}|setentrycounter[]{page}"\glsnumberformat}{44}
+\glossaryentry{Amazon S3?\glossentry{ac:as3}|setentrycounter[]{page}"\glsnumberformat}{44}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{44}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{45}
+\glossaryentry{Amazon S3?\glossentry{ac:as3}|setentrycounter[]{page}"\glsnumberformat}{45}
+\glossaryentry{Amazon S3?\glossentry{ac:as3}|setentrycounter[]{page}"\glsnumberformat}{45}
+\glossaryentry{IoT?\glossentry{ac:iot}|setentrycounter[]{page}"\glsnumberformat}{45}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{46}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{46}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{46}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{46}
+\glossaryentry{AMI?\glossentry{ac:ami}|setentrycounter[]{page}"\glsnumberformat}{46}
+\glossaryentry{SDK?\glossentry{ac:sdk}|setentrycounter[]{page}"\glsnumberformat}{46}
+\glossaryentry{Amazon ECR?\glossentry{ac:aecr}|setentrycounter[]{page}"\glsnumberformat}{46}
+\glossaryentry{Amazon ECR?\glossentry{ac:aecr}|setentrycounter[]{page}"\glsnumberformat}{46}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{46}
+\glossaryentry{Amazon ECR?\glossentry{ac:aecr}|setentrycounter[]{page}"\glsnumberformat}{46}
+\glossaryentry{AWS IAM?\glossentry{ac:awsiam}|setentrycounter[]{page}"\glsnumberformat}{46}
+\glossaryentry{Amazon ECR?\glossentry{ac:aecr}|setentrycounter[]{page}"\glsnumberformat}{46}
+\glossaryentry{Amazon ECR?\glossentry{ac:aecr}|setentrycounter[]{page}"\glsnumberformat}{46}
+\glossaryentry{Amazon ECR?\glossentry{ac:aecr}|setentrycounter[]{page}"\glsnumberformat}{46}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{46}
+\glossaryentry{Amazon EC2?\glossentry{ac:aec2}|setentrycounter[]{page}"\glsnumberformat}{46}
+\glossaryentry{Amazon EC2?\glossentry{ac:aec2}|setentrycounter[]{page}"\glsnumberformat}{46}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{46}
+\glossaryentry{Amazon EC2?\glossentry{ac:aec2}|setentrycounter[]{page}"\glsnumberformat}{46}
+\glossaryentry{Amazon EC2?\glossentry{ac:aec2}|setentrycounter[]{page}"\glsnumberformat}{46}
+\glossaryentry{Amazon EC2?\glossentry{ac:aec2}|setentrycounter[]{page}"\glsnumberformat}{46}
+\glossaryentry{Amazon VPC?\glossentry{ac:avpc}|setentrycounter[]{page}"\glsnumberformat}{47}
+\glossaryentry{Amazon EC2?\glossentry{ac:aec2}|setentrycounter[]{page}"\glsnumberformat}{47}
+\glossaryentry{AMI?\glossentry{ac:ami}|setentrycounter[]{page}"\glsnumberformat}{47}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{47}
+\glossaryentry{AMI?\glossentry{ac:ami}|setentrycounter[]{page}"\glsnumberformat}{47}
+\glossaryentry{AMI?\glossentry{ac:ami}|setentrycounter[]{page}"\glsnumberformat}{47}
+\glossaryentry{Amazon EC2?\glossentry{ac:aec2}|setentrycounter[]{page}"\glsnumberformat}{47}
+\glossaryentry{SSH?\glossentry{ac:ssh}|setentrycounter[]{page}"\glsnumberformat}{47}
+\glossaryentry{TCU?\glossentry{ac:tcu}|setentrycounter[]{page}"\glsnumberformat}{47}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{47}
+\glossaryentry{AWS?\glossentry{ac:aws}|setentrycounter[]{page}"\glsnumberformat}{48}
+\glossaryentry{Amazon ECR?\glossentry{ac:aecr}|setentrycounter[]{page}"\glsnumberformat}{48}
+\glossaryentry{Amazon EC2?\glossentry{ac:aec2}|setentrycounter[]{page}"\glsnumberformat}{48}
+\glossaryentry{TCU?\glossentry{ac:tcu}|setentrycounter[]{page}"\glsnumberformat}{48}
+\glossaryentry{POC?\glossentry{ac:poc}|setentrycounter[]{page}"\glsnumberformat}{48}
