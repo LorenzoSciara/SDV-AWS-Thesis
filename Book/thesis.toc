@@ -30,9 +30,9 @@
 \contentsline {subsection}{\numberline {5.1.2}Cloud Infrastructure}{59}{subsection.5.1.2}%
 \contentsline {subsection}{\numberline {5.1.3}Data Viewer: Grafana}{73}{subsection.5.1.3}%
 \contentsline {chapter}{\numberline {6}Conclding Remarks}{76}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Test and Validation on RaspberryPi}{76}{section.6.1}%
+\contentsline {section}{\numberline {6.1}Test and Validation on Raspberry Pi}{76}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Contribution Recaps}{78}{section.6.2}%
 \contentsline {subsection}{\numberline {6.2.1}Are the PoC goals being met?}{78}{subsection.6.2.1}%
 \contentsline {section}{\numberline {6.3}Future Works}{79}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Transform the poc in a product}{79}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.1}Transform the PoC in a product}{79}{subsection.6.3.1}%
 \contentsline {chapter}{Bibliography}{80}{Item.9}%
